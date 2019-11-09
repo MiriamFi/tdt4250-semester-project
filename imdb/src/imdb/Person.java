@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see imdb.ImdbPackage#getPerson()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='numberOfVotesConstraint averageRatingConstraint'"
- *        annotation="http://www.eclipse.org/acceleo/query/1.0 birthYearConstraint='self.birthYear &gt; 0 and self.birthYear &lt;= 2019' deathYearConstraint='self.deathYear &gt; 0 and self.deathYear &lt;= 2019'"
+ *        annotation="http://www.eclipse.org/acceleo/query/1.0 birthYearConstraint='self.birthYear &gt; 0 and self.birthYear &lt;= 2019' deathYearConstraint='self.deathYear &gt; -2 and self.deathYear &lt;= 2019 and self.deathYear &gt;= self.birthYear'"
  * @generated
  */
 public interface Person extends EObject {

@@ -62,6 +62,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute imdb.ecore#//Involvement/jobCategory"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute imdb.ecore#//Involvement/job"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute imdb.ecore#//Involvement/character"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference imdb.ecore#//Involvement/tvseries"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
