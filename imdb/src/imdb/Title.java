@@ -23,10 +23,13 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link imdb.Title#getRuntime <em>Runtime</em>}</li>
  *   <li>{@link imdb.Title#getGenres <em>Genres</em>}</li>
  *   <li>{@link imdb.Title#getRating <em>Rating</em>}</li>
+ *   <li>{@link imdb.Title#getInvolvements <em>Involvements</em>}</li>
+ *   <li>{@link imdb.Title#getImdb <em>Imdb</em>}</li>
  * </ul>
  *
  * @see imdb.ImdbPackage#getTitle()
- * @model
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='startYearConstraint runtimeConstraint'"
+ *        annotation="http://www.eclipse.org/acceleo/query/1.0 startYearConstraint='self.startYear &gt; 0 and self.startYear &lt;= 2050' runtimeConstraint='self.runtime &gt; 0'"
  * @generated
  */
 public interface Title extends EObject {
@@ -128,7 +131,7 @@ public interface Title extends EObject {
 	 * @return the value of the '<em>Start Year</em>' attribute.
 	 * @see #setStartYear(int)
 	 * @see imdb.ImdbPackage#getTitle_StartYear()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
 	int getStartYear();
@@ -200,5 +203,43 @@ public interface Title extends EObject {
 	 * @generated
 	 */
 	void setRating(Rating value);
+
+	/**
+	 * Returns the value of the '<em><b>Involvements</b></em>' containment reference list.
+	 * The list contents are of type {@link imdb.Involvement}.
+	 * It is bidirectional and its opposite is '{@link imdb.Involvement#getTitle <em>Title</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Involvements</em>' containment reference list.
+	 * @see imdb.ImdbPackage#getTitle_Involvements()
+	 * @see imdb.Involvement#getTitle
+	 * @model opposite="title" containment="true"
+	 * @generated
+	 */
+	EList<Involvement> getInvolvements();
+
+	/**
+	 * Returns the value of the '<em><b>Imdb</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link imdb.Imdb#getTitles <em>Titles</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Imdb</em>' container reference.
+	 * @see #setImdb(Imdb)
+	 * @see imdb.ImdbPackage#getTitle_Imdb()
+	 * @see imdb.Imdb#getTitles
+	 * @model opposite="titles" transient="false"
+	 * @generated
+	 */
+	Imdb getImdb();
+
+	/**
+	 * Sets the value of the '{@link imdb.Title#getImdb <em>Imdb</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Imdb</em>' container reference.
+	 * @see #getImdb()
+	 * @generated
+	 */
+	void setImdb(Imdb value);
 
 } // Title

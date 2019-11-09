@@ -2,17 +2,26 @@
  */
 package imdb.impl;
 
+import imdb.Imdb;
 import imdb.ImdbPackage;
+import imdb.Involvement;
 import imdb.Person;
 
+import imdb.Title;
 import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
+import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,6 +35,9 @@ import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
  *   <li>{@link imdb.impl.PersonImpl#getBirthYear <em>Birth Year</em>}</li>
  *   <li>{@link imdb.impl.PersonImpl#getDeathYear <em>Death Year</em>}</li>
  *   <li>{@link imdb.impl.PersonImpl#getProfessions <em>Professions</em>}</li>
+ *   <li>{@link imdb.impl.PersonImpl#getKnownForTitles <em>Known For Titles</em>}</li>
+ *   <li>{@link imdb.impl.PersonImpl#getInvolvement <em>Involvement</em>}</li>
+ *   <li>{@link imdb.impl.PersonImpl#getImdb <em>Imdb</em>}</li>
  * </ul>
  *
  * @generated
@@ -94,6 +106,25 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 	 * @ordered
 	 */
 	protected EList<String> professions;
+
+	/**
+	 * The cached value of the '{@link #getKnownForTitles() <em>Known For Titles</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getKnownForTitles()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Title> knownForTitles;
+	/**
+	 * The cached value of the '{@link #getInvolvement() <em>Involvement</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInvolvement()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Involvement> involvement;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -202,6 +233,124 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 	 * @generated
 	 */
 	@Override
+	public EList<Title> getKnownForTitles() {
+		if (knownForTitles == null) {
+			knownForTitles = new EObjectResolvingEList<Title>(Title.class, this, ImdbPackage.PERSON__KNOWN_FOR_TITLES);
+		}
+		return knownForTitles;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<Involvement> getInvolvement() {
+		if (involvement == null) {
+			involvement = new EObjectWithInverseResolvingEList<Involvement>(Involvement.class, this, ImdbPackage.PERSON__INVOLVEMENT, ImdbPackage.INVOLVEMENT__PERSON);
+		}
+		return involvement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Imdb getImdb() {
+		if (eContainerFeatureID() != ImdbPackage.PERSON__IMDB) return null;
+		return (Imdb)eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetImdb(Imdb newImdb, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newImdb, ImdbPackage.PERSON__IMDB, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setImdb(Imdb newImdb) {
+		if (newImdb != eInternalContainer() || (eContainerFeatureID() != ImdbPackage.PERSON__IMDB && newImdb != null)) {
+			if (EcoreUtil.isAncestor(this, newImdb))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newImdb != null)
+				msgs = ((InternalEObject)newImdb).eInverseAdd(this, ImdbPackage.IMDB__PERSONS, Imdb.class, msgs);
+			msgs = basicSetImdb(newImdb, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ImdbPackage.PERSON__IMDB, newImdb, newImdb));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ImdbPackage.PERSON__INVOLVEMENT:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getInvolvement()).basicAdd(otherEnd, msgs);
+			case ImdbPackage.PERSON__IMDB:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetImdb((Imdb)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ImdbPackage.PERSON__INVOLVEMENT:
+				return ((InternalEList<?>)getInvolvement()).basicRemove(otherEnd, msgs);
+			case ImdbPackage.PERSON__IMDB:
+				return basicSetImdb(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+			case ImdbPackage.PERSON__IMDB:
+				return eInternalContainer().eInverseRemove(this, ImdbPackage.IMDB__PERSONS, Imdb.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case ImdbPackage.PERSON__NAME:
@@ -212,6 +361,12 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 				return getDeathYear();
 			case ImdbPackage.PERSON__PROFESSIONS:
 				return getProfessions();
+			case ImdbPackage.PERSON__KNOWN_FOR_TITLES:
+				return getKnownForTitles();
+			case ImdbPackage.PERSON__INVOLVEMENT:
+				return getInvolvement();
+			case ImdbPackage.PERSON__IMDB:
+				return getImdb();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -238,6 +393,17 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 				getProfessions().clear();
 				getProfessions().addAll((Collection<? extends String>)newValue);
 				return;
+			case ImdbPackage.PERSON__KNOWN_FOR_TITLES:
+				getKnownForTitles().clear();
+				getKnownForTitles().addAll((Collection<? extends Title>)newValue);
+				return;
+			case ImdbPackage.PERSON__INVOLVEMENT:
+				getInvolvement().clear();
+				getInvolvement().addAll((Collection<? extends Involvement>)newValue);
+				return;
+			case ImdbPackage.PERSON__IMDB:
+				setImdb((Imdb)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -262,6 +428,15 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 			case ImdbPackage.PERSON__PROFESSIONS:
 				getProfessions().clear();
 				return;
+			case ImdbPackage.PERSON__KNOWN_FOR_TITLES:
+				getKnownForTitles().clear();
+				return;
+			case ImdbPackage.PERSON__INVOLVEMENT:
+				getInvolvement().clear();
+				return;
+			case ImdbPackage.PERSON__IMDB:
+				setImdb((Imdb)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -282,6 +457,12 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 				return deathYear != DEATH_YEAR_EDEFAULT;
 			case ImdbPackage.PERSON__PROFESSIONS:
 				return professions != null && !professions.isEmpty();
+			case ImdbPackage.PERSON__KNOWN_FOR_TITLES:
+				return knownForTitles != null && !knownForTitles.isEmpty();
+			case ImdbPackage.PERSON__INVOLVEMENT:
+				return involvement != null && !involvement.isEmpty();
+			case ImdbPackage.PERSON__IMDB:
+				return getImdb() != null;
 		}
 		return super.eIsSet(featureID);
 	}

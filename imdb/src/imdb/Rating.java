@@ -19,7 +19,8 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see imdb.ImdbPackage#getRating()
- * @model
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='numberOfVotesConstraint averageRatingConstraint'"
+ *        annotation="http://www.eclipse.org/acceleo/query/1.0 averageRatingConstraint='self.averageRating &gt;= 1 and self.averageRating &lt;= 10' numberOfVotesConstraint='self.numberOfVotes &gt; 0'"
  * @generated
  */
 public interface Rating extends EObject {

@@ -12,7 +12,11 @@
       <genEnumLiterals ecoreEnumLiteral="imdb.ecore#//TitleType/TVEPISODE"/>
       <genEnumLiterals ecoreEnumLiteral="imdb.ecore#//TitleType/VIDEO"/>
     </genEnums>
-    <genClasses ecoreClass="imdb.ecore#//Imdb"/>
+    <genClasses ecoreClass="imdb.ecore#//Imdb">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference imdb.ecore#//Imdb/titles"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference imdb.ecore#//Imdb/genres"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference imdb.ecore#//Imdb/persons"/>
+    </genClasses>
     <genClasses ecoreClass="imdb.ecore#//Title">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute imdb.ecore#//Title/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute imdb.ecore#//Title/region"/>
@@ -22,6 +26,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute imdb.ecore#//Title/runtime"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference imdb.ecore#//Title/genres"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference imdb.ecore#//Title/rating"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference imdb.ecore#//Title/involvements"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference imdb.ecore#//Title/imdb"/>
     </genClasses>
     <genClasses ecoreClass="imdb.ecore#//TvSeries">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute imdb.ecore#//TvSeries/endYear"/>
@@ -34,6 +40,7 @@
     </genClasses>
     <genClasses ecoreClass="imdb.ecore#//Genre">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute imdb.ecore#//Genre/name"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference imdb.ecore#//Genre/imdb"/>
     </genClasses>
     <genClasses ecoreClass="imdb.ecore#//Rating">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute imdb.ecore#//Rating/averageRating"/>
@@ -45,7 +52,16 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute imdb.ecore#//Person/birthYear"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute imdb.ecore#//Person/deathYear"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute imdb.ecore#//Person/professions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference imdb.ecore#//Person/knownForTitles"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference imdb.ecore#//Person/involvement"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference imdb.ecore#//Person/imdb"/>
     </genClasses>
-    <genClasses ecoreClass="imdb.ecore#//Involvement"/>
+    <genClasses ecoreClass="imdb.ecore#//Involvement">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference imdb.ecore#//Involvement/title"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference imdb.ecore#//Involvement/person"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute imdb.ecore#//Involvement/jobCategory"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute imdb.ecore#//Involvement/job"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute imdb.ecore#//Involvement/character"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

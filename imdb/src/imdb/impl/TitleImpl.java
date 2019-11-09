@@ -3,7 +3,9 @@
 package imdb.impl;
 
 import imdb.Genre;
+import imdb.Imdb;
 import imdb.ImdbPackage;
+import imdb.Involvement;
 import imdb.Rating;
 import imdb.Title;
 import imdb.TitleType;
@@ -21,7 +23,10 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -39,6 +44,8 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link imdb.impl.TitleImpl#getRuntime <em>Runtime</em>}</li>
  *   <li>{@link imdb.impl.TitleImpl#getGenres <em>Genres</em>}</li>
  *   <li>{@link imdb.impl.TitleImpl#getRating <em>Rating</em>}</li>
+ *   <li>{@link imdb.impl.TitleImpl#getInvolvements <em>Involvements</em>}</li>
+ *   <li>{@link imdb.impl.TitleImpl#getImdb <em>Imdb</em>}</li>
  * </ul>
  *
  * @generated
@@ -183,6 +190,16 @@ public class TitleImpl extends MinimalEObjectImpl.Container implements Title {
 	 * @ordered
 	 */
 	protected Rating rating;
+
+	/**
+	 * The cached value of the '{@link #getInvolvements() <em>Involvements</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInvolvements()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Involvement> involvements;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -405,12 +422,75 @@ public class TitleImpl extends MinimalEObjectImpl.Container implements Title {
 	 * @generated
 	 */
 	@Override
+	public EList<Involvement> getInvolvements() {
+		if (involvements == null) {
+			involvements = new EObjectContainmentWithInverseEList<Involvement>(Involvement.class, this, ImdbPackage.TITLE__INVOLVEMENTS, ImdbPackage.INVOLVEMENT__TITLE);
+		}
+		return involvements;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Imdb getImdb() {
+		if (eContainerFeatureID() != ImdbPackage.TITLE__IMDB) return null;
+		return (Imdb)eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetImdb(Imdb newImdb, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newImdb, ImdbPackage.TITLE__IMDB, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setImdb(Imdb newImdb) {
+		if (newImdb != eInternalContainer() || (eContainerFeatureID() != ImdbPackage.TITLE__IMDB && newImdb != null)) {
+			if (EcoreUtil.isAncestor(this, newImdb))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newImdb != null)
+				msgs = ((InternalEObject)newImdb).eInverseAdd(this, ImdbPackage.IMDB__TITLES, Imdb.class, msgs);
+			msgs = basicSetImdb(newImdb, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ImdbPackage.TITLE__IMDB, newImdb, newImdb));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case ImdbPackage.TITLE__RATING:
 				if (rating != null)
 					msgs = ((InternalEObject)rating).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ImdbPackage.TITLE__RATING, null, msgs);
 				return basicSetRating((Rating)otherEnd, msgs);
+			case ImdbPackage.TITLE__INVOLVEMENTS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getInvolvements()).basicAdd(otherEnd, msgs);
+			case ImdbPackage.TITLE__IMDB:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetImdb((Imdb)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -425,8 +505,26 @@ public class TitleImpl extends MinimalEObjectImpl.Container implements Title {
 		switch (featureID) {
 			case ImdbPackage.TITLE__RATING:
 				return basicSetRating(null, msgs);
+			case ImdbPackage.TITLE__INVOLVEMENTS:
+				return ((InternalEList<?>)getInvolvements()).basicRemove(otherEnd, msgs);
+			case ImdbPackage.TITLE__IMDB:
+				return basicSetImdb(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+			case ImdbPackage.TITLE__IMDB:
+				return eInternalContainer().eInverseRemove(this, ImdbPackage.IMDB__TITLES, Imdb.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
 
 	/**
@@ -453,6 +551,10 @@ public class TitleImpl extends MinimalEObjectImpl.Container implements Title {
 				return getGenres();
 			case ImdbPackage.TITLE__RATING:
 				return getRating();
+			case ImdbPackage.TITLE__INVOLVEMENTS:
+				return getInvolvements();
+			case ImdbPackage.TITLE__IMDB:
+				return getImdb();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -491,6 +593,13 @@ public class TitleImpl extends MinimalEObjectImpl.Container implements Title {
 			case ImdbPackage.TITLE__RATING:
 				setRating((Rating)newValue);
 				return;
+			case ImdbPackage.TITLE__INVOLVEMENTS:
+				getInvolvements().clear();
+				getInvolvements().addAll((Collection<? extends Involvement>)newValue);
+				return;
+			case ImdbPackage.TITLE__IMDB:
+				setImdb((Imdb)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -527,6 +636,12 @@ public class TitleImpl extends MinimalEObjectImpl.Container implements Title {
 			case ImdbPackage.TITLE__RATING:
 				setRating((Rating)null);
 				return;
+			case ImdbPackage.TITLE__INVOLVEMENTS:
+				getInvolvements().clear();
+				return;
+			case ImdbPackage.TITLE__IMDB:
+				setImdb((Imdb)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -555,6 +670,10 @@ public class TitleImpl extends MinimalEObjectImpl.Container implements Title {
 				return genres != null && !genres.isEmpty();
 			case ImdbPackage.TITLE__RATING:
 				return rating != null;
+			case ImdbPackage.TITLE__INVOLVEMENTS:
+				return involvements != null && !involvements.isEmpty();
+			case ImdbPackage.TITLE__IMDB:
+				return getImdb() != null;
 		}
 		return super.eIsSet(featureID);
 	}
