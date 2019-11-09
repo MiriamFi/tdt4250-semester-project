@@ -1,7 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="imdb" nsURI="http://no/ntnu/tdt4250/imdb" nsPrefix="no.ntnu.tdt4250.imdb">
-  <eClassifiers xsi:type="ecore:EClass" name="Movie">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Imdb">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="titles" upperBound="-1"
+        eType="#//Title" containment="true" eOpposite="#//Title/imdb"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="genres" upperBound="-1"
+        eType="#//Genre" containment="true" eOpposite="#//Genre/imdb"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="persons" upperBound="-1"
+        eType="#//Person" containment="true" eOpposite="#//Person/imdb"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Title">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="region" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="language" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="titleType" lowerBound="1"
+        eType="#//TitleType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="startYear" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="runtime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="genres" upperBound="3"
+        eType="#//Genre"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rating" eType="#//Rating"
+        containment="true" eOpposite="#//Rating/title"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="people" upperBound="-1"
+        eType="#//Involvement" containment="true" eOpposite="#//Involvement/title"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="imdb" eType="#//Imdb" eOpposite="#//Imdb/titles"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TvSeries" eSuperTypes="#//Title">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="endYear" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="episodes" upperBound="-1"
+        eType="#//Episode" containment="true" eOpposite="#//Episode/series"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Episode" eSuperTypes="#//Title">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="series" lowerBound="1"
+        eType="#//TvSeries" eOpposite="#//TvSeries/episodes"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="seasonNumber" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="episodeNumber" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Genre">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="imdb" eType="#//Imdb" eOpposite="#//Imdb/genres"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Rating">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="averageRating" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfVotes" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="title" lowerBound="1" eType="#//Title"
+        eOpposite="#//Title/rating"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Person">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="birthYear" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="deathYear" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="professions" upperBound="3"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="knownForTitles" upperBound="-1"
+        eType="#//Title"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="involvement" upperBound="-1"
+        eType="#//Involvement" eOpposite="#//Involvement/person"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="imdb" eType="#//Imdb" eOpposite="#//Imdb/persons"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Involvement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="title" lowerBound="1" eType="#//Title"
+        eOpposite="#//Title/people"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="person" lowerBound="1"
+        eType="#//Person" eOpposite="#//Person/involvement"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="jobCategory" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="job" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="character" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="TitleType">
+    <eLiterals name="MOVIE"/>
+    <eLiterals name="SHORT" value="1"/>
+    <eLiterals name="TVSERIES" value="2"/>
+    <eLiterals name="TVEPISODE" value="3"/>
+    <eLiterals name="VIDEO" value="4"/>
   </eClassifiers>
 </ecore:EPackage>

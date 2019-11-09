@@ -22,13 +22,76 @@ public interface ImdbFactory extends EFactory {
 	ImdbFactory eINSTANCE = imdb.impl.ImdbFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Movie</em>'.
+	 * Returns a new object of class '<em>Imdb</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Movie</em>'.
+	 * @return a new object of class '<em>Imdb</em>'.
 	 * @generated
 	 */
-	Movie createMovie();
+	Imdb createImdb();
+
+	/**
+	 * Returns a new object of class '<em>Title</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Title</em>'.
+	 * @generated
+	 */
+	Title createTitle();
+
+	/**
+	 * Returns a new object of class '<em>Tv Series</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Tv Series</em>'.
+	 * @generated
+	 */
+	TvSeries createTvSeries();
+
+	/**
+	 * Returns a new object of class '<em>Person</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Person</em>'.
+	 * @generated
+	 */
+	Person createPerson();
+
+	/**
+	 * Returns a new object of class '<em>Genre</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Genre</em>'.
+	 * @generated
+	 */
+	Genre createGenre();
+
+	/**
+	 * Returns a new object of class '<em>Episode</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Episode</em>'.
+	 * @generated
+	 */
+	Episode createEpisode();
+
+	/**
+	 * Returns a new object of class '<em>Rating</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Rating</em>'.
+	 * @generated
+	 */
+	Rating createRating();
+
+	/**
+	 * Returns a new object of class '<em>Involvement</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Involvement</em>'.
+	 * @generated
+	 */
+	Involvement createInvolvement();
 
 	/**
 	 * Returns the package supported by this factory.
