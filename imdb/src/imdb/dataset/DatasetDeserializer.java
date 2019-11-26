@@ -19,7 +19,7 @@ import imdb.TitleType;
 public class DatasetDeserializer {
 	
 	
-	public static final String outputXmiFilePath = "output.xmi";
+	public static final String outputXmiFilePath = "src/imdb/dataset/output.xmi";
 	private static Imdb imdb;
 	
 	
@@ -28,7 +28,10 @@ public class DatasetDeserializer {
 		System.out.println("Hello World");
 		DatasetDeserializer.deserialize();
 
+		System.out.println("");
 		System.out.println("Hello Overworld");
+		serializeToXMI(outputXmiFilePath);
+		System.out.println("Hello Overoverworld");
 		
 	}
 	
@@ -45,6 +48,7 @@ public class DatasetDeserializer {
 		
 		
 		deserializeSubsetBasics();
+		
 	}
 	
 	
@@ -128,7 +132,7 @@ public class DatasetDeserializer {
 	}
 	
 	
-	public static void serializeToXMI(String file) {
+	public static void serializeToXMI(String filepath) {
 		ResourceSet resourceSet = new ResourceSetImpl();
 		/*
 		* Register XML Factory implementation using DEFAULT_EXTENSION
@@ -139,12 +143,12 @@ public class DatasetDeserializer {
 		/*
 		* Create empty resource with the given URI
 		*/
-		Resource resource = resourceSet.createResource(URI.createURI("./bookStore.xml"));
+		Resource resource = resourceSet.createResource(URI.createURI(filepath));
 		 
 		/*
 		* Add instances to contents list of the resource 
 		*/
-		//resource.getContents().add();
+		resource.getContents().add(imdb);
 		 
 		try{
 		    /*
