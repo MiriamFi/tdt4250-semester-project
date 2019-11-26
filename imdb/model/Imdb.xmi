@@ -5,70 +5,143 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:no.ntnu.tdt4250.imdb="http://no/ntnu/tdt4250/imdb"
     xsi:schemaLocation="http://no/ntnu/tdt4250/imdb imdb.ecore">
-  <titles name="Scary scare"
+  <titles name="Star Wars Episode IV: A New Hope"
       region="US"
-      language="english"
-      startYear="2010"
-      runtime="123"
-      genres="//@genres.0 //@genres.3">
-    <rating
-        averageRating="5.5"
-        numberOfVotes="345"/>
+      language="English"
+      startYear="1977"
+      runtime="121"
+      titleID="tt0076759">
+    <involvements
+        person="//@persons.0"
+        job="Actor"
+        character="Luke Skywalker"/>
     <involvements
         person="//@persons.1"
-        jobCategory="actor"
-        job="acting"
-        character="Old man"/>
-  </titles>
-  <titles xsi:type="no.ntnu.tdt4250.imdb:TvSeries"
-      name="that soap opera"
-      region="US"
-      language="english"
-      titleType="TVSERIES"
-      startYear="2000"
-      runtime="24"
-      genres="//@genres.1 //@genres.3"
-      endYear="2009">
-    <rating
-        averageRating="7.5"
-        numberOfVotes="456789"/>
+        job="Actor"
+        character="Han Solo"/>
     <involvements
         person="//@persons.2"
-        jobCategory="actress"
-        job="acting"
-        character="lady"/>
-    <episodes
-        name="The one with me"
-        region="US"
-        language="english"
-        startYear="2003"
-        runtime="45"
-        genres="//@genres.4"
-        seasonNumber="2"
-        episodeNumber="5"/>
+        job="Actress"
+        character="Princess Leia Organa"/>
+    <involvements
+        person="//@persons.3"
+        job="Actor"
+        character="Grand Moff Tarkin"/>
+    <involvements
+        person="//@persons.4"
+        job="Actor"
+        character="Alec Guinness"/>
+    <genre>Action</genre>
+    <genre>Fantasy</genre>
+    <genre>Adventure</genre>
   </titles>
-  <genres name="horror"/>
-  <genres name="romance"/>
-  <genres name="action"/>
-  <genres name="comedy"/>
-  <genres name="fantasy"/>
-  <persons name="Anna Faraway"
-      birthYear="1990"
-      deathYear="-1">
-    <professions>actor</professions>
-    <professions>director</professions>
-    <professions>musician</professions>
+  <titles name="Star Wars: Episode V - The Empire Strikes Back"
+      region="US"
+      language="English"
+      startYear="1980"
+      runtime="124"
+      titleID="tt0080684">
+    <involvements
+        person="//@persons.0"
+        job="Actor"
+        character="Luke Skywalker"/>
+    <involvements
+        person="//@persons.1"
+        job="Actor"
+        character="Han Solo"/>
+    <involvements
+        person="//@persons.2"
+        job="Actress"
+        character="Princess Leia"/>
+    <genre>Action</genre>
+    <genre>Adventure</genre>
+    <genre>Fantasy</genre>
+  </titles>
+  <titles name="Alien"
+      region="US"
+      language="English"
+      startYear="1979"
+      runtime="117"
+      titleID="tt0078748">
+    <involvements
+        person="//@persons.5"
+        job="Actor"
+        character="Dallas"/>
+    <involvements
+        person="//@persons.6"
+        job="Actress"
+        character="Ripley"/>
+    <involvements
+        person="//@persons.7"
+        job="Actress"
+        character="Lambert"/>
+    <genre>Horror</genre>
+    <genre>Sci-Fi</genre>
+  </titles>
+  <persons name="Mark Hamill"
+      birthYear="1951"
+      knownForTitles="//@titles.0 //@titles.1"
+      involvement="//@titles.0/@involvements.0 //@titles.1/@involvements.0">
+    <professions>Actor</professions>
+    <professions>Producer</professions>
+    <professions>Soundtrack</professions>
   </persons>
-  <persons name="Brad Bit"
-      birthYear="1970"
-      deathYear="-1"
-      involvement="//@titles.0/@involvements.0">
-    <professions>writer</professions>
+  <persons name="Harrison Ford"
+      birthYear="1942"
+      knownForTitles="//@titles.0 //@titles.1"
+      involvement="//@titles.0/@involvements.1 //@titles.1/@involvements.1">
+    <professions>Actor</professions>
+    <professions>Writer</professions>
+    <professions>Producer</professions>
   </persons>
-  <persons name="Mary Mandarin"
-      birthYear="1940"
-      deathYear="2010"
-      involvement="//@titles.1/@involvements.0">
-    <professions>actress</professions>
+  <persons name="Carrie Fisher"
+      birthYear="1956"
+      deathYear="2016"
+      knownForTitles="//@titles.0 //@titles.1"
+      involvement="//@titles.0/@involvements.2 //@titles.1/@involvements.2">
+    <professions>Actress</professions>
+    <professions>Soundtrack</professions>
+    <professions>Writer</professions>
+  </persons>
+  <persons name="Peter Cushing"
+      birthYear="1913"
+      deathYear="1994"
+      knownForTitles="//@titles.0"
+      involvement="//@titles.0/@involvements.3">
+    <professions>Actor</professions>
+    <professions>Art_department</professions>
+    <professions>Soundtrack</professions>
+  </persons>
+  <persons name="Alec Guinness"
+      birthYear="1914"
+      deathYear="2000"
+      knownForTitles="//@titles.0"
+      involvement="//@titles.0/@involvements.4">
+    <professions>Actor</professions>
+    <professions>Soundtrack</professions>
+    <professions>Writer</professions>
+  </persons>
+  <persons name="Tom Skerritt"
+      birthYear="1933"
+      knownForTitles="//@titles.2"
+      involvement="//@titles.2/@involvements.0">
+    <professions>Actor</professions>
+    <professions>Director</professions>
+    <professions>Producer</professions>
+  </persons>
+  <persons name="Sigourney Weaver"
+      birthYear="1949"
+      knownForTitles="//@titles.2"
+      involvement="//@titles.2/@involvements.1">
+    <professions>Actress</professions>
+    <professions>Soundtrack</professions>
+    <professions>Producer</professions>
+  </persons>
+  <persons name="Veronica Cartwright"
+      birthYear="1949"
+      knownForTitles="//@titles.2"
+      involvement="//@titles.2/@involvements.2">
+    <professions>Actress</professions>
+    <professions>Soundtrack</professions>
   </persons>
 </no.ntnu.tdt4250.imdb:Imdb>
