@@ -8,7 +8,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="titles" upperBound="-1"
         eType="#//Title" containment="true" eOpposite="#//Title/imdb"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="genres" upperBound="-1"
-        eType="#//Genre" containment="true" eOpposite="#//Genre/imdb"/>
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="persons" upperBound="-1"
         eType="#//Person" containment="true" eOpposite="#//Person/imdb"/>
   </eClassifiers>
@@ -27,13 +27,14 @@
         eType="#//TitleType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="startYear" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="runtime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="genres" upperBound="3"
-        eType="#//Genre"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="genres" upperBound="3"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="rating" eType="#//Rating"
         containment="true" eOpposite="#//Rating/title"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="involvements" upperBound="-1"
         eType="#//Involvement" containment="true" eOpposite="#//Involvement/title"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="imdb" eType="#//Imdb" eOpposite="#//Imdb/titles"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="genre" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TvSeries" eSuperTypes="#//Title">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
@@ -60,10 +61,6 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="episodeNumber" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Genre">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="imdb" eType="#//Imdb" eOpposite="#//Imdb/genres"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Rating">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
