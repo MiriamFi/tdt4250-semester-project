@@ -39,6 +39,7 @@
       <details key="constraints" value="endYearConstraint hasTitleTypeTvseries"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/acceleo/query/1.0">
+      <details key="titleTypeConstraint" value="self.titleType = TitleType::TVSERIES"/>
       <details key="endYearConstraint" value="self.endYear > 0 and self.endYear &lt;= 2050 and self.endYear >= self.startYear"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="endYear" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -50,6 +51,7 @@
       <details key="constraints" value="seasonNumberConstraint episodeNumberConstraint"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/acceleo/query/1.0">
+      <details key="titleTypeConstraint" value="self.titleType = TitleType::TVEPISODE"/>
       <details key="seasonNumberConstraint" value="self.seasonNumber> 0"/>
       <details key="episodeNumberConstraint" value="self.episodeNumber> 0"/>
     </eAnnotations>
