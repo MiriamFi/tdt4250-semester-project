@@ -27,6 +27,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference imdb.ecore#//Title/involvements"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference imdb.ecore#//Title/imdb"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute imdb.ecore#//Title/genre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute imdb.ecore#//Title/titleID"/>
     </genClasses>
     <genClasses ecoreClass="imdb.ecore#//TvSeries">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute imdb.ecore#//TvSeries/endYear"/>
