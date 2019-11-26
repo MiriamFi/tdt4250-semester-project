@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:no.ntnu.tdt4250.imdb="http://no/ntnu/tdt4250/imdb" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+  <viewpoint:DAnalysis uid="_mU7fsBAsEeqwO9cZgSHscw" selectedViews="_SfSfEBA5Eeq07ZXfmbuGdw" version="14.1.0.201810161215">
+    <semanticResources>Imdb.imdb</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" uid="_SfSfEBA5Eeq07ZXfmbuGdw">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_UyoasBA5Eeq07ZXfmbuGdw" name="imdb diagram" repPath="#_Uxa5wBA5Eeq07ZXfmbuGdw">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']"/>
+        <target xmi:type="no.ntnu.tdt4250.imdb:Imdb" href="Imdb.imdb#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+  </viewpoint:DAnalysis>
+  <diagram:DSemanticDiagram uid="_Uxa5wBA5Eeq07ZXfmbuGdw" name="imdb diagram">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_UyepsxA5Eeq07ZXfmbuGdw" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_UyeptBA5Eeq07ZXfmbuGdw"/>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_UzR68BA5Eeq07ZXfmbuGdw" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_UzR68RA5Eeq07ZXfmbuGdw" type="Sirius" element="_Uxa5wBA5Eeq07ZXfmbuGdw" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_Uzlc8BA5Eeq07ZXfmbuGdw" type="2001" element="_UyOyEBA5Eeq07ZXfmbuGdw">
+          <children xmi:type="notation:Node" xmi:id="_Uzum4BA5Eeq07ZXfmbuGdw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_Uzum4RA5Eeq07ZXfmbuGdw" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_U0Bh1RA5Eeq07ZXfmbuGdw" type="3003" element="_UyU4sBA5Eeq07ZXfmbuGdw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_U0Bh1hA5Eeq07ZXfmbuGdw" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_U0Bh1xA5Eeq07ZXfmbuGdw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_Uzlc8RA5Eeq07ZXfmbuGdw" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Uzlc8hA5Eeq07ZXfmbuGdw" x="-39" y="-142" width="100" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_U0Bh0BA5Eeq07ZXfmbuGdw" type="2001" element="_UyepsBA5Eeq07ZXfmbuGdw">
+          <children xmi:type="notation:Node" xmi:id="_U0Bh0xA5Eeq07ZXfmbuGdw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_U0Bh1BA5Eeq07ZXfmbuGdw" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_U0Bh2BA5Eeq07ZXfmbuGdw" type="3003" element="_UyepsRA5Eeq07ZXfmbuGdw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_U0Bh2RA5Eeq07ZXfmbuGdw" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_U0Bh2hA5Eeq07ZXfmbuGdw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_U0Bh0RA5Eeq07ZXfmbuGdw" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_U0Bh0hA5Eeq07ZXfmbuGdw" x="372" y="84" width="283" height="238"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_UxmDcBA6Eeq07ZXfmbuGdw" type="2001" element="_UvwQYRA6Eeq07ZXfmbuGdw">
+          <children xmi:type="notation:Node" xmi:id="_UxnRkBA6Eeq07ZXfmbuGdw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_UxnRkRA6Eeq07ZXfmbuGdw" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_pP4skBA6Eeq07ZXfmbuGdw" type="3016" element="_pNzo8BA6Eeq07ZXfmbuGdw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_pP4skRA6Eeq07ZXfmbuGdw" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pP4skhA6Eeq07ZXfmbuGdw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_UxmDcRA6Eeq07ZXfmbuGdw" fontName="Segoe UI"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UxmDchA6Eeq07ZXfmbuGdw" x="96" y="138" width="127" height="109"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_Uxn4oBA6Eeq07ZXfmbuGdw" type="2001" element="_Uvw3cBA6Eeq07ZXfmbuGdw">
+          <children xmi:type="notation:Node" xmi:id="_Uxpt0BA6Eeq07ZXfmbuGdw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_Uxpt0RA6Eeq07ZXfmbuGdw" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_pP5ToBA6Eeq07ZXfmbuGdw" type="3016" element="_pN0QARA6Eeq07ZXfmbuGdw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_pP5ToRA6Eeq07ZXfmbuGdw" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pP5TohA6Eeq07ZXfmbuGdw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_Uxn4oRA6Eeq07ZXfmbuGdw" fontName="Segoe UI"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Uxn4ohA6Eeq07ZXfmbuGdw" x="720" y="-78" width="259" height="175"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_UxqU4BA6Eeq07ZXfmbuGdw" type="2001" element="_UvxegBA6Eeq07ZXfmbuGdw">
+          <children xmi:type="notation:Node" xmi:id="_Uxq78BA6Eeq07ZXfmbuGdw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_Uxq78RA6Eeq07ZXfmbuGdw" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_pP56sBA6Eeq07ZXfmbuGdw" type="3016" element="_pN03EBA6Eeq07ZXfmbuGdw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_pP56sRA6Eeq07ZXfmbuGdw" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pP56shA6Eeq07ZXfmbuGdw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_UxqU4RA6Eeq07ZXfmbuGdw" fontName="Segoe UI"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UxqU4hA6Eeq07ZXfmbuGdw" x="-73" y="-14" width="139" height="122"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_Sf37oBA-Eeq07ZXfmbuGdw" type="2001" element="_SemwUBA-Eeq07ZXfmbuGdw">
+          <children xmi:type="notation:Node" xmi:id="_Sf4isBA-Eeq07ZXfmbuGdw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_Sf4isRA-Eeq07ZXfmbuGdw" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Sf5JwBA-Eeq07ZXfmbuGdw" type="3003" element="_SemwURA-Eeq07ZXfmbuGdw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_Sf5JwRA-Eeq07ZXfmbuGdw" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Sf5JwhA-Eeq07ZXfmbuGdw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_Sf37oRA-Eeq07ZXfmbuGdw" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Sf37ohA-Eeq07ZXfmbuGdw" x="204" y="-93" width="151" height="139"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_UzR68hA5Eeq07ZXfmbuGdw"/>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_UyOyEBA5Eeq07ZXfmbuGdw" name="Scary scare" width="10" height="5" resizeKind="NSEW">
+      <target xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.0"/>
+      <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.0"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_UyU4sBA5Eeq07ZXfmbuGdw" labelSize="12" labelPosition="node" width="10" height="5" color="194,239,255">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@nodeMappings[name='TitleNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@nodeMappings[name='TitleNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_UyepsBA5Eeq07ZXfmbuGdw" name="that soap opera" width="10" height="5" resizeKind="NSEW">
+      <target xmi:type="no.ntnu.tdt4250.imdb:TvSeries" href="Imdb.imdb#//@titles.1"/>
+      <semanticElements xmi:type="no.ntnu.tdt4250.imdb:TvSeries" href="Imdb.imdb#//@titles.1"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_UyepsRA5Eeq07ZXfmbuGdw" labelSize="12" labelPosition="node" width="10" height="5" color="194,239,255">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@nodeMappings[name='TitleNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@nodeMappings[name='TitleNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_UvwQYRA6Eeq07ZXfmbuGdw" name="Anna Faraway" width="10" height="5" resizeKind="NSEW">
+      <target xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.0"/>
+      <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Ellipse" uid="_pNzo8BA6Eeq07ZXfmbuGdw" labelSize="12" labelPosition="node" horizontalDiameter="10" verticalDiameter="5" color="238,201,142">
+        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@nodeMappings[name='PersonNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@nodeMappings[name='PersonNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_Uvw3cBA6Eeq07ZXfmbuGdw" name="Brad Bit" width="10" height="5" resizeKind="NSEW">
+      <target xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.1"/>
+      <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.1"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Ellipse" uid="_pN0QARA6Eeq07ZXfmbuGdw" labelSize="12" labelPosition="node" horizontalDiameter="10" verticalDiameter="5" color="238,201,142">
+        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@nodeMappings[name='PersonNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@nodeMappings[name='PersonNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_UvxegBA6Eeq07ZXfmbuGdw" name="Mary Mandarin" width="10" height="5" resizeKind="NSEW">
+      <target xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.2"/>
+      <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.2"/>
+      <ownedStyle xmi:type="diagram:Ellipse" uid="_pN03EBA6Eeq07ZXfmbuGdw" labelSize="12" labelPosition="node" horizontalDiameter="10" verticalDiameter="5" color="238,201,142">
+        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@nodeMappings[name='PersonNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@nodeMappings[name='PersonNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_SemwUBA-Eeq07ZXfmbuGdw" name="that soap opera" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="no.ntnu.tdt4250.imdb:TvSeries" href="Imdb.imdb#//@titles.1"/>
+      <semanticElements xmi:type="no.ntnu.tdt4250.imdb:TvSeries" href="Imdb.imdb#//@titles.1"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_SemwURA-Eeq07ZXfmbuGdw" labelSize="12" labelPosition="node" color="239,41,41">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@nodeMappings[name='TvseriesNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@nodeMappings[name='TvseriesNode']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_UxoVIBA5Eeq07ZXfmbuGdw"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer"/>
+    <target xmi:type="no.ntnu.tdt4250.imdb:Imdb" href="Imdb.imdb#/"/>
+  </diagram:DSemanticDiagram>
+</xmi:XMI>
