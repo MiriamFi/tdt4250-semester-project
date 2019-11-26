@@ -68,8 +68,36 @@ public class ImdbAdapterFactory extends AdapterFactoryImpl {
 	protected ImdbSwitch<Adapter> modelSwitch =
 		new ImdbSwitch<Adapter>() {
 			@Override
-			public Adapter caseMovie(Movie object) {
-				return createMovieAdapter();
+			public Adapter caseImdb(Imdb object) {
+				return createImdbAdapter();
+			}
+			@Override
+			public Adapter caseTitle(Title object) {
+				return createTitleAdapter();
+			}
+			@Override
+			public Adapter caseTvSeries(TvSeries object) {
+				return createTvSeriesAdapter();
+			}
+			@Override
+			public Adapter caseEpisode(Episode object) {
+				return createEpisodeAdapter();
+			}
+			@Override
+			public Adapter caseGenre(Genre object) {
+				return createGenreAdapter();
+			}
+			@Override
+			public Adapter caseRating(Rating object) {
+				return createRatingAdapter();
+			}
+			@Override
+			public Adapter casePerson(Person object) {
+				return createPersonAdapter();
+			}
+			@Override
+			public Adapter caseInvolvement(Involvement object) {
+				return createInvolvementAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -92,16 +120,114 @@ public class ImdbAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link imdb.Movie <em>Movie</em>}'.
+	 * Creates a new adapter for an object of class '{@link imdb.Imdb <em>Imdb</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see imdb.Movie
+	 * @see imdb.Imdb
 	 * @generated
 	 */
-	public Adapter createMovieAdapter() {
+	public Adapter createImdbAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link imdb.Title <em>Title</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see imdb.Title
+	 * @generated
+	 */
+	public Adapter createTitleAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link imdb.TvSeries <em>Tv Series</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see imdb.TvSeries
+	 * @generated
+	 */
+	public Adapter createTvSeriesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link imdb.Person <em>Person</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see imdb.Person
+	 * @generated
+	 */
+	public Adapter createPersonAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link imdb.Genre <em>Genre</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see imdb.Genre
+	 * @generated
+	 */
+	public Adapter createGenreAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link imdb.Episode <em>Episode</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see imdb.Episode
+	 * @generated
+	 */
+	public Adapter createEpisodeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link imdb.Rating <em>Rating</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see imdb.Rating
+	 * @generated
+	 */
+	public Adapter createRatingAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link imdb.Involvement <em>Involvement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see imdb.Involvement
+	 * @generated
+	 */
+	public Adapter createInvolvementAdapter() {
 		return null;
 	}
 

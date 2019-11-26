@@ -5,6 +5,7 @@ package imdb.impl;
 import imdb.*;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -56,7 +57,14 @@ public class ImdbFactoryImpl extends EFactoryImpl implements ImdbFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case ImdbPackage.MOVIE: return createMovie();
+			case ImdbPackage.IMDB: return createImdb();
+			case ImdbPackage.TITLE: return createTitle();
+			case ImdbPackage.TV_SERIES: return createTvSeries();
+			case ImdbPackage.EPISODE: return createEpisode();
+			case ImdbPackage.GENRE: return createGenre();
+			case ImdbPackage.RATING: return createRating();
+			case ImdbPackage.PERSON: return createPerson();
+			case ImdbPackage.INVOLVEMENT: return createInvolvement();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -68,9 +76,136 @@ public class ImdbFactoryImpl extends EFactoryImpl implements ImdbFactory {
 	 * @generated
 	 */
 	@Override
-	public Movie createMovie() {
-		MovieImpl movie = new MovieImpl();
-		return movie;
+	public Object createFromString(EDataType eDataType, String initialValue) {
+		switch (eDataType.getClassifierID()) {
+			case ImdbPackage.TITLE_TYPE:
+				return createTitleTypeFromString(eDataType, initialValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String convertToString(EDataType eDataType, Object instanceValue) {
+		switch (eDataType.getClassifierID()) {
+			case ImdbPackage.TITLE_TYPE:
+				return convertTitleTypeToString(eDataType, instanceValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Imdb createImdb() {
+		ImdbImpl imdb = new ImdbImpl();
+		return imdb;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Title createTitle() {
+		TitleImpl title = new TitleImpl();
+		return title;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public TvSeries createTvSeries() {
+		TvSeriesImpl tvSeries = new TvSeriesImpl();
+		return tvSeries;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Person createPerson() {
+		PersonImpl person = new PersonImpl();
+		return person;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Genre createGenre() {
+		GenreImpl genre = new GenreImpl();
+		return genre;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Episode createEpisode() {
+		EpisodeImpl episode = new EpisodeImpl();
+		return episode;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Rating createRating() {
+		RatingImpl rating = new RatingImpl();
+		return rating;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Involvement createInvolvement() {
+		InvolvementImpl involvement = new InvolvementImpl();
+		return involvement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TitleType createTitleTypeFromString(EDataType eDataType, String initialValue) {
+		TitleType result = TitleType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertTitleTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**
