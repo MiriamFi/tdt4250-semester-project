@@ -58,15 +58,6 @@ public interface ImdbFactory extends EFactory {
 	Person createPerson();
 
 	/**
-	 * Returns a new object of class '<em>Genre</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Genre</em>'.
-	 * @generated
-	 */
-	Genre createGenre();
-
-	/**
 	 * Returns a new object of class '<em>Episode</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

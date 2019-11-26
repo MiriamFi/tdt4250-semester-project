@@ -94,8 +94,6 @@ public class ImdbValidator extends EObjectValidator {
 				return validateTvSeries((TvSeries)value, diagnostics, context);
 			case ImdbPackage.EPISODE:
 				return validateEpisode((Episode)value, diagnostics, context);
-			case ImdbPackage.GENRE:
-				return validateGenre((Genre)value, diagnostics, context);
 			case ImdbPackage.RATING:
 				return validateRating((Rating)value, diagnostics, context);
 			case ImdbPackage.PERSON:
@@ -353,15 +351,6 @@ public class ImdbValidator extends EObjectValidator {
 				 Diagnostic.ERROR,
 				 DIAGNOSTIC_SOURCE,
 				 0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateGenre(Genre genre, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(genre, diagnostics, context);
 	}
 
 	/**
