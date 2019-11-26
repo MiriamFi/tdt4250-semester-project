@@ -359,16 +359,6 @@ public interface ImdbPackage extends EPackage {
 	int TV_SERIES_OPERATION_COUNT = TITLE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link imdb.impl.PersonImpl <em>Person</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see imdb.impl.PersonImpl
-	 * @see imdb.impl.ImdbPackageImpl#getPerson()
-	 * @generated
-	 */
-	int PERSON = 5;
-
-	/**
 	 * The meta object id for the '{@link imdb.impl.EpisodeImpl <em>Episode</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -567,6 +557,16 @@ public interface ImdbPackage extends EPackage {
 	 * @ordered
 	 */
 	int RATING_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link imdb.impl.PersonImpl <em>Person</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see imdb.impl.PersonImpl
+	 * @see imdb.impl.ImdbPackageImpl#getPerson()
+	 * @generated
+	 */
+	int PERSON = 5;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -927,6 +927,92 @@ public interface ImdbPackage extends EPackage {
 	EReference getTvSeries_Episodes();
 
 	/**
+	 * Returns the meta object for class '{@link imdb.Episode <em>Episode</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Episode</em>'.
+	 * @see imdb.Episode
+	 * @generated
+	 */
+	EClass getEpisode();
+
+	/**
+	 * Returns the meta object for the container reference '{@link imdb.Episode#getSeries <em>Series</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Series</em>'.
+	 * @see imdb.Episode#getSeries()
+	 * @see #getEpisode()
+	 * @generated
+	 */
+	EReference getEpisode_Series();
+
+	/**
+	 * Returns the meta object for the attribute '{@link imdb.Episode#getSeasonNumber <em>Season Number</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Season Number</em>'.
+	 * @see imdb.Episode#getSeasonNumber()
+	 * @see #getEpisode()
+	 * @generated
+	 */
+	EAttribute getEpisode_SeasonNumber();
+
+	/**
+	 * Returns the meta object for the attribute '{@link imdb.Episode#getEpisodeNumber <em>Episode Number</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Episode Number</em>'.
+	 * @see imdb.Episode#getEpisodeNumber()
+	 * @see #getEpisode()
+	 * @generated
+	 */
+	EAttribute getEpisode_EpisodeNumber();
+
+	/**
+	 * Returns the meta object for class '{@link imdb.Rating <em>Rating</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Rating</em>'.
+	 * @see imdb.Rating
+	 * @generated
+	 */
+	EClass getRating();
+
+	/**
+	 * Returns the meta object for the attribute '{@link imdb.Rating#getAverageRating <em>Average Rating</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Average Rating</em>'.
+	 * @see imdb.Rating#getAverageRating()
+	 * @see #getRating()
+	 * @generated
+	 */
+	EAttribute getRating_AverageRating();
+
+	/**
+	 * Returns the meta object for the attribute '{@link imdb.Rating#getNumberOfVotes <em>Number Of Votes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Number Of Votes</em>'.
+	 * @see imdb.Rating#getNumberOfVotes()
+	 * @see #getRating()
+	 * @generated
+	 */
+	EAttribute getRating_NumberOfVotes();
+
+	/**
+	 * Returns the meta object for the container reference '{@link imdb.Rating#getTitle <em>Title</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Title</em>'.
+	 * @see imdb.Rating#getTitle()
+	 * @see #getRating()
+	 * @generated
+	 */
+	EReference getRating_Title();
+
+	/**
 	 * Returns the meta object for class '{@link imdb.Person <em>Person</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1012,92 +1098,6 @@ public interface ImdbPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getPerson_Imdb();
-
-	/**
-	 * Returns the meta object for class '{@link imdb.Episode <em>Episode</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Episode</em>'.
-	 * @see imdb.Episode
-	 * @generated
-	 */
-	EClass getEpisode();
-
-	/**
-	 * Returns the meta object for the container reference '{@link imdb.Episode#getSeries <em>Series</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Series</em>'.
-	 * @see imdb.Episode#getSeries()
-	 * @see #getEpisode()
-	 * @generated
-	 */
-	EReference getEpisode_Series();
-
-	/**
-	 * Returns the meta object for the attribute '{@link imdb.Episode#getSeasonNumber <em>Season Number</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Season Number</em>'.
-	 * @see imdb.Episode#getSeasonNumber()
-	 * @see #getEpisode()
-	 * @generated
-	 */
-	EAttribute getEpisode_SeasonNumber();
-
-	/**
-	 * Returns the meta object for the attribute '{@link imdb.Episode#getEpisodeNumber <em>Episode Number</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Episode Number</em>'.
-	 * @see imdb.Episode#getEpisodeNumber()
-	 * @see #getEpisode()
-	 * @generated
-	 */
-	EAttribute getEpisode_EpisodeNumber();
-
-	/**
-	 * Returns the meta object for class '{@link imdb.Rating <em>Rating</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Rating</em>'.
-	 * @see imdb.Rating
-	 * @generated
-	 */
-	EClass getRating();
-
-	/**
-	 * Returns the meta object for the attribute '{@link imdb.Rating#getAverageRating <em>Average Rating</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Average Rating</em>'.
-	 * @see imdb.Rating#getAverageRating()
-	 * @see #getRating()
-	 * @generated
-	 */
-	EAttribute getRating_AverageRating();
-
-	/**
-	 * Returns the meta object for the attribute '{@link imdb.Rating#getNumberOfVotes <em>Number Of Votes</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Number Of Votes</em>'.
-	 * @see imdb.Rating#getNumberOfVotes()
-	 * @see #getRating()
-	 * @generated
-	 */
-	EAttribute getRating_NumberOfVotes();
-
-	/**
-	 * Returns the meta object for the container reference '{@link imdb.Rating#getTitle <em>Title</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Title</em>'.
-	 * @see imdb.Rating#getTitle()
-	 * @see #getRating()
-	 * @generated
-	 */
-	EReference getRating_Title();
 
 	/**
 	 * Returns the meta object for class '{@link imdb.Involvement <em>Involvement</em>}'.
@@ -1351,72 +1351,6 @@ public interface ImdbPackage extends EPackage {
 		EReference TV_SERIES__EPISODES = eINSTANCE.getTvSeries_Episodes();
 
 		/**
-		 * The meta object literal for the '{@link imdb.impl.PersonImpl <em>Person</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see imdb.impl.PersonImpl
-		 * @see imdb.impl.ImdbPackageImpl#getPerson()
-		 * @generated
-		 */
-		EClass PERSON = eINSTANCE.getPerson();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PERSON__NAME = eINSTANCE.getPerson_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Birth Year</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PERSON__BIRTH_YEAR = eINSTANCE.getPerson_BirthYear();
-
-		/**
-		 * The meta object literal for the '<em><b>Death Year</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PERSON__DEATH_YEAR = eINSTANCE.getPerson_DeathYear();
-
-		/**
-		 * The meta object literal for the '<em><b>Professions</b></em>' attribute list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PERSON__PROFESSIONS = eINSTANCE.getPerson_Professions();
-
-		/**
-		 * The meta object literal for the '<em><b>Known For Titles</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PERSON__KNOWN_FOR_TITLES = eINSTANCE.getPerson_KnownForTitles();
-
-		/**
-		 * The meta object literal for the '<em><b>Involvement</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PERSON__INVOLVEMENT = eINSTANCE.getPerson_Involvement();
-
-		/**
-		 * The meta object literal for the '<em><b>Imdb</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PERSON__IMDB = eINSTANCE.getPerson_Imdb();
-
-		/**
 		 * The meta object literal for the '{@link imdb.impl.EpisodeImpl <em>Episode</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1483,6 +1417,72 @@ public interface ImdbPackage extends EPackage {
 		 * @generated
 		 */
 		EReference RATING__TITLE = eINSTANCE.getRating_Title();
+
+		/**
+		 * The meta object literal for the '{@link imdb.impl.PersonImpl <em>Person</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see imdb.impl.PersonImpl
+		 * @see imdb.impl.ImdbPackageImpl#getPerson()
+		 * @generated
+		 */
+		EClass PERSON = eINSTANCE.getPerson();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PERSON__NAME = eINSTANCE.getPerson_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Birth Year</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PERSON__BIRTH_YEAR = eINSTANCE.getPerson_BirthYear();
+
+		/**
+		 * The meta object literal for the '<em><b>Death Year</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PERSON__DEATH_YEAR = eINSTANCE.getPerson_DeathYear();
+
+		/**
+		 * The meta object literal for the '<em><b>Professions</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PERSON__PROFESSIONS = eINSTANCE.getPerson_Professions();
+
+		/**
+		 * The meta object literal for the '<em><b>Known For Titles</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PERSON__KNOWN_FOR_TITLES = eINSTANCE.getPerson_KnownForTitles();
+
+		/**
+		 * The meta object literal for the '<em><b>Involvement</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PERSON__INVOLVEMENT = eINSTANCE.getPerson_Involvement();
+
+		/**
+		 * The meta object literal for the '<em><b>Imdb</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PERSON__IMDB = eINSTANCE.getPerson_Imdb();
 
 		/**
 		 * The meta object literal for the '{@link imdb.impl.InvolvementImpl <em>Involvement</em>}' class.

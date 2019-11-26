@@ -26,7 +26,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Involvement extends EObject {
-
 	/**
 	 * Returns the value of the '<em><b>Title</b></em>' container reference.
 	 * It is bidirectional and its opposite is '{@link imdb.Title#getInvolvements <em>Involvements</em>}'.
@@ -162,4 +161,5 @@ public interface Involvement extends EObject {
 	 * @generated
 	 */
 	void setTvseries(TvSeries value);
+
 } // Involvement

@@ -138,17 +138,6 @@ public class ImdbFactoryImpl extends EFactoryImpl implements ImdbFactory {
 	 * @generated
 	 */
 	@Override
-	public Person createPerson() {
-		PersonImpl person = new PersonImpl();
-		return person;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Episode createEpisode() {
 		EpisodeImpl episode = new EpisodeImpl();
 		return episode;
@@ -163,6 +152,17 @@ public class ImdbFactoryImpl extends EFactoryImpl implements ImdbFactory {
 	public Rating createRating() {
 		RatingImpl rating = new RatingImpl();
 		return rating;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Person createPerson() {
+		PersonImpl person = new PersonImpl();
+		return person;
 	}
 
 	/**

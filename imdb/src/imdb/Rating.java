@@ -24,7 +24,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Rating extends EObject {
-
 	/**
 	 * Returns the value of the '<em><b>Average Rating</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -92,4 +91,5 @@ public interface Rating extends EObject {
 	 * @generated
 	 */
 	void setTitle(Title value);
+
 } // Rating

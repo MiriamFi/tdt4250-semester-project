@@ -49,15 +49,6 @@ public interface ImdbFactory extends EFactory {
 	TvSeries createTvSeries();
 
 	/**
-	 * Returns a new object of class '<em>Person</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Person</em>'.
-	 * @generated
-	 */
-	Person createPerson();
-
-	/**
 	 * Returns a new object of class '<em>Episode</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -74,6 +65,15 @@ public interface ImdbFactory extends EFactory {
 	 * @generated
 	 */
 	Rating createRating();
+
+	/**
+	 * Returns a new object of class '<em>Person</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Person</em>'.
+	 * @generated
+	 */
+	Person createPerson();
 
 	/**
 	 * Returns a new object of class '<em>Involvement</em>'.

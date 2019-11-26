@@ -4,17 +4,19 @@ package imdb.impl;
 
 import imdb.ImdbPackage;
 import imdb.Involvement;
-
 import imdb.Person;
 import imdb.Title;
+
 import imdb.TvSeries;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
@@ -45,6 +47,7 @@ public class InvolvementImpl extends MinimalEObjectImpl.Container implements Inv
 	 * @ordered
 	 */
 	protected Person person;
+
 	/**
 	 * The default value of the '{@link #getJobCategory() <em>Job Category</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -54,6 +57,7 @@ public class InvolvementImpl extends MinimalEObjectImpl.Container implements Inv
 	 * @ordered
 	 */
 	protected static final String JOB_CATEGORY_EDEFAULT = null;
+
 	/**
 	 * The cached value of the '{@link #getJobCategory() <em>Job Category</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -63,6 +67,7 @@ public class InvolvementImpl extends MinimalEObjectImpl.Container implements Inv
 	 * @ordered
 	 */
 	protected String jobCategory = JOB_CATEGORY_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getJob() <em>Job</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -72,6 +77,7 @@ public class InvolvementImpl extends MinimalEObjectImpl.Container implements Inv
 	 * @ordered
 	 */
 	protected static final String JOB_EDEFAULT = null;
+
 	/**
 	 * The cached value of the '{@link #getJob() <em>Job</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -81,6 +87,7 @@ public class InvolvementImpl extends MinimalEObjectImpl.Container implements Inv
 	 * @ordered
 	 */
 	protected String job = JOB_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getCharacter() <em>Character</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -90,6 +97,7 @@ public class InvolvementImpl extends MinimalEObjectImpl.Container implements Inv
 	 * @ordered
 	 */
 	protected static final String CHARACTER_EDEFAULT = null;
+
 	/**
 	 * The cached value of the '{@link #getCharacter() <em>Character</em>}' attribute.
 	 * <!-- begin-user-doc -->

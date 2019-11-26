@@ -406,14 +406,14 @@ public class ImdbValidator extends EObjectValidator {
 	 * Validates the averageRatingConstraint constraint of '<em>Rating</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
 	public boolean validateRating_averageRatingConstraint(Rating rating, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		// TODO implement the constraint
 		// -> specify the condition that violates the constraint
 		// -> verify the diagnostic details, including severity, code, and message
 		// Ensure that you remove @generated or mark it @generated NOT
-		if (!(rating.getAverageRating() >= 1 && rating.getAverageRating() <= 10)) {
+		if (false) {
 			if (diagnostics != null) {
 				diagnostics.add
 					(createDiagnostic
@@ -530,28 +530,14 @@ public class ImdbValidator extends EObjectValidator {
 	 * Validates the uniqueInvolvementConstraint constraint of '<em>Involvement</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
 	public boolean validateInvolvement_uniqueInvolvementConstraint(Involvement involvement, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		// TODO implement the constraint
 		// -> specify the condition that violates the constraint
 		// -> verify the diagnostic details, including severity, code, and message
 		// Ensure that you remove @generated or mark it @generated NOT
-		
-		boolean involvementIsUnique = true;
-		for (Involvement otherInvolvement : involvement.getTitle().getInvolvements()) {
-			if(otherInvolvement.getPerson() == involvement.getPerson()) {
-				if((otherInvolvement.getJob() == "actor" || otherInvolvement.getJob() == "actress")
-						&& otherInvolvement.getCharacter() == involvement.getCharacter()) {
-					involvementIsUnique = false;
-				}
-				else if (otherInvolvement.getJob() == involvement.getJob()) {
-					involvementIsUnique = false;
-				}
-			}
-		}
-		
-		if (!involvementIsUnique) {
+		if (false) {
 			if (diagnostics != null) {
 				diagnostics.add
 					(createDiagnostic
@@ -572,22 +558,14 @@ public class ImdbValidator extends EObjectValidator {
 	 * Validates the actorIsBornConstraint constraint of '<em>Involvement</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
 	public boolean validateInvolvement_actorIsBornConstraint(Involvement involvement, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		// TODO implement the constraint
 		// -> specify the condition that violates the constraint
 		// -> verify the diagnostic details, including severity, code, and message
 		// Ensure that you remove @generated or mark it @generated NOT
-		boolean actorIsBorn = true;
-		if(involvement.getTitle().getTitleType() == TitleType.TVSERIES) {
-			if(involvement.getPerson().getBirthYear() >= involvement.getTvseries().getEndYear()) {
-				actorIsBorn = false;
-			}
-		}else if(involvement.getPerson().getBirthYear() > involvement.getTitle().getStartYear()) {
-			actorIsBorn = false;
-		}
-		if (!actorIsBorn) {
+		if (false) {
 			if (diagnostics != null) {
 				diagnostics.add
 					(createDiagnostic

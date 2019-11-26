@@ -4,15 +4,17 @@ package imdb.impl;
 
 import imdb.ImdbPackage;
 import imdb.Rating;
-
 import imdb.Title;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
@@ -40,6 +42,7 @@ public class RatingImpl extends MinimalEObjectImpl.Container implements Rating {
 	 * @ordered
 	 */
 	protected static final float AVERAGE_RATING_EDEFAULT = 0.0F;
+
 	/**
 	 * The cached value of the '{@link #getAverageRating() <em>Average Rating</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -49,6 +52,7 @@ public class RatingImpl extends MinimalEObjectImpl.Container implements Rating {
 	 * @ordered
 	 */
 	protected float averageRating = AVERAGE_RATING_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getNumberOfVotes() <em>Number Of Votes</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -58,6 +62,7 @@ public class RatingImpl extends MinimalEObjectImpl.Container implements Rating {
 	 * @ordered
 	 */
 	protected static final int NUMBER_OF_VOTES_EDEFAULT = 0;
+
 	/**
 	 * The cached value of the '{@link #getNumberOfVotes() <em>Number Of Votes</em>}' attribute.
 	 * <!-- begin-user-doc -->

@@ -2,6 +2,7 @@
  */
 package imdb;
 
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Episode</b></em>'.

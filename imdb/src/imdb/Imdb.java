@@ -3,6 +3,7 @@
 package imdb;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -23,7 +24,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Imdb extends EObject {
-
 	/**
 	 * Returns the value of the '<em><b>Titles</b></em>' containment reference list.
 	 * The list contents are of type {@link imdb.Title}.
@@ -51,4 +51,5 @@ public interface Imdb extends EObject {
 	 * @generated
 	 */
 	EList<Person> getPersons();
+
 } // Imdb

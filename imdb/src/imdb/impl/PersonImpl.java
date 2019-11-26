@@ -6,17 +6,21 @@ import imdb.Imdb;
 import imdb.ImdbPackage;
 import imdb.Involvement;
 import imdb.Person;
-
 import imdb.Title;
+
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
@@ -52,6 +56,7 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 	 * @ordered
 	 */
 	protected static final String NAME_EDEFAULT = null;
+
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -61,6 +66,7 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getBirthYear() <em>Birth Year</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -70,6 +76,7 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 	 * @ordered
 	 */
 	protected static final int BIRTH_YEAR_EDEFAULT = 0;
+
 	/**
 	 * The cached value of the '{@link #getBirthYear() <em>Birth Year</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -79,6 +86,7 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 	 * @ordered
 	 */
 	protected int birthYear = BIRTH_YEAR_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getDeathYear() <em>Death Year</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -88,6 +96,7 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 	 * @ordered
 	 */
 	protected static final int DEATH_YEAR_EDEFAULT = 0;
+
 	/**
 	 * The cached value of the '{@link #getDeathYear() <em>Death Year</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -97,6 +106,7 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 	 * @ordered
 	 */
 	protected int deathYear = DEATH_YEAR_EDEFAULT;
+
 	/**
 	 * The cached value of the '{@link #getProfessions() <em>Professions</em>}' attribute list.
 	 * <!-- begin-user-doc -->
@@ -116,6 +126,7 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 	 * @ordered
 	 */
 	protected EList<Title> knownForTitles;
+
 	/**
 	 * The cached value of the '{@link #getInvolvement() <em>Involvement</em>}' reference list.
 	 * <!-- begin-user-doc -->
