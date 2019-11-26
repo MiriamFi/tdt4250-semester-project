@@ -20,13 +20,15 @@ public class DatasetDeserializer {
 	
 	
 	public static final String outputXmiFilePath = "output.xmi";
+	private static Imdb imdb;
 	
 	
 	
 	public static void main(String[] args) {
 		System.out.println("Hello World");
 		DatasetDeserializer.deserialize();
-		
+
+		System.out.println("Hello Overworld");
 		
 	}
 	
@@ -39,7 +41,8 @@ public class DatasetDeserializer {
 		// imdbFactory can be found in ImdbFactory.eINSTANCE;
 		
 		// Create Imdb class. Saved in ImdbPackage
-		ImdbFactory.eINSTANCE.createImdb();
+		imdb = ImdbFactory.eINSTANCE.createImdb();
+		
 		
 		deserializeSubsetBasics();
 	}
@@ -47,11 +50,12 @@ public class DatasetDeserializer {
 	
 	// Create all titles from file
 	public static void deserializeSubsetBasics(){
-		String filename = "subsetbasics.tsv";
-		
+		String filename = "src/imdb/dataset/subsetbasics.tsv";
+		System.out.println(System.getProperty("user.dir"));
 		// Open file
 		try(BufferedReader br = new BufferedReader(new FileReader(filename))) {
 		    for(String line; (line = br.readLine()) != null; ) {
+		    	System.out.print(1);
 		    	deserializeSubsetBasicsLine(line);
 		    }
 		} catch (IOException e) {
@@ -63,7 +67,7 @@ public class DatasetDeserializer {
 		// Split string by delimitter tab
 		String[] columnValues = line.split("\\t");
 		Title title = ImdbFactory.eINSTANCE.createTitle();
-		title.setImdb((Imdb)ImdbPackage.eINSTANCE.getImdb());
+		title.setImdb(imdb);
 		
 		// Since possibly not all title types are defined, 
 		
@@ -71,9 +75,24 @@ public class DatasetDeserializer {
 		String titleType = columnValues[1];
 		String titleName = columnValues[2];
 		String titleIsAdult = columnValues[4];
-		int titleStartYear = Integer.parseInt(columnValues[5]);
+		
+		// If start year is \N, make it a 0
+		int titleStartYear = 0;
+		try {
+			titleStartYear = Integer.parseInt(columnValues[5]);
+		} catch (NumberFormatException e) {
+			// do nothing
+		}
 		String titleEndYear = columnValues[6];
-		int titleRuntimeMinutes = Integer.parseInt(columnValues[7]);
+		
+
+		// If runtimeMinutes is \N, make it a 0
+		int titleRuntimeMinutes = 0;
+		try {
+			titleRuntimeMinutes = Integer.parseInt(columnValues[7]);
+		} catch (NumberFormatException e) {
+			// do nothing
+		}
 		String[] titleGenres = columnValues[8].split(",");
 		
 		title.setTitleType(TitleType.get(titleType.toUpperCase()));
