@@ -74,6 +74,7 @@ public class DatasetDeserializer {
 		int titleStartYear = Integer.parseInt(columnValues[5]);
 		String titleEndYear = columnValues[6];
 		int titleRuntimeMinutes = Integer.parseInt(columnValues[7]);
+		String[] titleGenres = columnValues[8].split(",");
 		
 		title.setTitleType(TitleType.get(titleType.toUpperCase()));
 		
