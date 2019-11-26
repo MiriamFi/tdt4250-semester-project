@@ -48,6 +48,7 @@ public class DatasetDeserializer {
 		
 		deserializeTitles();
 		
+		System.out.println();
 		// Hash the titles by id for faster query
 		
 		deserializePersons(); // uses the titles hash
