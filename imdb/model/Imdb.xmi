@@ -10,7 +10,7 @@
       language="english"
       startYear="2010"
       runtime="123"
-      genres="//@genres.0 //@genres.3">
+      genre="">
     <rating
         averageRating="5.5"
         numberOfVotes="345"/>
@@ -27,7 +27,7 @@
       titleType="TVSERIES"
       startYear="2000"
       runtime="24"
-      genres="//@genres.1 //@genres.3"
+      genre=""
       endYear="2009">
     <rating
         averageRating="7.5"
@@ -43,15 +43,10 @@
         language="english"
         startYear="2003"
         runtime="45"
-        genres="//@genres.4"
+        genre=""
         seasonNumber="2"
         episodeNumber="5"/>
   </titles>
-  <genres name="horror"/>
-  <genres name="romance"/>
-  <genres name="action"/>
-  <genres name="comedy"/>
-  <genres name="fantasy"/>
   <persons name="Anna Faraway"
       birthYear="1990"
       deathYear="-1">
