@@ -3,6 +3,10 @@ package imdb.dataset;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
@@ -12,7 +16,9 @@ import org.eclipse.emf.ecore.xmi.impl.XMLResourceFactoryImpl;
 
 import imdb.Imdb;
 import imdb.ImdbFactory;
+import imdb.ImdbPackage;
 import imdb.Person;
+import imdb.Rating;
 import imdb.Title;
 import imdb.TitleType;
 
@@ -21,6 +27,8 @@ public class DatasetDeserializer {
 	
 	public static final String outputXmiFilePath = "src/imdb/dataset/deserialized.xmi";
 	private static Imdb imdb;
+	
+	private static HashMap<String, Title> titleMap = new HashMap<String, Title>();
 	
 	
 	
@@ -49,17 +57,23 @@ public class DatasetDeserializer {
 		deserializeTitles();
 		
 		System.out.println();
+		
+
 		// Hash the titles by id for faster query
+		// EList<T> has the same performance for search as List<T>
+		// TODO: Add real ID
+		imdb.getTitles().forEach(title -> titleMap.put("title.getTitleID()", title));
 		
-		deserializePersons(); // uses the titles hash
 		
+		deserializePersons();
+		deserializeRatings();
 		
 	}
 	
 	
 	// Create all titles from file
 	public static void deserializeTitles(){
-		String filename = "src/imdb/dataset/subsetbasics.tsv";
+		String filename = "src/imdb/dataset/titles.tsv";
 		// Open file
 		try(BufferedReader br = new BufferedReader(new FileReader(filename))) {
 		    for(String line; (line = br.readLine()) != null; ) {
@@ -114,7 +128,7 @@ public class DatasetDeserializer {
 	
 	
 	public static void deserializePersons() {
-		String filename = "src/imdb/dataset/subsetname.tsv";
+		String filename = "src/imdb/dataset/persons.tsv";
 		// Open file
 		try(BufferedReader br = new BufferedReader(new FileReader(filename))) {
 		    for(String line; (line = br.readLine()) != null; ) {
@@ -156,18 +170,58 @@ public class DatasetDeserializer {
 		
 
 		String[] professions = columnValues[4].split(",");
+		String[] knownForTitlesIDs = columnValues[5].split(",");
+		
+		List<Title> knownForTitles = Arrays.asList(knownForTitlesIDs).stream()
+					.map(titleID -> titleMap.get(titleID))	// get Title by id
+					.filter(title -> title != null) 		// remove null titles
+					.collect(Collectors.toList());			// construct the list
 		
 		
 		person.setName(name);
 		person.setBirthYear(birthYear);
 		person.setDeathYear(deathYear);
+		person.getProfessions().clear();
+		person.getProfessions().addAll(Arrays.asList(professions));
+		
+		person.getKnownForTitles().clear();
+		person.getKnownForTitles().addAll(knownForTitles);
+		
 		
 	}
 
-	public static void deserializeSubsetRating(){
-		String filename = "subsetrating.tsv";
+	// Create all titles from file
+	public static void deserializeRatings(){
+		String filename = "src/imdb/dataset/ratings.tsv";
+		// Open file
+		try(BufferedReader br = new BufferedReader(new FileReader(filename))) {
+		    // skip the first line, it contains the column headers
+			br.readLine();
+			for(String line; (line = br.readLine()) != null; ) {
+		    	System.out.print(3);
+		    	deserializeEachRating(line);
+		    }
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public static void deserializeEachRating(String line){
+		// Split string by delimiter tab
+		String[] columnValues = line.split("\\t");
+		Rating rating = ImdbFactory.eINSTANCE.createRating();
+		
+		String titleID = columnValues[0];
+		float averageRating = Float.parseFloat(columnValues[1]);
+		int numVotes = Integer.parseInt(columnValues[2]);
+		
+		rating.setTitle(titleMap.get(titleID));
+		rating.setAverageRating(averageRating);
+		rating.setNumberOfVotes(numVotes);
 		
 	}
+	
+	
 	public static void deserializeSubsetPrincipals(){
 
 		String filename = "subsetprincipals.tsv";
@@ -195,17 +249,11 @@ public class DatasetDeserializer {
 		// Add instances to contents list of the resource 
 
 		resource.getContents().add(imdb);
-		 
+		
 		try {
 			resource.save(null);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
-	
-	
-	
-	
-	
-
 }
