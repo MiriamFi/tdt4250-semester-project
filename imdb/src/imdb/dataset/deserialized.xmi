@@ -1,0 +1,1802 @@
+<?xml version="1.0" encoding="ASCII"?>
+<no.ntnu.tdt4250.imdb:Imdb xmlns:no.ntnu.tdt4250.imdb="http://no/ntnu/tdt4250/imdb">
+  <titles name="Carmencita" titleType="SHORT" startYear="1894" runtime="1"/>
+  <titles name="Le clown et ses chiens" titleType="SHORT" startYear="1892" runtime="5"/>
+  <titles name="Blacksmith Scene" titleType="SHORT" startYear="1893" runtime="1"/>
+  <titles name="Chinese Opium Den" titleType="SHORT" startYear="1894" runtime="1"/>
+  <titles name="Corbett and Courtney Before the Kinetograph" titleType="SHORT" startYear="1894" runtime="1"/>
+  <titles name="Edison Kinetoscopic Record of a Sneeze" titleType="SHORT" startYear="1894" runtime="1"/>
+  <titles name="Miss Jerry" startYear="1894" runtime="45"/>
+  <titles name="Exiting the Factory" titleType="SHORT" startYear="1895" runtime="1"/>
+  <titles name="The Arrival of a Train" titleType="SHORT" startYear="1896" runtime="1"/>
+  <titles name="The Photographical Congress Arrives in Lyon" titleType="SHORT" startYear="1895" runtime="1"/>
+  <titles name="The Sprinkler Sprinkled" titleType="SHORT" startYear="1895" runtime="1"/>
+  <titles name="Autour d'une cabine" titleType="SHORT" startYear="1894" runtime="2"/>
+  <titles name="Blacksmith Scene" titleType="SHORT" startYear="1895" runtime="1"/>
+  <titles name="The Sea" titleType="SHORT" startYear="1895" runtime="1"/>
+  <titles name="The Messers. Lumi&#xc3;&#xa8;re at Cards" titleType="SHORT" startYear="1896" runtime="1"/>
+  <titles name="Cordeliers' Square in Lyon" titleType="SHORT" startYear="1895" runtime="1"/>
+  <titles name="Fishing for Goldfish" titleType="SHORT" startYear="1895" runtime="1"/>
+  <titles name="Baby's Dinner" titleType="SHORT" startYear="1895" runtime="1"/>
+  <titles name="Jumping the Blanket" titleType="SHORT" startYear="1895" runtime="1"/>
+  <titles name="Trick Riding" titleType="SHORT" startYear="1895" runtime="1"/>
+  <titles name="Watering the Flowers" titleType="SHORT" startYear="1896" runtime="1"/>
+  <titles name="Awakening of Rip" titleType="SHORT" startYear="1896"/>
+  <titles name="Sea Bathing" titleType="SHORT" startYear="1896" runtime="1"/>
+  <titles name="The Ball Game" titleType="SHORT" startYear="1898"/>
+  <titles name="Barque sortant du port de Trouville" titleType="SHORT" startYear="1896"/>
+  <titles name="Bataille de neige" titleType="SHORT" startYear="1897" runtime="1"/>
+  <titles name="Les blanchisseuses" titleType="SHORT" startYear="1896"/>
+  <titles name="B&#xc3;&#xa9;b&#xc3;&#xa9; et fillettes" titleType="SHORT" startYear="1896"/>
+  <titles name="The Bohemian Encampment" titleType="SHORT" startYear="1896"/>
+  <titles name="A Merry-Go-Round" titleType="SHORT" startYear="1896"/>
+  <titles name="Coronation of a Village Maiden" titleType="SHORT" startYear="1896"/>
+  <titles name="Dancing Darkies" titleType="SHORT" startYear="1896"/>
+  <titles name="Conjurer Making Ten Hats in Sixty Seconds" titleType="SHORT" startYear="1896"/>
+  <titles name="Unloading the Boat" titleType="SHORT" startYear="1896"/>
+  <titles name="Post No Bills" titleType="SHORT" startYear="1896" runtime="1"/>
+  <titles name="D&#xc3;&#xa9;molition d'un mur" titleType="SHORT" startYear="1896" runtime="1"/>
+  <titles name="Automobiles Starting a Race" titleType="SHORT" startYear="1896"/>
+  <titles name="Officers of French Army Leaving Service" titleType="SHORT" startYear="1896"/>
+  <titles name="The Conjuring of a Woman at the House of Robert Houdin" titleType="SHORT" startYear="1896" runtime="1"/>
+  <titles name="Exit of Rip and the Dwarf" titleType="SHORT" startYear="1896" runtime="1"/>
+  <titles name="Towing a Boat on the River" titleType="SHORT" startYear="1896"/>
+  <titles name="A Hard Wash" titleType="SHORT" startYear="1896"/>
+  <titles name="Gardener Burning Weeds" titleType="SHORT" startYear="1896"/>
+  <titles name="&quot;Beach and Pier at Trouville, 1st part&quot;" titleType="SHORT" startYear="1896"/>
+  <titles name="&quot;Beach and Pier at Trouville, 2nd part&quot;" titleType="SHORT" startYear="1896"/>
+  <titles name="Market Day" titleType="SHORT" startYear="1896"/>
+  <titles name="The House of the Devil" titleType="SHORT" startYear="1896" runtime="3"/>
+  <titles name="The Mysterious Paper" titleType="SHORT" startYear="1896"/>
+  <titles name="&quot;Place de l'Op&#xc3;&#xa9;ra, First View&quot;" titleType="SHORT" startYear="1896"/>
+  <titles name="&quot;Place de l'Op&#xc3;&#xa9;ra, Second View&quot;" titleType="SHORT" startYear="1896"/>
+  <titles name="The Beach at Villiers in a Gale" titleType="SHORT" startYear="1896"/>
+  <titles name="Smarter than the Teacher" titleType="SHORT" startYear="1896"/>
+  <titles name="The Docks at Marseilles" titleType="SHORT" startYear="1896"/>
+  <titles name="Naval Review at Cherburg" titleType="SHORT" startYear="1896"/>
+  <titles name="Rip Leaving Sleepy Hollow" titleType="SHORT" startYear="1896" runtime="1"/>
+  <titles name="Rip Meeting the Dwarf" titleType="SHORT" startYear="1896" runtime="1"/>
+  <titles name="Rip Passing Over the Mountain" titleType="SHORT" startYear="1896" runtime="1"/>
+  <titles name="Rip's Toast" titleType="SHORT" startYear="1896" runtime="1"/>
+  <titles name="Rip's Toast to Hudson" titleType="SHORT" startYear="1896" runtime="1"/>
+  <titles name="Rip's Twenty Years' Sleep" titleType="SHORT" startYear="1896"/>
+  <titles name="French Regiment Going to the Parade" titleType="SHORT" startYear="1896"/>
+  <titles name="&quot;Rescue on the River, Pt. 2&quot;" titleType="SHORT" startYear="1896"/>
+  <titles name="&quot;Rescue on the River, Pt. 1&quot;" titleType="SHORT" startYear="1896"/>
+  <titles name="Closing Hours at Vibert's Perfume Factory" titleType="SHORT" startYear="1896"/>
+  <titles name="Conjuring" titleType="SHORT" startYear="1896"/>
+  <titles name="Academy for Young Ladies" titleType="SHORT" startYear="1896"/>
+  <titles name="Un petit diable" titleType="SHORT" startYear="1896"/>
+  <titles name="A Watermelon Feast" titleType="SHORT" startYear="1896"/>
+  <titles name="The Bewitched Inn" titleType="SHORT" startYear="1897" runtime="2"/>
+  <titles name="Buffalo Bill and Escort" titleType="SHORT" startYear="1897"/>
+  <titles name="The Corbett-Fitzsimmons Fight" startYear="1897" runtime="20"/>
+  <titles name="Behind the Scenes" titleType="SHORT" startYear="1897"/>
+  <titles name="The Hallucinated Alchemist" titleType="SHORT" startYear="1897" runtime="2"/>
+  <titles name="The Hypnotist at Work" titleType="SHORT" startYear="1897"/>
+  <titles name="The Devil's Laboratory" titleType="SHORT" startYear="1897" runtime="1"/>
+  <titles name="Battle of Santiago Bay" titleType="SHORT" startYear="1898"/>
+  <titles name="The Burglar on the Roof" titleType="SHORT" startYear="1898" runtime="1"/>
+  <titles name="The Cavalier's Dream" titleType="SHORT" startYear="1898" runtime="1"/>
+  <titles name="The Cave of the Demons" titleType="SHORT" startYear="1898"/>
+  <titles name="Cripple Creek Bar-Room Scene" titleType="SHORT" startYear="1899" runtime="1"/>
+  <titles name="&quot;Ella Lola, a la Trilby&quot;" titleType="SHORT" startYear="1898"/>
+  <titles name="Indian War Council" titleType="SHORT" startYear="1898"/>
+  <titles name="The Miller and Chimney Sweep" titleType="SHORT" startYear="1897" runtime="1"/>
+  <titles name="A Novice at X-rays" titleType="SHORT" startYear="1898" runtime="1"/>
+  <titles name="A Trip to the Moon" titleType="SHORT" startYear="1898" runtime="3"/>
+  <titles name="Tearing Down the Spanish Flag" titleType="SHORT" startYear="1898"/>
+  <titles name="Beauty and the Beast" titleType="SHORT" startYear="1899"/>
+  <titles name="La bonne absinthe" titleType="SHORT" startYear="1899" runtime="1"/>
+  <titles name="Casey at the Bat" titleType="SHORT" startYear="1899" runtime="1"/>
+  <titles name="Cinderella" titleType="SHORT" startYear="1899" runtime="6"/>
+  <titles name="Cleopatra's Tomb" titleType="SHORT" startYear="1899" runtime="1"/>
+  <titles name="Haggard's She: The Pillar of Fire" titleType="SHORT" startYear="1899" runtime="1"/>
+  <titles name="Distributing a War Extra" titleType="SHORT" startYear="1899" runtime="1"/>
+  <titles name="The Sign of the Cross" titleType="SHORT" startYear="1899" runtime="3"/>
+  <titles name="The Haunted House" titleType="SHORT" startYear="1899"/>
+  <titles name="A Turn of the Century Illusionist" titleType="SHORT" startYear="1899" runtime="1"/>
+  <titles name="King John" titleType="SHORT" startYear="1899" runtime="5"/>
+  <titles name="A Kiss in the Tunnel" titleType="SHORT" startYear="1899" runtime="1"/>
+  <titles name="Panorama from the Tower of the Brooklyn Bridge" titleType="SHORT" startYear="1899"/>
+  <titles name="A Midnight Episode" titleType="SHORT" startYear="1899" runtime="1"/>
+  <titles name="Summoning the Spirits" titleType="SHORT" startYear="1899" runtime="1"/>
+  <titles name="Above the Limit" titleType="SHORT" startYear="1900"/>
+  <titles name="Above the Speedway" titleType="SHORT" startYear="1900"/>
+  <titles name="As Seen Through a Telescope" titleType="SHORT" startYear="1900" runtime="1"/>
+  <titles name="Buffalo Bill's Show Parade" titleType="SHORT" startYear="1900"/>
+  <titles name="Buffalo Bill's Wild West Parade" titleType="SHORT" startYear="1900"/>
+  <titles name="Buffalo Bill's Wild West Parade" titleType="SHORT" startYear="1900"/>
+  <titles name="Buffalo Bill's Wild West Show" titleType="SHORT" startYear="1900"/>
+  <titles name="Chez le photographe" titleType="SHORT" startYear="1900" runtime="1"/>
+  <titles name="Chirurgie fin de si&#xc3;&#xa8;cle" titleType="SHORT" startYear="1900" runtime="2"/>
+  <titles name="The Clown and the Alchemist" titleType="SHORT" startYear="1900"/>
+  <titles name="The Enchanted Drawing" titleType="SHORT" startYear="1900" runtime="2"/>
+  <titles name="Faust and Marguerite" titleType="SHORT" startYear="1900" runtime="1"/>
+  <titles name="&quot;La f&#xc3;&#xa9;e aux choux, ou la naissance des enfants&quot;" titleType="SHORT" startYear="1900" runtime="1"/>
+  <titles name="Le duel d'Hamlet" titleType="SHORT" startYear="1900" runtime="2"/>
+  <titles name="Happy Hooligan" titleType="SHORT" startYear="1900"/>
+  <titles name="The House That Jack Built" titleType="SHORT" startYear="1900" runtime="1"/>
+  <titles name="Chimmie Hicks and the Rum Omelet" titleType="SHORT" startYear="1900"/>
+  <titles name="The Mystic Swing" titleType="SHORT" startYear="1900" runtime="1"/>
+  <titles name="Uncle Josh in a Spooky Hotel" titleType="SHORT" startYear="1900" runtime="1"/>
+  <titles name="Uncle Josh's Nightmare" titleType="SHORT" startYear="1900" runtime="2"/>
+  <titles name="Another Job for the Undertaker" titleType="SHORT" startYear="1901" runtime="2"/>
+  <titles name="Buffalo Bill's Wild West Parade" titleType="SHORT" startYear="1901" runtime="2"/>
+  <titles name="&quot;What Came Out of the Cheese; or, The Lilliputians in a New York Restaurant&quot;" titleType="SHORT" startYear="1901" runtime="1"/>
+  <titles name="The Countryman's First Sight of the Animated Pictures" titleType="SHORT" startYear="1901" runtime="1"/>
+  <titles name="Day at the Circus" titleType="SHORT" startYear="1901"/>
+  <titles name="Execution of Czolgosz with Panorama of Auburn Prison" titleType="SHORT" startYear="1901" runtime="4"/>
+  <titles name="History of a Crime" titleType="SHORT" startYear="1901" runtime="5"/>
+  <titles name="Magical Sword" titleType="SHORT" startYear="1901" runtime="2"/>
+  <titles name="Panorama of Esplanade by Night" titleType="SHORT" startYear="1901" runtime="1"/>
+  <titles name="Little Red Riding Hood" titleType="SHORT" startYear="1901"/>
+  <titles name="Scrooge; or Marley's Ghost" titleType="SHORT" startYear="1901" runtime="6"/>
+  <titles name="The Devil's Seven Castles" titleType="SHORT" startYear="1904" runtime="11"/>
+  <titles name="Sleeping Beauty" titleType="SHORT" startYear="1903"/>
+  <titles name="Buffalo Bill's Wild West Show" titleType="SHORT" startYear="1902"/>
+  <titles name="Les chiens savants" titleType="SHORT" startYear="1902" runtime="3"/>
+  <titles name="The Coronation of King Edward VII" titleType="SHORT" startYear="1902" runtime="4"/>
+  <titles name="Danse excentrique" titleType="SHORT" startYear="1902"/>
+  <titles name="Jack and the Beanstalk" titleType="SHORT" startYear="1902" runtime="10"/>
+  <titles name="The Prince of Darkness" titleType="SHORT" startYear="1900"/>
+  <titles name="Demolishing and Building Up the Star Theatre" titleType="SHORT" startYear="1901" runtime="2"/>
+  <titles name="The Troublesome Fly" titleType="SHORT" startYear="1900"/>
+  <titles name="The Devil's Money Bags" titleType="SHORT" startYear="1902" runtime="3"/>
+  <titles name="Uncle Josh at the Moving Picture Show" titleType="SHORT" startYear="1902" runtime="2"/>
+  <titles name="Alcohol and Its Victims" titleType="SHORT" startYear="1902" runtime="4"/>
+  <titles name="A Trip to the Moon" titleType="SHORT" startYear="1902" runtime="13"/>
+  <titles name="The Enchanted Box" titleType="SHORT" startYear="1903" runtime="1"/>
+  <titles name="Buffalo Bill's Parade" titleType="SHORT" startYear="1903"/>
+  <titles name="Buffalo Bill's Street Parade" titleType="SHORT" startYear="1903"/>
+  <titles name="The Great Train Robbery" titleType="SHORT" startYear="1903" runtime="11"/>
+  <titles name="La guirlande merveilleuse" titleType="SHORT" startYear="1903" runtime="4"/>
+  <titles name="Capital Execution" titleType="SHORT" startYear="1903"/>
+  <titles name="Hiawatha" titleType="SHORT" startYear="1903" runtime="15"/>
+  <titles name="Kit Carson" titleType="SHORT" startYear="1903" runtime="21"/>
+  <titles name="Life of an American Fireman" titleType="SHORT" startYear="1903" runtime="6"/>
+  <titles name="The Messenger Boy's Mistake" titleType="SHORT" startYear="1903" runtime="2"/>
+  <titles name="The Music Lover" titleType="SHORT" startYear="1903" runtime="3"/>
+  <titles name="N.Y. Fire Department Returning" titleType="SHORT" startYear="1903"/>
+  <titles name="&quot;Panorama of Riker's Island, N.Y.&quot;" titleType="SHORT" startYear="1903" runtime="2"/>
+  <titles name="The Pioneers" titleType="SHORT" startYear="1903" runtime="15"/>
+  <titles name="Rip Van Winkle" titleType="SHORT" startYear="1903" runtime="4"/>
+  <titles name="&quot;Fairyland; or, the Kingdom of the Fairies&quot;" titleType="SHORT" startYear="1903" runtime="16"/>
+  <titles name="Uncle Tom's Cabin" titleType="SHORT" startYear="1903" runtime="13"/>
+  <titles name="Uncle Tom's Cabin" titleType="SHORT" startYear="1903"/>
+  <titles name="Voyage of the 'Arctic'" titleType="SHORT" startYear="1903" runtime="10"/>
+  <titles name="Rum vs. Cherries" titleType="SHORT" startYear="1904" runtime="4"/>
+  <titles name="A Gentleman of France" titleType="SHORT" startYear="1905" runtime="5"/>
+  <titles name="The Great Train Robbery" titleType="SHORT" startYear="1903" runtime="12"/>
+  <titles name="The Land Beyond the Sunset" titleType="SHORT" startYear="1912" runtime="14"/>
+  <titles name="Opening the Williamsburg Bridge" titleType="SHORT" startYear="1904"/>
+  <titles name="Personal" titleType="SHORT" startYear="1904" runtime="6"/>
+  <titles name="&quot;Pierrot, Murderer&quot;" titleType="SHORT" startYear="1904"/>
+  <titles name="The Pearl Fisher" titleType="SHORT" startYear="1907" runtime="12"/>
+  <titles name="Railroad Smashup" titleType="SHORT" startYear="1904"/>
+  <titles name="The Abductors" titleType="SHORT" startYear="1905"/>
+  <titles name="Adventures of Sherlock Holmes" titleType="SHORT" startYear="1905"/>
+  <titles name="The Wig Chase" titleType="SHORT" startYear="1906"/>
+  <titles name="Departure of Peary and the Roosevelt from New York" titleType="SHORT" startYear="1905"/>
+  <titles name="The Inexperienced Chauffeur" titleType="SHORT" startYear="1906"/>
+  <titles name="Funeral of Hiram Cronk" titleType="SHORT" startYear="1905"/>
+  <titles name="The Electric Hotel" titleType="SHORT" startYear="1908" runtime="8"/>
+  <titles name="The Kleptomaniac" titleType="SHORT" startYear="1905" runtime="8"/>
+  <titles name="The Little Train Robbery" titleType="SHORT" startYear="1905" runtime="12"/>
+  <titles name="The Moonshiners" titleType="SHORT" startYear="1905"/>
+  <titles name="Moose Hunting in Newfoundland" titleType="SHORT" startYear="1905"/>
+  <titles name="New York Subway" titleType="SHORT" startYear="1905" runtime="6"/>
+  <titles name="Pennsylvania Tunnel Excavation" titleType="SHORT" startYear="1905"/>
+  <titles name="&quot;Raffles, the Amateur Cracksman&quot;" titleType="SHORT" startYear="1905" runtime="15"/>
+  <titles name="Reuben in the Opium Joint" titleType="SHORT" startYear="1905"/>
+  <titles name="The Wooing and Wedding of a Coon" titleType="SHORT" startYear="1907"/>
+  <titles name="The Anarchist's Mother-in-Law" titleType="SHORT" startYear="1906" runtime="4"/>
+  <titles name="&quot;Arrival of Emigrants, Ellis Island&quot;" titleType="SHORT" startYear="1906" runtime="4"/>
+  <titles name="Dream of a Racetrack Fiend" titleType="SHORT" startYear="1906"/>
+  <titles name="Dream of a Rarebit Fiend" titleType="SHORT" startYear="1906" runtime="7"/>
+  <persons name="primaryName">
+    <professions>primaryProfession</professions>
+  </persons>
+  <persons name="Fred Astaire" birthYear="1899" deathYear="1987">
+    <professions>&quot;soundtrack</professions>
+    <professions>actor</professions>
+    <professions>miscellaneous&quot;</professions>
+  </persons>
+  <persons name="Lauren Bacall" birthYear="1924" deathYear="2014">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Brigitte Bardot" birthYear="1934">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="John Belushi" birthYear="1949" deathYear="1982">
+    <professions>&quot;actor</professions>
+    <professions>writer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Ingmar Bergman" birthYear="1918" deathYear="2007">
+    <professions>&quot;writer</professions>
+    <professions>director</professions>
+    <professions>actor&quot;</professions>
+  </persons>
+  <persons name="Ingrid Bergman" birthYear="1915" deathYear="1982">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Humphrey Bogart" birthYear="1899" deathYear="1957">
+    <professions>&quot;actor</professions>
+    <professions>soundtrack</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Marlon Brando" birthYear="1924" deathYear="2004">
+    <professions>&quot;actor</professions>
+    <professions>soundtrack</professions>
+    <professions>director&quot;</professions>
+  </persons>
+  <persons name="Richard Burton" birthYear="1925" deathYear="1984">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="James Cagney" birthYear="1899" deathYear="1986">
+    <professions>&quot;actor</professions>
+    <professions>soundtrack</professions>
+    <professions>director&quot;</professions>
+  </persons>
+  <persons name="Gary Cooper" birthYear="1901" deathYear="1961">
+    <professions>&quot;actor</professions>
+    <professions>soundtrack</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Bette Davis" birthYear="1908" deathYear="1989">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack</professions>
+    <professions>make_up_department&quot;</professions>
+  </persons>
+  <persons name="Doris Day" birthYear="1922" deathYear="2019">
+    <professions>&quot;soundtrack</professions>
+    <professions>actress</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Olivia de Havilland" birthYear="1916">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="James Dean" birthYear="1931" deathYear="1955">
+    <professions>&quot;actor</professions>
+    <professions>miscellaneous&quot;</professions>
+  </persons>
+  <persons name="Georges Delerue" birthYear="1925" deathYear="1992">
+    <professions>&quot;composer</professions>
+    <professions>soundtrack</professions>
+    <professions>music_department&quot;</professions>
+  </persons>
+  <persons name="Marlene Dietrich" birthYear="1901" deathYear="1992">
+    <professions>&quot;soundtrack</professions>
+    <professions>actress</professions>
+    <professions>music_department&quot;</professions>
+  </persons>
+  <persons name="Kirk Douglas" birthYear="1916">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Federico Fellini" birthYear="1920" deathYear="1993">
+    <professions>&quot;writer</professions>
+    <professions>director</professions>
+    <professions>assistant_director&quot;</professions>
+  </persons>
+  <persons name="Henry Fonda" birthYear="1905" deathYear="1982">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Joan Fontaine" birthYear="1917" deathYear="2013">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Clark Gable" birthYear="1901" deathYear="1960">
+    <professions>&quot;actor</professions>
+    <professions>soundtrack</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Judy Garland" birthYear="1922" deathYear="1969">
+    <professions>&quot;soundtrack</professions>
+    <professions>actress&quot;</professions>
+  </persons>
+  <persons name="John Gielgud" birthYear="1904" deathYear="2000">
+    <professions>&quot;actor</professions>
+    <professions>writer</professions>
+    <professions>director&quot;</professions>
+  </persons>
+  <persons name="Jerry Goldsmith" birthYear="1929" deathYear="2004">
+    <professions>&quot;music_department</professions>
+    <professions>soundtrack</professions>
+    <professions>composer&quot;</professions>
+  </persons>
+  <persons name="Cary Grant" birthYear="1904" deathYear="1986">
+    <professions>&quot;actor</professions>
+    <professions>soundtrack</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Alec Guinness" birthYear="1914" deathYear="2000">
+    <professions>&quot;actor</professions>
+    <professions>soundtrack</professions>
+    <professions>writer&quot;</professions>
+  </persons>
+  <persons name="Rita Hayworth" birthYear="1918" deathYear="1987">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Margaux Hemingway" birthYear="1954" deathYear="1996">
+    <professions>&quot;actress</professions>
+    <professions>miscellaneous&quot;</professions>
+  </persons>
+  <persons name="Audrey Hepburn" birthYear="1929" deathYear="1993">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Katharine Hepburn" birthYear="1907" deathYear="2003">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack</professions>
+    <professions>writer&quot;</professions>
+  </persons>
+  <persons name="Charlton Heston" birthYear="1923" deathYear="2008">
+    <professions>&quot;actor</professions>
+    <professions>director</professions>
+    <professions>writer&quot;</professions>
+  </persons>
+  <persons name="Alfred Hitchcock" birthYear="1899" deathYear="1980">
+    <professions>&quot;actor</professions>
+    <professions>director</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="William Holden" birthYear="1918" deathYear="1981">
+    <professions>&quot;actor</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="James Horner" birthYear="1953" deathYear="2015">
+    <professions>&quot;music_department</professions>
+    <professions>soundtrack</professions>
+    <professions>composer&quot;</professions>
+  </persons>
+  <persons name="Buster Keaton" birthYear="1895" deathYear="1966">
+    <professions>&quot;actor</professions>
+    <professions>writer</professions>
+    <professions>director&quot;</professions>
+  </persons>
+  <persons name="Gene Kelly" birthYear="1912" deathYear="1996">
+    <professions>&quot;actor</professions>
+    <professions>soundtrack</professions>
+    <professions>director&quot;</professions>
+  </persons>
+  <persons name="Grace Kelly" birthYear="1929" deathYear="1982">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Deborah Kerr" birthYear="1921" deathYear="2007">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Stanley Kubrick" birthYear="1928" deathYear="1999">
+    <professions>&quot;director</professions>
+    <professions>writer</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Akira Kurosawa" birthYear="1910" deathYear="1998">
+    <professions>&quot;writer</professions>
+    <professions>director</professions>
+    <professions>assistant_director&quot;</professions>
+  </persons>
+  <persons name="Alan Ladd" birthYear="1913" deathYear="1964">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>camera_department&quot;</professions>
+  </persons>
+  <persons name="Veronica Lake" birthYear="1922" deathYear="1973">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Burt Lancaster" birthYear="1913" deathYear="1994">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>miscellaneous&quot;</professions>
+  </persons>
+  <persons name="Bruce Lee" birthYear="1940" deathYear="1973">
+    <professions>&quot;actor</professions>
+    <professions>miscellaneous</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Vivien Leigh" birthYear="1913" deathYear="1967">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack</professions>
+    <professions>writer&quot;</professions>
+  </persons>
+  <persons name="Sophia Loren" birthYear="1934">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Peter Lorre" birthYear="1904" deathYear="1964">
+    <professions>&quot;actor</professions>
+    <professions>soundtrack</professions>
+    <professions>writer&quot;</professions>
+  </persons>
+  <persons name="Henry Mancini" birthYear="1924" deathYear="1994">
+    <professions>&quot;music_department</professions>
+    <professions>soundtrack</professions>
+    <professions>composer&quot;</professions>
+  </persons>
+  <persons name="Groucho Marx" birthYear="1890" deathYear="1977">
+    <professions>&quot;soundtrack</professions>
+    <professions>actor</professions>
+    <professions>writer&quot;</professions>
+  </persons>
+  <persons name="James Mason" birthYear="1909" deathYear="1984">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>writer&quot;</professions>
+  </persons>
+  <persons name="Marcello Mastroianni" birthYear="1924" deathYear="1996">
+    <professions>&quot;actor</professions>
+    <professions>soundtrack</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Robert Mitchum" birthYear="1917" deathYear="1997">
+    <professions>&quot;actor</professions>
+    <professions>soundtrack</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Marilyn Monroe" birthYear="1926" deathYear="1962">
+    <professions>&quot;soundtrack</professions>
+    <professions>actress</professions>
+    <professions>writer&quot;</professions>
+  </persons>
+  <persons name="Alfred Newman" birthYear="1901" deathYear="1970">
+    <professions>&quot;music_department</professions>
+    <professions>composer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Paul Newman" birthYear="1925" deathYear="2008">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>director&quot;</professions>
+  </persons>
+  <persons name="David Niven" birthYear="1910" deathYear="1983">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Maureen O'Hara" birthYear="1920" deathYear="2015">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Laurence Olivier" birthYear="1907" deathYear="1989">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>director&quot;</professions>
+  </persons>
+  <persons name="Gregory Peck" birthYear="1916" deathYear="2003">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Tyrone Power" birthYear="1914" deathYear="1958">
+    <professions>&quot;actor</professions>
+    <professions>soundtrack</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Elvis Presley" birthYear="1935" deathYear="1977">
+    <professions>&quot;soundtrack</professions>
+    <professions>actor</professions>
+    <professions>music_department&quot;</professions>
+  </persons>
+  <persons name="Anthony Quinn" birthYear="1915" deathYear="2001">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Edward G. Robinson" birthYear="1893" deathYear="1973">
+    <professions>&quot;actor</professions>
+    <professions>soundtrack</professions>
+    <professions>writer&quot;</professions>
+  </persons>
+  <persons name="Nino Rota" birthYear="1911" deathYear="1979">
+    <professions>&quot;composer</professions>
+    <professions>soundtrack</professions>
+    <professions>music_department&quot;</professions>
+  </persons>
+  <persons name="Jane Russell" birthYear="1921" deathYear="2011">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Mikl&#xc3;&#xb3;s R&#xc3;&#xb3;zsa" birthYear="1907" deathYear="1995">
+    <professions>&quot;music_department</professions>
+    <professions>composer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Randolph Scott" birthYear="1898" deathYear="1987">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Frank Sinatra" birthYear="1915" deathYear="1998">
+    <professions>&quot;soundtrack</professions>
+    <professions>actor</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Max Steiner" birthYear="1888" deathYear="1971">
+    <professions>&quot;music_department</professions>
+    <professions>composer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="James Stewart" birthYear="1908" deathYear="1997">
+    <professions>&quot;actor</professions>
+    <professions>soundtrack</professions>
+    <professions>director&quot;</professions>
+  </persons>
+  <persons name="Elizabeth Taylor" birthYear="1932" deathYear="2011">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Shirley Temple" birthYear="1928" deathYear="2014">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack</professions>
+    <professions>writer&quot;</professions>
+  </persons>
+  <persons name="Gene Tierney" birthYear="1920" deathYear="1991">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Spencer Tracy" birthYear="1900" deathYear="1967">
+    <professions>&quot;actor</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Fran&#xc3;&#xa7;ois Truffaut" birthYear="1932" deathYear="1984">
+    <professions>&quot;writer</professions>
+    <professions>director</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Franz Waxman" birthYear="1906" deathYear="1967">
+    <professions>&quot;music_department</professions>
+    <professions>composer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="John Wayne" birthYear="1907" deathYear="1979">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Raquel Welch" birthYear="1940">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Orson Welles" birthYear="1915" deathYear="1985">
+    <professions>&quot;actor</professions>
+    <professions>director</professions>
+    <professions>writer&quot;</professions>
+  </persons>
+  <persons name="Natalie Wood" birthYear="1938" deathYear="1981">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack</professions>
+    <professions>music_department&quot;</professions>
+  </persons>
+  <persons name="Victor Young" birthYear="1900" deathYear="1956">
+    <professions>&quot;music_department</professions>
+    <professions>soundtrack</professions>
+    <professions>composer&quot;</professions>
+  </persons>
+  <persons name="Alan Miller">
+    <professions>&quot;editor</professions>
+    <professions>writer</professions>
+    <professions>director&quot;</professions>
+  </persons>
+  <persons name="Li Gong" birthYear="1965">
+    <professions>actress</professions>
+  </persons>
+  <persons name="Henner Hofmann" birthYear="1950">
+    <professions>&quot;cinematographer</professions>
+    <professions>producer</professions>
+    <professions>camera_department&quot;</professions>
+  </persons>
+  <persons name="Louis de Fun&#xc3;&#xa8;s" birthYear="1914" deathYear="1983">
+    <professions>&quot;actor</professions>
+    <professions>writer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Elena Koreneva" birthYear="1953">
+    <professions>&quot;actress</professions>
+    <professions>casting_director&quot;</professions>
+  </persons>
+  <persons name="Richard Paul" birthYear="1940" deathYear="1998">
+    <professions>actor</professions>
+  </persons>
+  <persons name="Armin Mueller-Stahl" birthYear="1930">
+    <professions>&quot;actor</professions>
+    <professions>director</professions>
+    <professions>writer&quot;</professions>
+  </persons>
+  <persons name="G&#xc3;&#xa9;rard Pir&#xc3;&#xa8;s" birthYear="1942">
+    <professions>&quot;director</professions>
+    <professions>writer</professions>
+    <professions>actor&quot;</professions>
+  </persons>
+  <persons name="John Cleese" birthYear="1939">
+    <professions>&quot;actor</professions>
+    <professions>writer</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Brad Pitt" birthYear="1963">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="J. Reifel">
+    <professions>writer</professions>
+  </persons>
+  <persons name="Woody Allen" birthYear="1935">
+    <professions>&quot;writer</professions>
+    <professions>director</professions>
+    <professions>actor&quot;</professions>
+  </persons>
+  <persons name="Gillian Anderson" birthYear="1968">
+    <professions>&quot;actress</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Pamela Anderson" birthYear="1967">
+    <professions>&quot;actress</professions>
+    <professions>producer</professions>
+    <professions>director&quot;</professions>
+  </persons>
+  <persons name="Jennifer Aniston" birthYear="1969">
+    <professions>&quot;actress</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Patricia Arquette" birthYear="1968">
+    <professions>&quot;actress</professions>
+    <professions>director</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Rowan Atkinson" birthYear="1955">
+    <professions>&quot;actor</professions>
+    <professions>writer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Dan Aykroyd" birthYear="1952">
+    <professions>&quot;writer</professions>
+    <professions>actor</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Kevin Bacon" birthYear="1958">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Fairuza Balk" birthYear="1974">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Antonio Banderas" birthYear="1960">
+    <professions>&quot;actor</professions>
+    <professions>soundtrack</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Adrienne Barbeau" birthYear="1945">
+    <professions>&quot;actress</professions>
+    <professions>writer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Drew Barrymore" birthYear="1975">
+    <professions>&quot;producer</professions>
+    <professions>actress</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Kim Basinger" birthYear="1953">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Luc Besson" birthYear="1959">
+    <professions>&quot;writer</professions>
+    <professions>producer</professions>
+    <professions>director&quot;</professions>
+  </persons>
+  <persons name="Yasmine Bleeth" birthYear="1968">
+    <professions>actress</professions>
+  </persons>
+  <persons name="Kenneth Branagh" birthYear="1960">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>director&quot;</professions>
+  </persons>
+  <persons name="Matthew Broderick" birthYear="1962">
+    <professions>&quot;actor</professions>
+    <professions>soundtrack</professions>
+    <professions>director&quot;</professions>
+  </persons>
+  <persons name="Pierce Brosnan" birthYear="1953">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Sandra Bullock" birthYear="1964">
+    <professions>&quot;producer</professions>
+    <professions>actress</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Steve Buscemi" birthYear="1957">
+    <professions>&quot;actor</professions>
+    <professions>director</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Nicolas Cage" birthYear="1964">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="James Cameron" birthYear="1954">
+    <professions>&quot;writer</professions>
+    <professions>producer</professions>
+    <professions>director&quot;</professions>
+  </persons>
+  <persons name="Neve Campbell" birthYear="1973">
+    <professions>&quot;actress</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="John Carpenter" birthYear="1948">
+    <professions>&quot;soundtrack</professions>
+    <professions>writer</professions>
+    <professions>music_department&quot;</professions>
+  </persons>
+  <persons name="Tia Carrere" birthYear="1967">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Jim Carrey" birthYear="1962">
+    <professions>&quot;actor</professions>
+    <professions>writer</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Phoebe Cates" birthYear="1963">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Charles Chaplin" birthYear="1889" deathYear="1977">
+    <professions>&quot;writer</professions>
+    <professions>soundtrack</professions>
+    <professions>actor&quot;</professions>
+  </persons>
+  <persons name="George Clooney" birthYear="1961">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>director&quot;</professions>
+  </persons>
+  <persons name="Jennifer Connelly" birthYear="1970">
+    <professions>actress</professions>
+  </persons>
+  <persons name="Sean Connery" birthYear="1930">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Kevin Costner" birthYear="1955">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Wes Craven" birthYear="1939" deathYear="2015">
+    <professions>&quot;writer</professions>
+    <professions>producer</professions>
+    <professions>director&quot;</professions>
+  </persons>
+  <persons name="Russell Crowe" birthYear="1964">
+    <professions>&quot;actor</professions>
+    <professions>soundtrack</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Tom Cruise" birthYear="1962">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Jamie Lee Curtis" birthYear="1958">
+    <professions>&quot;actress</professions>
+    <professions>producer</professions>
+    <professions>director&quot;</professions>
+  </persons>
+  <persons name="John Cusack" birthYear="1966">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>writer&quot;</professions>
+  </persons>
+  <persons name="Claire Danes" birthYear="1979">
+    <professions>&quot;actress</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Geena Davis" birthYear="1956">
+    <professions>&quot;actress</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Robert De Niro" birthYear="1943">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="John Denver" birthYear="1943" deathYear="1997">
+    <professions>&quot;soundtrack</professions>
+    <professions>music_department</professions>
+    <professions>actor&quot;</professions>
+  </persons>
+  <persons name="Johnny Depp" birthYear="1963">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Bo Derek" birthYear="1956">
+    <professions>&quot;actress</professions>
+    <professions>producer</professions>
+    <professions>miscellaneous&quot;</professions>
+  </persons>
+  <persons name="Leonardo DiCaprio" birthYear="1974">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>writer&quot;</professions>
+  </persons>
+  <persons name="Cameron Diaz" birthYear="1972">
+    <professions>&quot;actress</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Michael Douglas" birthYear="1944">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="David Duchovny" birthYear="1960">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>director&quot;</professions>
+  </persons>
+  <persons name="Clint Eastwood" birthYear="1930">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>director&quot;</professions>
+  </persons>
+  <persons name="Erika Eleniak" birthYear="1969">
+    <professions>actress</professions>
+  </persons>
+  <persons name="Cary Elwes" birthYear="1962">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>director&quot;</professions>
+  </persons>
+  <persons name="Sherilyn Fenn" birthYear="1965">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Ralph Fiennes" birthYear="1962">
+    <professions>&quot;actor</professions>
+    <professions>director</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Colin Firth" birthYear="1960">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Harrison Ford" birthYear="1942">
+    <professions>&quot;actor</professions>
+    <professions>writer</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Jodie Foster" birthYear="1962">
+    <professions>&quot;actress</professions>
+    <professions>director</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Michael J. Fox" birthYear="1961">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>miscellaneous&quot;</professions>
+  </persons>
+  <persons name="Morgan Freeman" birthYear="1937">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Richard Gere" birthYear="1949">
+    <professions>&quot;actor</professions>
+    <professions>soundtrack</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Gina Gershon" birthYear="1962">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Mel Gibson" birthYear="1956">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>director&quot;</professions>
+  </persons>
+  <persons name="Whoopi Goldberg" birthYear="1955">
+    <professions>&quot;actress</professions>
+    <professions>producer</professions>
+    <professions>writer&quot;</professions>
+  </persons>
+  <persons name="Jeff Goldblum" birthYear="1952">
+    <professions>&quot;actor</professions>
+    <professions>soundtrack</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Linda Hamilton" birthYear="1956">
+    <professions>actress</professions>
+  </persons>
+  <persons name="Tom Hanks" birthYear="1956">
+    <professions>&quot;producer</professions>
+    <professions>actor</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Teri Hatcher" birthYear="1964">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack</professions>
+    <professions>writer&quot;</professions>
+  </persons>
+  <persons name="Ethan Hawke" birthYear="1970">
+    <professions>&quot;actor</professions>
+    <professions>writer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Salma Hayek" birthYear="1966">
+    <professions>&quot;actress</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Anne Heche" birthYear="1969">
+    <professions>&quot;actress</professions>
+    <professions>writer</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Dustin Hoffman" birthYear="1937">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Anthony Hopkins" birthYear="1937">
+    <professions>&quot;actor</professions>
+    <professions>soundtrack</professions>
+    <professions>composer&quot;</professions>
+  </persons>
+  <persons name="Ron Howard" birthYear="1954">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>director&quot;</professions>
+  </persons>
+  <persons name="Helen Hunt" birthYear="1963">
+    <professions>&quot;actress</professions>
+    <professions>producer</professions>
+    <professions>director&quot;</professions>
+  </persons>
+  <persons name="Elizabeth Hurley" birthYear="1965">
+    <professions>&quot;actress</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Samuel L. Jackson" birthYear="1948">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Tommy Lee Jones" birthYear="1946">
+    <professions>&quot;actor</professions>
+    <professions>director</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Milla Jovovich" birthYear="1975">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Ashley Judd" birthYear="1968">
+    <professions>&quot;actress</professions>
+    <professions>producer</professions>
+    <professions>director&quot;</professions>
+  </persons>
+  <persons name="Harvey Keitel" birthYear="1939">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Nicole Kidman" birthYear="1967">
+    <professions>&quot;actress</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Val Kilmer" birthYear="1959">
+    <professions>&quot;actor</professions>
+    <professions>soundtrack</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Stephen King" birthYear="1947">
+    <professions>&quot;writer</professions>
+    <professions>producer</professions>
+    <professions>actor&quot;</professions>
+  </persons>
+  <persons name="Nastassja Kinski" birthYear="1961">
+    <professions>&quot;actress</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Kevin Kline" birthYear="1947">
+    <professions>&quot;actor</professions>
+    <professions>soundtrack</professions>
+    <professions>director&quot;</professions>
+  </persons>
+  <persons name="Diane Lane" birthYear="1965">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Jude Law" birthYear="1972">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="David Lean" birthYear="1908" deathYear="1991">
+    <professions>&quot;editor</professions>
+    <professions>director</professions>
+    <professions>writer&quot;</professions>
+  </persons>
+  <persons name="Heather Locklear" birthYear="1961">
+    <professions>&quot;actress</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Jennifer Lopez" birthYear="1969">
+    <professions>&quot;actress</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Traci Lords" birthYear="1968">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="George Lucas" birthYear="1944">
+    <professions>&quot;writer</professions>
+    <professions>producer</professions>
+    <professions>director&quot;</professions>
+  </persons>
+  <persons name="Dolph Lundgren" birthYear="1957">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>director&quot;</professions>
+  </persons>
+  <persons name="David Lynch" birthYear="1946">
+    <professions>&quot;writer</professions>
+    <professions>director</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Madonna" birthYear="1958">
+    <professions>&quot;soundtrack</professions>
+    <professions>actress</professions>
+    <professions>music_department&quot;</professions>
+  </persons>
+  <persons name="Steve Martin" birthYear="1945">
+    <professions>&quot;writer</professions>
+    <professions>actor</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Jenny McCarthy" birthYear="1972">
+    <professions>&quot;actress</professions>
+    <professions>producer</professions>
+    <professions>writer&quot;</professions>
+  </persons>
+  <persons name="Matthew McConaughey" birthYear="1969">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Ewan McGregor" birthYear="1971">
+    <professions>&quot;actor</professions>
+    <professions>writer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Alyssa Milano" birthYear="1972">
+    <professions>&quot;actress</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Demi Moore" birthYear="1962">
+    <professions>&quot;actress</professions>
+    <professions>producer</professions>
+    <professions>director&quot;</professions>
+  </persons>
+  <persons name="Julianne Moore" birthYear="1960">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Bill Murray" birthYear="1950">
+    <professions>&quot;actor</professions>
+    <professions>soundtrack</professions>
+    <professions>writer&quot;</professions>
+  </persons>
+  <persons name="Mike Myers" birthYear="1963">
+    <professions>&quot;actor</professions>
+    <professions>writer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Jack Nicholson" birthYear="1937">
+    <professions>&quot;actor</professions>
+    <professions>soundtrack</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Gary Oldman" birthYear="1958">
+    <professions>&quot;actor</professions>
+    <professions>soundtrack</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Al Pacino" birthYear="1940">
+    <professions>&quot;actor</professions>
+    <professions>soundtrack</professions>
+    <professions>director&quot;</professions>
+  </persons>
+  <persons name="Bill Paxton" birthYear="1955" deathYear="2017">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>writer&quot;</professions>
+  </persons>
+  <persons name="Michelle Pfeiffer" birthYear="1958">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Ryan Phillippe" birthYear="1974">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>director&quot;</professions>
+  </persons>
+  <persons name="River Phoenix" birthYear="1970" deathYear="1993">
+    <professions>&quot;actor</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Natalie Portman" birthYear="1981">
+    <professions>&quot;actress</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Parker Posey" birthYear="1968">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack</professions>
+    <professions>writer&quot;</professions>
+  </persons>
+  <persons name="Keanu Reeves" birthYear="1964">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Christina Ricci" birthYear="1980">
+    <professions>&quot;actress</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Molly Ringwald" birthYear="1968">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack</professions>
+    <professions>music_department&quot;</professions>
+  </persons>
+  <persons name="Tim Robbins" birthYear="1958">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>director&quot;</professions>
+  </persons>
+  <persons name="Julia Roberts" birthYear="1967">
+    <professions>&quot;actress</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Mimi Rogers" birthYear="1956">
+    <professions>&quot;actress</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Meg Ryan" birthYear="1961">
+    <professions>&quot;actress</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Winona Ryder" birthYear="1971">
+    <professions>&quot;actress</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Mia Sara" birthYear="1967">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Susan Sarandon" birthYear="1946">
+    <professions>&quot;actress</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Arnold Schwarzenegger" birthYear="1947">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>director&quot;</professions>
+  </persons>
+  <persons name="Martin Scorsese" birthYear="1942">
+    <professions>&quot;producer</professions>
+    <professions>director</professions>
+    <professions>actor&quot;</professions>
+  </persons>
+  <persons name="Kristin Scott Thomas" birthYear="1960">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack</professions>
+    <professions>director&quot;</professions>
+  </persons>
+  <persons name="Steven Seagal" birthYear="1952">
+    <professions>&quot;producer</professions>
+    <professions>actor</professions>
+    <professions>writer&quot;</professions>
+  </persons>
+  <persons name="Joan Severance" birthYear="1958">
+    <professions>&quot;actress</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Charlie Sheen" birthYear="1965">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Brooke Shields" birthYear="1965">
+    <professions>&quot;actress</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Elisabeth Shue" birthYear="1963">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Alicia Silverstone" birthYear="1976">
+    <professions>&quot;actress</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Christian Slater" birthYear="1969">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Will Smith" birthYear="1968">
+    <professions>&quot;music_department</professions>
+    <professions>actor</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Mira Sorvino" birthYear="1967">
+    <professions>&quot;actress</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Kevin Spacey" birthYear="1959">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Steven Spielberg" birthYear="1946">
+    <professions>&quot;producer</professions>
+    <professions>writer</professions>
+    <professions>director&quot;</professions>
+  </persons>
+  <persons name="Sylvester Stallone" birthYear="1946">
+    <professions>&quot;actor</professions>
+    <professions>writer</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Oliver Stone" birthYear="1946">
+    <professions>&quot;director</professions>
+    <professions>producer</professions>
+    <professions>writer&quot;</professions>
+  </persons>
+  <persons name="Sharon Stone" birthYear="1958">
+    <professions>&quot;actress</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Quentin Tarantino" birthYear="1963">
+    <professions>&quot;writer</professions>
+    <professions>actor</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Charlize Theron" birthYear="1975">
+    <professions>&quot;actress</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Uma Thurman" birthYear="1970">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Jennifer Tilly" birthYear="1958">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack</professions>
+    <professions>writer&quot;</professions>
+  </persons>
+  <persons name="John Travolta" birthYear="1954">
+    <professions>&quot;actor</professions>
+    <professions>soundtrack</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Shannon Tweed" birthYear="1957">
+    <professions>&quot;actress</professions>
+    <professions>producer</professions>
+    <professions>set_decorator&quot;</professions>
+  </persons>
+  <persons name="Liv Tyler" birthYear="1977">
+    <professions>&quot;actress</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Skeet Ulrich" birthYear="1970">
+    <professions>&quot;actor</professions>
+    <professions>director</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Jean-Claude Van Damme" birthYear="1960">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>writer&quot;</professions>
+  </persons>
+  <persons name="Mark Wahlberg" birthYear="1971">
+    <professions>&quot;producer</professions>
+    <professions>actor</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Denzel Washington" birthYear="1954">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Sigourney Weaver" birthYear="1949">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Robin Williams" birthYear="1951" deathYear="2014">
+    <professions>&quot;actor</professions>
+    <professions>soundtrack</professions>
+    <professions>writer&quot;</professions>
+  </persons>
+  <persons name="Bruce Willis" birthYear="1955">
+    <professions>&quot;actor</professions>
+    <professions>soundtrack</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="John Woo" birthYear="1946">
+    <professions>&quot;producer</professions>
+    <professions>director</professions>
+    <professions>writer&quot;</professions>
+  </persons>
+  <persons name="Edward D. Wood Jr." birthYear="1924" deathYear="1978">
+    <professions>&quot;writer</professions>
+    <professions>director</professions>
+    <professions>actor&quot;</professions>
+  </persons>
+  <persons name="James Woods" birthYear="1947">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Ren&#xc3;&#xa9;e Zellweger" birthYear="1969">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Timothy Dowling" birthYear="1973">
+    <professions>&quot;actor</professions>
+    <professions>writer</professions>
+    <professions>miscellaneous&quot;</professions>
+  </persons>
+  <persons name="Robert Ellis" birthYear="1892" deathYear="1974">
+    <professions>&quot;actor</professions>
+    <professions>director</professions>
+    <professions>writer&quot;</professions>
+  </persons>
+  <persons name="Isabelle Adjani" birthYear="1955">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Ben Affleck" birthYear="1972">
+    <professions>&quot;producer</professions>
+    <professions>actor</professions>
+    <professions>writer&quot;</professions>
+  </persons>
+  <persons name="Jenny Agutter" birthYear="1952">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Alan Alda" birthYear="1936">
+    <professions>&quot;actor</professions>
+    <professions>miscellaneous</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Stephanie Zimbalist" birthYear="1956">
+    <professions>&quot;actress</professions>
+    <professions>writer&quot;</professions>
+  </persons>
+  <persons name="Ginger Lynn" birthYear="1962">
+    <professions>&quot;actress</professions>
+    <professions>director</professions>
+    <professions>writer&quot;</professions>
+  </persons>
+  <persons name="Joan Allen" birthYear="1956">
+    <professions>&quot;actress</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Karen Allen" birthYear="1951">
+    <professions>&quot;actress</professions>
+    <professions>director</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Nancy Allen" birthYear="1950">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Kirstie Alley" birthYear="1951">
+    <professions>&quot;actress</professions>
+    <professions>producer</professions>
+    <professions>writer&quot;</professions>
+  </persons>
+  <persons name="Pedro Almod&#xc3;&#xb3;var" birthYear="1949">
+    <professions>&quot;writer</professions>
+    <professions>director</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Robert Altman" birthYear="1925" deathYear="2006">
+    <professions>&quot;director</professions>
+    <professions>producer</professions>
+    <professions>writer&quot;</professions>
+  </persons>
+  <persons name="Ursula Andress" birthYear="1936">
+    <professions>actress</professions>
+  </persons>
+  <persons name="Julie Andrews" birthYear="1935">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Ann-Margret" birthYear="1941">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Jean-Jacques Annaud" birthYear="1943">
+    <professions>&quot;director</professions>
+    <professions>writer</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Gabrielle Anwar" birthYear="1970">
+    <professions>&quot;actress</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Anne Archer" birthYear="1947">
+    <professions>&quot;actress</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Fanny Ardant" birthYear="1949">
+    <professions>&quot;actress</professions>
+    <professions>director</professions>
+    <professions>writer&quot;</professions>
+  </persons>
+  <persons name="Alan Arkin" birthYear="1934">
+    <professions>&quot;actor</professions>
+    <professions>soundtrack</professions>
+    <professions>director&quot;</professions>
+  </persons>
+  <persons name="David Arquette" birthYear="1971">
+    <professions>&quot;producer</professions>
+    <professions>actor</professions>
+    <professions>director&quot;</professions>
+  </persons>
+  <persons name="Rosanna Arquette" birthYear="1959">
+    <professions>&quot;actress</professions>
+    <professions>director</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Sean Astin" birthYear="1971">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>director&quot;</professions>
+  </persons>
+  <persons name="Richard Attenborough" birthYear="1923" deathYear="2014">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>director&quot;</professions>
+  </persons>
+  <persons name="Pernilla August" birthYear="1958">
+    <professions>&quot;actress</professions>
+    <professions>director</professions>
+    <professions>writer&quot;</professions>
+  </persons>
+  <persons name="Hank Azaria" birthYear="1964">
+    <professions>&quot;actor</professions>
+    <professions>soundtrack</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Catherine Bach" birthYear="1954">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Scott Baio" birthYear="1960">
+    <professions>&quot;actor</professions>
+    <professions>director</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Scott Bairstow" birthYear="1970">
+    <professions>actor</professions>
+  </persons>
+  <persons name="Brenda Bakke" birthYear="1963">
+    <professions>actress</professions>
+  </persons>
+  <persons name="Adam Baldwin" birthYear="1962">
+    <professions>&quot;actor</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Alec Baldwin" birthYear="1958">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Stephen Baldwin" birthYear="1966">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>director&quot;</professions>
+  </persons>
+  <persons name="William Baldwin" birthYear="1963">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>stunts&quot;</professions>
+  </persons>
+  <persons name="Christian Bale" birthYear="1974">
+    <professions>&quot;actor</professions>
+    <professions>editorial_department</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Ellen Barkin" birthYear="1954">
+    <professions>&quot;actress</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="John Barry" birthYear="1933" deathYear="2011">
+    <professions>&quot;music_department</professions>
+    <professions>soundtrack</professions>
+    <professions>composer&quot;</professions>
+  </persons>
+  <persons name="Angela Bassett" birthYear="1958">
+    <professions>&quot;actress</professions>
+    <professions>producer</professions>
+    <professions>director&quot;</professions>
+  </persons>
+  <persons name="Michelle Bauer" birthYear="1958">
+    <professions>&quot;actress</professions>
+    <professions>miscellaneous</professions>
+    <professions>costume_department&quot;</professions>
+  </persons>
+  <persons name="Sean Bean" birthYear="1959">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>animation_department&quot;</professions>
+  </persons>
+  <persons name="Amanda Bearse" birthYear="1958">
+    <professions>&quot;actress</professions>
+    <professions>director</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Kate Beckinsale" birthYear="1973">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Robert Beltran" birthYear="1953">
+    <professions>&quot;actor</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Tom Berenger" birthYear="1949">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>writer&quot;</professions>
+  </persons>
+  <persons name="Candice Bergen" birthYear="1946">
+    <professions>&quot;actress</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Michael Biehn" birthYear="1956">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>director&quot;</professions>
+  </persons>
+  <persons name="Juliette Binoche" birthYear="1964">
+    <professions>&quot;actress</professions>
+    <professions>art_department</professions>
+    <professions>miscellaneous&quot;</professions>
+  </persons>
+  <persons name="Thora Birch" birthYear="1982">
+    <professions>&quot;actress</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Jacqueline Bisset" birthYear="1944">
+    <professions>&quot;actress</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Honor Blackman" birthYear="1925">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Linda Blair" birthYear="1959">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Mel Blanc" birthYear="1908" deathYear="1989">
+    <professions>&quot;actor</professions>
+    <professions>soundtrack</professions>
+    <professions>music_department&quot;</professions>
+  </persons>
+  <persons name="Brian Blessed" birthYear="1936">
+    <professions>&quot;actor</professions>
+    <professions>soundtrack</professions>
+    <professions>director&quot;</professions>
+  </persons>
+  <persons name="Helena Bonham Carter" birthYear="1966">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Ernest Borgnine" birthYear="1917" deathYear="2012">
+    <professions>&quot;actor</professions>
+    <professions>soundtrack</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="David Bowie" birthYear="1947" deathYear="2016">
+    <professions>&quot;soundtrack</professions>
+    <professions>actor</professions>
+    <professions>composer&quot;</professions>
+  </persons>
+  <persons name="Bruce Boxleitner" birthYear="1950">
+    <professions>&quot;actor</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Annie Rosar" birthYear="1888" deathYear="1963">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Amy Brenneman" birthYear="1964">
+    <professions>&quot;actress</professions>
+    <professions>producer</professions>
+    <professions>writer&quot;</professions>
+  </persons>
+  <persons name="Jeff Bridges" birthYear="1949">
+    <professions>&quot;actor</professions>
+    <professions>soundtrack</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Charles Bronson" birthYear="1921" deathYear="2003">
+    <professions>actor</professions>
+  </persons>
+  <persons name="Louise Brooks" birthYear="1906" deathYear="1985">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Mel Brooks" birthYear="1926">
+    <professions>&quot;actor</professions>
+    <professions>writer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Clancy Brown" birthYear="1959">
+    <professions>&quot;actor</professions>
+    <professions>soundtrack</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Tim Burton" birthYear="1958">
+    <professions>&quot;producer</professions>
+    <professions>miscellaneous</professions>
+    <professions>director&quot;</professions>
+  </persons>
+  <persons name="Yancy Butler" birthYear="1970">
+    <professions>actress</professions>
+  </persons>
+  <persons name="Luis Bu&#xc3;&#xb1;uel" birthYear="1900" deathYear="1983">
+    <professions>&quot;writer</professions>
+    <professions>director</professions>
+    <professions>actor&quot;</professions>
+  </persons>
+  <persons name="Gabriel Byrne" birthYear="1950">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>writer&quot;</professions>
+  </persons>
+  <persons name="Emmanuelle B&#xc3;&#xa9;art" birthYear="1963">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Michael Caine" birthYear="1933">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Barbara Carrera" birthYear="1945">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="David Caruso" birthYear="1956">
+    <professions>&quot;actor</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Kim Cattrall" birthYear="1956">
+    <professions>&quot;actress</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Lacey Chabert" birthYear="1982">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Richard Chamberlain" birthYear="1934">
+    <professions>&quot;actor</professions>
+    <professions>soundtrack</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Jackie Chan" birthYear="1954">
+    <professions>&quot;actor</professions>
+    <professions>stunts</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+  <persons name="Stockard Channing" birthYear="1944">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack</professions>
+    <professions>miscellaneous&quot;</professions>
+  </persons>
+  <persons name="Chevy Chase" birthYear="1943">
+    <professions>&quot;actor</professions>
+    <professions>writer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Don Cheadle" birthYear="1964">
+    <professions>&quot;actor</professions>
+    <professions>producer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Cher" birthYear="1946">
+    <professions>&quot;soundtrack</professions>
+    <professions>actress</professions>
+    <professions>director&quot;</professions>
+  </persons>
+  <persons name="Yun-Fat Chow" birthYear="1955">
+    <professions>&quot;actor</professions>
+    <professions>writer</professions>
+    <professions>soundtrack&quot;</professions>
+  </persons>
+  <persons name="Glenn Close" birthYear="1947">
+    <professions>&quot;actress</professions>
+    <professions>soundtrack</professions>
+    <professions>producer&quot;</professions>
+  </persons>
+</no.ntnu.tdt4250.imdb:Imdb>
