@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -16,7 +17,7 @@ import org.eclipse.emf.ecore.xmi.impl.XMLResourceFactoryImpl;
 
 import imdb.Imdb;
 import imdb.ImdbFactory;
-import imdb.ImdbPackage;
+import imdb.Involvement;
 import imdb.Person;
 import imdb.Rating;
 import imdb.Title;
@@ -29,20 +30,12 @@ public class DatasetDeserializer {
 	private static Imdb imdb;
 	
 	private static HashMap<String, Title> titleMap = new HashMap<String, Title>();
+	private static HashMap<String, Person> personMap = new HashMap<String, Person>();
 	
 	
 	
 	public static void main(String[] args) {
-		System.out.println("Start deserializing to Ecore instances");
-		DatasetDeserializer.deserialize();
-		System.out.println("\nStart serializing to XMI");
-		serializeToXMI(outputXmiFilePath);
-		System.out.println("Saved to "+outputXmiFilePath);
-		
-	}
-	
-	
-	public static void deserialize() {
+
 		// get instantiated EPackage
 		// imdbPackage can be found in ImdbPackage.eINSTANCE;
 
@@ -53,20 +46,62 @@ public class DatasetDeserializer {
 		imdb = ImdbFactory.eINSTANCE.createImdb();
 		
 		
+		System.out.println("Start deserializing to Ecore instances");
+		DatasetDeserializer.deserialize();
+		System.out.println("\nStart serializing to XMI");
+		serializeToXMI(outputXmiFilePath);
+		System.out.println("Saved to "+outputXmiFilePath);
 		
+	}
+	
+	
+	public static void deserialize() {
 		deserializeTitles();
+		System.out.println("Done deserializing all titles");
 		
-		System.out.println();
+		hash500RandomTVSeries();
+		System.out.println("Picked out 500 TV Series titles");
 		
-
-		// Hash the titles by id for faster query
-		// EList<T> has the same performance for search as List<T>
-		// TODO: Add real ID
-		imdb.getTitles().forEach(title -> titleMap.put(title.getID(), title));
+		
+		deserializeRatings();
+		System.out.println("Done getting corresponding ratings");
+		
+		
 		
 		
 		deserializePersons();
-		deserializeRatings();
+		hashPersons();
+		System.out.println("Done deserializing all persons");
+		
+		
+		// deserialize involvements
+		System.out.println();
+		
+		
+		
+		// remove all person not connected to titles or
+		// involvements that are connected to a titles
+		
+		List<Person> persons = imdb.getPersons().stream()
+			.filter(person -> { 
+				for (Title title : person.getKnownForTitles()) {
+					// If person has titleMap titles in knownForTitles
+					if (titleMap.containsValue(title))
+						return true;
+					
+					// If person is connected to titleMap titles through involvements
+					for (Involvement involvement: title.getInvolvements()) {
+						if (involvement.getPerson() == person)
+							return true;
+					}
+				}
+				return false;
+			})
+			.collect(Collectors.toList());
+		
+		// Update ecore model
+		imdb.getPersons().clear();
+		imdb.getPersons().addAll(persons);
 		
 	}
 	
@@ -77,7 +112,6 @@ public class DatasetDeserializer {
 		// Open file
 		try(BufferedReader br = new BufferedReader(new FileReader(filename))) {
 		    for(String line; (line = br.readLine()) != null; ) {
-		    	System.out.print(1);
 		    	deserializeEachTitle(line);
 		    }
 		} catch (IOException e) {
@@ -117,6 +151,9 @@ public class DatasetDeserializer {
 		}
 		String[] titleGenres = columnValues[8].split(",");
 		
+		
+		
+		title.setID(titleID);
 		title.setTitleType(TitleType.get(titleType.toUpperCase()));
 		
 		title.setName(titleName);
@@ -127,13 +164,42 @@ public class DatasetDeserializer {
 	}
 	
 	
+	
+	private static void hash500RandomTVSeries() {
+		// Hash the titles by id for faster query
+		// List<T> has the same performance for search as List<T>
+		//imdb.getTitles().forEach(title -> titleMap.put(title.getID(), title));
+
+		// Hash titles
+		List<Title> tvSeries = imdb.getTitles().stream()
+					.filter(title -> title.getTitleType() == TitleType.TVSERIES)
+					.collect(Collectors.toList());
+		
+		// Randomise the list
+		Collections.shuffle(tvSeries);
+		
+		// Pick 500
+		tvSeries = tvSeries.stream()
+				.limit(500) // no need to check if the list is shorter than 500
+				.collect(Collectors.toList());
+		
+		// Update the titleMap
+		tvSeries.forEach(series -> titleMap.put(series.getID(), series));
+		
+		
+		// Append to ecore model
+		imdb.getTitles().clear();
+		imdb.getTitles().addAll(tvSeries);
+	}
+	
+	
+	
 	public static void deserializePersons() {
 		String filename = "src/imdb/dataset/persons.tsv";
 		// Open file
 		try(BufferedReader br = new BufferedReader(new FileReader(filename))) {
 		    for(String line; (line = br.readLine()) != null; ) {
-		    	System.out.print(2);
-		    	deserializeEachPerson(line);
+		    	deserializePerson(line);
 		    }
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -141,7 +207,7 @@ public class DatasetDeserializer {
 	}
 	
 
-	public static void deserializeEachPerson(String line){
+	public static void deserializePerson(String line){
 		// Split string by delimiter tab
 		String[] columnValues = line.split("\\t");
 		Person person = ImdbFactory.eINSTANCE.createPerson();
@@ -181,7 +247,7 @@ public class DatasetDeserializer {
 		person.setName(name);
 		person.setBirthYear(birthYear);
 		person.setDeathYear(deathYear);
-		person.getProfessions().clear();
+		person.getProfessions().clear(); 
 		person.getProfessions().addAll(Arrays.asList(professions));
 		
 		person.getKnownForTitles().clear();
@@ -190,6 +256,12 @@ public class DatasetDeserializer {
 		
 	}
 
+	
+	
+	private static void hashPersons() {
+		imdb.getPersons().forEach(person -> personMap.put(person.getID(), person));
+	}
+	
 	// Create all titles from file
 	public static void deserializeRatings(){
 		String filename = "src/imdb/dataset/ratings.tsv";
@@ -198,7 +270,6 @@ public class DatasetDeserializer {
 		    // skip the first line, it contains the column headers
 			br.readLine();
 			for(String line; (line = br.readLine()) != null; ) {
-		    	System.out.print(3);
 		    	deserializeEachRating(line);
 		    }
 		} catch (IOException e) {
@@ -212,6 +283,10 @@ public class DatasetDeserializer {
 		Rating rating = ImdbFactory.eINSTANCE.createRating();
 		
 		String titleID = columnValues[0];
+		
+		// Stop deserialization when the titleID is not in titleMap
+		if (titleMap.get(titleID) == null) return;
+		
 		float averageRating = Float.parseFloat(columnValues[1]);
 		int numVotes = Integer.parseInt(columnValues[2]);
 		
