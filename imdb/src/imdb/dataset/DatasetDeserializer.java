@@ -62,7 +62,7 @@ public class DatasetDeserializer {
 		// Hash the titles by id for faster query
 		// EList<T> has the same performance for search as List<T>
 		// TODO: Add real ID
-		imdb.getTitles().forEach(title -> titleMap.put("title.getTitleID()", title));
+		imdb.getTitles().forEach(title -> titleMap.put(title.getID(), title));
 		
 		
 		deserializePersons();

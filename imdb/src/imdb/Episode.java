@@ -19,7 +19,7 @@ package imdb;
  *
  * @see imdb.ImdbPackage#getEpisode()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='seasonNumberConstraint episodeNumberConstraint'"
- *        annotation="http://www.eclipse.org/acceleo/query/1.0 seasonNumberConstraint='self.seasonNumber&gt; 0' episodeNumberConstraint='self.episodeNumber&gt; 0'"
+ *        annotation="http://www.eclipse.org/acceleo/query/1.0 titleTypeConstraint='self.titleType = TitleType::TVEPISODE' seasonNumberConstraint='self.seasonNumber&gt; 0' episodeNumberConstraint='self.episodeNumber&gt; 0'"
  * @generated
  */
 public interface Episode extends Title {

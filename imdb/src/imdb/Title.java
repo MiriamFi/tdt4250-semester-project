@@ -25,6 +25,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link imdb.Title#getInvolvements <em>Involvements</em>}</li>
  *   <li>{@link imdb.Title#getImdb <em>Imdb</em>}</li>
  *   <li>{@link imdb.Title#getGenre <em>Genre</em>}</li>
+ *   <li>{@link imdb.Title#getID <em>ID</em>}</li>
  * </ul>
  *
  * @see imdb.ImdbPackage#getTitle()
@@ -241,5 +242,27 @@ public interface Title extends EObject {
 	 * @generated
 	 */
 	EList<String> getGenre();
+
+	/**
+	 * Returns the value of the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>ID</em>' attribute.
+	 * @see #setID(String)
+	 * @see imdb.ImdbPackage#getTitle_ID()
+	 * @model
+	 * @generated
+	 */
+	String getID();
+
+	/**
+	 * Sets the value of the '{@link imdb.Title#getID <em>ID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>ID</em>' attribute.
+	 * @see #getID()
+	 * @generated
+	 */
+	void setID(String value);
 
 } // Title

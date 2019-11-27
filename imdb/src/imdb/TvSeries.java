@@ -19,7 +19,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * @see imdb.ImdbPackage#getTvSeries()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='endYearConstraint hasTitleTypeTvseries'"
- *        annotation="http://www.eclipse.org/acceleo/query/1.0 endYearConstraint='self.endYear &gt; 0 and self.endYear &lt;= 2050 and self.endYear &gt;= self.startYear'"
+ *        annotation="http://www.eclipse.org/acceleo/query/1.0 titleTypeConstraint='self.titleType = TitleType::TVSERIES' endYearConstraint='self.endYear &gt; 0 and self.endYear &lt;= 2050 and self.endYear &gt;= self.startYear'"
  * @generated
  */
 public interface TvSeries extends Title {
