@@ -575,16 +575,13 @@ public class ImdbValidator extends EObjectValidator {
 	 * @generated NOT
 	 */
 	public boolean validateInvolvement_actorIsBornConstraint(Involvement involvement, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		// TODO implement the constraint
-		// -> specify the condition that violates the constraint
-		// -> verify the diagnostic details, including severity, code, and message
-		// Ensure that you remove @generated or mark it @generated NOT
 		boolean actorIsBorn = true;
-		if(involvement.getTitle().getTitleType() == TitleType.TVSERIES) {
-			if(involvement.getPerson().getBirthYear() >= involvement.getTvseries().getEndYear()) {
+		if (involvement.getTitle().getTitleType() == TitleType.TVSERIES) {
+			int endYear = ((TvSeries)involvement.getTitle()).getEndYear();
+			if (involvement.getPerson().getBirthYear() > endYear) {
 				actorIsBorn = false;
 			}
-		}else if(involvement.getPerson().getBirthYear() > involvement.getTitle().getStartYear()) {
+		} else if(involvement.getPerson().getBirthYear() > involvement.getTitle().getStartYear()) {
 			actorIsBorn = false;
 		}
 		if (!actorIsBorn) {

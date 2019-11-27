@@ -7,7 +7,6 @@ import imdb.Involvement;
 
 import imdb.Person;
 import imdb.Title;
-import imdb.TvSeries;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
@@ -30,7 +29,6 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  *   <li>{@link imdb.impl.InvolvementImpl#getJobCategory <em>Job Category</em>}</li>
  *   <li>{@link imdb.impl.InvolvementImpl#getJob <em>Job</em>}</li>
  *   <li>{@link imdb.impl.InvolvementImpl#getCharacter <em>Character</em>}</li>
- *   <li>{@link imdb.impl.InvolvementImpl#getTvseries <em>Tvseries</em>}</li>
  * </ul>
  *
  * @generated
@@ -99,16 +97,6 @@ public class InvolvementImpl extends MinimalEObjectImpl.Container implements Inv
 	 * @ordered
 	 */
 	protected String character = CHARACTER_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getTvseries() <em>Tvseries</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTvseries()
-	 * @generated
-	 * @ordered
-	 */
-	protected TvSeries tvseries;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -309,46 +297,6 @@ public class InvolvementImpl extends MinimalEObjectImpl.Container implements Inv
 	 * @generated
 	 */
 	@Override
-	public TvSeries getTvseries() {
-		if (tvseries != null && tvseries.eIsProxy()) {
-			InternalEObject oldTvseries = (InternalEObject)tvseries;
-			tvseries = (TvSeries)eResolveProxy(oldTvseries);
-			if (tvseries != oldTvseries) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ImdbPackage.INVOLVEMENT__TVSERIES, oldTvseries, tvseries));
-			}
-		}
-		return tvseries;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public TvSeries basicGetTvseries() {
-		return tvseries;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setTvseries(TvSeries newTvseries) {
-		TvSeries oldTvseries = tvseries;
-		tvseries = newTvseries;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ImdbPackage.INVOLVEMENT__TVSERIES, oldTvseries, tvseries));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case ImdbPackage.INVOLVEMENT__TITLE:
@@ -412,9 +360,6 @@ public class InvolvementImpl extends MinimalEObjectImpl.Container implements Inv
 				return getJob();
 			case ImdbPackage.INVOLVEMENT__CHARACTER:
 				return getCharacter();
-			case ImdbPackage.INVOLVEMENT__TVSERIES:
-				if (resolve) return getTvseries();
-				return basicGetTvseries();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -441,9 +386,6 @@ public class InvolvementImpl extends MinimalEObjectImpl.Container implements Inv
 				return;
 			case ImdbPackage.INVOLVEMENT__CHARACTER:
 				setCharacter((String)newValue);
-				return;
-			case ImdbPackage.INVOLVEMENT__TVSERIES:
-				setTvseries((TvSeries)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -472,9 +414,6 @@ public class InvolvementImpl extends MinimalEObjectImpl.Container implements Inv
 			case ImdbPackage.INVOLVEMENT__CHARACTER:
 				setCharacter(CHARACTER_EDEFAULT);
 				return;
-			case ImdbPackage.INVOLVEMENT__TVSERIES:
-				setTvseries((TvSeries)null);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -497,8 +436,6 @@ public class InvolvementImpl extends MinimalEObjectImpl.Container implements Inv
 				return JOB_EDEFAULT == null ? job != null : !JOB_EDEFAULT.equals(job);
 			case ImdbPackage.INVOLVEMENT__CHARACTER:
 				return CHARACTER_EDEFAULT == null ? character != null : !CHARACTER_EDEFAULT.equals(character);
-			case ImdbPackage.INVOLVEMENT__TVSERIES:
-				return tvseries != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -18,7 +18,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link imdb.Involvement#getJobCategory <em>Job Category</em>}</li>
  *   <li>{@link imdb.Involvement#getJob <em>Job</em>}</li>
  *   <li>{@link imdb.Involvement#getCharacter <em>Character</em>}</li>
- *   <li>{@link imdb.Involvement#getTvseries <em>Tvseries</em>}</li>
  * </ul>
  *
  * @see imdb.ImdbPackage#getInvolvement()
@@ -140,26 +139,4 @@ public interface Involvement extends EObject {
 	 * @generated
 	 */
 	void setCharacter(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Tvseries</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Tvseries</em>' reference.
-	 * @see #setTvseries(TvSeries)
-	 * @see imdb.ImdbPackage#getInvolvement_Tvseries()
-	 * @model
-	 * @generated
-	 */
-	TvSeries getTvseries();
-
-	/**
-	 * Sets the value of the '{@link imdb.Involvement#getTvseries <em>Tvseries</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Tvseries</em>' reference.
-	 * @see #getTvseries()
-	 * @generated
-	 */
-	void setTvseries(TvSeries value);
 } // Involvement

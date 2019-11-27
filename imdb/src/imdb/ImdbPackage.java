@@ -705,22 +705,13 @@ public interface ImdbPackage extends EPackage {
 	int INVOLVEMENT__CHARACTER = 4;
 
 	/**
-	 * The feature id for the '<em><b>Tvseries</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INVOLVEMENT__TVSERIES = 5;
-
-	/**
 	 * The number of structural features of the '<em>Involvement</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INVOLVEMENT_FEATURE_COUNT = 6;
+	int INVOLVEMENT_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Involvement</em>' class.
@@ -1165,17 +1156,6 @@ public interface ImdbPackage extends EPackage {
 	EAttribute getInvolvement_Character();
 
 	/**
-	 * Returns the meta object for the reference '{@link imdb.Involvement#getTvseries <em>Tvseries</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Tvseries</em>'.
-	 * @see imdb.Involvement#getTvseries()
-	 * @see #getInvolvement()
-	 * @generated
-	 */
-	EReference getInvolvement_Tvseries();
-
-	/**
 	 * Returns the meta object for enum '{@link imdb.TitleType <em>Title Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1533,14 +1513,6 @@ public interface ImdbPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute INVOLVEMENT__CHARACTER = eINSTANCE.getInvolvement_Character();
-
-		/**
-		 * The meta object literal for the '<em><b>Tvseries</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference INVOLVEMENT__TVSERIES = eINSTANCE.getInvolvement_Tvseries();
 
 		/**
 		 * The meta object literal for the '{@link imdb.TitleType <em>Title Type</em>}' enum.

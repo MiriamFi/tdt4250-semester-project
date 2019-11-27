@@ -544,16 +544,6 @@ public class ImdbPackageImpl extends EPackageImpl implements ImdbPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getInvolvement_Tvseries() {
-		return (EReference)involvementEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EEnum getTitleType() {
 		return titleTypeEEnum;
 	}
@@ -632,7 +622,6 @@ public class ImdbPackageImpl extends EPackageImpl implements ImdbPackage {
 		createEAttribute(involvementEClass, INVOLVEMENT__JOB_CATEGORY);
 		createEAttribute(involvementEClass, INVOLVEMENT__JOB);
 		createEAttribute(involvementEClass, INVOLVEMENT__CHARACTER);
-		createEReference(involvementEClass, INVOLVEMENT__TVSERIES);
 
 		// Create enums
 		titleTypeEEnum = createEEnum(TITLE_TYPE);
@@ -715,7 +704,6 @@ public class ImdbPackageImpl extends EPackageImpl implements ImdbPackage {
 		initEAttribute(getInvolvement_JobCategory(), ecorePackage.getEString(), "jobCategory", null, 1, 1, Involvement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getInvolvement_Job(), ecorePackage.getEString(), "job", null, 0, 1, Involvement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getInvolvement_Character(), ecorePackage.getEString(), "character", null, 0, 1, Involvement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getInvolvement_Tvseries(), this.getTvSeries(), null, "tvseries", null, 0, 1, Involvement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(titleTypeEEnum, TitleType.class, "TitleType");
