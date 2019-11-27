@@ -32,7 +32,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="imdb" eType="#//Imdb" eOpposite="#//Imdb/titles"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="genre" upperBound="-1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="titleID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TvSeries" eSuperTypes="#//Title">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
@@ -95,6 +95,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="involvement" upperBound="-1"
         eType="#//Involvement" eOpposite="#//Involvement/person"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="imdb" eType="#//Imdb" eOpposite="#//Imdb/persons"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Involvement">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">

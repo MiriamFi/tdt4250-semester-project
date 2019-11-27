@@ -4,14 +4,14 @@
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="SharedCrew Diagram" titleExpression="aql:'Other titles that share crew with'+self.name" initialisation="true" domainClass="imdb::Title" enablePopupBars="true">
       <defaultLayer name="Default">
         <nodeMappings name="SharedCrewNode" semanticCandidatesExpression="var:self" domainClass="imdb::Title">
-          <style xsi:type="style:SquareDescription" labelSize="12" tooltipExpression="feature:name" labelPosition="node" resizeKind="NSEW" width="10" height="5">
+          <style xsi:type="style:SquareDescription" labelSize="12" tooltipExpression="feature:name" labelPosition="node" resizeKind="NSEW" width="20" height="15">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='orange']"/>
           </style>
         </nodeMappings>
         <nodeMappings name="otherTitles" preconditionExpression="if self.name.startsWith('a') then self else self.eContainer() endif" semanticCandidatesExpression="aql:self.involvements.person.involvement.title->select(p | p.name != self.name)" domainClass="imdb::Title">
-          <style xsi:type="style:SquareDescription" labelSize="12" tooltipExpression="feature:name" sizeComputationExpression="5" labelPosition="node" resizeKind="NSEW" width="12" height="6">
+          <style xsi:type="style:SquareDescription" labelSize="12" tooltipExpression="feature:name" sizeComputationExpression="5" labelPosition="node" resizeKind="NSEW" width="20" height="15">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
