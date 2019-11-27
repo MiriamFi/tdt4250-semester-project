@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see imdb.ImdbPackage#getInvolvement()
- * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='uniqueInvolvementConstraint actorIsBornConstraint'"
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='uniqueJobCategoryPerPersonConstraint actorIsBornConstraint'"
  * @generated
  */
 public interface Involvement extends EObject {

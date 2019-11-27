@@ -45,6 +45,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link imdb.impl.TitleImpl#getInvolvements <em>Involvements</em>}</li>
  *   <li>{@link imdb.impl.TitleImpl#getImdb <em>Imdb</em>}</li>
  *   <li>{@link imdb.impl.TitleImpl#getGenre <em>Genre</em>}</li>
+ *   <li>{@link imdb.impl.TitleImpl#getID <em>ID</em>}</li>
  * </ul>
  *
  * @generated
@@ -199,6 +200,26 @@ public class TitleImpl extends MinimalEObjectImpl.Container implements Title {
 	 * @ordered
 	 */
 	protected EList<String> genre;
+
+	/**
+	 * The default value of the '{@link #getID() <em>ID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getID()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getID() <em>ID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getID()
+	 * @generated
+	 * @ordered
+	 */
+	protected String id = ID_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -476,6 +497,29 @@ public class TitleImpl extends MinimalEObjectImpl.Container implements Title {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	public String getID() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setID(String newID) {
+		String oldID = id;
+		id = newID;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ImdbPackage.TITLE__ID, oldID, id));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -554,6 +598,8 @@ public class TitleImpl extends MinimalEObjectImpl.Container implements Title {
 				return getImdb();
 			case ImdbPackage.TITLE__GENRE:
 				return getGenre();
+			case ImdbPackage.TITLE__ID:
+				return getID();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -599,6 +645,9 @@ public class TitleImpl extends MinimalEObjectImpl.Container implements Title {
 				getGenre().clear();
 				getGenre().addAll((Collection<? extends String>)newValue);
 				return;
+			case ImdbPackage.TITLE__ID:
+				setID((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -641,6 +690,9 @@ public class TitleImpl extends MinimalEObjectImpl.Container implements Title {
 			case ImdbPackage.TITLE__GENRE:
 				getGenre().clear();
 				return;
+			case ImdbPackage.TITLE__ID:
+				setID(ID_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -673,6 +725,8 @@ public class TitleImpl extends MinimalEObjectImpl.Container implements Title {
 				return getImdb() != null;
 			case ImdbPackage.TITLE__GENRE:
 				return genre != null && !genre.isEmpty();
+			case ImdbPackage.TITLE__ID:
+				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -701,6 +755,8 @@ public class TitleImpl extends MinimalEObjectImpl.Container implements Title {
 		result.append(runtime);
 		result.append(", genre: ");
 		result.append(genre);
+		result.append(", ID: ");
+		result.append(id);
 		result.append(')');
 		return result.toString();
 	}

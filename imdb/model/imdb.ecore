@@ -12,11 +12,12 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Title">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="startYearConstraint runtimeConstraint"/>
+      <details key="constraints" value="startYearConstraint runtimeConstraint uniqueCharactersConstraint"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/acceleo/query/1.0">
       <details key="startYearConstraint" value="self.startYear > 0 and self.startYear &lt;= 2050"/>
       <details key="runtimeConstraint" value="self.runtime > 0"/>
+      <details key="uniqueCharactersConstraint" value="self.involvements -> isUnique(inv | inv.character)"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="region" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -32,15 +33,14 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="imdb" eType="#//Imdb" eOpposite="#//Imdb/titles"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="genre" upperBound="-1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TvSeries" eSuperTypes="#//Title">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="endYearConstraint hasTitleTypeTvseries"/>
+      <details key="constraints" value="endYearConstraint titleTypeConstraint"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/acceleo/query/1.0">
-      <details key="titleTypeConstraint" value="self.titleType = TitleType::TVSERIES"/>
-      <details key="endYearConstraint" value="self.endYear > 0 and self.endYear &lt;= 2050 and self.endYear >= self.startYear"/>
+      <details key="endYearConstraint" value="(self.endYear > 0 and self.endYear &lt;= 2050 and self.endYear >= self.startYear) or self.endYear = -1"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="endYear" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="episodes" upperBound="-1"
@@ -48,12 +48,12 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Episode" eSuperTypes="#//Title">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="seasonNumberConstraint episodeNumberConstraint"/>
+      <details key="constraints" value="noImdbContainerConstraint seasonNumberConstraint episodeNumberConstraint titleTypeConstraint"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/acceleo/query/1.0">
-      <details key="titleTypeConstraint" value="self.titleType = TitleType::TVEPISODE"/>
-      <details key="seasonNumberConstraint" value="self.seasonNumber> 0"/>
-      <details key="episodeNumberConstraint" value="self.episodeNumber> 0"/>
+      <details key="noImdbContainerConstraint" value="self.imdb = null"/>
+      <details key="seasonNumberConstraint" value="self.seasonNumber > 0"/>
+      <details key="episodeNumberConstraint" value="self.episodeNumber > 0"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="series" lowerBound="1"
         eType="#//TvSeries" eOpposite="#//TvSeries/episodes"/>
@@ -78,11 +78,11 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Person">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="numberOfVotesConstraint averageRatingConstraint"/>
+      <details key="constraints" value="birthYearConstraint deathYearConstraint"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/acceleo/query/1.0">
       <details key="birthYearConstraint" value="self.birthYear > 0 and self.birthYear &lt;= 2019"/>
-      <details key="deathYearConstraint" value="self.deathYear > -2 and self.deathYear &lt;= 2019 and self.deathYear >= self.birthYear"/>
+      <details key="deathYearConstraint" value="(self.deathYear > 0 and self.deathYear &lt;= 2019 and self.deathYear >= self.birthYear) or self.deathYear = -1"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="birthYear" lowerBound="1"
@@ -94,12 +94,13 @@
         eType="#//Title"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="involvement" upperBound="-1"
         eType="#//Involvement" eOpposite="#//Involvement/person"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="imdb" eType="#//Imdb" eOpposite="#//Imdb/persons"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="imdb" lowerBound="1" eType="#//Imdb"
+        eOpposite="#//Imdb/persons"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Involvement">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="uniqueInvolvementConstraint actorIsBornConstraint"/>
+      <details key="constraints" value="uniqueJobCategoryPerPersonConstraint actorIsBornConstraint"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="title" lowerBound="1" eType="#//Title"
         eOpposite="#//Title/involvements"/>
