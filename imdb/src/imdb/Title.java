@@ -21,10 +21,10 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link imdb.Title#getTitleType <em>Title Type</em>}</li>
  *   <li>{@link imdb.Title#getStartYear <em>Start Year</em>}</li>
  *   <li>{@link imdb.Title#getRuntime <em>Runtime</em>}</li>
- *   <li>{@link imdb.Title#getGenres <em>Genres</em>}</li>
  *   <li>{@link imdb.Title#getRating <em>Rating</em>}</li>
  *   <li>{@link imdb.Title#getInvolvements <em>Involvements</em>}</li>
  *   <li>{@link imdb.Title#getImdb <em>Imdb</em>}</li>
+ *   <li>{@link imdb.Title#getGenre <em>Genre</em>}</li>
  * </ul>
  *
  * @see imdb.ImdbPackage#getTitle()
@@ -169,18 +169,6 @@ public interface Title extends EObject {
 	void setRuntime(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Genres</b></em>' reference list.
-	 * The list contents are of type {@link imdb.Genre}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Genres</em>' reference list.
-	 * @see imdb.ImdbPackage#getTitle_Genres()
-	 * @model upper="3"
-	 * @generated
-	 */
-	EList<Genre> getGenres();
-
-	/**
 	 * Returns the value of the '<em><b>Rating</b></em>' containment reference.
 	 * It is bidirectional and its opposite is '{@link imdb.Rating#getTitle <em>Title</em>}'.
 	 * <!-- begin-user-doc -->
@@ -241,5 +229,17 @@ public interface Title extends EObject {
 	 * @generated
 	 */
 	void setImdb(Imdb value);
+
+	/**
+	 * Returns the value of the '<em><b>Genre</b></em>' attribute list.
+	 * The list contents are of type {@link java.lang.String}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Genre</em>' attribute list.
+	 * @see imdb.ImdbPackage#getTitle_Genre()
+	 * @model
+	 * @generated
+	 */
+	EList<String> getGenre();
 
 } // Title

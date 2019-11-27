@@ -2,7 +2,6 @@
  */
 package imdb.impl;
 
-import imdb.Genre;
 import imdb.Imdb;
 import imdb.ImdbPackage;
 
@@ -27,7 +26,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link imdb.impl.ImdbImpl#getTitles <em>Titles</em>}</li>
- *   <li>{@link imdb.impl.ImdbImpl#getGenres <em>Genres</em>}</li>
  *   <li>{@link imdb.impl.ImdbImpl#getPersons <em>Persons</em>}</li>
  * </ul>
  *
@@ -43,15 +41,6 @@ public class ImdbImpl extends MinimalEObjectImpl.Container implements Imdb {
 	 * @ordered
 	 */
 	protected EList<Title> titles;
-	/**
-	 * The cached value of the '{@link #getGenres() <em>Genres</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getGenres()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Genre> genres;
 	/**
 	 * The cached value of the '{@link #getPersons() <em>Persons</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -100,19 +89,6 @@ public class ImdbImpl extends MinimalEObjectImpl.Container implements Imdb {
 	 * @generated
 	 */
 	@Override
-	public EList<Genre> getGenres() {
-		if (genres == null) {
-			genres = new EObjectContainmentWithInverseEList<Genre>(Genre.class, this, ImdbPackage.IMDB__GENRES, ImdbPackage.GENRE__IMDB);
-		}
-		return genres;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EList<Person> getPersons() {
 		if (persons == null) {
 			persons = new EObjectContainmentWithInverseEList<Person>(Person.class, this, ImdbPackage.IMDB__PERSONS, ImdbPackage.PERSON__IMDB);
@@ -131,8 +107,6 @@ public class ImdbImpl extends MinimalEObjectImpl.Container implements Imdb {
 		switch (featureID) {
 			case ImdbPackage.IMDB__TITLES:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getTitles()).basicAdd(otherEnd, msgs);
-			case ImdbPackage.IMDB__GENRES:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getGenres()).basicAdd(otherEnd, msgs);
 			case ImdbPackage.IMDB__PERSONS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getPersons()).basicAdd(otherEnd, msgs);
 		}
@@ -149,8 +123,6 @@ public class ImdbImpl extends MinimalEObjectImpl.Container implements Imdb {
 		switch (featureID) {
 			case ImdbPackage.IMDB__TITLES:
 				return ((InternalEList<?>)getTitles()).basicRemove(otherEnd, msgs);
-			case ImdbPackage.IMDB__GENRES:
-				return ((InternalEList<?>)getGenres()).basicRemove(otherEnd, msgs);
 			case ImdbPackage.IMDB__PERSONS:
 				return ((InternalEList<?>)getPersons()).basicRemove(otherEnd, msgs);
 		}
@@ -167,8 +139,6 @@ public class ImdbImpl extends MinimalEObjectImpl.Container implements Imdb {
 		switch (featureID) {
 			case ImdbPackage.IMDB__TITLES:
 				return getTitles();
-			case ImdbPackage.IMDB__GENRES:
-				return getGenres();
 			case ImdbPackage.IMDB__PERSONS:
 				return getPersons();
 		}
@@ -187,10 +157,6 @@ public class ImdbImpl extends MinimalEObjectImpl.Container implements Imdb {
 			case ImdbPackage.IMDB__TITLES:
 				getTitles().clear();
 				getTitles().addAll((Collection<? extends Title>)newValue);
-				return;
-			case ImdbPackage.IMDB__GENRES:
-				getGenres().clear();
-				getGenres().addAll((Collection<? extends Genre>)newValue);
 				return;
 			case ImdbPackage.IMDB__PERSONS:
 				getPersons().clear();
@@ -211,9 +177,6 @@ public class ImdbImpl extends MinimalEObjectImpl.Container implements Imdb {
 			case ImdbPackage.IMDB__TITLES:
 				getTitles().clear();
 				return;
-			case ImdbPackage.IMDB__GENRES:
-				getGenres().clear();
-				return;
 			case ImdbPackage.IMDB__PERSONS:
 				getPersons().clear();
 				return;
@@ -231,8 +194,6 @@ public class ImdbImpl extends MinimalEObjectImpl.Container implements Imdb {
 		switch (featureID) {
 			case ImdbPackage.IMDB__TITLES:
 				return titles != null && !titles.isEmpty();
-			case ImdbPackage.IMDB__GENRES:
-				return genres != null && !genres.isEmpty();
 			case ImdbPackage.IMDB__PERSONS:
 				return persons != null && !persons.isEmpty();
 		}

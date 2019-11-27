@@ -7,8 +7,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="Imdb">
     <eStructuralFeatures xsi:type="ecore:EReference" name="titles" upperBound="-1"
         eType="#//Title" containment="true" eOpposite="#//Title/imdb"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="genres" upperBound="-1"
-        eType="#//Genre" containment="true" eOpposite="#//Genre/imdb"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="persons" upperBound="-1"
         eType="#//Person" containment="true" eOpposite="#//Person/imdb"/>
   </eClassifiers>
@@ -27,19 +25,21 @@
         eType="#//TitleType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="startYear" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="runtime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="genres" upperBound="3"
-        eType="#//Genre"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="rating" eType="#//Rating"
         containment="true" eOpposite="#//Rating/title"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="involvements" upperBound="-1"
         eType="#//Involvement" containment="true" eOpposite="#//Involvement/title"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="imdb" eType="#//Imdb" eOpposite="#//Imdb/titles"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="genre" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TvSeries" eSuperTypes="#//Title">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="constraints" value="endYearConstraint hasTitleTypeTvseries"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/acceleo/query/1.0">
+      <details key="titleTypeConstraint" value="self.titleType = TitleType::TVSERIES"/>
       <details key="endYearConstraint" value="self.endYear > 0 and self.endYear &lt;= 2050 and self.endYear >= self.startYear"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="endYear" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -51,6 +51,7 @@
       <details key="constraints" value="seasonNumberConstraint episodeNumberConstraint"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/acceleo/query/1.0">
+      <details key="titleTypeConstraint" value="self.titleType = TitleType::TVEPISODE"/>
       <details key="seasonNumberConstraint" value="self.seasonNumber> 0"/>
       <details key="episodeNumberConstraint" value="self.episodeNumber> 0"/>
     </eAnnotations>
@@ -60,10 +61,6 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="episodeNumber" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Genre">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="imdb" eType="#//Imdb" eOpposite="#//Imdb/genres"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Rating">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
@@ -98,6 +95,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="involvement" upperBound="-1"
         eType="#//Involvement" eOpposite="#//Involvement/person"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="imdb" eType="#//Imdb" eOpposite="#//Imdb/persons"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Involvement">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
