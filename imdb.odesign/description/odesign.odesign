@@ -1,10 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" name="odesign" version="12.0.0.2017041100">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/tree/description/1.0.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" name="odesign" version="12.0.0.2017041100">
   <ownedViewpoints name="imdb_viewpoint" modelFileExtension="imdb">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="SharedCrew Diagram" titleExpression="aql:'Other titles that share crew with'+self.name" initialisation="true" domainClass="imdb::Title" enablePopupBars="true">
+      <defaultLayer name="Default">
+        <nodeMappings name="SharedCrewNode" semanticCandidatesExpression="var:self" domainClass="imdb::Title">
+          <style xsi:type="style:SquareDescription" labelSize="12" tooltipExpression="feature:name" labelPosition="node" resizeKind="NSEW" width="10" height="5">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='orange']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="otherTitles" preconditionExpression="if self.name.startsWith('a') then self else self.eContainer() endif" semanticCandidatesExpression="aql:self.involvements.person.involvement.title->select(p | p.name != self.name)" domainClass="imdb::Title">
+          <style xsi:type="style:SquareDescription" labelSize="12" tooltipExpression="feature:name" sizeComputationExpression="5" labelPosition="node" resizeKind="NSEW" width="12" height="6">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings sourceMapping="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='SharedCrew%20Diagram']/@defaultLayer/@nodeMappings[name='SharedCrewNode']" targetMapping="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='SharedCrew%20Diagram']/@defaultLayer/@nodeMappings[name='otherTitles']" targetFinderExpression="aql:self.involvements.person.involvement.title->select(p | p.name != self.name)">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+      </defaultLayer>
+    </ownedRepresentations>
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Imdb diagram" domainClass="imdb::Imdb">
       <metamodel href="http://no/ntnu/tdt4250/imdb#/"/>
       <defaultLayer name="Default">
-        <nodeMappings name="TitleNode" semanticCandidatesExpression="feature:titles" domainClass="imdb::Title">
+        <nodeMappings name="TitleNode" semanticCandidatesExpression="feature:titles" doubleClickDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='TitleDoubleClick']" domainClass="imdb::Title">
           <style xsi:type="style:SquareDescription" labelSize="12" labelPosition="node" resizeKind="NSEW" width="10" height="5">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -33,8 +59,54 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
+        <toolSections name="Tools">
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="TitleDoubleClick" mappings="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@nodeMappings[name='TitleNode']">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='SharedCrew%20Diagram']"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
       </defaultLayer>
     </ownedRepresentations>
     <ownedJavaExtensions qualifiedClassName="imdb.odesign.Services"/>
+  </ownedViewpoints>
+  <ownedViewpoints name="person_viewpoint" modelFileExtension="imdb">
+    <ownedRepresentations xsi:type="description_2:TreeDescription" name="Person Tree" domainClass="imdb::Imdb">
+      <subItemMappings name="TitleNode" domainClass="imdb::Title" semanticCandidatesExpression="feature:titles">
+        <defaultStyle>
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="Persons" domainClass="imdb::Person" semanticCandidatesExpression="aql:self.involvements.person">
+          <defaultStyle labelExpression="aql:self.name">
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+        </subItemMappings>
+      </subItemMappings>
+    </ownedRepresentations>
+  </ownedViewpoints>
+  <ownedViewpoints name="Workedwith_viewpoint" modelFileExtension="imdb">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Imdb diagram" domainClass="imdb::Imdb" enablePopupBars="true">
+      <defaultLayer name="Default">
+        <nodeMappings name="Person" semanticCandidatesExpression="feature:persons" domainClass="imdb::Person">
+          <style xsi:type="style:SquareDescription" labelSize="12" labelPosition="node" resizeKind="NSEW" width="10" height="5">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='orange']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings sourceMapping="//@ownedViewpoints[name='Workedwith_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@nodeMappings[name='Person']" targetMapping="//@ownedViewpoints[name='Workedwith_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@nodeMappings[name='Person']" targetFinderExpression="aql:self.involvement.title.involvements.person->select(p | p.name != self.name)">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_purple']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+      </defaultLayer>
+    </ownedRepresentations>
   </ownedViewpoints>
 </description:Group>
