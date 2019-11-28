@@ -189,9 +189,7 @@
                     <groups name="Default Group" semanticCandidateExpression="var:self">
                       <controls xsi:type="properties:TextDescription" name="Job" labelExpression="Job:">
                         <initialOperation>
-                          <firstModelOperations xsi:type="tool_1:SetValue" featureName="jobCategory" valueExpression="var:newValue">
-                            <subModelOperations xsi:type="tool_1:SetValue" featureName="job" valueExpression="var:newValue"/>
-                          </firstModelOperations>
+                          <firstModelOperations xsi:type="tool_1:SetValue" featureName="job" valueExpression="var:newValue"/>
                         </initialOperation>
                       </controls>
                       <controls xsi:type="properties:TextDescription" name="Character" labelExpression="Character:">
