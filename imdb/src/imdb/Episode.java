@@ -17,7 +17,7 @@ package imdb;
  * </ul>
  *
  * @see imdb.ImdbPackage#getEpisode()
- * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='noImdbContainerConstraint seasonNumberConstraint episodeNumberConstraint titleTypeConstraint'"
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='noImdbContainerConstraint seasonNumberConstraint episodeNumberConstraint'"
  *        annotation="http://www.eclipse.org/acceleo/query/1.0 noImdbContainerConstraint='self.imdb = null' seasonNumberConstraint='self.seasonNumber &gt; 0' episodeNumberConstraint='self.episodeNumber &gt; 0'"
  * @generated
  */

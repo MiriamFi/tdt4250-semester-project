@@ -12,7 +12,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Title">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="startYearConstraint runtimeConstraint uniqueCharactersConstraint"/>
+      <details key="constraints" value="startYearConstraint runtimeConstraint uniqueCharactersConstraint imdbNotNullConstraint titleTypeConstraint"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/acceleo/query/1.0">
       <details key="startYearConstraint" value="self.startYear > 0 and self.startYear &lt;= 2050"/>
@@ -37,7 +37,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TvSeries" eSuperTypes="#//Title">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="endYearConstraint titleTypeConstraint"/>
+      <details key="constraints" value="endYearConstraint"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/acceleo/query/1.0">
       <details key="endYearConstraint" value="(self.endYear > 0 and self.endYear &lt;= 2050 and self.endYear >= self.startYear) or self.endYear = -1"/>
@@ -48,7 +48,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Episode" eSuperTypes="#//Title">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="noImdbContainerConstraint seasonNumberConstraint episodeNumberConstraint titleTypeConstraint"/>
+      <details key="constraints" value="noImdbContainerConstraint seasonNumberConstraint episodeNumberConstraint"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/acceleo/query/1.0">
       <details key="noImdbContainerConstraint" value="self.imdb = null"/>

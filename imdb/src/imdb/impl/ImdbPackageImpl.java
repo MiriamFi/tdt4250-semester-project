@@ -753,19 +753,19 @@ public class ImdbPackageImpl extends EPackageImpl implements ImdbPackage {
 		  (titleEClass,
 		   source,
 		   new String[] {
-			   "constraints", "startYearConstraint runtimeConstraint uniqueCharactersConstraint"
+			   "constraints", "startYearConstraint runtimeConstraint uniqueCharactersConstraint imdbNotNullConstraint titleTypeConstraint"
 		   });
 		addAnnotation
 		  (tvSeriesEClass,
 		   source,
 		   new String[] {
-			   "constraints", "endYearConstraint titleTypeConstraint"
+			   "constraints", "endYearConstraint"
 		   });
 		addAnnotation
 		  (episodeEClass,
 		   source,
 		   new String[] {
-			   "constraints", "noImdbContainerConstraint seasonNumberConstraint episodeNumberConstraint titleTypeConstraint"
+			   "constraints", "noImdbContainerConstraint seasonNumberConstraint episodeNumberConstraint"
 		   });
 		addAnnotation
 		  (ratingEClass,

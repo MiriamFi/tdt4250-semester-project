@@ -29,7 +29,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see imdb.ImdbPackage#getTitle()
- * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='startYearConstraint runtimeConstraint uniqueCharactersConstraint'"
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='startYearConstraint runtimeConstraint uniqueCharactersConstraint imdbNotNullConstraint titleTypeConstraint'"
  *        annotation="http://www.eclipse.org/acceleo/query/1.0 startYearConstraint='self.startYear &gt; 0 and self.startYear &lt;= 2050' runtimeConstraint='self.runtime &gt; 0' uniqueCharactersConstraint='self.involvements -&gt; isUnique(inv | inv.character)'"
  * @generated
  */

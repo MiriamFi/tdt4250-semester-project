@@ -4,12 +4,14 @@ package imdb.util;
 
 import imdb.*;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.ResourceLocator;
 
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.EObjectValidator;
@@ -134,6 +136,8 @@ public class ImdbValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validateTitle_startYearConstraint(title, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTitle_runtimeConstraint(title, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTitle_uniqueCharactersConstraint(title, diagnostics, context);
+		if (result || diagnostics != null) result &= validateTitle_imdbNotNullConstraint(title, diagnostics, context);
+		if (result || diagnostics != null) result &= validateTitle_titleTypeConstraint(title, diagnostics, context);
 		return result;
 	}
 
@@ -225,6 +229,72 @@ public class ImdbValidator extends EObjectValidator {
 	}
 
 	/**
+	 * Validates the imdbNotNullConstraint constraint of '<em>Title</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public boolean validateTitle_imdbNotNullConstraint(Title title, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (title.getTitleType() != TitleType.TVEPISODE
+				&& title.getImdb() == null) {
+			if (diagnostics != null) {
+				diagnostics.add
+					(createDiagnostic
+						(Diagnostic.ERROR,
+						 DIAGNOSTIC_SOURCE,
+						 0,
+						 "_UI_GenericConstraint_diagnostic",
+						 new Object[] { "imdbNotNullConstraint", getObjectLabel(title, context) },
+						 new Object[] { title },
+						 context));
+			}
+			return false;
+		}
+		return true;
+	}
+
+	private static Map<EClass, TitleType> class_titleType_map;
+	static {
+		class_titleType_map = new HashMap<>();
+		class_titleType_map.put(ImdbPackage.eINSTANCE.getTvSeries(), TitleType.TVSERIES);
+		class_titleType_map.put(ImdbPackage.eINSTANCE.getEpisode(), TitleType.TVEPISODE);
+	}
+
+	/**
+	 * Validates the titleTypeConstraint constraint of '<em>Title</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public boolean validateTitle_titleTypeConstraint(Title title, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		boolean matchingClassAndTitleType;
+
+		TitleType requiredTitleType = class_titleType_map.get(title.eClass());
+		if (requiredTitleType != null) {
+			matchingClassAndTitleType = title.getTitleType() == requiredTitleType;
+		}
+		else {
+			matchingClassAndTitleType = !class_titleType_map.values().contains(title.getTitleType());
+		}
+
+		if (!matchingClassAndTitleType) {
+			if (diagnostics != null) {
+				diagnostics.add
+					(createDiagnostic
+						(Diagnostic.ERROR,
+						 DIAGNOSTIC_SOURCE,
+						 0,
+						 "_UI_GenericConstraint_diagnostic",
+						 new Object[] { "titleTypeConstraint", getObjectLabel(title, context) },
+						 new Object[] { title },
+						 context));
+			}
+			return false;
+		}
+		return true;
+	}
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -242,33 +312,10 @@ public class ImdbValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validateTitle_startYearConstraint(tvSeries, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTitle_runtimeConstraint(tvSeries, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTitle_uniqueCharactersConstraint(tvSeries, diagnostics, context);
+		if (result || diagnostics != null) result &= validateTitle_imdbNotNullConstraint(tvSeries, diagnostics, context);
+		if (result || diagnostics != null) result &= validateTitle_titleTypeConstraint(tvSeries, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTvSeries_endYearConstraint(tvSeries, diagnostics, context);
-		if (result || diagnostics != null) result &= validateTvSeries_titleTypeConstraint(tvSeries, diagnostics, context);
 		return result;
-	}
-
-	/**
-	 * Validates the titleTypeConstraint constraint of '<em>Tv Series</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public boolean validateTvSeries_titleTypeConstraint(TvSeries tvSeries, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (tvSeries.getTitleType() != TitleType.TVSERIES) {
-			if (diagnostics != null) {
-				diagnostics.add
-					(createDiagnostic
-						(Diagnostic.ERROR,
-						 DIAGNOSTIC_SOURCE,
-						 0,
-						 "_UI_GenericConstraint_diagnostic",
-						 new Object[] { "titleTypeConstraint", getObjectLabel(tvSeries, context) },
-						 new Object[] { tvSeries },
-						 context));
-			}
-			return false;
-		}
-		return true;
 	}
 
 	/**
@@ -318,10 +365,11 @@ public class ImdbValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validateTitle_startYearConstraint(episode, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTitle_runtimeConstraint(episode, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTitle_uniqueCharactersConstraint(episode, diagnostics, context);
+		if (result || diagnostics != null) result &= validateTitle_imdbNotNullConstraint(episode, diagnostics, context);
+		if (result || diagnostics != null) result &= validateTitle_titleTypeConstraint(episode, diagnostics, context);
 		if (result || diagnostics != null) result &= validateEpisode_noImdbContainerConstraint(episode, diagnostics, context);
 		if (result || diagnostics != null) result &= validateEpisode_seasonNumberConstraint(episode, diagnostics, context);
 		if (result || diagnostics != null) result &= validateEpisode_episodeNumberConstraint(episode, diagnostics, context);
-		if (result || diagnostics != null) result &= validateEpisode_titleTypeConstraint(episode, diagnostics, context);
 		return result;
 	}
 
@@ -352,30 +400,6 @@ public class ImdbValidator extends EObjectValidator {
 				 Diagnostic.ERROR,
 				 DIAGNOSTIC_SOURCE,
 				 0);
-	}
-
-	/**
-	 * Validates the titleTypeConstraint constraint of '<em>Episode</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public boolean validateEpisode_titleTypeConstraint(Episode episode, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (episode.getTitleType() != TitleType.TVEPISODE) {
-			if (diagnostics != null) {
-				diagnostics.add
-					(createDiagnostic
-						(Diagnostic.ERROR,
-						 DIAGNOSTIC_SOURCE,
-						 0,
-						 "_UI_GenericConstraint_diagnostic",
-						 new Object[] { "titleTypeConstraint", getObjectLabel(episode, context) },
-						 new Object[] { episode },
-						 context));
-			}
-			return false;
-		}
-		return true;
 	}
 
 	/**
