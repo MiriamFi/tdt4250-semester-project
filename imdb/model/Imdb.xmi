@@ -78,33 +78,48 @@
     <genre>Horror</genre>
     <genre>Sci-Fi</genre>
   </titles>
-  <titles xsi:type="no.ntnu.tdt4250.imdb:TvSeries"
-      name="Over the Garden Wall"
-      titleType="TVSERIES"
-      startYear="1234"
-      runtime="12"
-      ID="tt3718778"
-      endYear="1235">
-    <episodes
-        name="Chapter 1: The Old Grist Mill"
-        titleType="TVEPISODE"
-        startYear="2014"
-        runtime="12"
-        ID="tt3841710"
-        seasonNumber="1"
-        episodeNumber="1"/>
-    <episodes
-        name="Chapter 2: Hard Times at the Huskin' Bee"
-        titleType="TVEPISODE"
-        startYear="2014"
-        runtime="12"
-        ID="tt4166816"
-        seasonNumber="1"
-        episodeNumber="2"/>
+  <titles name="Aliens"
+      region="US"
+      language="English"
+      startYear="1986"
+      runtime="137"
+      ID="tt0090605">
+    <involvements
+        person="//@persons.8"
+        job="Director"
+        character="Himself"/>
+    <involvements
+        person="//@persons.6"
+        job="Actress"
+        character="Ripley"/>
+    <involvements
+        person="//@persons.9"
+        job="Actress"
+        character="Newt"/>
+    <genre>Action</genre>
+    <genre>Adventure</genre>
+    <genre>Sci-Fi</genre>
+  </titles>
+  <titles name="Avatar"
+      region="US"
+      language="English"
+      startYear="2009"
+      runtime="162"
+      ID="tt0499549">
+    <involvements
+        person="//@persons.8"
+        job="Director, Writer"
+        character="Himself"/>
+    <involvements
+        person="//@persons.10"
+        job="Actor"
+        character="Jake Sully"/>
+    <genre>Action</genre>
+    <genre>Adventure</genre>
+    <genre>Fantasy</genre>
   </titles>
   <persons name="Mark Hamill"
       birthYear="1951"
-      deathYear="-1"
       knownForTitles="//@titles.0 //@titles.1"
       involvement="//@titles.0/@involvements.0 //@titles.1/@involvements.0">
     <professions>Actor</professions>
@@ -113,7 +128,6 @@
   </persons>
   <persons name="Harrison Ford"
       birthYear="1942"
-      deathYear="-1"
       knownForTitles="//@titles.0 //@titles.1"
       involvement="//@titles.0/@involvements.1 //@titles.1/@involvements.1">
     <professions>Actor</professions>
@@ -149,7 +163,6 @@
   </persons>
   <persons name="Tom Skerritt"
       birthYear="1933"
-      deathYear="-1"
       knownForTitles="//@titles.2"
       involvement="//@titles.2/@involvements.0">
     <professions>Actor</professions>
@@ -158,19 +171,40 @@
   </persons>
   <persons name="Sigourney Weaver"
       birthYear="1949"
-      deathYear="-1"
       knownForTitles="//@titles.2"
-      involvement="//@titles.2/@involvements.1">
+      involvement="//@titles.2/@involvements.1 //@titles.3/@involvements.1">
     <professions>Actress</professions>
     <professions>Soundtrack</professions>
     <professions>Producer</professions>
   </persons>
   <persons name="Veronica Cartwright"
       birthYear="1949"
-      deathYear="-1"
       knownForTitles="//@titles.2"
       involvement="//@titles.2/@involvements.2">
     <professions>Actress</professions>
     <professions>Soundtrack</professions>
+  </persons>
+  <persons name="James Cameron"
+      birthYear="1954"
+      knownForTitles="//@titles.3"
+      involvement="//@titles.3/@involvements.0 //@titles.4/@involvements.0"
+      ID="nm0000116">
+    <professions>Writer</professions>
+    <professions>Producer</professions>
+    <professions>Director</professions>
+  </persons>
+  <persons name="Carrie Henn"
+      birthYear="1976"
+      knownForTitles="//@titles.3"
+      involvement="//@titles.3/@involvements.2"
+      ID="nm0001343"/>
+  <persons name="Sam Worthington"
+      birthYear="1976"
+      knownForTitles="//@titles.4"
+      involvement="//@titles.4/@involvements.1"
+      ID="nm0941777">
+    <professions>Actor</professions>
+    <professions>Producer</professions>
+    <professions>Director</professions>
   </persons>
 </no.ntnu.tdt4250.imdb:Imdb>
