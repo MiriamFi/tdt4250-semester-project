@@ -78,8 +78,33 @@
     <genre>Horror</genre>
     <genre>Sci-Fi</genre>
   </titles>
+  <titles xsi:type="no.ntnu.tdt4250.imdb:TvSeries"
+      name="Over the Garden Wall"
+      titleType="TVSERIES"
+      startYear="1234"
+      runtime="12"
+      ID="tt3718778"
+      endYear="1235">
+    <episodes
+        name="Chapter 1: The Old Grist Mill"
+        titleType="TVEPISODE"
+        startYear="2014"
+        runtime="12"
+        ID="tt3841710"
+        seasonNumber="1"
+        episodeNumber="1"/>
+    <episodes
+        name="Chapter 2: Hard Times at the Huskin' Bee"
+        titleType="TVEPISODE"
+        startYear="2014"
+        runtime="12"
+        ID="tt4166816"
+        seasonNumber="1"
+        episodeNumber="2"/>
+  </titles>
   <persons name="Mark Hamill"
       birthYear="1951"
+      deathYear="-1"
       knownForTitles="//@titles.0 //@titles.1"
       involvement="//@titles.0/@involvements.0 //@titles.1/@involvements.0">
     <professions>Actor</professions>
@@ -88,6 +113,7 @@
   </persons>
   <persons name="Harrison Ford"
       birthYear="1942"
+      deathYear="-1"
       knownForTitles="//@titles.0 //@titles.1"
       involvement="//@titles.0/@involvements.1 //@titles.1/@involvements.1">
     <professions>Actor</professions>
@@ -123,6 +149,7 @@
   </persons>
   <persons name="Tom Skerritt"
       birthYear="1933"
+      deathYear="-1"
       knownForTitles="//@titles.2"
       involvement="//@titles.2/@involvements.0">
     <professions>Actor</professions>
@@ -131,6 +158,7 @@
   </persons>
   <persons name="Sigourney Weaver"
       birthYear="1949"
+      deathYear="-1"
       knownForTitles="//@titles.2"
       involvement="//@titles.2/@involvements.1">
     <professions>Actress</professions>
@@ -139,6 +167,7 @@
   </persons>
   <persons name="Veronica Cartwright"
       birthYear="1949"
+      deathYear="-1"
       knownForTitles="//@titles.2"
       involvement="//@titles.2/@involvements.2">
     <professions>Actress</professions>

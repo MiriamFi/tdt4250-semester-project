@@ -205,13 +205,22 @@ public interface ImdbPackage extends EPackage {
 	int TITLE__GENRE = 9;
 
 	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TITLE__ID = 10;
+
+	/**
 	 * The number of structural features of the '<em>Title</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TITLE_FEATURE_COUNT = 10;
+	int TITLE_FEATURE_COUNT = 11;
 
 	/**
 	 * The number of operations of the '<em>Title</em>' class.
@@ -321,6 +330,15 @@ public interface ImdbPackage extends EPackage {
 	 * @ordered
 	 */
 	int TV_SERIES__GENRE = TITLE__GENRE;
+
+	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TV_SERIES__ID = TITLE__ID;
 
 	/**
 	 * The feature id for the '<em><b>End Year</b></em>' attribute.
@@ -467,6 +485,15 @@ public interface ImdbPackage extends EPackage {
 	 * @ordered
 	 */
 	int EPISODE__GENRE = TITLE__GENRE;
+
+	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EPISODE__ID = TITLE__ID;
 
 	/**
 	 * The feature id for the '<em><b>Series</b></em>' container reference.
@@ -632,13 +659,22 @@ public interface ImdbPackage extends EPackage {
 	int PERSON__IMDB = 6;
 
 	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERSON__ID = 7;
+
+	/**
 	 * The number of structural features of the '<em>Person</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON_FEATURE_COUNT = 7;
+	int PERSON_FEATURE_COUNT = 8;
 
 	/**
 	 * The number of operations of the '<em>Person</em>' class.
@@ -678,22 +714,13 @@ public interface ImdbPackage extends EPackage {
 	int INVOLVEMENT__PERSON = 1;
 
 	/**
-	 * The feature id for the '<em><b>Job Category</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INVOLVEMENT__JOB_CATEGORY = 2;
-
-	/**
 	 * The feature id for the '<em><b>Job</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INVOLVEMENT__JOB = 3;
+	int INVOLVEMENT__JOB = 2;
 
 	/**
 	 * The feature id for the '<em><b>Character</b></em>' attribute.
@@ -702,16 +729,7 @@ public interface ImdbPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INVOLVEMENT__CHARACTER = 4;
-
-	/**
-	 * The feature id for the '<em><b>Tvseries</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INVOLVEMENT__TVSERIES = 5;
+	int INVOLVEMENT__CHARACTER = 3;
 
 	/**
 	 * The number of structural features of the '<em>Involvement</em>' class.
@@ -720,7 +738,7 @@ public interface ImdbPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INVOLVEMENT_FEATURE_COUNT = 6;
+	int INVOLVEMENT_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Involvement</em>' class.
@@ -895,6 +913,17 @@ public interface ImdbPackage extends EPackage {
 	EAttribute getTitle_Genre();
 
 	/**
+	 * Returns the meta object for the attribute '{@link imdb.Title#getID <em>ID</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>ID</em>'.
+	 * @see imdb.Title#getID()
+	 * @see #getTitle()
+	 * @generated
+	 */
+	EAttribute getTitle_ID();
+
+	/**
 	 * Returns the meta object for class '{@link imdb.TvSeries <em>Tv Series</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1012,6 +1041,17 @@ public interface ImdbPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getPerson_Imdb();
+
+	/**
+	 * Returns the meta object for the attribute '{@link imdb.Person#getID <em>ID</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>ID</em>'.
+	 * @see imdb.Person#getID()
+	 * @see #getPerson()
+	 * @generated
+	 */
+	EAttribute getPerson_ID();
 
 	/**
 	 * Returns the meta object for class '{@link imdb.Episode <em>Episode</em>}'.
@@ -1132,17 +1172,6 @@ public interface ImdbPackage extends EPackage {
 	EReference getInvolvement_Person();
 
 	/**
-	 * Returns the meta object for the attribute '{@link imdb.Involvement#getJobCategory <em>Job Category</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Job Category</em>'.
-	 * @see imdb.Involvement#getJobCategory()
-	 * @see #getInvolvement()
-	 * @generated
-	 */
-	EAttribute getInvolvement_JobCategory();
-
-	/**
 	 * Returns the meta object for the attribute '{@link imdb.Involvement#getJob <em>Job</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1163,17 +1192,6 @@ public interface ImdbPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getInvolvement_Character();
-
-	/**
-	 * Returns the meta object for the reference '{@link imdb.Involvement#getTvseries <em>Tvseries</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Tvseries</em>'.
-	 * @see imdb.Involvement#getTvseries()
-	 * @see #getInvolvement()
-	 * @generated
-	 */
-	EReference getInvolvement_Tvseries();
 
 	/**
 	 * Returns the meta object for enum '{@link imdb.TitleType <em>Title Type</em>}'.
@@ -1325,6 +1343,14 @@ public interface ImdbPackage extends EPackage {
 		EAttribute TITLE__GENRE = eINSTANCE.getTitle_Genre();
 
 		/**
+		 * The meta object literal for the '<em><b>ID</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TITLE__ID = eINSTANCE.getTitle_ID();
+
+		/**
 		 * The meta object literal for the '{@link imdb.impl.TvSeriesImpl <em>Tv Series</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1415,6 +1441,14 @@ public interface ImdbPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PERSON__IMDB = eINSTANCE.getPerson_Imdb();
+
+		/**
+		 * The meta object literal for the '<em><b>ID</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PERSON__ID = eINSTANCE.getPerson_ID();
 
 		/**
 		 * The meta object literal for the '{@link imdb.impl.EpisodeImpl <em>Episode</em>}' class.
@@ -1511,14 +1545,6 @@ public interface ImdbPackage extends EPackage {
 		EReference INVOLVEMENT__PERSON = eINSTANCE.getInvolvement_Person();
 
 		/**
-		 * The meta object literal for the '<em><b>Job Category</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute INVOLVEMENT__JOB_CATEGORY = eINSTANCE.getInvolvement_JobCategory();
-
-		/**
 		 * The meta object literal for the '<em><b>Job</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1533,14 +1559,6 @@ public interface ImdbPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute INVOLVEMENT__CHARACTER = eINSTANCE.getInvolvement_Character();
-
-		/**
-		 * The meta object literal for the '<em><b>Tvseries</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference INVOLVEMENT__TVSERIES = eINSTANCE.getInvolvement_Tvseries();
 
 		/**
 		 * The meta object literal for the '{@link imdb.TitleType <em>Title Type</em>}' enum.

@@ -21,11 +21,12 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link imdb.Person#getKnownForTitles <em>Known For Titles</em>}</li>
  *   <li>{@link imdb.Person#getInvolvement <em>Involvement</em>}</li>
  *   <li>{@link imdb.Person#getImdb <em>Imdb</em>}</li>
+ *   <li>{@link imdb.Person#getID <em>ID</em>}</li>
  * </ul>
  *
  * @see imdb.ImdbPackage#getPerson()
- * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='numberOfVotesConstraint averageRatingConstraint'"
- *        annotation="http://www.eclipse.org/acceleo/query/1.0 birthYearConstraint='self.birthYear &gt; 0 and self.birthYear &lt;= 2019' deathYearConstraint='self.deathYear &gt; -2 and self.deathYear &lt;= 2019 and self.deathYear &gt;= self.birthYear'"
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='birthYearConstraint deathYearConstraint'"
+ *        annotation="http://www.eclipse.org/acceleo/query/1.0 birthYearConstraint='self.birthYear &gt; 0 and self.birthYear &lt;= 2019' deathYearConstraint='(self.deathYear &gt; 0 and self.deathYear &lt;= 2019 and self.deathYear &gt;= self.birthYear) or self.deathYear = -1'"
  * @generated
  */
 public interface Person extends EObject {
@@ -143,7 +144,7 @@ public interface Person extends EObject {
 	 * @see #setImdb(Imdb)
 	 * @see imdb.ImdbPackage#getPerson_Imdb()
 	 * @see imdb.Imdb#getPersons
-	 * @model opposite="persons" transient="false"
+	 * @model opposite="persons" required="true" transient="false"
 	 * @generated
 	 */
 	Imdb getImdb();
@@ -157,4 +158,26 @@ public interface Person extends EObject {
 	 * @generated
 	 */
 	void setImdb(Imdb value);
+
+	/**
+	 * Returns the value of the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>ID</em>' attribute.
+	 * @see #setID(String)
+	 * @see imdb.ImdbPackage#getPerson_ID()
+	 * @model
+	 * @generated
+	 */
+	String getID();
+
+	/**
+	 * Sets the value of the '{@link imdb.Person#getID <em>ID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>ID</em>' attribute.
+	 * @see #getID()
+	 * @generated
+	 */
+	void setID(String value);
 } // Person

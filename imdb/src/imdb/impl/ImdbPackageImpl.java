@@ -294,6 +294,16 @@ public class ImdbPackageImpl extends EPackageImpl implements ImdbPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getTitle_ID() {
+		return (EAttribute)titleEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getTvSeries() {
 		return tvSeriesEClass;
 	}
@@ -396,6 +406,16 @@ public class ImdbPackageImpl extends EPackageImpl implements ImdbPackage {
 	@Override
 	public EReference getPerson_Imdb() {
 		return (EReference)personEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getPerson_ID() {
+		return (EAttribute)personEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -514,7 +534,7 @@ public class ImdbPackageImpl extends EPackageImpl implements ImdbPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getInvolvement_JobCategory() {
+	public EAttribute getInvolvement_Job() {
 		return (EAttribute)involvementEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -524,28 +544,8 @@ public class ImdbPackageImpl extends EPackageImpl implements ImdbPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getInvolvement_Job() {
-		return (EAttribute)involvementEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EAttribute getInvolvement_Character() {
-		return (EAttribute)involvementEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getInvolvement_Tvseries() {
-		return (EReference)involvementEClass.getEStructuralFeatures().get(5);
+		return (EAttribute)involvementEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -602,6 +602,7 @@ public class ImdbPackageImpl extends EPackageImpl implements ImdbPackage {
 		createEReference(titleEClass, TITLE__INVOLVEMENTS);
 		createEReference(titleEClass, TITLE__IMDB);
 		createEAttribute(titleEClass, TITLE__GENRE);
+		createEAttribute(titleEClass, TITLE__ID);
 
 		tvSeriesEClass = createEClass(TV_SERIES);
 		createEAttribute(tvSeriesEClass, TV_SERIES__END_YEAR);
@@ -625,14 +626,13 @@ public class ImdbPackageImpl extends EPackageImpl implements ImdbPackage {
 		createEReference(personEClass, PERSON__KNOWN_FOR_TITLES);
 		createEReference(personEClass, PERSON__INVOLVEMENT);
 		createEReference(personEClass, PERSON__IMDB);
+		createEAttribute(personEClass, PERSON__ID);
 
 		involvementEClass = createEClass(INVOLVEMENT);
 		createEReference(involvementEClass, INVOLVEMENT__TITLE);
 		createEReference(involvementEClass, INVOLVEMENT__PERSON);
-		createEAttribute(involvementEClass, INVOLVEMENT__JOB_CATEGORY);
 		createEAttribute(involvementEClass, INVOLVEMENT__JOB);
 		createEAttribute(involvementEClass, INVOLVEMENT__CHARACTER);
-		createEReference(involvementEClass, INVOLVEMENT__TVSERIES);
 
 		// Create enums
 		titleTypeEEnum = createEEnum(TITLE_TYPE);
@@ -685,6 +685,7 @@ public class ImdbPackageImpl extends EPackageImpl implements ImdbPackage {
 		initEReference(getTitle_Involvements(), this.getInvolvement(), this.getInvolvement_Title(), "involvements", null, 0, -1, Title.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTitle_Imdb(), this.getImdb(), this.getImdb_Titles(), "imdb", null, 0, 1, Title.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTitle_Genre(), ecorePackage.getEString(), "genre", null, 0, -1, Title.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTitle_ID(), ecorePackage.getEString(), "ID", null, 1, 1, Title.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tvSeriesEClass, TvSeries.class, "TvSeries", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTvSeries_EndYear(), ecorePackage.getEInt(), "endYear", null, 0, 1, TvSeries.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -707,15 +708,14 @@ public class ImdbPackageImpl extends EPackageImpl implements ImdbPackage {
 		initEAttribute(getPerson_Professions(), ecorePackage.getEString(), "professions", null, 0, 3, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPerson_KnownForTitles(), this.getTitle(), null, "knownForTitles", null, 0, -1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPerson_Involvement(), this.getInvolvement(), this.getInvolvement_Person(), "involvement", null, 0, -1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPerson_Imdb(), this.getImdb(), this.getImdb_Persons(), "imdb", null, 0, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPerson_Imdb(), this.getImdb(), this.getImdb_Persons(), "imdb", null, 1, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPerson_ID(), ecorePackage.getEString(), "ID", null, 0, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(involvementEClass, Involvement.class, "Involvement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getInvolvement_Title(), this.getTitle(), this.getTitle_Involvements(), "title", null, 1, 1, Involvement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getInvolvement_Person(), this.getPerson(), this.getPerson_Involvement(), "person", null, 1, 1, Involvement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getInvolvement_JobCategory(), ecorePackage.getEString(), "jobCategory", null, 1, 1, Involvement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getInvolvement_Job(), ecorePackage.getEString(), "job", null, 0, 1, Involvement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getInvolvement_Job(), ecorePackage.getEString(), "job", null, 1, 1, Involvement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getInvolvement_Character(), ecorePackage.getEString(), "character", null, 0, 1, Involvement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getInvolvement_Tvseries(), this.getTvSeries(), null, "tvseries", null, 0, 1, Involvement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(titleTypeEEnum, TitleType.class, "TitleType");
@@ -753,19 +753,19 @@ public class ImdbPackageImpl extends EPackageImpl implements ImdbPackage {
 		  (titleEClass,
 		   source,
 		   new String[] {
-			   "constraints", "startYearConstraint runtimeConstraint"
+			   "constraints", "startYearConstraint runtimeConstraint uniqueCharactersConstraint imdbNotNullConstraint titleTypeConstraint"
 		   });
 		addAnnotation
 		  (tvSeriesEClass,
 		   source,
 		   new String[] {
-			   "constraints", "endYearConstraint hasTitleTypeTvseries"
+			   "constraints", "endYearConstraint"
 		   });
 		addAnnotation
 		  (episodeEClass,
 		   source,
 		   new String[] {
-			   "constraints", "seasonNumberConstraint episodeNumberConstraint"
+			   "constraints", "noImdbContainerConstraint seasonNumberConstraint episodeNumberConstraint"
 		   });
 		addAnnotation
 		  (ratingEClass,
@@ -777,13 +777,13 @@ public class ImdbPackageImpl extends EPackageImpl implements ImdbPackage {
 		  (personEClass,
 		   source,
 		   new String[] {
-			   "constraints", "numberOfVotesConstraint averageRatingConstraint"
+			   "constraints", "birthYearConstraint deathYearConstraint"
 		   });
 		addAnnotation
 		  (involvementEClass,
 		   source,
 		   new String[] {
-			   "constraints", "uniqueInvolvementConstraint actorIsBornConstraint"
+			   "constraints", "uniqueJobPerPersonConstraint actorIsBornConstraint"
 		   });
 	}
 
@@ -800,20 +800,22 @@ public class ImdbPackageImpl extends EPackageImpl implements ImdbPackage {
 		   source,
 		   new String[] {
 			   "startYearConstraint", "self.startYear > 0 and self.startYear <= 2050",
-			   "runtimeConstraint", "self.runtime > 0"
+			   "runtimeConstraint", "self.runtime > 0",
+			   "uniqueCharactersConstraint", "self.involvements -> isUnique(inv | inv.character)"
 		   });
 		addAnnotation
 		  (tvSeriesEClass,
 		   source,
 		   new String[] {
-			   "endYearConstraint", "self.endYear > 0 and self.endYear <= 2050 and self.endYear >= self.startYear"
+			   "endYearConstraint", "(self.endYear > 0 and self.endYear <= 2050 and self.endYear >= self.startYear) or self.endYear = -1"
 		   });
 		addAnnotation
 		  (episodeEClass,
 		   source,
 		   new String[] {
-			   "seasonNumberConstraint", "self.seasonNumber> 0",
-			   "episodeNumberConstraint", "self.episodeNumber> 0"
+			   "noImdbContainerConstraint", "self.imdb = null",
+			   "seasonNumberConstraint", "self.seasonNumber > 0",
+			   "episodeNumberConstraint", "self.episodeNumber > 0"
 		   });
 		addAnnotation
 		  (ratingEClass,
@@ -826,7 +828,7 @@ public class ImdbPackageImpl extends EPackageImpl implements ImdbPackage {
 		   source,
 		   new String[] {
 			   "birthYearConstraint", "self.birthYear > 0 and self.birthYear <= 2019",
-			   "deathYearConstraint", "self.deathYear > -2 and self.deathYear <= 2019 and self.deathYear >= self.birthYear"
+			   "deathYearConstraint", "(self.deathYear > 0 and self.deathYear <= 2019 and self.deathYear >= self.birthYear) or self.deathYear = -1"
 		   });
 	}
 
