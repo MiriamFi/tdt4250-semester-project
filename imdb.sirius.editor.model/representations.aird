@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/tree/description/1.0.0" xmlns:description_3="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:no.ntnu.tdt4250.imdb="http://no/ntnu/tdt4250/imdb" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:table="http://www.eclipse.org/sirius/table/1.1.0" xmlns:tree="http://www.eclipse.org/sirius/tree/1.0.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/tree/description/1.0.0 http://www.eclipse.org/sirius/tree/1.0.0#//description http://www.eclipse.org/sirius/table/description/1.1.0 http://www.eclipse.org/sirius/table/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
-  <viewpoint:DAnalysis uid="_mU7fsBAsEeqwO9cZgSHscw" selectedViews="_SfSfEBA5Eeq07ZXfmbuGdw _wkfU0BD5EeqtT82Di4KYgg _KIAOgBD-EeqtT82Di4KYgg _HCXw8BEXEeqzTNOpdVed8A" version="14.1.0.201810161215">
+  <viewpoint:DAnalysis uid="_mU7fsBAsEeqwO9cZgSHscw" selectedViews="_SfSfEBA5Eeq07ZXfmbuGdw _wkfU0BD5EeqtT82Di4KYgg _KIAOgBD-EeqtT82Di4KYgg _jMQZcBHrEeqtvpi1ZwzS3Q" version="14.1.0.201810161215">
     <semanticResources>Imdb.imdb</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_SfSfEBA5Eeq07ZXfmbuGdw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']"/>
@@ -16,6 +16,22 @@
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='SharedCrew%20Diagram']"/>
         <target xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.2"/>
       </ownedRepresentationDescriptors>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_fRqMIBHrEeqtvpi1ZwzS3Q" name="new Imdb diagram" repPath="#_fRChEBHrEeqtvpi1ZwzS3Q">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']"/>
+        <target xmi:type="no.ntnu.tdt4250.imdb:Imdb" href="Imdb.imdb#/"/>
+      </ownedRepresentationDescriptors>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_g5XJwRHrEeqtvpi1ZwzS3Q" name="Other people that Mark Hamill has worked with" repPath="#_g5K8gBHrEeqtvpi1ZwzS3Q">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='WorkedWithSelect%20Diagram']"/>
+        <target xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.0"/>
+      </ownedRepresentationDescriptors>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_h4g5oRHrEeqtvpi1ZwzS3Q" name="Other titles that share crew with Star Wars Episode IV: A New Hope" repPath="#_h4edYBHrEeqtvpi1ZwzS3Q">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='SharedCrew%20Diagram']"/>
+        <target xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.0"/>
+      </ownedRepresentationDescriptors>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_wpygIBHsEeq0QYsm6gBQLg" name="Other people that Tom Skerritt has worked with" repPath="#_wpkdsBHsEeq0QYsm6gBQLg">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='WorkedWithSelect%20Diagram']"/>
+        <target xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.5"/>
+      </ownedRepresentationDescriptors>
     </ownedViews>
     <ownedViews xmi:type="viewpoint:DView" uid="_wkfU0BD5EeqtT82Di4KYgg">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='person_viewpoint']"/>
@@ -26,6 +42,10 @@
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_wETIEBHZEeq_COCdO6JO7g" name="Details of Mark Hamill" repPath="#_wDJRgBHZEeq_COCdO6JO7g">
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20detail%20diagram']"/>
         <target xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.0"/>
+      </ownedRepresentationDescriptors>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_tF7NQRHrEeqtvpi1ZwzS3Q" name="Details of Peter Cushing" repPath="#_tFvnEBHrEeqtvpi1ZwzS3Q">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20detail%20diagram']"/>
+        <target xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.3"/>
       </ownedRepresentationDescriptors>
     </ownedViews>
     <ownedViews xmi:type="viewpoint:DView" uid="_KIAOgBD-EeqtT82Di4KYgg">
@@ -45,6 +65,13 @@
         <target xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.2"/>
       </ownedRepresentationDescriptors>
     </ownedViews>
+    <ownedViews xmi:type="viewpoint:DView" uid="_jMQZcBHrEeqtvpi1ZwzS3Q">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='titleTables']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_jMcmsRHrEeqtvpi1ZwzS3Q" name="Table" repPath="#_jMS1sBHrEeqtvpi1ZwzS3Q">
+        <description xmi:type="description_3:EditionTableDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='titleTables']/@ownedRepresentations[name='TitleTable']"/>
+        <target xmi:type="no.ntnu.tdt4250.imdb:Imdb" href="Imdb.imdb#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
   </viewpoint:DAnalysis>
   <diagram:DSemanticDiagram uid="_Uxa5wBA5Eeq07ZXfmbuGdw" name="imdb diagram">
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_UyepsxA5Eeq07ZXfmbuGdw" source="DANNOTATION_CUSTOMIZATION_KEY">
@@ -61,7 +88,7 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_U0Bh1xA5Eeq07ZXfmbuGdw"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_Uzlc8RA5Eeq07ZXfmbuGdw" fontName="Segoe UI" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Uzlc8hA5Eeq07ZXfmbuGdw" x="42" y="224" width="208" height="136"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Uzlc8hA5Eeq07ZXfmbuGdw" x="42" y="224" width="180" height="120"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_U0Bh0BA5Eeq07ZXfmbuGdw" type="2001" element="_UyepsBA5Eeq07ZXfmbuGdw">
           <children xmi:type="notation:Node" xmi:id="_U0Bh0xA5Eeq07ZXfmbuGdw" type="5002">
@@ -72,7 +99,7 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_U0Bh2hA5Eeq07ZXfmbuGdw"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_U0Bh0RA5Eeq07ZXfmbuGdw" fontName="Segoe UI" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_U0Bh0hA5Eeq07ZXfmbuGdw" x="777" y="413" width="283" height="238"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_U0Bh0hA5Eeq07ZXfmbuGdw" x="777" y="413" width="180" height="120"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_UxmDcBA6Eeq07ZXfmbuGdw" type="2001" element="_UvwQYRA6Eeq07ZXfmbuGdw">
           <children xmi:type="notation:Node" xmi:id="_UxnRkBA6Eeq07ZXfmbuGdw" type="5002">
@@ -116,7 +143,7 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8a1ESxBKEeqrgMP-9O1ymA"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_8arTMRBKEeqrgMP-9O1ymA" fontName="Segoe UI" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8arTMhBKEeqrgMP-9O1ymA" x="191" y="-35" width="100" height="50"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8arTMhBKEeqrgMP-9O1ymA" x="191" y="-35" width="180" height="120"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_8a1EMBBKEeqrgMP-9O1ymA" type="2001" element="_8aCaDRBKEeqrgMP-9O1ymA">
           <children xmi:type="notation:Node" xmi:id="_8a1EMxBKEeqrgMP-9O1ymA" type="5002">
@@ -172,6 +199,28 @@
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_8a1ERRBKEeqrgMP-9O1ymA" fontName="Segoe UI" fontHeight="12"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8a1ERhBKEeqrgMP-9O1ymA" x="-182" y="-245" width="160" height="120"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="__VwlUBHsEeq0QYsm6gBQLg" type="2001" element="__VjxABHsEeq0QYsm6gBQLg">
+          <children xmi:type="notation:Node" xmi:id="__VxMYBHsEeq0QYsm6gBQLg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="__VxMYRHsEeq0QYsm6gBQLg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="__VzBkBHsEeq0QYsm6gBQLg" type="3003" element="__VkYEBHsEeq0QYsm6gBQLg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="__VzBkRHsEeq0QYsm6gBQLg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="__VzBkhHsEeq0QYsm6gBQLg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="__VwlURHsEeq0QYsm6gBQLg" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="__VwlUhHsEeq0QYsm6gBQLg" x="336" y="-234" width="180" height="120"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_FXUfIBHtEeq0QYsm6gBQLg" type="2001" element="_FXNKYBHtEeq0QYsm6gBQLg">
+          <children xmi:type="notation:Node" xmi:id="_FXVGMBHtEeq0QYsm6gBQLg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_FXVGMRHtEeq0QYsm6gBQLg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_FXVtQBHtEeq0QYsm6gBQLg" type="3003" element="_FXNKYRHtEeq0QYsm6gBQLg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_FXVtQRHtEeq0QYsm6gBQLg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FXVtQhHtEeq0QYsm6gBQLg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_FXUfIRHtEeq0QYsm6gBQLg" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FXUfIhHtEeq0QYsm6gBQLg" x="756" y="-198" width="160" height="120"/>
         </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_UzR68hA5Eeq07ZXfmbuGdw"/>
         <edges xmi:type="notation:Edge" xmi:id="_xe8BkBBOEeqkqsZIe-vV7A" type="4001" element="_xdyyEBBOEeqkqsZIe-vV7A" source="_Uzlc8BA5Eeq07ZXfmbuGdw" target="_UxmDcBA6Eeq07ZXfmbuGdw">
@@ -350,37 +399,64 @@
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_xfFzCBBOEeqkqsZIe-vV7A" id="(0.5,0.0)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_xfFzCRBOEeqkqsZIe-vV7A" id="(0.5,1.0)"/>
         </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_g1d2UBHtEeq0QYsm6gBQLg" type="4001" element="_g1V6gBHtEeq0QYsm6gBQLg" source="__VwlUBHsEeq0QYsm6gBQLg" target="_FXUfIBHtEeq0QYsm6gBQLg">
+          <children xmi:type="notation:Node" xmi:id="_g1d2VBHtEeq0QYsm6gBQLg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g1d2VRHtEeq0QYsm6gBQLg" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_g1d2VhHtEeq0QYsm6gBQLg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g1d2VxHtEeq0QYsm6gBQLg" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_g1edYBHtEeq0QYsm6gBQLg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g1edYRHtEeq0QYsm6gBQLg" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_g1d2URHtEeq0QYsm6gBQLg"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_g1d2UhHtEeq0QYsm6gBQLg" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_g1d2UxHtEeq0QYsm6gBQLg" points="[0, 0, -240, -30]$[240, 30, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_g1edYhHtEeq0QYsm6gBQLg" id="(1.0,0.2)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_g1edYxHtEeq0QYsm6gBQLg" id="(0.0,0.15)"/>
+        </edges>
       </data>
     </ownedAnnotationEntries>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_UyOyEBA5Eeq07ZXfmbuGdw" name="Star Wars Episode IV: A New Hope" outgoingEdges="_xdyyEBBOEeqkqsZIe-vV7A _xdyyFRBOEeqkqsZIe-vV7A _xdyyGhBOEeqkqsZIe-vV7A _xdyyHxBOEeqkqsZIe-vV7A _xdyyJBBOEeqkqsZIe-vV7A" width="10" height="5" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_UyOyEBA5Eeq07ZXfmbuGdw" name="Star Wars Episode IV: A New Hope" outgoingEdges="_xdyyEBBOEeqkqsZIe-vV7A _xdyyFRBOEeqkqsZIe-vV7A _xdyyGhBOEeqkqsZIe-vV7A _xdyyHxBOEeqkqsZIe-vV7A _xdyyJBBOEeqkqsZIe-vV7A" width="18" height="12" resizeKind="NSEW">
       <target xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.0"/>
       <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.0"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:Square" uid="_UyU4sBA5Eeq07ZXfmbuGdw" labelSize="12" labelPosition="node" width="10" height="5" color="194,239,255">
+      <ownedStyle xmi:type="diagram:Square" uid="_UyU4sBA5Eeq07ZXfmbuGdw" labelSize="12" labelPosition="node" width="18" height="12" color="194,239,255">
         <description xmi:type="style:SquareDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@nodeMappings[name='TitleNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@nodeMappings[name='TitleNode']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_UyepsBA5Eeq07ZXfmbuGdw" name="Star Wars: Episode V - The Empire Strikes Back" outgoingEdges="_xdyyKRBOEeqkqsZIe-vV7A _xdyyLhBOEeqkqsZIe-vV7A _xdyyMxBOEeqkqsZIe-vV7A" width="10" height="5" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_UyepsBA5Eeq07ZXfmbuGdw" name="Star Wars: Episode V - The Empire Strikes Back" outgoingEdges="_xdyyKRBOEeqkqsZIe-vV7A _xdyyLhBOEeqkqsZIe-vV7A _xdyyMxBOEeqkqsZIe-vV7A" width="18" height="12" resizeKind="NSEW">
       <target xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.1"/>
       <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.1"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:Square" uid="_UyepsRA5Eeq07ZXfmbuGdw" labelSize="12" labelPosition="node" width="10" height="5" color="194,239,255">
+      <ownedStyle xmi:type="diagram:Square" uid="_UyepsRA5Eeq07ZXfmbuGdw" labelSize="12" labelPosition="node" width="18" height="12" color="194,239,255">
         <description xmi:type="style:SquareDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@nodeMappings[name='TitleNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@nodeMappings[name='TitleNode']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_8aCaBBBKEeqrgMP-9O1ymA" name="Alien" outgoingEdges="_xdyyOBBOEeqkqsZIe-vV7A _xdyyPRBOEeqkqsZIe-vV7A _xdyyQhBOEeqkqsZIe-vV7A" width="10" height="5" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_8aCaBBBKEeqrgMP-9O1ymA" name="Alien" outgoingEdges="_xdyyOBBOEeqkqsZIe-vV7A _xdyyPRBOEeqkqsZIe-vV7A _xdyyQhBOEeqkqsZIe-vV7A" width="18" height="12" resizeKind="NSEW">
       <target xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.2"/>
       <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.2"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:Square" uid="_8aCaBRBKEeqrgMP-9O1ymA" labelSize="12" labelPosition="node" width="10" height="5" color="194,239,255">
+      <ownedStyle xmi:type="diagram:Square" uid="_8aCaBRBKEeqrgMP-9O1ymA" labelSize="12" labelPosition="node" width="18" height="12" color="194,239,255">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@nodeMappings[name='TitleNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@nodeMappings[name='TitleNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="__VjxABHsEeq0QYsm6gBQLg" name="Short Stories From Dallas" outgoingEdges="_g1V6gBHtEeq0QYsm6gBQLg" width="18" height="12" resizeKind="NSEW">
+      <target xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.3"/>
+      <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.3"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="__VkYEBHsEeq0QYsm6gBQLg" labelSize="12" labelPosition="node" width="18" height="12" color="194,239,255">
         <description xmi:type="style:SquareDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@nodeMappings[name='TitleNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@nodeMappings[name='TitleNode']"/>
@@ -470,6 +546,14 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@nodeMappings[name='PersonNode']"/>
     </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_FXNKYBHtEeq0QYsm6gBQLg" name="Martin Shortleg" incomingEdges="_g1V6gBHtEeq0QYsm6gBQLg" width="16" height="12" resizeKind="NSEW">
+      <target xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.8"/>
+      <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.8"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_FXNKYRHtEeq0QYsm6gBQLg" labelSize="12" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" width="16" height="12" color="253,206,137">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@nodeMappings[name='PersonNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@nodeMappings[name='PersonNode']"/>
+    </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_xdyyEBBOEeqkqsZIe-vV7A" sourceNode="_UyOyEBA5Eeq07ZXfmbuGdw" targetNode="_UvwQYRA6Eeq07ZXfmbuGdw">
       <target xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.0"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_xdyyERBOEeqkqsZIe-vV7A" size="2" strokeColor="39,76,114">
@@ -555,6 +639,14 @@
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_xdyyQxBOEeqkqsZIe-vV7A" size="2" strokeColor="39,76,114">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@edgeMappings[name='personTitleEdge']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_xdyyRBBOEeqkqsZIe-vV7A" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@edgeMappings[name='personTitleEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_g1V6gBHtEeq0QYsm6gBQLg" sourceNode="__VjxABHsEeq0QYsm6gBQLg" targetNode="_FXNKYBHtEeq0QYsm6gBQLg">
+      <target xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.3"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_g1V6gRHtEeq0QYsm6gBQLg" size="2" strokeColor="39,76,114">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@edgeMappings[name='personTitleEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_g1V6ghHtEeq0QYsm6gBQLg" labelSize="12"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@edgeMappings[name='personTitleEdge']"/>
     </ownedDiagramElements>
@@ -1562,15 +1654,15 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_v_nvahEIEeqtT82Di4KYgg"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_v_nvZBEIEeqtT82Di4KYgg" fontName="Segoe UI" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_v_nvZREIEeqtT82Di4KYgg" width="100" height="50"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_v_nvZREIEeqtT82Di4KYgg" width="200" height="150"/>
         </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_v_nvYhEIEeqtT82Di4KYgg"/>
       </data>
     </ownedAnnotationEntries>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_v_SYMBEIEeqtT82Di4KYgg" name="Alien" tooltipText="Alien" width="10" height="5" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_v_SYMBEIEeqtT82Di4KYgg" name="Alien" tooltipText="Alien" width="20" height="15" resizeKind="NSEW">
       <target xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.2"/>
       <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.2"/>
-      <ownedStyle xmi:type="diagram:Square" uid="_v_SYMREIEeqtT82Di4KYgg" labelSize="12" labelPosition="node" width="10" height="5" color="252,175,62">
+      <ownedStyle xmi:type="diagram:Square" uid="_v_SYMREIEeqtT82Di4KYgg" labelSize="12" labelPosition="node" width="20" height="15" color="252,175,62">
         <description xmi:type="style:SquareDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='SharedCrew%20Diagram']/@defaultLayer/@nodeMappings[name='SharedCrewNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='SharedCrew%20Diagram']/@defaultLayer/@nodeMappings[name='SharedCrewNode']"/>
@@ -1897,5 +1989,1164 @@
     <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_wDUQoBHZEeq_COCdO6JO7g"/>
     <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20detail%20diagram']/@defaultLayer"/>
     <target xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.0"/>
+  </diagram:DSemanticDiagram>
+  <diagram:DSemanticDiagram uid="_fRChEBHrEeqtvpi1ZwzS3Q" name="new Imdb diagram">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_fRl6sBHrEeqtvpi1ZwzS3Q" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_fRl6sRHrEeqtvpi1ZwzS3Q"/>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_fSZL8BHrEeqtvpi1ZwzS3Q" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_fSZL8RHrEeqtvpi1ZwzS3Q" type="Sirius" element="_fRChEBHrEeqtvpi1ZwzS3Q" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_fS1Q0BHrEeqtvpi1ZwzS3Q" type="2001" element="_fRYfUBHrEeqtvpi1ZwzS3Q">
+          <children xmi:type="notation:Node" xmi:id="_fTGWkBHrEeqtvpi1ZwzS3Q" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_fTGWkRHrEeqtvpi1ZwzS3Q" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_fUYI8BHrEeqtvpi1ZwzS3Q" type="3003" element="_fRaUgBHrEeqtvpi1ZwzS3Q">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_fUYI8RHrEeqtvpi1ZwzS3Q" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fUYI8hHrEeqtvpi1ZwzS3Q"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_fS1Q0RHrEeqtvpi1ZwzS3Q" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fS1Q0hHrEeqtvpi1ZwzS3Q" x="420" y="182" width="180" height="120"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_fUT3gBHrEeqtvpi1ZwzS3Q" type="2001" element="_fRcwwBHrEeqtvpi1ZwzS3Q">
+          <children xmi:type="notation:Node" xmi:id="_fUT3gxHrEeqtvpi1ZwzS3Q" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_fUT3hBHrEeqtvpi1ZwzS3Q" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_fUYI8xHrEeqtvpi1ZwzS3Q" type="3003" element="_fRcwwRHrEeqtvpi1ZwzS3Q">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_fUYI9BHrEeqtvpi1ZwzS3Q" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fUYI9RHrEeqtvpi1ZwzS3Q"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_fUT3gRHrEeqtvpi1ZwzS3Q" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fUT3ghHrEeqtvpi1ZwzS3Q" x="665" y="182" width="180" height="120"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_fUUekBHrEeqtvpi1ZwzS3Q" type="2001" element="_fRdX0BHrEeqtvpi1ZwzS3Q">
+          <children xmi:type="notation:Node" xmi:id="_fUUekxHrEeqtvpi1ZwzS3Q" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_fUUelBHrEeqtvpi1ZwzS3Q" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_fUYwABHrEeqtvpi1ZwzS3Q" type="3003" element="_fRdX0RHrEeqtvpi1ZwzS3Q">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_fUYwARHrEeqtvpi1ZwzS3Q" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fUYwAhHrEeqtvpi1ZwzS3Q"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_fUUekRHrEeqtvpi1ZwzS3Q" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fUUekhHrEeqtvpi1ZwzS3Q" x="1309" y="182" width="180" height="120"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_fUUelRHrEeqtvpi1ZwzS3Q" type="2001" element="_fRdX0xHrEeqtvpi1ZwzS3Q">
+          <children xmi:type="notation:Node" xmi:id="_fUUemBHrEeqtvpi1ZwzS3Q" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_fUUemRHrEeqtvpi1ZwzS3Q" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_fUYwAxHrEeqtvpi1ZwzS3Q" type="3003" element="_fRdX1BHrEeqtvpi1ZwzS3Q">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_fUYwBBHrEeqtvpi1ZwzS3Q" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fUYwBRHrEeqtvpi1ZwzS3Q"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_fUUelhHrEeqtvpi1ZwzS3Q" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fUUelxHrEeqtvpi1ZwzS3Q" x="658" width="160" height="120"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_fUVFoBHrEeqtvpi1ZwzS3Q" type="2001" element="_fRdX1hHrEeqtvpi1ZwzS3Q">
+          <children xmi:type="notation:Node" xmi:id="_fUVFoxHrEeqtvpi1ZwzS3Q" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_fUVFpBHrEeqtvpi1ZwzS3Q" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_fUZXEBHrEeqtvpi1ZwzS3Q" type="3003" element="_fRdX1xHrEeqtvpi1ZwzS3Q">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_fUZXERHrEeqtvpi1ZwzS3Q" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fUZXEhHrEeqtvpi1ZwzS3Q"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_fUVFoRHrEeqtvpi1ZwzS3Q" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fUVFohHrEeqtvpi1ZwzS3Q" x="882" width="160" height="120"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_fUVFpRHrEeqtvpi1ZwzS3Q" type="2001" element="_fRdX2RHrEeqtvpi1ZwzS3Q">
+          <children xmi:type="notation:Node" xmi:id="_fUVFqBHrEeqtvpi1ZwzS3Q" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_fUVFqRHrEeqtvpi1ZwzS3Q" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_fUZXExHrEeqtvpi1ZwzS3Q" type="3003" element="_fRd-4BHrEeqtvpi1ZwzS3Q">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_fUZXFBHrEeqtvpi1ZwzS3Q" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fUZXFRHrEeqtvpi1ZwzS3Q"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_fUVFphHrEeqtvpi1ZwzS3Q" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fUVFpxHrEeqtvpi1ZwzS3Q" x="441" width="160" height="120"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_fUVssBHrEeqtvpi1ZwzS3Q" type="2001" element="_fRd-4hHrEeqtvpi1ZwzS3Q">
+          <children xmi:type="notation:Node" xmi:id="_fUVssxHrEeqtvpi1ZwzS3Q" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_fUVstBHrEeqtvpi1ZwzS3Q" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_fUZXFhHrEeqtvpi1ZwzS3Q" type="3003" element="_fRd-4xHrEeqtvpi1ZwzS3Q">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_fUZXFxHrEeqtvpi1ZwzS3Q" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fUZXGBHrEeqtvpi1ZwzS3Q"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_fUVssRHrEeqtvpi1ZwzS3Q" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fUVsshHrEeqtvpi1ZwzS3Q" width="160" height="120"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_fUVstRHrEeqtvpi1ZwzS3Q" type="2001" element="_fRd-5RHrEeqtvpi1ZwzS3Q">
+          <children xmi:type="notation:Node" xmi:id="_fUVsuBHrEeqtvpi1ZwzS3Q" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_fUVsuRHrEeqtvpi1ZwzS3Q" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_fUZ-IBHrEeqtvpi1ZwzS3Q" type="3003" element="_fRd-5hHrEeqtvpi1ZwzS3Q">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_fUZ-IRHrEeqtvpi1ZwzS3Q" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fUZ-IhHrEeqtvpi1ZwzS3Q"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_fUVsthHrEeqtvpi1ZwzS3Q" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fUVstxHrEeqtvpi1ZwzS3Q" x="217" width="160" height="120"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_fUWTwBHrEeqtvpi1ZwzS3Q" type="2001" element="_fRd-6BHrEeqtvpi1ZwzS3Q">
+          <children xmi:type="notation:Node" xmi:id="_fUWTwxHrEeqtvpi1ZwzS3Q" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_fUWTxBHrEeqtvpi1ZwzS3Q" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_fUZ-IxHrEeqtvpi1ZwzS3Q" type="3003" element="_fRd-6RHrEeqtvpi1ZwzS3Q">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_fUZ-JBHrEeqtvpi1ZwzS3Q" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fUZ-JRHrEeqtvpi1ZwzS3Q"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_fUWTwRHrEeqtvpi1ZwzS3Q" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fUWTwhHrEeqtvpi1ZwzS3Q" x="1071" width="160" height="120"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_fUWTxRHrEeqtvpi1ZwzS3Q" type="2001" element="_fRd-6xHrEeqtvpi1ZwzS3Q">
+          <children xmi:type="notation:Node" xmi:id="_fUW60BHrEeqtvpi1ZwzS3Q" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_fUW60RHrEeqtvpi1ZwzS3Q" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_fUZ-JhHrEeqtvpi1ZwzS3Q" type="3003" element="_fRd-7BHrEeqtvpi1ZwzS3Q">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_fUZ-JxHrEeqtvpi1ZwzS3Q" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fUZ-KBHrEeqtvpi1ZwzS3Q"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_fUWTxhHrEeqtvpi1ZwzS3Q" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fUWTxxHrEeqtvpi1ZwzS3Q" x="1323" width="160" height="120"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_fUW60hHrEeqtvpi1ZwzS3Q" type="2001" element="_fRd-7hHrEeqtvpi1ZwzS3Q">
+          <children xmi:type="notation:Node" xmi:id="_fUW61RHrEeqtvpi1ZwzS3Q" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_fUW61hHrEeqtvpi1ZwzS3Q" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_fUalMBHrEeqtvpi1ZwzS3Q" type="3003" element="_fRel8BHrEeqtvpi1ZwzS3Q">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_fUalMRHrEeqtvpi1ZwzS3Q" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fUalMhHrEeqtvpi1ZwzS3Q"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_fUW60xHrEeqtvpi1ZwzS3Q" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fUW61BHrEeqtvpi1ZwzS3Q" x="1540" width="160" height="120"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_fSZL8hHrEeqtvpi1ZwzS3Q"/>
+        <edges xmi:type="notation:Edge" xmi:id="_fUrq8BHrEeqtvpi1ZwzS3Q" type="4001" element="_fRjecBHrEeqtvpi1ZwzS3Q" source="_fS1Q0BHrEeqtvpi1ZwzS3Q" target="_fUUelRHrEeqtvpi1ZwzS3Q">
+          <children xmi:type="notation:Node" xmi:id="_fUsSABHrEeqtvpi1ZwzS3Q" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fUsSARHrEeqtvpi1ZwzS3Q" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_fUs5EBHrEeqtvpi1ZwzS3Q" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fUs5ERHrEeqtvpi1ZwzS3Q" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_fUs5EhHrEeqtvpi1ZwzS3Q" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fUs5ExHrEeqtvpi1ZwzS3Q" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_fUrq8RHrEeqtvpi1ZwzS3Q"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_fUrq8hHrEeqtvpi1ZwzS3Q" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_fUrq8xHrEeqtvpi1ZwzS3Q" points="[0, 0, -228, 60]$[228, -60, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_fU67gBHrEeqtvpi1ZwzS3Q" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_fU67gRHrEeqtvpi1ZwzS3Q" id="(0.5,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_fU67ghHrEeqtvpi1ZwzS3Q" type="4001" element="_fRkFgxHrEeqtvpi1ZwzS3Q" source="_fS1Q0BHrEeqtvpi1ZwzS3Q" target="_fUVFoBHrEeqtvpi1ZwzS3Q">
+          <children xmi:type="notation:Node" xmi:id="_fU7ikBHrEeqtvpi1ZwzS3Q" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fU7ikRHrEeqtvpi1ZwzS3Q" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_fU7ikhHrEeqtvpi1ZwzS3Q" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fU7ikxHrEeqtvpi1ZwzS3Q" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_fU7ilBHrEeqtvpi1ZwzS3Q" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fU7ilRHrEeqtvpi1ZwzS3Q" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_fU67gxHrEeqtvpi1ZwzS3Q"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_fU67hBHrEeqtvpi1ZwzS3Q" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_fU67hRHrEeqtvpi1ZwzS3Q" points="[0, 0, -448, 60]$[448, -60, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_fU7ilhHrEeqtvpi1ZwzS3Q" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_fU7ilxHrEeqtvpi1ZwzS3Q" id="(0.5,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_fU7imBHrEeqtvpi1ZwzS3Q" type="4001" element="_fRkFiBHrEeqtvpi1ZwzS3Q" source="_fS1Q0BHrEeqtvpi1ZwzS3Q" target="_fUVFpRHrEeqtvpi1ZwzS3Q">
+          <children xmi:type="notation:Node" xmi:id="_fU8JoBHrEeqtvpi1ZwzS3Q" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fU8JoRHrEeqtvpi1ZwzS3Q" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_fU8JohHrEeqtvpi1ZwzS3Q" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fU8JoxHrEeqtvpi1ZwzS3Q" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_fU8JpBHrEeqtvpi1ZwzS3Q" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fU8JpRHrEeqtvpi1ZwzS3Q" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_fU7imRHrEeqtvpi1ZwzS3Q"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_fU7imhHrEeqtvpi1ZwzS3Q" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_fU7imxHrEeqtvpi1ZwzS3Q" points="[0, 0, -8, 60]$[8, -60, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_fU8JphHrEeqtvpi1ZwzS3Q" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_fU8JpxHrEeqtvpi1ZwzS3Q" id="(0.5,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_fU8JqBHrEeqtvpi1ZwzS3Q" type="4001" element="_fRkslBHrEeqtvpi1ZwzS3Q" source="_fS1Q0BHrEeqtvpi1ZwzS3Q" target="_fUVssBHrEeqtvpi1ZwzS3Q">
+          <children xmi:type="notation:Node" xmi:id="_fU8JrBHrEeqtvpi1ZwzS3Q" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fU8JrRHrEeqtvpi1ZwzS3Q" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_fU8JrhHrEeqtvpi1ZwzS3Q" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fU8JrxHrEeqtvpi1ZwzS3Q" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_fU8JsBHrEeqtvpi1ZwzS3Q" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fU8JsRHrEeqtvpi1ZwzS3Q" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_fU8JqRHrEeqtvpi1ZwzS3Q"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_fU8JqhHrEeqtvpi1ZwzS3Q" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_fU8JqxHrEeqtvpi1ZwzS3Q" points="[0, 0, 432, 60]$[-432, -60, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_fU8wsBHrEeqtvpi1ZwzS3Q" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_fU8wsRHrEeqtvpi1ZwzS3Q" id="(0.5,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_fU8wshHrEeqtvpi1ZwzS3Q" type="4001" element="_fRksmRHrEeqtvpi1ZwzS3Q" source="_fS1Q0BHrEeqtvpi1ZwzS3Q" target="_fUVstRHrEeqtvpi1ZwzS3Q">
+          <children xmi:type="notation:Node" xmi:id="_fU8wthHrEeqtvpi1ZwzS3Q" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fU8wtxHrEeqtvpi1ZwzS3Q" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_fU8wuBHrEeqtvpi1ZwzS3Q" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fU8wuRHrEeqtvpi1ZwzS3Q" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_fU8wuhHrEeqtvpi1ZwzS3Q" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fU8wuxHrEeqtvpi1ZwzS3Q" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_fU8wsxHrEeqtvpi1ZwzS3Q"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_fU8wtBHrEeqtvpi1ZwzS3Q" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_fU8wtRHrEeqtvpi1ZwzS3Q" points="[0, 0, 212, 60]$[-212, -60, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_fU8wvBHrEeqtvpi1ZwzS3Q" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_fU8wvRHrEeqtvpi1ZwzS3Q" id="(0.5,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_fU9XwBHrEeqtvpi1ZwzS3Q" type="4001" element="_fRksnhHrEeqtvpi1ZwzS3Q" source="_fUT3gBHrEeqtvpi1ZwzS3Q" target="_fUUelRHrEeqtvpi1ZwzS3Q">
+          <children xmi:type="notation:Node" xmi:id="_fU9XxBHrEeqtvpi1ZwzS3Q" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fU9XxRHrEeqtvpi1ZwzS3Q" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_fU9XxhHrEeqtvpi1ZwzS3Q" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fU9XxxHrEeqtvpi1ZwzS3Q" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_fU9XyBHrEeqtvpi1ZwzS3Q" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fU9XyRHrEeqtvpi1ZwzS3Q" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_fU9XwRHrEeqtvpi1ZwzS3Q"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_fU9XwhHrEeqtvpi1ZwzS3Q" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_fU9XwxHrEeqtvpi1ZwzS3Q" points="[0, 0, 12, 60]$[-12, -60, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_fU9XyhHrEeqtvpi1ZwzS3Q" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_fU9-0BHrEeqtvpi1ZwzS3Q" id="(0.5,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_fU9-0RHrEeqtvpi1ZwzS3Q" type="4001" element="_fRksoxHrEeqtvpi1ZwzS3Q" source="_fUT3gBHrEeqtvpi1ZwzS3Q" target="_fUVFoBHrEeqtvpi1ZwzS3Q">
+          <children xmi:type="notation:Node" xmi:id="_fU9-1RHrEeqtvpi1ZwzS3Q" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fU9-1hHrEeqtvpi1ZwzS3Q" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_fU9-1xHrEeqtvpi1ZwzS3Q" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fU9-2BHrEeqtvpi1ZwzS3Q" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_fU9-2RHrEeqtvpi1ZwzS3Q" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fU9-2hHrEeqtvpi1ZwzS3Q" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_fU9-0hHrEeqtvpi1ZwzS3Q"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_fU9-0xHrEeqtvpi1ZwzS3Q" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_fU9-1BHrEeqtvpi1ZwzS3Q" points="[0, 0, -208, 60]$[208, -60, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_fU9-2xHrEeqtvpi1ZwzS3Q" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_fU9-3BHrEeqtvpi1ZwzS3Q" id="(0.5,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_fU9-3RHrEeqtvpi1ZwzS3Q" type="4001" element="_fRlToBHrEeqtvpi1ZwzS3Q" source="_fUT3gBHrEeqtvpi1ZwzS3Q" target="_fUVFpRHrEeqtvpi1ZwzS3Q">
+          <children xmi:type="notation:Node" xmi:id="_fU-l4BHrEeqtvpi1ZwzS3Q" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fU-l4RHrEeqtvpi1ZwzS3Q" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_fU-l4hHrEeqtvpi1ZwzS3Q" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fU-l4xHrEeqtvpi1ZwzS3Q" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_fU-l5BHrEeqtvpi1ZwzS3Q" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fU-l5RHrEeqtvpi1ZwzS3Q" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_fU9-3hHrEeqtvpi1ZwzS3Q"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_fU9-3xHrEeqtvpi1ZwzS3Q" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_fU9-4BHrEeqtvpi1ZwzS3Q" points="[0, 0, 232, 60]$[-232, -60, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_fU-l5hHrEeqtvpi1ZwzS3Q" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_fU-l5xHrEeqtvpi1ZwzS3Q" id="(0.5,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_fU-l6BHrEeqtvpi1ZwzS3Q" type="4001" element="_fRlTpRHrEeqtvpi1ZwzS3Q" source="_fUUekBHrEeqtvpi1ZwzS3Q" target="_fUWTwBHrEeqtvpi1ZwzS3Q">
+          <children xmi:type="notation:Node" xmi:id="_fU_M8BHrEeqtvpi1ZwzS3Q" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fU_M8RHrEeqtvpi1ZwzS3Q" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_fU_M8hHrEeqtvpi1ZwzS3Q" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fU_M8xHrEeqtvpi1ZwzS3Q" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_fU_M9BHrEeqtvpi1ZwzS3Q" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fU_M9RHrEeqtvpi1ZwzS3Q" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_fU-l6RHrEeqtvpi1ZwzS3Q"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_fU-l6hHrEeqtvpi1ZwzS3Q" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_fU-l6xHrEeqtvpi1ZwzS3Q" points="[0, 0, 220, 60]$[-220, -60, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_fU_M9hHrEeqtvpi1ZwzS3Q" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_fU_M9xHrEeqtvpi1ZwzS3Q" id="(0.5,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_fU_M-BHrEeqtvpi1ZwzS3Q" type="4001" element="_fRlTqhHrEeqtvpi1ZwzS3Q" source="_fUUekBHrEeqtvpi1ZwzS3Q" target="_fUWTxRHrEeqtvpi1ZwzS3Q">
+          <children xmi:type="notation:Node" xmi:id="_fU_0ABHrEeqtvpi1ZwzS3Q" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fU_0ARHrEeqtvpi1ZwzS3Q" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_fU_0AhHrEeqtvpi1ZwzS3Q" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fU_0AxHrEeqtvpi1ZwzS3Q" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_fU_0BBHrEeqtvpi1ZwzS3Q" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fU_0BRHrEeqtvpi1ZwzS3Q" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_fU_M-RHrEeqtvpi1ZwzS3Q"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_fU_M-hHrEeqtvpi1ZwzS3Q" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_fU_M-xHrEeqtvpi1ZwzS3Q" points="[0, 0, 0, 60]$[0, -60, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_fU_0BhHrEeqtvpi1ZwzS3Q" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_fU_0BxHrEeqtvpi1ZwzS3Q" id="(0.5,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_fU_0CBHrEeqtvpi1ZwzS3Q" type="4001" element="_fRlTrxHrEeqtvpi1ZwzS3Q" source="_fUUekBHrEeqtvpi1ZwzS3Q" target="_fUW60hHrEeqtvpi1ZwzS3Q">
+          <children xmi:type="notation:Node" xmi:id="_fU_0DBHrEeqtvpi1ZwzS3Q" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fU_0DRHrEeqtvpi1ZwzS3Q" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_fU_0DhHrEeqtvpi1ZwzS3Q" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fU_0DxHrEeqtvpi1ZwzS3Q" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_fVAbEBHrEeqtvpi1ZwzS3Q" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fVAbERHrEeqtvpi1ZwzS3Q" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_fU_0CRHrEeqtvpi1ZwzS3Q"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_fU_0ChHrEeqtvpi1ZwzS3Q" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_fU_0CxHrEeqtvpi1ZwzS3Q" points="[0, 0, -220, 60]$[220, -60, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_fVAbEhHrEeqtvpi1ZwzS3Q" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_fVAbExHrEeqtvpi1ZwzS3Q" id="(0.5,1.0)"/>
+        </edges>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_fRYfUBHrEeqtvpi1ZwzS3Q" name="Star Wars Episode IV: A New Hope" outgoingEdges="_fRjecBHrEeqtvpi1ZwzS3Q _fRkFgxHrEeqtvpi1ZwzS3Q _fRkFiBHrEeqtvpi1ZwzS3Q _fRkslBHrEeqtvpi1ZwzS3Q _fRksmRHrEeqtvpi1ZwzS3Q" width="18" height="12" resizeKind="NSEW">
+      <target xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.0"/>
+      <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.0"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_fRaUgBHrEeqtvpi1ZwzS3Q" labelSize="12" labelPosition="node" width="18" height="12" color="194,239,255">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@nodeMappings[name='TitleNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@nodeMappings[name='TitleNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_fRcwwBHrEeqtvpi1ZwzS3Q" name="Star Wars: Episode V - The Empire Strikes Back" outgoingEdges="_fRksnhHrEeqtvpi1ZwzS3Q _fRksoxHrEeqtvpi1ZwzS3Q _fRlToBHrEeqtvpi1ZwzS3Q" width="18" height="12" resizeKind="NSEW">
+      <target xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.1"/>
+      <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.1"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_fRcwwRHrEeqtvpi1ZwzS3Q" labelSize="12" labelPosition="node" width="18" height="12" color="194,239,255">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@nodeMappings[name='TitleNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@nodeMappings[name='TitleNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_fRdX0BHrEeqtvpi1ZwzS3Q" name="Alien" outgoingEdges="_fRlTpRHrEeqtvpi1ZwzS3Q _fRlTqhHrEeqtvpi1ZwzS3Q _fRlTrxHrEeqtvpi1ZwzS3Q" width="18" height="12" resizeKind="NSEW">
+      <target xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.2"/>
+      <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.2"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_fRdX0RHrEeqtvpi1ZwzS3Q" labelSize="12" labelPosition="node" width="18" height="12" color="194,239,255">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@nodeMappings[name='TitleNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@nodeMappings[name='TitleNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_fRdX0xHrEeqtvpi1ZwzS3Q" name="Mark Hamill" incomingEdges="_fRjecBHrEeqtvpi1ZwzS3Q _fRksnhHrEeqtvpi1ZwzS3Q" width="16" height="12" resizeKind="NSEW">
+      <target xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.0"/>
+      <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.0"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_fRdX1BHrEeqtvpi1ZwzS3Q" labelSize="12" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" width="16" height="12" color="253,206,137">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@nodeMappings[name='PersonNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@nodeMappings[name='PersonNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_fRdX1hHrEeqtvpi1ZwzS3Q" name="Harrison Ford" incomingEdges="_fRkFgxHrEeqtvpi1ZwzS3Q _fRksoxHrEeqtvpi1ZwzS3Q" width="16" height="12" resizeKind="NSEW">
+      <target xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.1"/>
+      <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.1"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_fRdX1xHrEeqtvpi1ZwzS3Q" labelSize="12" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" width="16" height="12" color="253,206,137">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@nodeMappings[name='PersonNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@nodeMappings[name='PersonNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_fRdX2RHrEeqtvpi1ZwzS3Q" name="Carrie Fisher" incomingEdges="_fRkFiBHrEeqtvpi1ZwzS3Q _fRlToBHrEeqtvpi1ZwzS3Q" width="16" height="12" resizeKind="NSEW">
+      <target xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.2"/>
+      <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.2"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_fRd-4BHrEeqtvpi1ZwzS3Q" labelSize="12" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" width="16" height="12" color="253,206,137">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@nodeMappings[name='PersonNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@nodeMappings[name='PersonNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_fRd-4hHrEeqtvpi1ZwzS3Q" name="Peter Cushing" incomingEdges="_fRkslBHrEeqtvpi1ZwzS3Q" width="16" height="12" resizeKind="NSEW">
+      <target xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.3"/>
+      <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.3"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_fRd-4xHrEeqtvpi1ZwzS3Q" labelSize="12" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" width="16" height="12" color="253,206,137">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@nodeMappings[name='PersonNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@nodeMappings[name='PersonNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_fRd-5RHrEeqtvpi1ZwzS3Q" name="Alec Guinness" incomingEdges="_fRksmRHrEeqtvpi1ZwzS3Q" width="16" height="12" resizeKind="NSEW">
+      <target xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.4"/>
+      <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.4"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_fRd-5hHrEeqtvpi1ZwzS3Q" labelSize="12" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" width="16" height="12" color="253,206,137">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@nodeMappings[name='PersonNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@nodeMappings[name='PersonNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_fRd-6BHrEeqtvpi1ZwzS3Q" name="Tom Skerritt" incomingEdges="_fRlTpRHrEeqtvpi1ZwzS3Q" width="16" height="12" resizeKind="NSEW">
+      <target xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.5"/>
+      <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.5"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_fRd-6RHrEeqtvpi1ZwzS3Q" labelSize="12" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" width="16" height="12" color="253,206,137">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@nodeMappings[name='PersonNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@nodeMappings[name='PersonNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_fRd-6xHrEeqtvpi1ZwzS3Q" name="Sigourney Weaver" incomingEdges="_fRlTqhHrEeqtvpi1ZwzS3Q" width="16" height="12" resizeKind="NSEW">
+      <target xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.6"/>
+      <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.6"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_fRd-7BHrEeqtvpi1ZwzS3Q" labelSize="12" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" width="16" height="12" color="253,206,137">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@nodeMappings[name='PersonNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@nodeMappings[name='PersonNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_fRd-7hHrEeqtvpi1ZwzS3Q" name="Veronica Cartwright" incomingEdges="_fRlTrxHrEeqtvpi1ZwzS3Q" width="16" height="12" resizeKind="NSEW">
+      <target xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.7"/>
+      <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.7"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_fRel8BHrEeqtvpi1ZwzS3Q" labelSize="12" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" width="16" height="12" color="253,206,137">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@nodeMappings[name='PersonNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@nodeMappings[name='PersonNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_fRjecBHrEeqtvpi1ZwzS3Q" sourceNode="_fRYfUBHrEeqtvpi1ZwzS3Q" targetNode="_fRdX0xHrEeqtvpi1ZwzS3Q">
+      <target xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_fRjecRHrEeqtvpi1ZwzS3Q" size="2" strokeColor="39,76,114">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@edgeMappings[name='personTitleEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_fRkFgBHrEeqtvpi1ZwzS3Q" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@edgeMappings[name='personTitleEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_fRkFgxHrEeqtvpi1ZwzS3Q" sourceNode="_fRYfUBHrEeqtvpi1ZwzS3Q" targetNode="_fRdX1hHrEeqtvpi1ZwzS3Q">
+      <target xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_fRkFhBHrEeqtvpi1ZwzS3Q" size="2" strokeColor="39,76,114">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@edgeMappings[name='personTitleEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_fRkFhRHrEeqtvpi1ZwzS3Q" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@edgeMappings[name='personTitleEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_fRkFiBHrEeqtvpi1ZwzS3Q" sourceNode="_fRYfUBHrEeqtvpi1ZwzS3Q" targetNode="_fRdX2RHrEeqtvpi1ZwzS3Q">
+      <target xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_fRkskBHrEeqtvpi1ZwzS3Q" size="2" strokeColor="39,76,114">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@edgeMappings[name='personTitleEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_fRkskRHrEeqtvpi1ZwzS3Q" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@edgeMappings[name='personTitleEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_fRkslBHrEeqtvpi1ZwzS3Q" sourceNode="_fRYfUBHrEeqtvpi1ZwzS3Q" targetNode="_fRd-4hHrEeqtvpi1ZwzS3Q">
+      <target xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_fRkslRHrEeqtvpi1ZwzS3Q" size="2" strokeColor="39,76,114">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@edgeMappings[name='personTitleEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_fRkslhHrEeqtvpi1ZwzS3Q" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@edgeMappings[name='personTitleEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_fRksmRHrEeqtvpi1ZwzS3Q" sourceNode="_fRYfUBHrEeqtvpi1ZwzS3Q" targetNode="_fRd-5RHrEeqtvpi1ZwzS3Q">
+      <target xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_fRksmhHrEeqtvpi1ZwzS3Q" size="2" strokeColor="39,76,114">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@edgeMappings[name='personTitleEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_fRksmxHrEeqtvpi1ZwzS3Q" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@edgeMappings[name='personTitleEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_fRksnhHrEeqtvpi1ZwzS3Q" sourceNode="_fRcwwBHrEeqtvpi1ZwzS3Q" targetNode="_fRdX0xHrEeqtvpi1ZwzS3Q">
+      <target xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.1"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_fRksnxHrEeqtvpi1ZwzS3Q" size="2" strokeColor="39,76,114">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@edgeMappings[name='personTitleEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_fRksoBHrEeqtvpi1ZwzS3Q" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@edgeMappings[name='personTitleEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_fRksoxHrEeqtvpi1ZwzS3Q" sourceNode="_fRcwwBHrEeqtvpi1ZwzS3Q" targetNode="_fRdX1hHrEeqtvpi1ZwzS3Q">
+      <target xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.1"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_fRkspBHrEeqtvpi1ZwzS3Q" size="2" strokeColor="39,76,114">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@edgeMappings[name='personTitleEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_fRkspRHrEeqtvpi1ZwzS3Q" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@edgeMappings[name='personTitleEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_fRlToBHrEeqtvpi1ZwzS3Q" sourceNode="_fRcwwBHrEeqtvpi1ZwzS3Q" targetNode="_fRdX2RHrEeqtvpi1ZwzS3Q">
+      <target xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.1"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_fRlToRHrEeqtvpi1ZwzS3Q" size="2" strokeColor="39,76,114">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@edgeMappings[name='personTitleEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_fRlTohHrEeqtvpi1ZwzS3Q" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@edgeMappings[name='personTitleEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_fRlTpRHrEeqtvpi1ZwzS3Q" sourceNode="_fRdX0BHrEeqtvpi1ZwzS3Q" targetNode="_fRd-6BHrEeqtvpi1ZwzS3Q">
+      <target xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.2"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_fRlTphHrEeqtvpi1ZwzS3Q" size="2" strokeColor="39,76,114">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@edgeMappings[name='personTitleEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_fRlTpxHrEeqtvpi1ZwzS3Q" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@edgeMappings[name='personTitleEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_fRlTqhHrEeqtvpi1ZwzS3Q" sourceNode="_fRdX0BHrEeqtvpi1ZwzS3Q" targetNode="_fRd-6xHrEeqtvpi1ZwzS3Q">
+      <target xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.2"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_fRlTqxHrEeqtvpi1ZwzS3Q" size="2" strokeColor="39,76,114">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@edgeMappings[name='personTitleEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_fRlTrBHrEeqtvpi1ZwzS3Q" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@edgeMappings[name='personTitleEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_fRlTrxHrEeqtvpi1ZwzS3Q" sourceNode="_fRdX0BHrEeqtvpi1ZwzS3Q" targetNode="_fRd-7hHrEeqtvpi1ZwzS3Q">
+      <target xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.2"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_fRlTsBHrEeqtvpi1ZwzS3Q" size="2" strokeColor="39,76,114">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@edgeMappings[name='personTitleEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_fRlTsRHrEeqtvpi1ZwzS3Q" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@edgeMappings[name='personTitleEdge']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_fRJOwBHrEeqtvpi1ZwzS3Q"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer"/>
+    <target xmi:type="no.ntnu.tdt4250.imdb:Imdb" href="Imdb.imdb#/"/>
+  </diagram:DSemanticDiagram>
+  <diagram:DSemanticDiagram uid="_g5K8gBHrEeqtvpi1ZwzS3Q" name="Other people that Mark Hamill has worked with">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_g5WivBHrEeqtvpi1ZwzS3Q" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_g5WivRHrEeqtvpi1ZwzS3Q"/>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_g5fsoBHrEeqtvpi1ZwzS3Q" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_g5fsoRHrEeqtvpi1ZwzS3Q" type="Sirius" element="_g5K8gBHrEeqtvpi1ZwzS3Q" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_g5fsoxHrEeqtvpi1ZwzS3Q" type="2001" element="_g5UtgBHrEeqtvpi1ZwzS3Q">
+          <children xmi:type="notation:Node" xmi:id="_g5fsphHrEeqtvpi1ZwzS3Q" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_g5fspxHrEeqtvpi1ZwzS3Q" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_g5g6xRHrEeqtvpi1ZwzS3Q" type="3003" element="_g5UtgRHrEeqtvpi1ZwzS3Q">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_g5g6xhHrEeqtvpi1ZwzS3Q" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g5g6xxHrEeqtvpi1ZwzS3Q"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_g5fspBHrEeqtvpi1ZwzS3Q" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g5fspRHrEeqtvpi1ZwzS3Q" x="329" y="182" width="160" height="120"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_g5fsqBHrEeqtvpi1ZwzS3Q" type="2001" element="_g5VUkBHrEeqtvpi1ZwzS3Q">
+          <children xmi:type="notation:Node" xmi:id="_g5gTsBHrEeqtvpi1ZwzS3Q" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_g5gTsRHrEeqtvpi1ZwzS3Q" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_g5hh0BHrEeqtvpi1ZwzS3Q" type="3003" element="_g5VUkRHrEeqtvpi1ZwzS3Q">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_g5hh0RHrEeqtvpi1ZwzS3Q" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g5hh0hHrEeqtvpi1ZwzS3Q"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_g5fsqRHrEeqtvpi1ZwzS3Q" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g5fsqhHrEeqtvpi1ZwzS3Q" width="160" height="120"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_g5gTshHrEeqtvpi1ZwzS3Q" type="2001" element="_g5VUkxHrEeqtvpi1ZwzS3Q">
+          <children xmi:type="notation:Node" xmi:id="_g5gTtRHrEeqtvpi1ZwzS3Q" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_g5gTthHrEeqtvpi1ZwzS3Q" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_g5hh0xHrEeqtvpi1ZwzS3Q" type="3003" element="_g5VUlBHrEeqtvpi1ZwzS3Q">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_g5hh1BHrEeqtvpi1ZwzS3Q" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g5hh1RHrEeqtvpi1ZwzS3Q"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_g5gTsxHrEeqtvpi1ZwzS3Q" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g5gTtBHrEeqtvpi1ZwzS3Q" x="441" width="160" height="120"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_g5gTtxHrEeqtvpi1ZwzS3Q" type="2001" element="_g5VUlhHrEeqtvpi1ZwzS3Q">
+          <children xmi:type="notation:Node" xmi:id="_g5gTuhHrEeqtvpi1ZwzS3Q" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_g5gTuxHrEeqtvpi1ZwzS3Q" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_g5hh1hHrEeqtvpi1ZwzS3Q" type="3003" element="_g5VUlxHrEeqtvpi1ZwzS3Q">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_g5hh1xHrEeqtvpi1ZwzS3Q" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g5hh2BHrEeqtvpi1ZwzS3Q"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_g5gTuBHrEeqtvpi1ZwzS3Q" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g5gTuRHrEeqtvpi1ZwzS3Q" x="658" width="160" height="120"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_g5g6wBHrEeqtvpi1ZwzS3Q" type="2001" element="_g5VUmRHrEeqtvpi1ZwzS3Q">
+          <children xmi:type="notation:Node" xmi:id="_g5g6wxHrEeqtvpi1ZwzS3Q" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_g5g6xBHrEeqtvpi1ZwzS3Q" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_g5hh2RHrEeqtvpi1ZwzS3Q" type="3003" element="_g5V7oBHrEeqtvpi1ZwzS3Q">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_g5hh2hHrEeqtvpi1ZwzS3Q" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g5hh2xHrEeqtvpi1ZwzS3Q"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_g5g6wRHrEeqtvpi1ZwzS3Q" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g5g6whHrEeqtvpi1ZwzS3Q" x="217" width="160" height="120"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_g5fsohHrEeqtvpi1ZwzS3Q"/>
+        <edges xmi:type="notation:Edge" xmi:id="_g5iI4BHrEeqtvpi1ZwzS3Q" type="4001" element="_g5V7ohHrEeqtvpi1ZwzS3Q" source="_g5fsoxHrEeqtvpi1ZwzS3Q" target="_g5fsqBHrEeqtvpi1ZwzS3Q">
+          <children xmi:type="notation:Node" xmi:id="_g5iI5BHrEeqtvpi1ZwzS3Q" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g5iI5RHrEeqtvpi1ZwzS3Q" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_g5iI5hHrEeqtvpi1ZwzS3Q" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g5iI5xHrEeqtvpi1ZwzS3Q" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_g5iv8BHrEeqtvpi1ZwzS3Q" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g5iv8RHrEeqtvpi1ZwzS3Q" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_g5iI4RHrEeqtvpi1ZwzS3Q"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_g5iI4hHrEeqtvpi1ZwzS3Q" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_g5iI4xHrEeqtvpi1ZwzS3Q" points="[0, 0, 330, 60]$[-330, -60, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_g5iv8hHrEeqtvpi1ZwzS3Q" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_g5iv8xHrEeqtvpi1ZwzS3Q" id="(0.5,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_g5iv9BHrEeqtvpi1ZwzS3Q" type="4001" element="_g5V7pxHrEeqtvpi1ZwzS3Q" source="_g5fsoxHrEeqtvpi1ZwzS3Q" target="_g5gTshHrEeqtvpi1ZwzS3Q">
+          <children xmi:type="notation:Node" xmi:id="_g5iv-BHrEeqtvpi1ZwzS3Q" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g5iv-RHrEeqtvpi1ZwzS3Q" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_g5iv-hHrEeqtvpi1ZwzS3Q" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g5iv-xHrEeqtvpi1ZwzS3Q" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_g5jXABHrEeqtvpi1ZwzS3Q" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g5jXARHrEeqtvpi1ZwzS3Q" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_g5iv9RHrEeqtvpi1ZwzS3Q"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_g5iv9hHrEeqtvpi1ZwzS3Q" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_g5iv9xHrEeqtvpi1ZwzS3Q" points="[0, 0, -110, 60]$[110, -60, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_g5jXAhHrEeqtvpi1ZwzS3Q" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_g5jXAxHrEeqtvpi1ZwzS3Q" id="(0.5,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_g5jXBBHrEeqtvpi1ZwzS3Q" type="4001" element="_g5WishHrEeqtvpi1ZwzS3Q" source="_g5fsoxHrEeqtvpi1ZwzS3Q" target="_g5gTtxHrEeqtvpi1ZwzS3Q">
+          <children xmi:type="notation:Node" xmi:id="_g5jXCBHrEeqtvpi1ZwzS3Q" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g5jXCRHrEeqtvpi1ZwzS3Q" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_g5jXChHrEeqtvpi1ZwzS3Q" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g5jXCxHrEeqtvpi1ZwzS3Q" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_g5jXDBHrEeqtvpi1ZwzS3Q" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g5jXDRHrEeqtvpi1ZwzS3Q" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_g5jXBRHrEeqtvpi1ZwzS3Q"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_g5jXBhHrEeqtvpi1ZwzS3Q" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_g5jXBxHrEeqtvpi1ZwzS3Q" points="[0, 0, -330, 60]$[330, -60, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_g5j-EBHrEeqtvpi1ZwzS3Q" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_g5j-ERHrEeqtvpi1ZwzS3Q" id="(0.5,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_g5j-EhHrEeqtvpi1ZwzS3Q" type="4001" element="_g5WitxHrEeqtvpi1ZwzS3Q" source="_g5fsoxHrEeqtvpi1ZwzS3Q" target="_g5g6wBHrEeqtvpi1ZwzS3Q">
+          <children xmi:type="notation:Node" xmi:id="_g5j-FhHrEeqtvpi1ZwzS3Q" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g5j-FxHrEeqtvpi1ZwzS3Q" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_g5j-GBHrEeqtvpi1ZwzS3Q" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g5j-GRHrEeqtvpi1ZwzS3Q" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_g5j-GhHrEeqtvpi1ZwzS3Q" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g5j-GxHrEeqtvpi1ZwzS3Q" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_g5j-ExHrEeqtvpi1ZwzS3Q"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_g5j-FBHrEeqtvpi1ZwzS3Q" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_g5j-FRHrEeqtvpi1ZwzS3Q" points="[0, 0, 110, 60]$[-110, -60, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_g5j-HBHrEeqtvpi1ZwzS3Q" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_g5j-HRHrEeqtvpi1ZwzS3Q" id="(0.5,1.0)"/>
+        </edges>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_g5UtgBHrEeqtvpi1ZwzS3Q" name="Mark Hamill" tooltipText="Mark Hamill" outgoingEdges="_g5V7ohHrEeqtvpi1ZwzS3Q _g5V7pxHrEeqtvpi1ZwzS3Q _g5WishHrEeqtvpi1ZwzS3Q _g5WitxHrEeqtvpi1ZwzS3Q" width="16" height="12" resizeKind="NSEW">
+      <target xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.0"/>
+      <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.0"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_g5UtgRHrEeqtvpi1ZwzS3Q" labelSize="12" labelPosition="node" width="16" height="12" color="252,175,62">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='WorkedWithSelect%20Diagram']/@defaultLayer/@nodeMappings[name='MainPersonNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='WorkedWithSelect%20Diagram']/@defaultLayer/@nodeMappings[name='MainPersonNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_g5VUkBHrEeqtvpi1ZwzS3Q" name="Harrison Ford" tooltipText="Harrison Ford" incomingEdges="_g5V7ohHrEeqtvpi1ZwzS3Q" width="16" height="12" resizeKind="NSEW">
+      <target xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.1"/>
+      <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.1"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_g5VUkRHrEeqtvpi1ZwzS3Q" labelSize="12" labelPosition="node" width="16" height="12" color="238,201,142">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='WorkedWithSelect%20Diagram']/@defaultLayer/@nodeMappings[name='otherPeople']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='WorkedWithSelect%20Diagram']/@defaultLayer/@nodeMappings[name='otherPeople']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_g5VUkxHrEeqtvpi1ZwzS3Q" name="Carrie Fisher" tooltipText="Carrie Fisher" incomingEdges="_g5V7pxHrEeqtvpi1ZwzS3Q" width="16" height="12" resizeKind="NSEW">
+      <target xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.2"/>
+      <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.2"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_g5VUlBHrEeqtvpi1ZwzS3Q" labelSize="12" labelPosition="node" width="16" height="12" color="238,201,142">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='WorkedWithSelect%20Diagram']/@defaultLayer/@nodeMappings[name='otherPeople']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='WorkedWithSelect%20Diagram']/@defaultLayer/@nodeMappings[name='otherPeople']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_g5VUlhHrEeqtvpi1ZwzS3Q" name="Peter Cushing" tooltipText="Peter Cushing" incomingEdges="_g5WishHrEeqtvpi1ZwzS3Q" width="16" height="12" resizeKind="NSEW">
+      <target xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.3"/>
+      <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.3"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_g5VUlxHrEeqtvpi1ZwzS3Q" labelSize="12" labelPosition="node" width="16" height="12" color="238,201,142">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='WorkedWithSelect%20Diagram']/@defaultLayer/@nodeMappings[name='otherPeople']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='WorkedWithSelect%20Diagram']/@defaultLayer/@nodeMappings[name='otherPeople']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_g5VUmRHrEeqtvpi1ZwzS3Q" name="Alec Guinness" tooltipText="Alec Guinness" incomingEdges="_g5WitxHrEeqtvpi1ZwzS3Q" width="16" height="12" resizeKind="NSEW">
+      <target xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.4"/>
+      <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.4"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_g5V7oBHrEeqtvpi1ZwzS3Q" labelSize="12" labelPosition="node" width="16" height="12" color="238,201,142">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='WorkedWithSelect%20Diagram']/@defaultLayer/@nodeMappings[name='otherPeople']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='WorkedWithSelect%20Diagram']/@defaultLayer/@nodeMappings[name='otherPeople']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_g5V7ohHrEeqtvpi1ZwzS3Q" sourceNode="_g5UtgBHrEeqtvpi1ZwzS3Q" targetNode="_g5VUkBHrEeqtvpi1ZwzS3Q">
+      <target xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_g5V7oxHrEeqtvpi1ZwzS3Q" size="2" strokeColor="69,69,69">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='WorkedWithSelect%20Diagram']/@defaultLayer/@edgeMappings[name='']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_g5V7pBHrEeqtvpi1ZwzS3Q" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='WorkedWithSelect%20Diagram']/@defaultLayer/@edgeMappings[name='']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_g5V7pxHrEeqtvpi1ZwzS3Q" sourceNode="_g5UtgBHrEeqtvpi1ZwzS3Q" targetNode="_g5VUkxHrEeqtvpi1ZwzS3Q">
+      <target xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_g5V7qBHrEeqtvpi1ZwzS3Q" size="2" strokeColor="69,69,69">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='WorkedWithSelect%20Diagram']/@defaultLayer/@edgeMappings[name='']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_g5V7qRHrEeqtvpi1ZwzS3Q" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='WorkedWithSelect%20Diagram']/@defaultLayer/@edgeMappings[name='']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_g5WishHrEeqtvpi1ZwzS3Q" sourceNode="_g5UtgBHrEeqtvpi1ZwzS3Q" targetNode="_g5VUlhHrEeqtvpi1ZwzS3Q">
+      <target xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_g5WisxHrEeqtvpi1ZwzS3Q" size="2" strokeColor="69,69,69">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='WorkedWithSelect%20Diagram']/@defaultLayer/@edgeMappings[name='']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_g5WitBHrEeqtvpi1ZwzS3Q" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='WorkedWithSelect%20Diagram']/@defaultLayer/@edgeMappings[name='']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_g5WitxHrEeqtvpi1ZwzS3Q" sourceNode="_g5UtgBHrEeqtvpi1ZwzS3Q" targetNode="_g5VUmRHrEeqtvpi1ZwzS3Q">
+      <target xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_g5WiuBHrEeqtvpi1ZwzS3Q" size="2" strokeColor="69,69,69">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='WorkedWithSelect%20Diagram']/@defaultLayer/@edgeMappings[name='']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_g5WiuRHrEeqtvpi1ZwzS3Q" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='WorkedWithSelect%20Diagram']/@defaultLayer/@edgeMappings[name='']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='WorkedWithSelect%20Diagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_g5K8gRHrEeqtvpi1ZwzS3Q"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='WorkedWithSelect%20Diagram']/@defaultLayer"/>
+    <target xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.0"/>
+  </diagram:DSemanticDiagram>
+  <diagram:DSemanticDiagram uid="_h4edYBHrEeqtvpi1ZwzS3Q" name="Other titles that share crew with Star Wars Episode IV: A New Hope">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_h4gSlxHrEeqtvpi1ZwzS3Q" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_h4gSmBHrEeqtvpi1ZwzS3Q"/>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_h4r4wBHrEeqtvpi1ZwzS3Q" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_h4r4wRHrEeqtvpi1ZwzS3Q" type="Sirius" element="_h4edYBHrEeqtvpi1ZwzS3Q" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_h4r4wxHrEeqtvpi1ZwzS3Q" type="2001" element="_h4frgBHrEeqtvpi1ZwzS3Q">
+          <children xmi:type="notation:Node" xmi:id="_h4sf0BHrEeqtvpi1ZwzS3Q" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_h4sf0RHrEeqtvpi1ZwzS3Q" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_h4sf1xHrEeqtvpi1ZwzS3Q" type="3003" element="_h4frgRHrEeqtvpi1ZwzS3Q">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_h4sf2BHrEeqtvpi1ZwzS3Q" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_h4sf2RHrEeqtvpi1ZwzS3Q"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_h4r4xBHrEeqtvpi1ZwzS3Q" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_h4r4xRHrEeqtvpi1ZwzS3Q" y="210" width="200" height="150"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_h4sf0hHrEeqtvpi1ZwzS3Q" type="2001" element="_h4frgxHrEeqtvpi1ZwzS3Q">
+          <children xmi:type="notation:Node" xmi:id="_h4sf1RHrEeqtvpi1ZwzS3Q" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_h4sf1hHrEeqtvpi1ZwzS3Q" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_h4tG4BHrEeqtvpi1ZwzS3Q" type="3003" element="_h4gSkBHrEeqtvpi1ZwzS3Q">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_h4tG4RHrEeqtvpi1ZwzS3Q" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_h4tG4hHrEeqtvpi1ZwzS3Q"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_h4sf0xHrEeqtvpi1ZwzS3Q" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_h4sf1BHrEeqtvpi1ZwzS3Q" width="200" height="150"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_h4r4whHrEeqtvpi1ZwzS3Q"/>
+        <edges xmi:type="notation:Edge" xmi:id="_h4tG4xHrEeqtvpi1ZwzS3Q" type="4001" element="_h4gSkhHrEeqtvpi1ZwzS3Q" source="_h4r4wxHrEeqtvpi1ZwzS3Q" target="_h4sf0hHrEeqtvpi1ZwzS3Q">
+          <children xmi:type="notation:Node" xmi:id="_h4tt8BHrEeqtvpi1ZwzS3Q" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_h4tt8RHrEeqtvpi1ZwzS3Q" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_h4uVABHrEeqtvpi1ZwzS3Q" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_h4uVARHrEeqtvpi1ZwzS3Q" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_h4u8EBHrEeqtvpi1ZwzS3Q" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_h4u8ERHrEeqtvpi1ZwzS3Q" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_h4tG5BHrEeqtvpi1ZwzS3Q"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_h4tG5RHrEeqtvpi1ZwzS3Q" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_h4tG5hHrEeqtvpi1ZwzS3Q" points="[0, 0, 0, 60]$[0, -60, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_h4u8EhHrEeqtvpi1ZwzS3Q" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_h4u8ExHrEeqtvpi1ZwzS3Q" id="(0.5,1.0)"/>
+        </edges>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_h4frgBHrEeqtvpi1ZwzS3Q" name="Star Wars Episode IV: A New Hope" tooltipText="Star Wars Episode IV: A New Hope" outgoingEdges="_h4gSkhHrEeqtvpi1ZwzS3Q" width="20" height="15" resizeKind="NSEW">
+      <target xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.0"/>
+      <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.0"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_h4frgRHrEeqtvpi1ZwzS3Q" labelSize="12" labelPosition="node" width="20" height="15" color="252,175,62">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='SharedCrew%20Diagram']/@defaultLayer/@nodeMappings[name='SharedCrewNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='SharedCrew%20Diagram']/@defaultLayer/@nodeMappings[name='SharedCrewNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_h4frgxHrEeqtvpi1ZwzS3Q" name="Star Wars: Episode V - The Empire Strikes Back" tooltipText="Star Wars: Episode V - The Empire Strikes Back" incomingEdges="_h4gSkhHrEeqtvpi1ZwzS3Q" width="20" height="15" resizeKind="NSEW">
+      <target xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.1"/>
+      <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.1"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_h4gSkBHrEeqtvpi1ZwzS3Q" labelSize="12" labelPosition="node" width="20" height="15" color="194,239,255">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='SharedCrew%20Diagram']/@defaultLayer/@nodeMappings[name='otherTitles']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='SharedCrew%20Diagram']/@defaultLayer/@nodeMappings[name='otherTitles']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_h4gSkhHrEeqtvpi1ZwzS3Q" sourceNode="_h4frgBHrEeqtvpi1ZwzS3Q" targetNode="_h4frgxHrEeqtvpi1ZwzS3Q">
+      <target xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_h4gSkxHrEeqtvpi1ZwzS3Q" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='SharedCrew%20Diagram']/@defaultLayer/@edgeMappings[name='']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_h4gSlBHrEeqtvpi1ZwzS3Q" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='SharedCrew%20Diagram']/@defaultLayer/@edgeMappings[name='']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='SharedCrew%20Diagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_h4edYRHrEeqtvpi1ZwzS3Q"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='SharedCrew%20Diagram']/@defaultLayer"/>
+    <target xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.0"/>
+  </diagram:DSemanticDiagram>
+  <table:DTable uid="_jMS1sBHrEeqtvpi1ZwzS3Q" name="Table" headerColumnWidth="414">
+    <target xmi:type="no.ntnu.tdt4250.imdb:Imdb" href="Imdb.imdb#/"/>
+    <lines xmi:type="table:DLine" uid="_jMYVQBHrEeqtvpi1ZwzS3Q" label="Star Wars Episode IV: A New Hope">
+      <target xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.0"/>
+      <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.0"/>
+      <originMapping xmi:type="description_3:LineMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='titleTables']/@ownedRepresentations[name='TitleTable']/@ownedLineMappings[name='Titles']"/>
+      <cells xmi:type="table:DCell" uid="_jMbYkBHrEeqtvpi1ZwzS3Q" label="[Mark Hamill, Harrison Ford, Carrie Fisher, Peter Cushing, Alec Guinness]" column="_jMaxgBHrEeqtvpi1ZwzS3Q">
+        <target xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.0"/>
+        <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.0"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_jMb_oRHrEeqtvpi1ZwzS3Q" label="[Action, Fantasy, Adventure]" column="_jMaxghHrEeqtvpi1ZwzS3Q">
+        <target xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.0"/>
+        <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.0"/>
+      </cells>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_jMZjYBHrEeqtvpi1ZwzS3Q" label="Star Wars: Episode V - The Empire Strikes Back">
+      <target xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.1"/>
+      <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.1"/>
+      <originMapping xmi:type="description_3:LineMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='titleTables']/@ownedRepresentations[name='TitleTable']/@ownedLineMappings[name='Titles']"/>
+      <cells xmi:type="table:DCell" uid="_jMb_oxHrEeqtvpi1ZwzS3Q" label="[Mark Hamill, Harrison Ford, Carrie Fisher]" column="_jMaxgBHrEeqtvpi1ZwzS3Q">
+        <target xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.1"/>
+        <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.1"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_jMb_pRHrEeqtvpi1ZwzS3Q" label="[Action, Adventure, Fantasy]" column="_jMaxghHrEeqtvpi1ZwzS3Q">
+        <target xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.1"/>
+        <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.1"/>
+      </cells>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_jMZjYhHrEeqtvpi1ZwzS3Q" label="Alien">
+      <target xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.2"/>
+      <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.2"/>
+      <originMapping xmi:type="description_3:LineMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='titleTables']/@ownedRepresentations[name='TitleTable']/@ownedLineMappings[name='Titles']"/>
+      <cells xmi:type="table:DCell" uid="_jMb_pxHrEeqtvpi1ZwzS3Q" label="[Tom Skerritt, Sigourney Weaver, Veronica Cartwright]" column="_jMaxgBHrEeqtvpi1ZwzS3Q">
+        <target xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.2"/>
+        <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.2"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_jMb_qRHrEeqtvpi1ZwzS3Q" label="[Horror, Sci-Fi]" column="_jMaxghHrEeqtvpi1ZwzS3Q">
+        <target xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.2"/>
+        <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.2"/>
+      </cells>
+    </lines>
+    <columns xmi:type="table:DFeatureColumn" uid="_jMaxgBHrEeqtvpi1ZwzS3Q" label="Actors" cells="_jMbYkBHrEeqtvpi1ZwzS3Q _jMb_oxHrEeqtvpi1ZwzS3Q _jMb_pxHrEeqtvpi1ZwzS3Q" width="572" featureName="*">
+      <originMapping xmi:type="description_3:FeatureColumnMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='titleTables']/@ownedRepresentations[name='TitleTable']/@ownedColumnMappings[name='Actors']"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_jMaxghHrEeqtvpi1ZwzS3Q" label="Genres" cells="_jMb_oRHrEeqtvpi1ZwzS3Q _jMb_pRHrEeqtvpi1ZwzS3Q _jMb_qRHrEeqtvpi1ZwzS3Q" width="229" featureName="*">
+      <originMapping xmi:type="description_3:FeatureColumnMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='titleTables']/@ownedRepresentations[name='TitleTable']/@ownedColumnMappings[name='Genre']"/>
+    </columns>
+    <description xmi:type="description_3:EditionTableDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='titleTables']/@ownedRepresentations[name='TitleTable']"/>
+  </table:DTable>
+  <diagram:DSemanticDiagram uid="_tFvnEBHrEeqtvpi1ZwzS3Q" name="Details of Peter Cushing">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_tF6mMBHrEeqtvpi1ZwzS3Q" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_tF6mMRHrEeqtvpi1ZwzS3Q"/>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_tF70UBHrEeqtvpi1ZwzS3Q" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_tF70URHrEeqtvpi1ZwzS3Q" type="Sirius" element="_tFvnEBHrEeqtvpi1ZwzS3Q" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_tF8bYBHrEeqtvpi1ZwzS3Q" type="2002" element="_tFyDUBHrEeqtvpi1ZwzS3Q">
+          <children xmi:type="notation:Node" xmi:id="_tF9CcBHrEeqtvpi1ZwzS3Q" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_tF9CcRHrEeqtvpi1ZwzS3Q" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_tF9pgBHrEeqtvpi1ZwzS3Q" type="3009" element="_tFzRcBHrEeqtvpi1ZwzS3Q">
+              <children xmi:type="notation:Node" xmi:id="_tF9pgxHrEeqtvpi1ZwzS3Q" type="5004"/>
+              <children xmi:type="notation:Node" xmi:id="_tF-QkBHrEeqtvpi1ZwzS3Q" type="7003">
+                <children xmi:type="notation:Node" xmi:id="_tF_evBHrEeqtvpi1ZwzS3Q" type="3010" element="_tFzRcxHrEeqtvpi1ZwzS3Q">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_tF_evRHrEeqtvpi1ZwzS3Q" fontName="Segoe UI" fontHeight="8"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_tF_evhHrEeqtvpi1ZwzS3Q"/>
+                </children>
+                <styles xmi:type="notation:SortingStyle" xmi:id="_tF-QkRHrEeqtvpi1ZwzS3Q"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_tF-QkhHrEeqtvpi1ZwzS3Q"/>
+                <styles xmi:type="notation:DrawerStyle" xmi:id="_tF-QkxHrEeqtvpi1ZwzS3Q"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_tF9pgRHrEeqtvpi1ZwzS3Q" fontName="Segoe UI" fontHeight="12" bold="true"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tF9pghHrEeqtvpi1ZwzS3Q"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_tF-QlBHrEeqtvpi1ZwzS3Q" type="3009" element="_tFz4gBHrEeqtvpi1ZwzS3Q">
+              <children xmi:type="notation:Node" xmi:id="_tF-3oBHrEeqtvpi1ZwzS3Q" type="5004"/>
+              <children xmi:type="notation:Node" xmi:id="_tF-3oRHrEeqtvpi1ZwzS3Q" type="7003">
+                <children xmi:type="notation:Node" xmi:id="_tGAFwBHrEeqtvpi1ZwzS3Q" type="3010" element="_tF0fkBHrEeqtvpi1ZwzS3Q">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_tGAFwRHrEeqtvpi1ZwzS3Q" fontName="Segoe UI" fontHeight="8"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_tGAFwhHrEeqtvpi1ZwzS3Q"/>
+                </children>
+                <styles xmi:type="notation:SortingStyle" xmi:id="_tF-3ohHrEeqtvpi1ZwzS3Q"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_tF-3oxHrEeqtvpi1ZwzS3Q"/>
+                <styles xmi:type="notation:DrawerStyle" xmi:id="_tF-3pBHrEeqtvpi1ZwzS3Q"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_tF-QlRHrEeqtvpi1ZwzS3Q" fontName="Segoe UI" fontHeight="12" bold="true"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tF-QlhHrEeqtvpi1ZwzS3Q" x="40"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_tF-3pRHrEeqtvpi1ZwzS3Q" type="3009" element="_tF270BHrEeqtvpi1ZwzS3Q">
+              <children xmi:type="notation:Node" xmi:id="_tF-3qBHrEeqtvpi1ZwzS3Q" type="5004"/>
+              <children xmi:type="notation:Node" xmi:id="_tF-3qRHrEeqtvpi1ZwzS3Q" type="7003">
+                <children xmi:type="notation:Node" xmi:id="_tGAFwxHrEeqtvpi1ZwzS3Q" type="3010" element="_tF3i4BHrEeqtvpi1ZwzS3Q">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_tGAFxBHrEeqtvpi1ZwzS3Q" fontName="Segoe UI" fontHeight="8"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_tGAFxRHrEeqtvpi1ZwzS3Q"/>
+                </children>
+                <styles xmi:type="notation:SortingStyle" xmi:id="_tF-3qhHrEeqtvpi1ZwzS3Q"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_tF-3qxHrEeqtvpi1ZwzS3Q"/>
+                <styles xmi:type="notation:DrawerStyle" xmi:id="_tF-3rBHrEeqtvpi1ZwzS3Q"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_tF-3phHrEeqtvpi1ZwzS3Q" fontName="Segoe UI" fontHeight="12" bold="true"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tF-3pxHrEeqtvpi1ZwzS3Q" x="80"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_tF-3rRHrEeqtvpi1ZwzS3Q" type="3009" element="_tF4J8BHrEeqtvpi1ZwzS3Q">
+              <children xmi:type="notation:Node" xmi:id="_tF-3sBHrEeqtvpi1ZwzS3Q" type="5004"/>
+              <children xmi:type="notation:Node" xmi:id="_tF_esBHrEeqtvpi1ZwzS3Q" type="7003">
+                <children xmi:type="notation:Node" xmi:id="_tGAFxhHrEeqtvpi1ZwzS3Q" type="3010" element="_tF4J8xHrEeqtvpi1ZwzS3Q">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_tGAFxxHrEeqtvpi1ZwzS3Q" fontName="Segoe UI" fontHeight="8"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_tGAFyBHrEeqtvpi1ZwzS3Q"/>
+                </children>
+                <styles xmi:type="notation:SortingStyle" xmi:id="_tF_esRHrEeqtvpi1ZwzS3Q"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_tF_eshHrEeqtvpi1ZwzS3Q"/>
+                <styles xmi:type="notation:DrawerStyle" xmi:id="_tF_esxHrEeqtvpi1ZwzS3Q"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_tF-3rhHrEeqtvpi1ZwzS3Q" fontName="Segoe UI" fontHeight="12" bold="true"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tF-3rxHrEeqtvpi1ZwzS3Q" x="120"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_tF_etBHrEeqtvpi1ZwzS3Q" type="3009" element="_tF4xARHrEeqtvpi1ZwzS3Q">
+              <children xmi:type="notation:Node" xmi:id="_tF_etxHrEeqtvpi1ZwzS3Q" type="5004"/>
+              <children xmi:type="notation:Node" xmi:id="_tF_euBHrEeqtvpi1ZwzS3Q" type="7003">
+                <children xmi:type="notation:Node" xmi:id="_tGAFyRHrEeqtvpi1ZwzS3Q" type="3010" element="_tF5YEBHrEeqtvpi1ZwzS3Q">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_tGAFyhHrEeqtvpi1ZwzS3Q" fontName="Segoe UI" fontHeight="8"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_tGAFyxHrEeqtvpi1ZwzS3Q"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_tGAFzBHrEeqtvpi1ZwzS3Q" type="3010" element="_tF5_IRHrEeqtvpi1ZwzS3Q">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_tGAFzRHrEeqtvpi1ZwzS3Q" fontName="Segoe UI" fontHeight="8"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_tGAFzhHrEeqtvpi1ZwzS3Q"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_tGAs0BHrEeqtvpi1ZwzS3Q" type="3010" element="_tF5_IxHrEeqtvpi1ZwzS3Q">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_tGAs0RHrEeqtvpi1ZwzS3Q" fontName="Segoe UI" fontHeight="8"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_tGAs0hHrEeqtvpi1ZwzS3Q"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_tGAs0xHrEeqtvpi1ZwzS3Q" type="3010" element="_tF5_JRHrEeqtvpi1ZwzS3Q">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_tGAs1BHrEeqtvpi1ZwzS3Q" fontName="Segoe UI" fontHeight="8"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_tGAs1RHrEeqtvpi1ZwzS3Q"/>
+                </children>
+                <styles xmi:type="notation:SortingStyle" xmi:id="_tF_euRHrEeqtvpi1ZwzS3Q"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_tF_euhHrEeqtvpi1ZwzS3Q"/>
+                <styles xmi:type="notation:DrawerStyle" xmi:id="_tF_euxHrEeqtvpi1ZwzS3Q"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_tF_etRHrEeqtvpi1ZwzS3Q" fontName="Segoe UI" fontHeight="12" bold="true"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tF_ethHrEeqtvpi1ZwzS3Q" x="160"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_tF9CchHrEeqtvpi1ZwzS3Q"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_tF9CcxHrEeqtvpi1ZwzS3Q"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_tF8bYRHrEeqtvpi1ZwzS3Q" fontName="Segoe UI" fontHeight="14" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tF8bYhHrEeqtvpi1ZwzS3Q" y="35"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_tF70UhHrEeqtvpi1ZwzS3Q"/>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_tFyDUBHrEeqtvpi1ZwzS3Q" name="Peter Cushing" childrenPresentation="HorizontalStack">
+      <target xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.3"/>
+      <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.3"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_tFyDURHrEeqtvpi1ZwzS3Q" labelSize="14" showIcon="false" borderSize="1" borderSizeComputationExpression="1">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20detail%20diagram']/@defaultLayer/@containerMappings[name='Person%20Container']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20detail%20diagram']/@defaultLayer/@containerMappings[name='Person%20Container']"/>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_tFzRcBHrEeqtvpi1ZwzS3Q" name="Titles">
+        <target xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.3"/>
+        <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.3"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_tFzRcRHrEeqtvpi1ZwzS3Q" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" borderColor="136,136,136" foregroundColor="194,239,255">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20detail%20diagram']/@defaultLayer/@containerMappings[name='Person%20Container']/@subContainerMappings[name='Person%27s%20Titles%20Container']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20detail%20diagram']/@defaultLayer/@containerMappings[name='Person%20Container']/@subContainerMappings[name='Person%27s%20Titles%20Container']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_tFzRcxHrEeqtvpi1ZwzS3Q" name="Star Wars Episode IV: A New Hope">
+          <target xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.0"/>
+          <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Title" href="Imdb.imdb#//@titles.0"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_tFzRdBHrEeqtvpi1ZwzS3Q" showIcon="false" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20detail%20diagram']/@defaultLayer/@containerMappings[name='Person%20Container']/@subContainerMappings[name='Person%27s%20Titles%20Container']/@subNodeMappings[name='Person%27s%20Title%20Node']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20detail%20diagram']/@defaultLayer/@containerMappings[name='Person%20Container']/@subContainerMappings[name='Person%27s%20Titles%20Container']/@subNodeMappings[name='Person%27s%20Title%20Node']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_tFz4gBHrEeqtvpi1ZwzS3Q" name="Roles">
+        <target xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.3"/>
+        <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.3"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_tFz4gRHrEeqtvpi1ZwzS3Q" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" borderColor="136,136,136" foregroundColor="194,239,255">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20detail%20diagram']/@defaultLayer/@containerMappings[name='Person%20Container']/@subContainerMappings[name='Person%27s%20Roles%20Container']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20detail%20diagram']/@defaultLayer/@containerMappings[name='Person%20Container']/@subContainerMappings[name='Person%27s%20Roles%20Container']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_tF0fkBHrEeqtvpi1ZwzS3Q" name="Grand Moff Tarkin">
+          <target xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.3"/>
+          <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.3"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_tF2UwBHrEeqtvpi1ZwzS3Q" showIcon="false" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20detail%20diagram']/@defaultLayer/@containerMappings[name='Person%20Container']/@subContainerMappings[name='Person%27s%20Roles%20Container']/@subNodeMappings[name='Person%27s%20Roles%20Node']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20detail%20diagram']/@defaultLayer/@containerMappings[name='Person%20Container']/@subContainerMappings[name='Person%27s%20Roles%20Container']/@subNodeMappings[name='Person%27s%20Roles%20Node']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_tF270BHrEeqtvpi1ZwzS3Q" name="Jobs">
+        <target xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.3"/>
+        <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.3"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_tF270RHrEeqtvpi1ZwzS3Q" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" borderColor="136,136,136" foregroundColor="194,239,255">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20detail%20diagram']/@defaultLayer/@containerMappings[name='Person%20Container']/@subContainerMappings[name='Person%27s%20Jobs%20Container']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20detail%20diagram']/@defaultLayer/@containerMappings[name='Person%20Container']/@subContainerMappings[name='Person%27s%20Jobs%20Container']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_tF3i4BHrEeqtvpi1ZwzS3Q" name="Actor">
+          <target xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.3"/>
+          <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.3"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_tF3i4RHrEeqtvpi1ZwzS3Q" showIcon="false" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20detail%20diagram']/@defaultLayer/@containerMappings[name='Person%20Container']/@subContainerMappings[name='Person%27s%20Jobs%20Container']/@subNodeMappings[name='Person%27s%20Job%20Node']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20detail%20diagram']/@defaultLayer/@containerMappings[name='Person%20Container']/@subContainerMappings[name='Person%27s%20Jobs%20Container']/@subNodeMappings[name='Person%27s%20Job%20Node']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_tF4J8BHrEeqtvpi1ZwzS3Q" name="Genres">
+        <target xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.3"/>
+        <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.3"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_tF4J8RHrEeqtvpi1ZwzS3Q" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" borderColor="136,136,136" foregroundColor="194,239,255">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20detail%20diagram']/@defaultLayer/@containerMappings[name='Person%20Container']/@subContainerMappings[name='Person%27s%20Genres%20Container']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20detail%20diagram']/@defaultLayer/@containerMappings[name='Person%20Container']/@subContainerMappings[name='Person%27s%20Genres%20Container']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_tF4J8xHrEeqtvpi1ZwzS3Q" name="Action&#xA;Fantasy&#xA;Adventure">
+          <target xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.3"/>
+          <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.3"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_tF4xABHrEeqtvpi1ZwzS3Q" showIcon="false" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20detail%20diagram']/@defaultLayer/@containerMappings[name='Person%20Container']/@subContainerMappings[name='Person%27s%20Genres%20Container']/@subNodeMappings[name='Person%27s%20Genre%20Node']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20detail%20diagram']/@defaultLayer/@containerMappings[name='Person%20Container']/@subContainerMappings[name='Person%27s%20Genres%20Container']/@subNodeMappings[name='Person%27s%20Genre%20Node']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_tF4xARHrEeqtvpi1ZwzS3Q" name="Associated people">
+        <target xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.3"/>
+        <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.3"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_tF4xAhHrEeqtvpi1ZwzS3Q" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" borderColor="136,136,136" foregroundColor="194,239,255">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20detail%20diagram']/@defaultLayer/@containerMappings[name='Person%20Container']/@subContainerMappings[name='Person%27s%20Associated%20People%20Container']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20detail%20diagram']/@defaultLayer/@containerMappings[name='Person%20Container']/@subContainerMappings[name='Person%27s%20Associated%20People%20Container']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_tF5YEBHrEeqtvpi1ZwzS3Q" name="Mark Hamill">
+          <target xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.0"/>
+          <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.0"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_tF5_IBHrEeqtvpi1ZwzS3Q" showIcon="false" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20detail%20diagram']/@defaultLayer/@containerMappings[name='Person%20Container']/@subContainerMappings[name='Person%27s%20Associated%20People%20Container']/@subNodeMappings[name='Person%27s%20Associated%20People%20Node']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20detail%20diagram']/@defaultLayer/@containerMappings[name='Person%20Container']/@subContainerMappings[name='Person%27s%20Associated%20People%20Container']/@subNodeMappings[name='Person%27s%20Associated%20People%20Node']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_tF5_IRHrEeqtvpi1ZwzS3Q" name="Harrison Ford">
+          <target xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.1"/>
+          <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.1"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_tF5_IhHrEeqtvpi1ZwzS3Q" showIcon="false" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20detail%20diagram']/@defaultLayer/@containerMappings[name='Person%20Container']/@subContainerMappings[name='Person%27s%20Associated%20People%20Container']/@subNodeMappings[name='Person%27s%20Associated%20People%20Node']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20detail%20diagram']/@defaultLayer/@containerMappings[name='Person%20Container']/@subContainerMappings[name='Person%27s%20Associated%20People%20Container']/@subNodeMappings[name='Person%27s%20Associated%20People%20Node']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_tF5_IxHrEeqtvpi1ZwzS3Q" name="Carrie Fisher">
+          <target xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.2"/>
+          <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.2"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_tF5_JBHrEeqtvpi1ZwzS3Q" showIcon="false" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20detail%20diagram']/@defaultLayer/@containerMappings[name='Person%20Container']/@subContainerMappings[name='Person%27s%20Associated%20People%20Container']/@subNodeMappings[name='Person%27s%20Associated%20People%20Node']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20detail%20diagram']/@defaultLayer/@containerMappings[name='Person%20Container']/@subContainerMappings[name='Person%27s%20Associated%20People%20Container']/@subNodeMappings[name='Person%27s%20Associated%20People%20Node']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_tF5_JRHrEeqtvpi1ZwzS3Q" name="Alec Guinness">
+          <target xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.4"/>
+          <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.4"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_tF5_JhHrEeqtvpi1ZwzS3Q" showIcon="false" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20detail%20diagram']/@defaultLayer/@containerMappings[name='Person%20Container']/@subContainerMappings[name='Person%27s%20Associated%20People%20Container']/@subNodeMappings[name='Person%27s%20Associated%20People%20Node']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20detail%20diagram']/@defaultLayer/@containerMappings[name='Person%20Container']/@subContainerMappings[name='Person%27s%20Associated%20People%20Container']/@subNodeMappings[name='Person%27s%20Associated%20People%20Node']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20detail%20diagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_tFwOIBHrEeqtvpi1ZwzS3Q"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20detail%20diagram']/@defaultLayer"/>
+    <target xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.3"/>
+  </diagram:DSemanticDiagram>
+  <diagram:DSemanticDiagram uid="_wpkdsBHsEeq0QYsm6gBQLg" name="Other people that Tom Skerritt has worked with">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_wpsZhRHsEeq0QYsm6gBQLg" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_wpsZhhHsEeq0QYsm6gBQLg"/>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_wqMIwBHsEeq0QYsm6gBQLg" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_wqMv0BHsEeq0QYsm6gBQLg" type="Sirius" element="_wpkdsBHsEeq0QYsm6gBQLg" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_wqOlABHsEeq0QYsm6gBQLg" type="2001" element="_wpoIEBHsEeq0QYsm6gBQLg">
+          <children xmi:type="notation:Node" xmi:id="_wqS2cBHsEeq0QYsm6gBQLg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_wqS2cRHsEeq0QYsm6gBQLg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_wqV5wBHsEeq0QYsm6gBQLg" type="3003" element="_wppWMBHsEeq0QYsm6gBQLg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_wqV5wRHsEeq0QYsm6gBQLg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wqV5whHsEeq0QYsm6gBQLg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_wqOlARHsEeq0QYsm6gBQLg" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wqOlAhHsEeq0QYsm6gBQLg" x="108" y="180" width="160" height="120"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_wqUEkBHsEeq0QYsm6gBQLg" type="2001" element="_wpqkUBHsEeq0QYsm6gBQLg">
+          <children xmi:type="notation:Node" xmi:id="_wqUroBHsEeq0QYsm6gBQLg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_wqUroRHsEeq0QYsm6gBQLg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_wqWg0BHsEeq0QYsm6gBQLg" type="3003" element="_wpqkURHsEeq0QYsm6gBQLg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_wqWg0RHsEeq0QYsm6gBQLg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wqWg0hHsEeq0QYsm6gBQLg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_wqUEkRHsEeq0QYsm6gBQLg" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wqUEkhHsEeq0QYsm6gBQLg" width="160" height="120"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_wqUrohHsEeq0QYsm6gBQLg" type="2001" element="_wprLYBHsEeq0QYsm6gBQLg">
+          <children xmi:type="notation:Node" xmi:id="_wqVSsBHsEeq0QYsm6gBQLg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_wqVSsRHsEeq0QYsm6gBQLg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_wqXH4BHsEeq0QYsm6gBQLg" type="3003" element="_wprLYRHsEeq0QYsm6gBQLg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_wqXH4RHsEeq0QYsm6gBQLg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wqXH4hHsEeq0QYsm6gBQLg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_wqUroxHsEeq0QYsm6gBQLg" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wqUrpBHsEeq0QYsm6gBQLg" x="222" width="160" height="120"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_wqMv0RHsEeq0QYsm6gBQLg"/>
+        <edges xmi:type="notation:Edge" xmi:id="_wqYWABHsEeq0QYsm6gBQLg" type="4001" element="_wprycBHsEeq0QYsm6gBQLg" source="_wqOlABHsEeq0QYsm6gBQLg" target="_wqUEkBHsEeq0QYsm6gBQLg">
+          <children xmi:type="notation:Node" xmi:id="_wqaLMBHsEeq0QYsm6gBQLg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wqaLMRHsEeq0QYsm6gBQLg" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_wqbZUBHsEeq0QYsm6gBQLg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wqbZURHsEeq0QYsm6gBQLg" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_wqcAYBHsEeq0QYsm6gBQLg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wqcAYRHsEeq0QYsm6gBQLg" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_wqYWARHsEeq0QYsm6gBQLg"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_wqYWAhHsEeq0QYsm6gBQLg" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_wqYWAxHsEeq0QYsm6gBQLg" points="[0, 0, 110, 60]$[-110, -60, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_wqg44BHsEeq0QYsm6gBQLg" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_wqg44RHsEeq0QYsm6gBQLg" id="(0.5,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_wqhf8BHsEeq0QYsm6gBQLg" type="4001" element="_wpsZgBHsEeq0QYsm6gBQLg" source="_wqOlABHsEeq0QYsm6gBQLg" target="_wqUrohHsEeq0QYsm6gBQLg">
+          <children xmi:type="notation:Node" xmi:id="_wqhf9BHsEeq0QYsm6gBQLg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wqhf9RHsEeq0QYsm6gBQLg" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_wqiHABHsEeq0QYsm6gBQLg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wqiHARHsEeq0QYsm6gBQLg" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_wqiHAhHsEeq0QYsm6gBQLg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wqiHAxHsEeq0QYsm6gBQLg" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_wqhf8RHsEeq0QYsm6gBQLg"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_wqhf8hHsEeq0QYsm6gBQLg" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_wqhf8xHsEeq0QYsm6gBQLg" points="[0, 0, -110, 60]$[110, -60, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_wqiHBBHsEeq0QYsm6gBQLg" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_wqiHBRHsEeq0QYsm6gBQLg" id="(0.5,1.0)"/>
+        </edges>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_wpoIEBHsEeq0QYsm6gBQLg" name="Tom Skerritt" tooltipText="Tom Skerritt" outgoingEdges="_wprycBHsEeq0QYsm6gBQLg _wpsZgBHsEeq0QYsm6gBQLg" width="16" height="12" resizeKind="NSEW">
+      <target xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.5"/>
+      <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.5"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_wppWMBHsEeq0QYsm6gBQLg" labelSize="12" labelPosition="node" width="16" height="12" color="252,175,62">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='WorkedWithSelect%20Diagram']/@defaultLayer/@nodeMappings[name='MainPersonNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='WorkedWithSelect%20Diagram']/@defaultLayer/@nodeMappings[name='MainPersonNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_wpqkUBHsEeq0QYsm6gBQLg" name="Sigourney Weaver" tooltipText="Sigourney Weaver" incomingEdges="_wprycBHsEeq0QYsm6gBQLg" width="16" height="12" resizeKind="NSEW">
+      <target xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.6"/>
+      <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.6"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_wpqkURHsEeq0QYsm6gBQLg" labelSize="12" labelPosition="node" width="16" height="12" color="238,201,142">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='WorkedWithSelect%20Diagram']/@defaultLayer/@nodeMappings[name='otherPeople']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='WorkedWithSelect%20Diagram']/@defaultLayer/@nodeMappings[name='otherPeople']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_wprLYBHsEeq0QYsm6gBQLg" name="Veronica Cartwright" tooltipText="Veronica Cartwright" incomingEdges="_wpsZgBHsEeq0QYsm6gBQLg" width="16" height="12" resizeKind="NSEW">
+      <target xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.7"/>
+      <semanticElements xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.7"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_wprLYRHsEeq0QYsm6gBQLg" labelSize="12" labelPosition="node" width="16" height="12" color="238,201,142">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='WorkedWithSelect%20Diagram']/@defaultLayer/@nodeMappings[name='otherPeople']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='WorkedWithSelect%20Diagram']/@defaultLayer/@nodeMappings[name='otherPeople']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_wprycBHsEeq0QYsm6gBQLg" sourceNode="_wpoIEBHsEeq0QYsm6gBQLg" targetNode="_wpqkUBHsEeq0QYsm6gBQLg">
+      <target xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.5"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_wprycRHsEeq0QYsm6gBQLg" size="2" strokeColor="69,69,69">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='WorkedWithSelect%20Diagram']/@defaultLayer/@edgeMappings[name='']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_wprychHsEeq0QYsm6gBQLg" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='WorkedWithSelect%20Diagram']/@defaultLayer/@edgeMappings[name='']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_wpsZgBHsEeq0QYsm6gBQLg" sourceNode="_wpoIEBHsEeq0QYsm6gBQLg" targetNode="_wprLYBHsEeq0QYsm6gBQLg">
+      <target xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.5"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_wpsZgRHsEeq0QYsm6gBQLg" size="2" strokeColor="69,69,69">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='WorkedWithSelect%20Diagram']/@defaultLayer/@edgeMappings[name='']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_wpsZghHsEeq0QYsm6gBQLg" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='WorkedWithSelect%20Diagram']/@defaultLayer/@edgeMappings[name='']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='WorkedWithSelect%20Diagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_wplEwBHsEeq0QYsm6gBQLg"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/imdb.odesign/description/odesign.odesign#//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='WorkedWithSelect%20Diagram']/@defaultLayer"/>
+    <target xmi:type="no.ntnu.tdt4250.imdb:Person" href="Imdb.imdb#//@persons.5"/>
   </diagram:DSemanticDiagram>
 </xmi:XMI>
