@@ -682,13 +682,20 @@ public class ImdbValidator extends EObjectValidator {
 	public boolean validateInvolvement_actorIsBornConstraint(Involvement involvement, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		boolean actorIsBorn = true;
 		if (involvement.getTitle().getTitleType() == TitleType.TVSERIES) {
-			int endYear = ((TvSeries)involvement.getTitle()).getEndYear();
+			Title title = involvement.getTitle();
+			if (!(title instanceof TvSeries)) {
+				// Ignore until titleType has been corrected (validated by `validateTitle_titleTypeConstraint()`)
+				return true;
+			}
+
+			int endYear = ((TvSeries)title).getEndYear();
 			if (involvement.getPerson().getBirthYear() > endYear) {
 				actorIsBorn = false;
 			}
 		} else if(involvement.getPerson().getBirthYear() > involvement.getTitle().getStartYear()) {
 			actorIsBorn = false;
 		}
+
 		if (!actorIsBorn) {
 			if (diagnostics != null) {
 				diagnostics.add
