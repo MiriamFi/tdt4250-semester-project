@@ -602,37 +602,37 @@ public class ImdbValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(involvement, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(involvement, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(involvement, diagnostics, context);
-		if (result || diagnostics != null) result &= validateInvolvement_uniqueJobCategoryPerPersonConstraint(involvement, diagnostics, context);
+		if (result || diagnostics != null) result &= validateInvolvement_uniqueJobPerPersonConstraint(involvement, diagnostics, context);
 		if (result || diagnostics != null) result &= validateInvolvement_actorIsBornConstraint(involvement, diagnostics, context);
 		return result;
 	}
 
 	/**
-	 * Validates the uniqueJobCategoryPerPersonConstraint constraint of '<em>Involvement</em>'.
+	 * Validates the uniqueJobPerPersonConstraint constraint of '<em>Involvement</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public boolean validateInvolvement_uniqueJobCategoryPerPersonConstraint(Involvement involvement, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		boolean personHasMultipleOfTheSameJobCategory = false;
+	public boolean validateInvolvement_uniqueJobPerPersonConstraint(Involvement involvement, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		boolean personHasMultipleOfTheSameJob = false;
 		for (Involvement otherInvolvement : involvement.getTitle().getInvolvements()) {
 			if (otherInvolvement == involvement)
 				continue;
 
 			if (otherInvolvement.getPerson() == involvement.getPerson()
-					&& otherInvolvement.getJobCategory().equals(involvement.getJobCategory())) {
+					&& otherInvolvement.getJob().equals(involvement.getJob())) {
 
-				String job = involvement.getJobCategory().toLowerCase();
+				String job = involvement.getJob().toLowerCase();
 				if (!job.equals("actor") && !job.equals("actress")) {
-					personHasMultipleOfTheSameJobCategory = true;
+					personHasMultipleOfTheSameJob = true;
 				} else {
 					if (otherInvolvement.getCharacter().equals(involvement.getCharacter()))
-						personHasMultipleOfTheSameJobCategory = true;
+						personHasMultipleOfTheSameJob = true;
 				}
 			}
 		}
 		
-		if (personHasMultipleOfTheSameJobCategory) {
+		if (personHasMultipleOfTheSameJob) {
 			if (diagnostics != null) {
 				diagnostics.add
 					(createDiagnostic
@@ -640,7 +640,7 @@ public class ImdbValidator extends EObjectValidator {
 						 DIAGNOSTIC_SOURCE,
 						 0,
 						 "_UI_GenericConstraint_diagnostic",
-						 new Object[] { "uniqueJobCategoryPerPersonConstraint", getObjectLabel(involvement, context) },
+						 new Object[] { "uniqueJobPerPersonConstraint", getObjectLabel(involvement, context) },
 						 new Object[] { involvement },
 						 context));
 			}

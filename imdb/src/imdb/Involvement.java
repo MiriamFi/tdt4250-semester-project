@@ -15,13 +15,12 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link imdb.Involvement#getTitle <em>Title</em>}</li>
  *   <li>{@link imdb.Involvement#getPerson <em>Person</em>}</li>
- *   <li>{@link imdb.Involvement#getJobCategory <em>Job Category</em>}</li>
  *   <li>{@link imdb.Involvement#getJob <em>Job</em>}</li>
  *   <li>{@link imdb.Involvement#getCharacter <em>Character</em>}</li>
  * </ul>
  *
  * @see imdb.ImdbPackage#getInvolvement()
- * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='uniqueJobCategoryPerPersonConstraint actorIsBornConstraint'"
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='uniqueJobPerPersonConstraint actorIsBornConstraint'"
  * @generated
  */
 public interface Involvement extends EObject {
@@ -75,35 +74,13 @@ public interface Involvement extends EObject {
 	void setPerson(Person value);
 
 	/**
-	 * Returns the value of the '<em><b>Job Category</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Job Category</em>' attribute.
-	 * @see #setJobCategory(String)
-	 * @see imdb.ImdbPackage#getInvolvement_JobCategory()
-	 * @model required="true"
-	 * @generated
-	 */
-	String getJobCategory();
-
-	/**
-	 * Sets the value of the '{@link imdb.Involvement#getJobCategory <em>Job Category</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Job Category</em>' attribute.
-	 * @see #getJobCategory()
-	 * @generated
-	 */
-	void setJobCategory(String value);
-
-	/**
 	 * Returns the value of the '<em><b>Job</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Job</em>' attribute.
 	 * @see #setJob(String)
 	 * @see imdb.ImdbPackage#getInvolvement_Job()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	String getJob();

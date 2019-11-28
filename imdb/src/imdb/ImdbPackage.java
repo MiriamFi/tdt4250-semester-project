@@ -714,22 +714,13 @@ public interface ImdbPackage extends EPackage {
 	int INVOLVEMENT__PERSON = 1;
 
 	/**
-	 * The feature id for the '<em><b>Job Category</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INVOLVEMENT__JOB_CATEGORY = 2;
-
-	/**
 	 * The feature id for the '<em><b>Job</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INVOLVEMENT__JOB = 3;
+	int INVOLVEMENT__JOB = 2;
 
 	/**
 	 * The feature id for the '<em><b>Character</b></em>' attribute.
@@ -738,7 +729,7 @@ public interface ImdbPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INVOLVEMENT__CHARACTER = 4;
+	int INVOLVEMENT__CHARACTER = 3;
 
 	/**
 	 * The number of structural features of the '<em>Involvement</em>' class.
@@ -747,7 +738,7 @@ public interface ImdbPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INVOLVEMENT_FEATURE_COUNT = 5;
+	int INVOLVEMENT_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Involvement</em>' class.
@@ -1181,17 +1172,6 @@ public interface ImdbPackage extends EPackage {
 	EReference getInvolvement_Person();
 
 	/**
-	 * Returns the meta object for the attribute '{@link imdb.Involvement#getJobCategory <em>Job Category</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Job Category</em>'.
-	 * @see imdb.Involvement#getJobCategory()
-	 * @see #getInvolvement()
-	 * @generated
-	 */
-	EAttribute getInvolvement_JobCategory();
-
-	/**
 	 * Returns the meta object for the attribute '{@link imdb.Involvement#getJob <em>Job</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1563,14 +1543,6 @@ public interface ImdbPackage extends EPackage {
 		 * @generated
 		 */
 		EReference INVOLVEMENT__PERSON = eINSTANCE.getInvolvement_Person();
-
-		/**
-		 * The meta object literal for the '<em><b>Job Category</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute INVOLVEMENT__JOB_CATEGORY = eINSTANCE.getInvolvement_JobCategory();
 
 		/**
 		 * The meta object literal for the '<em><b>Job</b></em>' attribute feature.

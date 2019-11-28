@@ -534,7 +534,7 @@ public class ImdbPackageImpl extends EPackageImpl implements ImdbPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getInvolvement_JobCategory() {
+	public EAttribute getInvolvement_Job() {
 		return (EAttribute)involvementEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -544,18 +544,8 @@ public class ImdbPackageImpl extends EPackageImpl implements ImdbPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getInvolvement_Job() {
-		return (EAttribute)involvementEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EAttribute getInvolvement_Character() {
-		return (EAttribute)involvementEClass.getEStructuralFeatures().get(4);
+		return (EAttribute)involvementEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -641,7 +631,6 @@ public class ImdbPackageImpl extends EPackageImpl implements ImdbPackage {
 		involvementEClass = createEClass(INVOLVEMENT);
 		createEReference(involvementEClass, INVOLVEMENT__TITLE);
 		createEReference(involvementEClass, INVOLVEMENT__PERSON);
-		createEAttribute(involvementEClass, INVOLVEMENT__JOB_CATEGORY);
 		createEAttribute(involvementEClass, INVOLVEMENT__JOB);
 		createEAttribute(involvementEClass, INVOLVEMENT__CHARACTER);
 
@@ -725,8 +714,7 @@ public class ImdbPackageImpl extends EPackageImpl implements ImdbPackage {
 		initEClass(involvementEClass, Involvement.class, "Involvement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getInvolvement_Title(), this.getTitle(), this.getTitle_Involvements(), "title", null, 1, 1, Involvement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getInvolvement_Person(), this.getPerson(), this.getPerson_Involvement(), "person", null, 1, 1, Involvement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getInvolvement_JobCategory(), ecorePackage.getEString(), "jobCategory", null, 1, 1, Involvement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getInvolvement_Job(), ecorePackage.getEString(), "job", null, 0, 1, Involvement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getInvolvement_Job(), ecorePackage.getEString(), "job", null, 1, 1, Involvement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getInvolvement_Character(), ecorePackage.getEString(), "character", null, 0, 1, Involvement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
@@ -795,7 +783,7 @@ public class ImdbPackageImpl extends EPackageImpl implements ImdbPackage {
 		  (involvementEClass,
 		   source,
 		   new String[] {
-			   "constraints", "uniqueJobCategoryPerPersonConstraint actorIsBornConstraint"
+			   "constraints", "uniqueJobPerPersonConstraint actorIsBornConstraint"
 		   });
 	}
 

@@ -56,7 +56,6 @@
     <genClasses ecoreClass="imdb.ecore#//Involvement">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference imdb.ecore#//Involvement/title"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference imdb.ecore#//Involvement/person"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute imdb.ecore#//Involvement/jobCategory"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute imdb.ecore#//Involvement/job"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute imdb.ecore#//Involvement/character"/>
     </genClasses>

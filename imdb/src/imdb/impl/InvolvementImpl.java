@@ -26,7 +26,6 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * <ul>
  *   <li>{@link imdb.impl.InvolvementImpl#getTitle <em>Title</em>}</li>
  *   <li>{@link imdb.impl.InvolvementImpl#getPerson <em>Person</em>}</li>
- *   <li>{@link imdb.impl.InvolvementImpl#getJobCategory <em>Job Category</em>}</li>
  *   <li>{@link imdb.impl.InvolvementImpl#getJob <em>Job</em>}</li>
  *   <li>{@link imdb.impl.InvolvementImpl#getCharacter <em>Character</em>}</li>
  * </ul>
@@ -43,24 +42,6 @@ public class InvolvementImpl extends MinimalEObjectImpl.Container implements Inv
 	 * @ordered
 	 */
 	protected Person person;
-	/**
-	 * The default value of the '{@link #getJobCategory() <em>Job Category</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getJobCategory()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String JOB_CATEGORY_EDEFAULT = null;
-	/**
-	 * The cached value of the '{@link #getJobCategory() <em>Job Category</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getJobCategory()
-	 * @generated
-	 * @ordered
-	 */
-	protected String jobCategory = JOB_CATEGORY_EDEFAULT;
 	/**
 	 * The default value of the '{@link #getJob() <em>Job</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -228,29 +209,6 @@ public class InvolvementImpl extends MinimalEObjectImpl.Container implements Inv
 	 * @generated
 	 */
 	@Override
-	public String getJobCategory() {
-		return jobCategory;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setJobCategory(String newJobCategory) {
-		String oldJobCategory = jobCategory;
-		jobCategory = newJobCategory;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ImdbPackage.INVOLVEMENT__JOB_CATEGORY, oldJobCategory, jobCategory));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public String getJob() {
 		return job;
 	}
@@ -354,8 +312,6 @@ public class InvolvementImpl extends MinimalEObjectImpl.Container implements Inv
 			case ImdbPackage.INVOLVEMENT__PERSON:
 				if (resolve) return getPerson();
 				return basicGetPerson();
-			case ImdbPackage.INVOLVEMENT__JOB_CATEGORY:
-				return getJobCategory();
 			case ImdbPackage.INVOLVEMENT__JOB:
 				return getJob();
 			case ImdbPackage.INVOLVEMENT__CHARACTER:
@@ -377,9 +333,6 @@ public class InvolvementImpl extends MinimalEObjectImpl.Container implements Inv
 				return;
 			case ImdbPackage.INVOLVEMENT__PERSON:
 				setPerson((Person)newValue);
-				return;
-			case ImdbPackage.INVOLVEMENT__JOB_CATEGORY:
-				setJobCategory((String)newValue);
 				return;
 			case ImdbPackage.INVOLVEMENT__JOB:
 				setJob((String)newValue);
@@ -405,9 +358,6 @@ public class InvolvementImpl extends MinimalEObjectImpl.Container implements Inv
 			case ImdbPackage.INVOLVEMENT__PERSON:
 				setPerson((Person)null);
 				return;
-			case ImdbPackage.INVOLVEMENT__JOB_CATEGORY:
-				setJobCategory(JOB_CATEGORY_EDEFAULT);
-				return;
 			case ImdbPackage.INVOLVEMENT__JOB:
 				setJob(JOB_EDEFAULT);
 				return;
@@ -430,8 +380,6 @@ public class InvolvementImpl extends MinimalEObjectImpl.Container implements Inv
 				return getTitle() != null;
 			case ImdbPackage.INVOLVEMENT__PERSON:
 				return person != null;
-			case ImdbPackage.INVOLVEMENT__JOB_CATEGORY:
-				return JOB_CATEGORY_EDEFAULT == null ? jobCategory != null : !JOB_CATEGORY_EDEFAULT.equals(jobCategory);
 			case ImdbPackage.INVOLVEMENT__JOB:
 				return JOB_EDEFAULT == null ? job != null : !JOB_EDEFAULT.equals(job);
 			case ImdbPackage.INVOLVEMENT__CHARACTER:
@@ -450,9 +398,7 @@ public class InvolvementImpl extends MinimalEObjectImpl.Container implements Inv
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (jobCategory: ");
-		result.append(jobCategory);
-		result.append(", job: ");
+		result.append(" (job: ");
 		result.append(job);
 		result.append(", character: ");
 		result.append(character);

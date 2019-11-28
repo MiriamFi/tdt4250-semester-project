@@ -13,28 +13,23 @@
       ID="tt0076759">
     <involvements
         person="//@persons.0"
-        jobCategory="Actor"
-        job=""
+        job="Actor"
         character="Luke Skywalker"/>
     <involvements
         person="//@persons.1"
-        jobCategory="Actor"
-        job=""
+        job="Actor"
         character="Han Solo"/>
     <involvements
         person="//@persons.2"
-        jobCategory="Actress"
-        job=""
+        job="Actress"
         character="Princess Leia Organa"/>
     <involvements
         person="//@persons.3"
-        jobCategory="Actor"
-        job=""
+        job="Actor"
         character="Grand Moff Tarkin"/>
     <involvements
         person="//@persons.4"
-        jobCategory="Actor"
-        job=""
+        job="Actor"
         character="Alec Guinness"/>
     <genre>Action</genre>
     <genre>Fantasy</genre>
@@ -48,18 +43,15 @@
       ID="tt0080684">
     <involvements
         person="//@persons.0"
-        jobCategory="Actor"
-        job=""
+        job="Actor"
         character="Luke Skywalker"/>
     <involvements
         person="//@persons.1"
-        jobCategory="Actor"
-        job=""
+        job="Actor"
         character="Han Solo"/>
     <involvements
         person="//@persons.2"
-        jobCategory="Actress"
-        job=""
+        job="Actress"
         character="Princess Leia"/>
     <genre>Action</genre>
     <genre>Adventure</genre>
@@ -73,18 +65,15 @@
       ID="tt0078748">
     <involvements
         person="//@persons.5"
-        jobCategory="Actor"
-        job=""
+        job="Actor"
         character="Dallas"/>
     <involvements
         person="//@persons.6"
-        jobCategory="Actress"
-        job=""
+        job="Actress"
         character="Ripley"/>
     <involvements
         person="//@persons.7"
-        jobCategory="Actress"
-        job=""
+        job="Actress"
         character="Lambert"/>
     <genre>Horror</genre>
     <genre>Sci-Fi</genre>
