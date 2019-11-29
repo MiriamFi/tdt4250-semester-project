@@ -96,7 +96,7 @@
         eType="#//Involvement" eOpposite="#//Involvement/person"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="imdb" lowerBound="1" eType="#//Imdb"
         eOpposite="#//Imdb/persons"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Involvement">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">

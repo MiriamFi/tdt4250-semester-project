@@ -166,7 +166,7 @@ public interface Person extends EObject {
 	 * @return the value of the '<em>ID</em>' attribute.
 	 * @see #setID(String)
 	 * @see imdb.ImdbPackage#getPerson_ID()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	String getID();
