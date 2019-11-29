@@ -757,7 +757,7 @@ public interface ImdbPackage extends EPackage {
 	 * @see imdb.impl.ImdbPackageImpl#getTitleType()
 	 * @generated
 	 */
-	int TITLE_TYPE = 7;
+	int TITLE_TYPE = 8;
 
 
 	/**

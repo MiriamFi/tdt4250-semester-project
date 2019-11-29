@@ -6,6 +6,7 @@
   <foreignModel>imdb.ecore</foreignModel>
   <genPackages prefix="Imdb" disposableProviderFactory="true" ecorePackage="imdb.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="imdb.ecore#//TitleType">
+      <genEnumLiterals ecoreEnumLiteral="imdb.ecore#//TitleType/OTHER"/>
       <genEnumLiterals ecoreEnumLiteral="imdb.ecore#//TitleType/MOVIE"/>
       <genEnumLiterals ecoreEnumLiteral="imdb.ecore#//TitleType/SHORT"/>
       <genEnumLiterals ecoreEnumLiteral="imdb.ecore#//TitleType/TVSERIES"/>

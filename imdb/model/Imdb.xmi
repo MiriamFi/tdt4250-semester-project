@@ -8,6 +8,7 @@
   <titles name="Star Wars Episode IV: A New Hope"
       region="US"
       language="English"
+      titleType="MOVIE"
       startYear="1977"
       runtime="121"
       ID="tt0076759">
@@ -38,6 +39,7 @@
   <titles name="Star Wars: Episode V - The Empire Strikes Back"
       region="US"
       language="English"
+      titleType="MOVIE"
       startYear="1980"
       runtime="124"
       ID="tt0080684">
@@ -60,6 +62,7 @@
   <titles name="Alien"
       region="US"
       language="English"
+      titleType="MOVIE"
       startYear="1979"
       runtime="117"
       ID="tt0078748">

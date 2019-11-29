@@ -719,6 +719,7 @@ public class ImdbPackageImpl extends EPackageImpl implements ImdbPackage {
 
 		// Initialize enums and add enum literals
 		initEEnum(titleTypeEEnum, TitleType.class, "TitleType");
+		addEEnumLiteral(titleTypeEEnum, TitleType.OTHER);
 		addEEnumLiteral(titleTypeEEnum, TitleType.MOVIE);
 		addEEnumLiteral(titleTypeEEnum, TitleType.SHORT);
 		addEEnumLiteral(titleTypeEEnum, TitleType.TVSERIES);

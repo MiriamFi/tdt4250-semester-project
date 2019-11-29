@@ -110,6 +110,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="character" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="TitleType">
+    <eLiterals name="OTHER" value="-1"/>
     <eLiterals name="MOVIE"/>
     <eLiterals name="SHORT" value="1"/>
     <eLiterals name="TVSERIES" value="2"/>
