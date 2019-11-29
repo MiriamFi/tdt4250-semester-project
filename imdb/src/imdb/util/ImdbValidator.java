@@ -102,6 +102,8 @@ public class ImdbValidator extends EObjectValidator {
 				return validatePerson((Person)value, diagnostics, context);
 			case ImdbPackage.INVOLVEMENT:
 				return validateInvolvement((Involvement)value, diagnostics, context);
+			case ImdbPackage.TITLE_TYPE_WRAPPER:
+				return validateTitleTypeWrapper((TitleTypeWrapper)value, diagnostics, context);
 			case ImdbPackage.TITLE_TYPE:
 				return validateTitleType((TitleType)value, diagnostics, context);
 			default:
@@ -711,6 +713,15 @@ public class ImdbValidator extends EObjectValidator {
 			return false;
 		}
 		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateTitleTypeWrapper(TitleTypeWrapper titleTypeWrapper, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(titleTypeWrapper, diagnostics, context);
 	}
 
 	/**

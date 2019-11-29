@@ -60,5 +60,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute imdb.ecore#//Involvement/job"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute imdb.ecore#//Involvement/character"/>
     </genClasses>
+    <genClasses ecoreClass="imdb.ecore#//TitleTypeWrapper">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute imdb.ecore#//TitleTypeWrapper/titleType"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

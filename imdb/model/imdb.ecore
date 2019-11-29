@@ -117,4 +117,8 @@
     <eLiterals name="TVEPISODE" value="3"/>
     <eLiterals name="VIDEO" value="4"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TitleTypeWrapper">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="titleType" lowerBound="1"
+        eType="#//TitleType"/>
+  </eClassifiers>
 </ecore:EPackage>
