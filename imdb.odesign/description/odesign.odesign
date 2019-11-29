@@ -88,6 +88,20 @@
           <ownedVariables xsi:type="tool_1:SelectModelElementVariable" name="availableTitleTypes" candidatesExpression="[self.getAvailableTitleTypes()/]" multiple="true"/>
         </filters>
       </filters>
+      <filters xsi:type="filter:CompositeFilterDescription" name="searchTitles" label="Search titles">
+        <filters xsi:type="filter:VariableFilter" semanticConditionExpression="[if self.oclIsKindOf(imdb::Title) then self.oclAsType(imdb::Title).name.toLowerCase().contains(searchString.toLowerCase()) else true endif/]">
+          <ownedVariables xsi:type="description:TypedVariable" name="searchString">
+            <valueType href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+          </ownedVariables>
+        </filters>
+      </filters>
+      <filters xsi:type="filter:CompositeFilterDescription" name="searchPersons" label="Search persons">
+        <filters xsi:type="filter:VariableFilter" semanticConditionExpression="[if self.oclIsKindOf(imdb::Person) then self.oclAsType(imdb::Person).name.toLowerCase().contains(searchString.toLowerCase()) else true endif/]">
+          <ownedVariables xsi:type="description:TypedVariable" name="searchString">
+            <valueType href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+          </ownedVariables>
+        </filters>
+      </filters>
       <defaultLayer name="Default">
         <nodeMappings name="TitleNode" semanticCandidatesExpression="feature:titles" doubleClickDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='TitleDoubleClick']" domainClass="imdb::Title">
           <style xsi:type="style:SquareDescription" labelSize="12" labelPosition="node" resizeKind="NSEW" width="18" height="12">
