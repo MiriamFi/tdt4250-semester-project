@@ -88,7 +88,7 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int DEATH_YEAR_EDEFAULT = 0;
+	protected static final int DEATH_YEAR_EDEFAULT = -1;
 	/**
 	 * The cached value of the '{@link #getDeathYear() <em>Death Year</em>}' attribute.
 	 * <!-- begin-user-doc -->
