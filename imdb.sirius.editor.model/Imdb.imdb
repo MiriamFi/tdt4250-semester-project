@@ -133,7 +133,20 @@
         runtime="12"
         ID="tt3841710"
         seasonNumber="1"
-        episodeNumber="1"/>
+        episodeNumber="1">
+      <involvements
+          person="//@persons.9"
+          job="Actor"
+          character="Wirt"/>
+      <involvements
+          person="//@persons.10"
+          job="Actor"
+          character="Gregory"/>
+      <involvements
+          person="//@persons.11"
+          job="Actress"
+          character="Beatrice"/>
+    </episodes>
     <episodes
         name="Chapter 2: Hard Times at the Huskin' Bee"
         titleType="TVEPISODE"
@@ -141,7 +154,20 @@
         runtime="12"
         ID="tt4166816"
         seasonNumber="1"
-        episodeNumber="2"/>
+        episodeNumber="2">
+      <involvements
+          person="//@persons.9"
+          job="Actor"
+          character="Wirt"/>
+      <involvements
+          person="//@persons.10"
+          job="Actor"
+          character="Gregory"/>
+      <involvements
+          person="//@persons.11"
+          job="Actress"
+          character="Beatrice"/>
+    </episodes>
   </titles>
   <persons name="Mark Hamill"
       birthYear="1951"
@@ -230,21 +256,21 @@
   <persons name="Elijah Wood"
       birthYear="1981"
       deathYear="-1"
-      involvement="//@titles.4/@involvements.0 //@titles.3/@involvements.0"
+      involvement="//@titles.4/@involvements.0 //@titles.3/@involvements.0 //@titles.4/@episodes.0/@involvements.0 //@titles.4/@episodes.1/@involvements.0"
       ID="nm0000704">
     <professions>Actor</professions>
   </persons>
   <persons name="Collin Dean"
       birthYear="2005"
       deathYear="-1"
-      involvement="//@titles.4/@involvements.1"
+      involvement="//@titles.4/@involvements.1 //@titles.4/@episodes.1/@involvements.1 //@titles.4/@episodes.0/@involvements.1"
       ID="nm5242354">
     <professions>Actor</professions>
   </persons>
   <persons name="Melanie Lynskey"
       birthYear="1977"
       deathYear="-1"
-      involvement="//@titles.4/@involvements.2"
+      involvement="//@titles.4/@involvements.2 //@titles.4/@episodes.1/@involvements.2 //@titles.4/@episodes.0/@involvements.2"
       ID="nm0001491">
     <professions>Actress</professions>
   </persons>
