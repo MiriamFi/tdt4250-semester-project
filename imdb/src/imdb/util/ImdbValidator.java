@@ -690,7 +690,7 @@ public class ImdbValidator extends EObjectValidator {
 				return true;
 			}
 
-			int endYear = ((TvSeries)title).getEndYear();
+			int endYear = ((TvSeries) title).getEndYear();
 			if (involvement.getPerson().getBirthYear() > endYear) {
 				actorIsBorn = false;
 			}

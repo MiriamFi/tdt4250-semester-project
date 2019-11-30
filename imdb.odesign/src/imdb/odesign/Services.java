@@ -29,37 +29,34 @@ public class Services {
 		// TODO Auto-generated code
 		return self;
     }
-    
 
-    
-    public Collection<Episode> getSeasons(EObject self){
-    	Map<Integer, Episode> seasons = new HashMap<Integer, Episode>();
-    	
-    	if( !(self instanceof TvSeries)) {
-    		return seasons.values();
-    		
-    	}
-    	for(Episode episode : ((TvSeries) self).getEpisodes()) {
-    		int season = episode.getSeasonNumber();
-    		if(!seasons.containsKey(season)){
-    			seasons.put(season, episode);
-    		}
-    	}
-    	return seasons.values();
-    }
-    
-    public List<Episode> getEpisodes (EObject self){
-    	List<Episode> episodes = new ArrayList<Episode>();
-    	if( !(self instanceof Episode)) {
-    		return episodes;
-    	}
-    	Episode episode  = (Episode) self;
-    	for(Episode e: episode.getSeries().getEpisodes()) {
-    		if(e.getSeasonNumber() == episode.getSeasonNumber()) {
-    			episodes.add(e);
-    		}
-    	}
-    	return episodes;
+	public Collection<Episode> getSeasons(EObject self) {
+		Map<Integer, Episode> seasons = new HashMap<Integer, Episode>();
+
+		if (!(self instanceof TvSeries)) {
+			return seasons.values();
+		}
+		for (Episode episode : ((TvSeries) self).getEpisodes()) {
+			int season = episode.getSeasonNumber();
+			if (!seasons.containsKey(season)) {
+				seasons.put(season, episode);
+			}
+		}
+		return seasons.values();
+	}
+
+	public List<Episode> getEpisodes(EObject self) {
+		List<Episode> episodes = new ArrayList<Episode>();
+		if (!(self instanceof Episode)) {
+			return episodes;
+		}
+		Episode episode = (Episode) self;
+		for (Episode e : episode.getSeries().getEpisodes()) {
+			if (e.getSeasonNumber() == episode.getSeasonNumber()) {
+				episodes.add(e);
+			}
+		}
+		return episodes;
 	}
 
 	public Collection<TitleTypeWrapper> getAvailableTitleTypes(Imdb self) {
@@ -69,7 +66,7 @@ public class Services {
 					TitleTypeWrapper wrapper = ImdbFactory.eINSTANCE.createTitleTypeWrapper();
 					wrapper.setTitleType(type);
 					return wrapper;
-					})
+				})
 				.collect(Collectors.toSet());
 	}
 
@@ -79,13 +76,13 @@ public class Services {
 	 * @param self
 	 * @param titleType
 	 * @return whether the {@link Title} is of the provided {@link TitleType}.
-	 * Also returns {@code true} if <b>self</b> is not a {@link Title}.
+	 *         Also returns {@code true} if <b>self</b> is not a {@link Title}.
 	 */
 	public boolean isOneOfTitleTypes(EObject self, Collection<TitleTypeWrapper> titleTypes) {
 		if (!(self instanceof Title))
 			return true;
 
-		TitleType type = ((Title)self).getTitleType();
+		TitleType type = ((Title) self).getTitleType();
 		return titleTypes.stream()
 				.anyMatch(wrapper -> wrapper.getTitleType() == type);
 	}

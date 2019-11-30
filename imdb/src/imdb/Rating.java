@@ -92,4 +92,5 @@ public interface Rating extends EObject {
 	 * @generated
 	 */
 	void setTitle(Title value);
+
 } // Rating

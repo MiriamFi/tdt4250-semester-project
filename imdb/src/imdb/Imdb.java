@@ -51,4 +51,5 @@ public interface Imdb extends EObject {
 	 * @generated
 	 */
 	EList<Person> getPersons();
+
 } // Imdb
