@@ -3,6 +3,7 @@ package imdb.dataset;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
@@ -70,38 +71,43 @@ public class DatasetDeserializer {
 		
 		
 		deserializePersons();
-		hashPersons();
 		System.out.println("Done deserializing all persons");
+		hashPersons();
+		System.out.println("Hashed all persons");
 		
 		
-		// deserialize involvements
-		System.out.println();
+		deserializeInvolvements();
+		
+		System.out.println("Done deserialize all involvements");
 		
 		
 		
 		// remove all person not connected to titles or
 		// involvements that are connected to a titles
+		HashMap<String, Person> smallerPersonMap = new HashMap<String, Person>();
 		
-		List<Person> persons = imdb.getPersons().stream()
-			.filter(person -> { 
-				for (Title title : person.getKnownForTitles()) {
-					// If person has titleMap titles in knownForTitles
-					if (titleMap.containsValue(title))
-						return true;
-					
-					// If person is connected to titleMap titles through involvements
-					for (Involvement involvement: title.getInvolvements()) {
-						if (involvement.getPerson() == person)
-							return true;
-					}
-				}
-				return false;
-			})
-			.collect(Collectors.toList());
+		
+		// For each parsed title, get all persons connected with involvements
+		for (Title title: titleMap.values()) {
+			for (Involvement involvement: title.getInvolvements()) {
+				smallerPersonMap.put(involvement.getPerson().getID(), involvement.getPerson());
+			}
+		}
+		
+		// Get each person that is connected to a title in titleMap through knownForTitles
+		imdb.getPersons().forEach(person -> {
+			for (Title title : person.getKnownForTitles()) {
+				if (titleMap.containsValue(title))
+					smallerPersonMap.put(person.getID(), person);
+			}
+		});
+		
 		
 		// Update ecore model
 		imdb.getPersons().clear();
-		imdb.getPersons().addAll(persons);
+		imdb.getPersons().addAll(smallerPersonMap.values());
+
+		System.out.println("Removed all disconnected persons");
 		
 	}
 	
@@ -110,6 +116,7 @@ public class DatasetDeserializer {
 		String filename = "src/imdb/dataset/titles.tsv";
 		// Open file
 		try(BufferedReader br = new BufferedReader(new FileReader(filename))) {
+			br.readLine(); //skip first line
 		    for(String line; (line = br.readLine()) != null; ) {
 		    	deserializeEachTitle(line);
 		    }
@@ -193,6 +200,7 @@ public class DatasetDeserializer {
 		String filename = "src/imdb/dataset/persons.tsv";
 		// Open file
 		try(BufferedReader br = new BufferedReader(new FileReader(filename))) {
+			br.readLine(); //skip first line
 		    for(String line; (line = br.readLine()) != null; ) {
 		    	deserializePerson(line);
 		    }
@@ -238,6 +246,7 @@ public class DatasetDeserializer {
 					.collect(Collectors.toList());			// construct the list
 		
 		
+		person.setID(ID);
 		person.setName(name);
 		person.setBirthYear(birthYear);
 		person.setDeathYear(deathYear);
@@ -259,7 +268,7 @@ public class DatasetDeserializer {
 		String filename = "src/imdb/dataset/ratings.tsv";
 		// Open file
 		try(BufferedReader br = new BufferedReader(new FileReader(filename))) {
-		    // skip the first line, it contains the column headers
+			// skip the first line, it contains the column headers
 			br.readLine();
 			for(String line; (line = br.readLine()) != null; ) {
 		    	deserializeEachRating(line);
@@ -272,12 +281,13 @@ public class DatasetDeserializer {
 	public static void deserializeEachRating(String line){
 		// Split string by delimiter tab
 		String[] columnValues = line.split("\\t");
-		Rating rating = ImdbFactory.eINSTANCE.createRating();
 		
 		String titleID = columnValues[0];
-		
 		// Stop deserialization when the titleID is not in titleMap
 		if (titleMap.get(titleID) == null) return;
+		
+		
+		Rating rating = ImdbFactory.eINSTANCE.createRating();
 		
 		float averageRating = Float.parseFloat(columnValues[1]);
 		int numVotes = Integer.parseInt(columnValues[2]);
@@ -287,8 +297,6 @@ public class DatasetDeserializer {
 		rating.setNumberOfVotes(numVotes);
 		
 	}
-	
-	
 	
 	public static void deserializeInvolvements(){
 		String filename = "src/imdb/dataset/involvements.tsv";
@@ -307,20 +315,38 @@ public class DatasetDeserializer {
 	public static void deserializeInvolvement(String line){
 		// Split string by delimiter tab
 		String[] columnValues = line.split("\\t");
-		Rating rating = ImdbFactory.eINSTANCE.createRating();
-		
+
 		String titleID = columnValues[0];
-		
 		// Stop deserialization when the titleID is not in titleMap
 		if (titleMap.get(titleID) == null) return;
 		
-		float averageRating = Float.parseFloat(columnValues[1]);
-		int numVotes = Integer.parseInt(columnValues[2]);
+		String personID = columnValues[2];
+		// Stop deserialization when the personID is not in personMap
+		if (personMap.get(personID) == null) return;
 		
-		rating.setTitle(titleMap.get(titleID));
-		rating.setAverageRating(averageRating);
-		rating.setNumberOfVotes(numVotes);
-		
+		String category = columnValues[3];
+		String job = columnValues[4];
+		String charactersString = columnValues[5];
+		// character is stored as "[""name 1"",""name 2 something""]"  That is for when a name itself contain comma such as "Superintendant, Department Store
+		String[] characters;
+		if (charactersString.equals("\\N")){
+			characters = null;
+			createInvolvement(titleID, personID, category, job, null);
+		} else {
+			characters = charactersString.substring(4,charactersString.length()-4).split("\"\",\"\"");
+			for(String character: characters) {
+				createInvolvement(titleID, personID, category, job, character);
+			}
+		}
+	}
+	
+	private static void createInvolvement(String titleID, String personID, String category, String job, String character) {
+		Involvement involvement = ImdbFactory.eINSTANCE.createInvolvement();
+		involvement.setTitle(titleMap.get(titleID)); // both ways
+		involvement.setPerson(personMap.get(personID));
+		involvement.setJobCategory(category);
+		involvement.setJob(job);
+		involvement.setCharacter(character);
 	}
 	
 	
