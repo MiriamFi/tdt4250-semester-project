@@ -37,7 +37,7 @@
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="SharedCrew Diagram" titleExpression="aql:'Other titles that share crew with ' +self.name" initialisation="true" domainClass="imdb::Title" enablePopupBars="true">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="SharedCrew Diagram" titleExpression="aql:'Other titles that share crew with ' +self.name" initialisation="true" domainClass="imdb::Title" preconditionExpression="aql:self.titleType != imdb::TitleType::TVEPISODE" enablePopupBars="true">
       <filters xsi:type="filter:CompositeFilterDescription"/>
       <defaultLayer name="Default">
         <nodeMappings name="SharedCrewNode" semanticCandidatesExpression="var:self" doubleClickDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='SharedCrew%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Main%20Title']" domainClass="imdb::Title">
@@ -47,7 +47,7 @@
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='orange']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="otherTitles" preconditionExpression="if self.name.startsWith('a') then self else self.eContainer() endif" semanticCandidatesExpression="aql:self.involvements.person.involvement.title->select(t | t.ID != self.ID)" doubleClickDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='SharedCrew%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Other%20Titles']" domainClass="imdb::Title">
+        <nodeMappings name="otherTitles" preconditionExpression="if self.name.startsWith('a') then self else self.eContainer() endif" semanticCandidatesExpression="aql:self.involvements.person.involvement.title->select(t | t.titleType != imdb::TitleType::TVEPISODE)->select(t | t.ID != self.ID)" doubleClickDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='SharedCrew%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Other%20Titles']" domainClass="imdb::Title">
           <style xsi:type="style:SquareDescription" labelSize="12" tooltipExpression="feature:name" sizeComputationExpression="5" labelPosition="node" resizeKind="NSEW" width="20" height="15">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -487,7 +487,7 @@
       </ownedRepresentationNavigationDescriptions>
       <ownedLineMappings name="Imdb" navigationDescriptions="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='PersonsTable']/@ownedRepresentationNavigationDescriptions[name='Diagram%20Navigation']" domainClass="imdb::Imdb" semanticCandidatesExpression="aql:self" headerLabelExpression="IMDB"/>
       <ownedLineMappings name="Persons" detailDescriptions="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='PersonsTable']/@ownedRepresentationCreationDescriptions[name='Create%20Person%20Details']" navigationDescriptions="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='PersonsTable']/@ownedRepresentationNavigationDescriptions[name='Person%20details']" domainClass="imdb::Person" semanticCandidatesExpression="aql:self.persons" headerLabelExpression="feature:name"/>
-      <ownedColumnMappings name="Titles" headerLabelExpression="Titles" featureName="*" labelExpression="aql:self.involvement.title.name"/>
+      <ownedColumnMappings name="Titles" headerLabelExpression="Titles" featureName="*" labelExpression="aql:self.involvement.title->select(t | t.titleType != imdb::TitleType::TVEPISODE).name"/>
       <ownedColumnMappings name="Characters" headerLabelExpression="Characters" featureName="*" labelExpression="aql:self.involvement.character->asOrderedSet()->sep(', ')->toString()"/>
       <ownedColumnMappings name="Jobs" headerLabelExpression="Jobs" featureName="*" labelExpression="aql:self.involvement.job->asOrderedSet()->sep(', ')->toString()"/>
     </ownedRepresentations>
@@ -645,7 +645,7 @@
       <defaultLayer name="Default">
         <containerMappings name="Person Container" semanticCandidatesExpression="var:self" doubleClickDescription="//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20detail%20diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Main%20Person']" domainClass="imdb::Person" childrenPresentation="HorizontalStack">
           <subContainerMappings name="Person's Titles Container" semanticCandidatesExpression="var:self" domainClass="imdb::Person" childrenPresentation="List">
-            <subNodeMappings name="Person's Title Node" semanticCandidatesExpression="aql:self.involvement.title" doubleClickDescription="//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20detail%20diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Title']" domainClass="imdb::Title">
+            <subNodeMappings name="Person's Title Node" semanticCandidatesExpression="aql:self.involvement.title->select(t | t.titleType != imdb::TitleType::TVEPISODE)" doubleClickDescription="//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20detail%20diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Title']" domainClass="imdb::Title">
               <style xsi:type="style:SquareDescription" showIcon="false" sizeComputationExpression="" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -822,7 +822,7 @@
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='orange']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="titlesWorkedOn" semanticCandidatesExpression="aql:self.involvement.title" domainClass="imdb::Title">
+        <nodeMappings name="titlesWorkedOn" semanticCandidatesExpression="aql:self.involvement.title->select(t | t.titleType != imdb::TitleType::TVEPISODE)" domainClass="imdb::Title">
           <style xsi:type="style:SquareDescription" labelSize="12" tooltipExpression="aql:self.name" labelPosition="node" resizeKind="NSEW" width="16" height="12">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
