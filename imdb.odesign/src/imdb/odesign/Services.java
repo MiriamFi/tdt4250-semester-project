@@ -1,21 +1,21 @@
 package imdb.odesign;
 
-import java.util.Collection;
-import java.util.stream.Collectors;
-
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 import org.eclipse.emf.ecore.EObject;
 
+import imdb.Episode;
 import imdb.Imdb;
 import imdb.ImdbFactory;
 import imdb.Title;
-import imdb.Episode;
-import imdb.TvSeries;
-
 import imdb.TitleType;
 import imdb.TitleTypeWrapper;
+import imdb.TvSeries;
 
 /**
  * The services class used by VSM.
@@ -31,7 +31,7 @@ public class Services {
     }
     
 
-    
+    /*
     public List<Episode> getSeasons(EObject self){
     	List<Episode> seasons = new ArrayList<Episode>();
     	List<Integer> seasonNums = new ArrayList<Integer>();
@@ -46,6 +46,22 @@ public class Services {
     		}
     	}
     	return seasons;
+    }*/
+    
+    public Collection<Episode> getSeasons(EObject self){
+    	Map<Integer, Episode> seasons = new HashMap<Integer, Episode>();
+    	
+    	if( !(self instanceof TvSeries)) {
+    		return seasons.values();
+    		
+    	}
+    	for(Episode episode : ((TvSeries) self).getEpisodes()) {
+    		int season = episode.getSeasonNumber();
+    		if(!seasons.containsKey(season)){
+    			seasons.put(season, episode);
+    		}
+    	}
+    	return seasons.values();
     }
     
     public List<Episode> getEpisodes (EObject self){

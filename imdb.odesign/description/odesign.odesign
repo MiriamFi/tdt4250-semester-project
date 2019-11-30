@@ -371,6 +371,27 @@
       <ownedColumnMappings name="Characters" headerLabelExpression="Characters" featureName="*" labelExpression="aql:self.involvement.character->asOrderedSet()->sep(', ') ->toString()"/>
       <ownedColumnMappings name="Jobs" headerLabelExpression="Jobs" featureName="*" labelExpression="aql:self.involvement.job->asOrderedSet()->sep(', ') ->toString()"/>
     </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_3:TreeDescription" name="TVseries tree" domainClass="imdb::Imdb">
+      <subItemMappings name="TVseries tree group" domainClass="imdb::TvSeries" semanticCandidatesExpression="aql:self.titles">
+        <defaultStyle>
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="Season tree group" domainClass="imdb::Episode" semanticCandidatesExpression="aql:self.getSeasons()">
+          <defaultStyle labelExpression="aql:'Season ' + self.seasonNumber">
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <subItemMappings name="Episode node" domainClass="imdb::Episode" semanticCandidatesExpression="aql: self.getEpisodes()">
+            <defaultStyle>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </defaultStyle>
+          </subItemMappings>
+        </subItemMappings>
+      </subItemMappings>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="imdb.odesign.Services"/>
   </ownedViewpoints>
   <ownedViewpoints name="person_viewpoint" modelFileExtension="imdb">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Person detail diagram" titleExpression="aql:'Details of '+self.name" domainClass="imdb::Person" enablePopupBars="true">
@@ -679,28 +700,6 @@
           </ownedTools>
         </toolSections>
       </defaultLayer>
-    </ownedRepresentations>
-  </ownedViewpoints>
-  <ownedViewpoints name="tvseries_viewpoint" modelFileExtension="imdb">
-    <ownedRepresentations xsi:type="description_3:TreeDescription" name="TVseries tree" domainClass="imdb::TvSeries">
-      <subItemMappings name="TVseries tree group" domainClass="imdb::TvSeries" semanticCandidatesExpression="feature:eAllContents">
-        <defaultStyle>
-          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-        </defaultStyle>
-        <subItemMappings name="Season tree group" domainClass="imdb::Episode" semanticCandidatesExpression="aql:self.getSeasons()">
-          <defaultStyle labelExpression="aql:'Season ' + self.seasonNumber">
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-          </defaultStyle>
-          <subItemMappings name="Episode node" domainClass="imdb::Episode" semanticCandidatesExpression="aql: self.getEpisodes()">
-            <defaultStyle>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-            </defaultStyle>
-          </subItemMappings>
-        </subItemMappings>
-      </subItemMappings>
     </ownedRepresentations>
   </ownedViewpoints>
 </description:Group>
