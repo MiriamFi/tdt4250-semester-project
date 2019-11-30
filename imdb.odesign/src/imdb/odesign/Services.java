@@ -31,22 +31,6 @@ public class Services {
     }
     
 
-    /*
-    public List<Episode> getSeasons(EObject self){
-    	List<Episode> seasons = new ArrayList<Episode>();
-    	List<Integer> seasonNums = new ArrayList<Integer>();
-    	
-    	if( !(self instanceof Episode)) {
-    		return seasons;
-    		
-    	}
-    	for(Episode episode : ((Episode) self).getSeries().getEpisodes()) {
-    		if(!seasonNums.contains(episode.getSeasonNumber())){
-    			seasons.add(episode);
-    		}
-    	}
-    	return seasons;
-    }*/
     
     public Collection<Episode> getSeasons(EObject self){
     	Map<Integer, Episode> seasons = new HashMap<Integer, Episode>();
