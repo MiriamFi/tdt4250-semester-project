@@ -106,7 +106,6 @@ public class DatasetDeserializer {
 	}
 	
 	
-	// Create all titles from file
 	public static void deserializeTitles(){
 		String filename = "src/imdb/dataset/titles.tsv";
 		// Open file
@@ -163,8 +162,6 @@ public class DatasetDeserializer {
 		
 	}
 	
-	
-	
 	private static void hash500RandomTVSeries() {
 		// Hash the titles by id for faster query
 		// List<T> has the same performance for search as List<T>
@@ -192,8 +189,6 @@ public class DatasetDeserializer {
 		imdb.getTitles().addAll(tvSeries);
 	}
 	
-	
-	
 	public static void deserializePersons() {
 		String filename = "src/imdb/dataset/persons.tsv";
 		// Open file
@@ -206,7 +201,6 @@ public class DatasetDeserializer {
 		}
 	}
 	
-
 	public static void deserializePerson(String line){
 		// Split string by delimiter tab
 		String[] columnValues = line.split("\\t");
@@ -256,13 +250,11 @@ public class DatasetDeserializer {
 		
 	}
 
-	
-	
 	private static void hashPersons() {
 		imdb.getPersons().forEach(person -> personMap.put(person.getID(), person));
 	}
+
 	
-	// Create all titles from file
 	public static void deserializeRatings(){
 		String filename = "src/imdb/dataset/ratings.tsv";
 		// Open file
@@ -297,18 +289,43 @@ public class DatasetDeserializer {
 	}
 	
 	
-	public static void deserializeSubsetPrincipals(){
-
-		String filename = "subsetprincipals.tsv";
+	
+	public static void deserializeInvolvements(){
+		String filename = "src/imdb/dataset/involvements.tsv";
 		// Open file
 		try(BufferedReader br = new BufferedReader(new FileReader(filename))) {
-		    for(String line; (line = br.readLine()) != null; ) {
-		    	
+		    // skip the first line, it contains the column headers
+			br.readLine();
+			for(String line; (line = br.readLine()) != null; ) {
+		    	deserializeInvolvement(line);
 		    }
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
+
+	public static void deserializeInvolvement(String line){
+		// Split string by delimiter tab
+		String[] columnValues = line.split("\\t");
+		Rating rating = ImdbFactory.eINSTANCE.createRating();
+		
+		String titleID = columnValues[0];
+		
+		// Stop deserialization when the titleID is not in titleMap
+		if (titleMap.get(titleID) == null) return;
+		
+		float averageRating = Float.parseFloat(columnValues[1]);
+		int numVotes = Integer.parseInt(columnValues[2]);
+		
+		rating.setTitle(titleMap.get(titleID));
+		rating.setAverageRating(averageRating);
+		rating.setNumberOfVotes(numVotes);
+		
+	}
+	
+	
+	
+	
 	
 	
 	public static void serializeToXMI(String filepath) {
