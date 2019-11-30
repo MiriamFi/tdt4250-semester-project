@@ -12,6 +12,8 @@ import org.eclipse.emf.ecore.EObject;
 import imdb.Episode;
 import imdb.Imdb;
 import imdb.ImdbFactory;
+import imdb.Involvement;
+import imdb.Person;
 import imdb.Title;
 import imdb.TitleType;
 import imdb.TitleTypeWrapper;
@@ -85,5 +87,77 @@ public class Services {
 		TitleType type = ((Title) self).getTitleType();
 		return titleTypes.stream()
 				.anyMatch(wrapper -> wrapper.getTitleType() == type);
+	}
+
+	/**
+	 * Use as part of a filter expression.
+	 * 
+	 * @param self each object in a diagram.
+	 * @param searchString
+	 * @param hideConnections
+	 * @return If <b>self</b> is a
+	 *         <ul>
+	 *           <li>{@link Title}: whether it's filtered by <b>searchString</b>.</li>
+	 *           <li>
+	 *             {@link Person} and <b>hideConnections</b> is {@code true}: whether any of the {@link Title}s
+	 *             they've been involved in are filtered by <b>searchString</b>.
+	 *           </li>
+	 *         </ul>
+	 *         Also returns {@code true} if <b>self</b> is neither a {@link Title} nor a {@link Person}.
+	 */
+	public boolean isFilteredByTitle(EObject self, String searchString, Boolean hideConnections) {
+		final String cleanedSearchString = searchString.toLowerCase();
+
+		if (self instanceof Title) {
+			return ((Title) self).isFilteredBy(cleanedSearchString, true);
+		}
+		else if (self instanceof Person) {
+			if (!hideConnections)
+				return true;
+
+			Collection<Involvement> involvements = ((Person) self).getInvolvement();
+			return involvements.stream()
+					.map(involvement -> involvement.getTitle())
+					.anyMatch(title -> title.isFilteredBy(cleanedSearchString, true));
+		}
+		else {
+			return true;
+		}
+	}
+
+	/**
+	 * Use as part of a filter expression.
+	 * 
+	 * @param self each object in a diagram.
+	 * @param searchString
+	 * @param hideConnections
+	 * @return If <b>self</b> is a
+	 *         <ul>
+	 *           <li>{@link Person}: whether they're filtered by <b>searchString</b>.</li>
+	 *           <li>
+	 *             {@link Title} and <b>hideConnections</b> is {@code true}: whether any of the {@link Person}s
+	 *             who have been involved are filtered by <b>searchString</b>.</li>
+	 *           </li>
+	 *         </ul>
+	 *         Also returns {@code true} if <b>self</b> is neither a {@link Person} nor a {@link Title}.
+	 */
+	public boolean isFilteredByPerson(EObject self, String searchString, Boolean hideConnections) {
+		final String cleanedSearchString = searchString.toLowerCase();
+
+		if (self instanceof Person) {
+			return ((Person) self).isFilteredBy(cleanedSearchString, true);
+		}
+		else if (self instanceof Title) {
+			if (!hideConnections)
+				return true;
+
+			Collection<Involvement> involvements = ((Title) self).getInvolvements();
+			return involvements.stream()
+					.map(involvement -> involvement.getPerson())
+					.anyMatch(person -> person.isFilteredBy(cleanedSearchString, true));
+		}
+		else {
+			return true;
+		}
 	}
 }

@@ -2,6 +2,13 @@
 <description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:description_3="http://www.eclipse.org/sirius/tree/description/1.0.0" xmlns:filter="http://www.eclipse.org/sirius/diagram/description/filter/1.1.0" xmlns:properties="http://www.eclipse.org/sirius/properties/1.0.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="odesign" version="12.0.0.2017041100">
   <ownedViewpoints name="imdb_viewpoint" modelFileExtension="imdb">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Persons Network Diagram" domainClass="imdb::Imdb" enablePopupBars="true">
+      <filters xsi:type="filter:CompositeFilterDescription" name="searchPersons" label="Search persons">
+        <filters xsi:type="filter:VariableFilter" semanticConditionExpression="[self.isFilteredByPerson(searchString, false)/]">
+          <ownedVariables xsi:type="description:TypedVariable" name="searchString">
+            <valueType href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+          </ownedVariables>
+        </filters>
+      </filters>
       <defaultLayer name="Default">
         <nodeMappings name="Person" semanticCandidatesExpression="feature:persons" doubleClickDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Persons%20Network%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='']" domainClass="imdb::Person">
           <style xsi:type="style:SquareDescription" labelSize="12" labelPosition="node" resizeKind="NSEW" width="16" height="12">
@@ -38,7 +45,13 @@
       </defaultLayer>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="SharedCrew Diagram" titleExpression="aql:'Other titles that share crew with ' +self.name" initialisation="true" domainClass="imdb::Title" preconditionExpression="aql:self.titleType != imdb::TitleType::TVEPISODE" enablePopupBars="true">
-      <filters xsi:type="filter:CompositeFilterDescription"/>
+      <filters xsi:type="filter:CompositeFilterDescription" name="searchTitles" label="Search titles">
+        <filters xsi:type="filter:VariableFilter" semanticConditionExpression="[self.isFilteredByTitle(searchString, false)/]">
+          <ownedVariables xsi:type="description:TypedVariable" name="searchString">
+            <valueType href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+          </ownedVariables>
+        </filters>
+      </filters>
       <defaultLayer name="Default">
         <nodeMappings name="SharedCrewNode" semanticCandidatesExpression="var:self" doubleClickDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='SharedCrew%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Main%20Title']" domainClass="imdb::Title">
           <style xsi:type="style:SquareDescription" labelSize="12" tooltipExpression="feature:name" labelPosition="node" resizeKind="NSEW" width="20" height="15">
@@ -96,14 +109,14 @@
         </filters>
       </filters>
       <filters xsi:type="filter:CompositeFilterDescription" name="searchTitles" label="Search titles">
-        <filters xsi:type="filter:VariableFilter" semanticConditionExpression="[if self.oclIsKindOf(imdb::Title) then self.oclAsType(imdb::Title).name.toLowerCase().contains(searchString.toLowerCase()) else true endif/]">
+        <filters xsi:type="filter:VariableFilter" semanticConditionExpression="[self.isFilteredByTitle(searchString, true)/]">
           <ownedVariables xsi:type="description:TypedVariable" name="searchString">
             <valueType href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
           </ownedVariables>
         </filters>
       </filters>
       <filters xsi:type="filter:CompositeFilterDescription" name="searchPersons" label="Search persons">
-        <filters xsi:type="filter:VariableFilter" semanticConditionExpression="[if self.oclIsKindOf(imdb::Person) then self.oclAsType(imdb::Person).name.toLowerCase().contains(searchString.toLowerCase()) else true endif/]">
+        <filters xsi:type="filter:VariableFilter" semanticConditionExpression="[self.isFilteredByPerson(searchString, true)/]">
           <ownedVariables xsi:type="description:TypedVariable" name="searchString">
             <valueType href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
           </ownedVariables>
@@ -772,6 +785,13 @@
       </defaultLayer>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="WorkedWithSelect Diagram" titleExpression="aql:'Other people that ' +self.name+ ' has worked with'" initialisation="true" domainClass="imdb::Person" enablePopupBars="true">
+      <filters xsi:type="filter:CompositeFilterDescription" name="searchPersons" label="Search persons">
+        <filters xsi:type="filter:VariableFilter" semanticConditionExpression="[self.isFilteredByPerson(searchString, false)/]">
+          <ownedVariables xsi:type="description:TypedVariable" name="searchString">
+            <valueType href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+          </ownedVariables>
+        </filters>
+      </filters>
       <defaultLayer name="Default">
         <nodeMappings name="MainPersonNode" semanticCandidatesExpression="var:self" doubleClickDescription="//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='WorkedWithSelect%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Main%20Person']" domainClass="imdb::Person">
           <style xsi:type="style:SquareDescription" labelSize="12" tooltipExpression="feature:name" labelPosition="node" resizeKind="NSEW" width="16" height="12">
@@ -814,6 +834,13 @@
       </defaultLayer>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="WorkedOnTitlesSelect" titleExpression="aql:'Which titles ' + self.name + ' has worked on'" initialisation="true" domainClass="imdb::Person" enablePopupBars="true">
+      <filters xsi:type="filter:CompositeFilterDescription" name="searchTitles" label="Search titles">
+        <filters xsi:type="filter:VariableFilter" semanticConditionExpression="[self.isFilteredByTitle(searchString, false)/]">
+          <ownedVariables xsi:type="description:TypedVariable" name="searchString">
+            <valueType href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+          </ownedVariables>
+        </filters>
+      </filters>
       <defaultLayer name="Default">
         <nodeMappings name="mainPerson" semanticCandidatesExpression="var:self" domainClass="imdb::Person">
           <style xsi:type="style:SquareDescription" labelSize="12" tooltipExpression="aql:self.name" labelPosition="node" resizeKind="NSEW" width="16" height="12">
