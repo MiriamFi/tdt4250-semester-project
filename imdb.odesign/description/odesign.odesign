@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:filter="http://www.eclipse.org/sirius/diagram/description/filter/1.1.0" xmlns:properties="http://www.eclipse.org/sirius/properties/1.0.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="odesign" version="12.0.0.2017041100">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:description_3="http://www.eclipse.org/sirius/tree/description/1.0.0" xmlns:filter="http://www.eclipse.org/sirius/diagram/description/filter/1.1.0" xmlns:properties="http://www.eclipse.org/sirius/properties/1.0.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="odesign" version="12.0.0.2017041100">
   <ownedViewpoints name="imdb_viewpoint" modelFileExtension="imdb">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Persons Network Diagram" domainClass="imdb::Imdb" enablePopupBars="true">
       <defaultLayer name="Default">
@@ -679,6 +679,28 @@
           </ownedTools>
         </toolSections>
       </defaultLayer>
+    </ownedRepresentations>
+  </ownedViewpoints>
+  <ownedViewpoints name="tvseries_viewpoint" modelFileExtension="imdb">
+    <ownedRepresentations xsi:type="description_3:TreeDescription" name="TVseries tree" domainClass="imdb::TvSeries">
+      <subItemMappings name="TVseries tree group" domainClass="imdb::TvSeries" semanticCandidatesExpression="feature:eAllContents">
+        <defaultStyle>
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="Season tree group" domainClass="imdb::Episode" semanticCandidatesExpression="aql:self.getSeasons()">
+          <defaultStyle labelExpression="aql:'Season ' + self.seasonNumber">
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <subItemMappings name="Episode node" domainClass="imdb::Episode" semanticCandidatesExpression="aql: self.getEpisodes()">
+            <defaultStyle>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </defaultStyle>
+          </subItemMappings>
+        </subItemMappings>
+      </subItemMappings>
     </ownedRepresentations>
   </ownedViewpoints>
 </description:Group>

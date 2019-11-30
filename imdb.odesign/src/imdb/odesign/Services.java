@@ -3,11 +3,17 @@ package imdb.odesign;
 import java.util.Collection;
 import java.util.stream.Collectors;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.eclipse.emf.ecore.EObject;
 
 import imdb.Imdb;
 import imdb.ImdbFactory;
 import imdb.Title;
+import imdb.Episode;
+import imdb.TvSeries;
+
 import imdb.TitleType;
 import imdb.TitleTypeWrapper;
 
@@ -22,6 +28,38 @@ public class Services {
 	public EObject myService(EObject self, String arg) {
 		// TODO Auto-generated code
 		return self;
+    }
+    
+
+    
+    public List<Episode> getSeasons(EObject self){
+    	List<Episode> seasons = new ArrayList<Episode>();
+    	List<Integer> seasonNums = new ArrayList<Integer>();
+    	
+    	if( !(self instanceof Episode)) {
+    		return seasons;
+    		
+    	}
+    	for(Episode episode : ((Episode) self).getSeries().getEpisodes()) {
+    		if(!seasonNums.contains(episode.getSeasonNumber())){
+    			seasons.add(episode);
+    		}
+    	}
+    	return seasons;
+    }
+    
+    public List<Episode> getEpisodes (EObject self){
+    	List<Episode> episodes = new ArrayList<Episode>();
+    	if( !(self instanceof Episode)) {
+    		return episodes;
+    	}
+    	Episode episode  = (Episode) self;
+    	for(Episode e: episode.getSeries().getEpisodes()) {
+    		if(e.getSeasonNumber() == episode.getSeasonNumber()) {
+    			episodes.add(e);
+    		}
+    	}
+    	return episodes;
 	}
 
 	public Collection<TitleTypeWrapper> getAvailableTitleTypes(Imdb self) {
