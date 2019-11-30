@@ -104,8 +104,8 @@
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Imdb diagram" initialisation="true" domainClass="imdb::Imdb" enablePopupBars="true">
       <metamodel href="http://no/ntnu/tdt4250/imdb#/"/>
       <filters xsi:type="filter:CompositeFilterDescription" name="ofTitleType" label="Of title type">
-        <filters xsi:type="filter:VariableFilter" semanticConditionExpression="[self.isOneOfTitleTypes(availableTitleTypes)/]">
-          <ownedVariables xsi:type="tool_1:SelectModelElementVariable" name="availableTitleTypes" candidatesExpression="[self.getAvailableTitleTypes()/]" multiple="true"/>
+        <filters xsi:type="filter:VariableFilter" semanticConditionExpression="[self.isFilteredByTitle(filterTitleType, true)/]">
+          <ownedVariables xsi:type="tool_1:SelectModelElementVariable" name="filterTitleType" candidatesExpression="[self.getAvailableTitleTypes()/]"/>
         </filters>
       </filters>
       <filters xsi:type="filter:CompositeFilterDescription" name="searchTitles" label="Search titles">
