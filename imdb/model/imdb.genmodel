@@ -62,6 +62,10 @@
     </genClasses>
     <genClasses ecoreClass="imdb.ecore#//TitleTypeWrapper">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute imdb.ecore#//TitleTypeWrapper/titleType"/>
+      <genOperations ecoreOperation="imdb.ecore#//TitleTypeWrapper/equals">
+        <genParameters ecoreParameter="imdb.ecore#//TitleTypeWrapper/equals/obj"/>
+      </genOperations>
+      <genOperations ecoreOperation="imdb.ecore#//TitleTypeWrapper/hashCode"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

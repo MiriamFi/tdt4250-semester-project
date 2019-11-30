@@ -6,8 +6,10 @@ import imdb.ImdbPackage;
 import imdb.TitleType;
 import imdb.TitleTypeWrapper;
 
+import java.lang.reflect.InvocationTargetException;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -92,6 +94,34 @@ public class TitleTypeWrapperImpl extends MinimalEObjectImpl.Container implement
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (obj == null)
+			return false;
+
+		if (obj instanceof TitleTypeWrapper)
+			return this.titleType == ((TitleTypeWrapper) obj).getTitleType();
+		else if (obj instanceof TitleType)
+			return this.titleType == obj;
+		else
+			return false;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public int hashCode() {
+		return this.titleType.hashCode();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -145,6 +175,22 @@ public class TitleTypeWrapperImpl extends MinimalEObjectImpl.Container implement
 				return titleType != TITLE_TYPE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case ImdbPackage.TITLE_TYPE_WRAPPER___EQUALS__OBJECT:
+				return equals(arguments.get(0));
+			case ImdbPackage.TITLE_TYPE_WRAPPER___HASH_CODE:
+				return hashCode();
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

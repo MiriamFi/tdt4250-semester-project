@@ -17,6 +17,7 @@ import imdb.util.ImdbValidator;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.EReference;
@@ -581,6 +582,26 @@ public class ImdbPackageImpl extends EPackageImpl implements ImdbPackage {
 	 * @generated
 	 */
 	@Override
+	public EOperation getTitleTypeWrapper__Equals__Object() {
+		return titleTypeWrapperEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getTitleTypeWrapper__HashCode() {
+		return titleTypeWrapperEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EEnum getTitleType() {
 		return titleTypeEEnum;
 	}
@@ -663,6 +684,8 @@ public class ImdbPackageImpl extends EPackageImpl implements ImdbPackage {
 
 		titleTypeWrapperEClass = createEClass(TITLE_TYPE_WRAPPER);
 		createEAttribute(titleTypeWrapperEClass, TITLE_TYPE_WRAPPER__TITLE_TYPE);
+		createEOperation(titleTypeWrapperEClass, TITLE_TYPE_WRAPPER___EQUALS__OBJECT);
+		createEOperation(titleTypeWrapperEClass, TITLE_TYPE_WRAPPER___HASH_CODE);
 
 		// Create enums
 		titleTypeEEnum = createEEnum(TITLE_TYPE);
@@ -749,6 +772,11 @@ public class ImdbPackageImpl extends EPackageImpl implements ImdbPackage {
 
 		initEClass(titleTypeWrapperEClass, TitleTypeWrapper.class, "TitleTypeWrapper", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTitleTypeWrapper_TitleType(), this.getTitleType(), "titleType", null, 1, 1, TitleTypeWrapper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		op = initEOperation(getTitleTypeWrapper__Equals__Object(), ecorePackage.getEBoolean(), "equals", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEJavaObject(), "obj", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getTitleTypeWrapper__HashCode(), ecorePackage.getEInt(), "hashCode", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(titleTypeEEnum, TitleType.class, "TitleType");

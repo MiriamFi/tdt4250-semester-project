@@ -120,6 +120,10 @@
     <eLiterals name="VIDEO" value="4"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TitleTypeWrapper">
+    <eOperations name="equals" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="obj" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+    </eOperations>
+    <eOperations name="hashCode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="titleType" lowerBound="1"
         eType="#//TitleType"/>
   </eClassifiers>

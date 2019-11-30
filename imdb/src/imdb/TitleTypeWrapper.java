@@ -46,4 +46,20 @@ public interface TitleTypeWrapper extends EObject {
 	 */
 	void setTitleType(TitleType value);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	boolean equals(Object obj);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	int hashCode();
+
 } // TitleTypeWrapper
