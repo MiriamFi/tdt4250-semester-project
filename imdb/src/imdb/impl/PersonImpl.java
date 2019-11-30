@@ -8,6 +8,7 @@ import imdb.Involvement;
 import imdb.Person;
 
 import imdb.Title;
+import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -342,6 +343,20 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public boolean isFilteredBy(String searchString, boolean caseInsensitive) {
+		String cleanedName = name;
+		if (caseInsensitive)
+			cleanedName = cleanedName.toLowerCase();
+
+		return cleanedName.contains(searchString);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
@@ -518,6 +533,20 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case ImdbPackage.PERSON___IS_FILTERED_BY__STRING_BOOLEAN:
+				return isFilteredBy((String)arguments.get(0), (Boolean)arguments.get(1));
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

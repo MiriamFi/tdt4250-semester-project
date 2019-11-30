@@ -224,13 +224,22 @@ public interface ImdbPackage extends EPackage {
 	int TITLE_FEATURE_COUNT = 11;
 
 	/**
+	 * The operation id for the '<em>Is Filtered By</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TITLE___IS_FILTERED_BY__STRING_BOOLEAN = 0;
+
+	/**
 	 * The number of operations of the '<em>Title</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TITLE_OPERATION_COUNT = 0;
+	int TITLE_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link imdb.impl.TvSeriesImpl <em>Tv Series</em>}' class.
@@ -367,6 +376,15 @@ public interface ImdbPackage extends EPackage {
 	 * @ordered
 	 */
 	int TV_SERIES_FEATURE_COUNT = TITLE_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Is Filtered By</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TV_SERIES___IS_FILTERED_BY__STRING_BOOLEAN = TITLE___IS_FILTERED_BY__STRING_BOOLEAN;
 
 	/**
 	 * The number of operations of the '<em>Tv Series</em>' class.
@@ -533,6 +551,15 @@ public interface ImdbPackage extends EPackage {
 	int EPISODE_FEATURE_COUNT = TITLE_FEATURE_COUNT + 3;
 
 	/**
+	 * The operation id for the '<em>Is Filtered By</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EPISODE___IS_FILTERED_BY__STRING_BOOLEAN = TITLE___IS_FILTERED_BY__STRING_BOOLEAN;
+
+	/**
 	 * The number of operations of the '<em>Episode</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -678,13 +705,22 @@ public interface ImdbPackage extends EPackage {
 	int PERSON_FEATURE_COUNT = 8;
 
 	/**
+	 * The operation id for the '<em>Is Filtered By</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERSON___IS_FILTERED_BY__STRING_BOOLEAN = 0;
+
+	/**
 	 * The number of operations of the '<em>Person</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON_OPERATION_COUNT = 0;
+	int PERSON_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link imdb.impl.InvolvementImpl <em>Involvement</em>}' class.
@@ -980,6 +1016,16 @@ public interface ImdbPackage extends EPackage {
 	EAttribute getTitle_ID();
 
 	/**
+	 * Returns the meta object for the '{@link imdb.Title#isFilteredBy(java.lang.String, boolean) <em>Is Filtered By</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Filtered By</em>' operation.
+	 * @see imdb.Title#isFilteredBy(java.lang.String, boolean)
+	 * @generated
+	 */
+	EOperation getTitle__IsFilteredBy__String_boolean();
+
+	/**
 	 * Returns the meta object for class '{@link imdb.TvSeries <em>Tv Series</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1108,6 +1154,16 @@ public interface ImdbPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getPerson_ID();
+
+	/**
+	 * Returns the meta object for the '{@link imdb.Person#isFilteredBy(java.lang.String, boolean) <em>Is Filtered By</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Filtered By</em>' operation.
+	 * @see imdb.Person#isFilteredBy(java.lang.String, boolean)
+	 * @generated
+	 */
+	EOperation getPerson__IsFilteredBy__String_boolean();
 
 	/**
 	 * Returns the meta object for class '{@link imdb.Episode <em>Episode</em>}'.
@@ -1448,6 +1504,14 @@ public interface ImdbPackage extends EPackage {
 		EAttribute TITLE__ID = eINSTANCE.getTitle_ID();
 
 		/**
+		 * The meta object literal for the '<em><b>Is Filtered By</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation TITLE___IS_FILTERED_BY__STRING_BOOLEAN = eINSTANCE.getTitle__IsFilteredBy__String_boolean();
+
+		/**
 		 * The meta object literal for the '{@link imdb.impl.TvSeriesImpl <em>Tv Series</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1546,6 +1610,14 @@ public interface ImdbPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute PERSON__ID = eINSTANCE.getPerson_ID();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Filtered By</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation PERSON___IS_FILTERED_BY__STRING_BOOLEAN = eINSTANCE.getPerson__IsFilteredBy__String_boolean();
 
 		/**
 		 * The meta object literal for the '{@link imdb.impl.EpisodeImpl <em>Episode</em>}' class.

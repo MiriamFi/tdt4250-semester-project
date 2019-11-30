@@ -181,4 +181,15 @@ public interface Person extends EObject {
 	 * @generated
 	 */
 	void setID(String value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * @param searchString a string assumed to be lower case if <b>caseInsensitive</b> is {@code true}.
+	 * @param caseInsensitive
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	boolean isFilteredBy(String searchString, boolean caseInsensitive);
+
 } // Person
