@@ -1,15 +1,21 @@
 package imdb.odesign;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 import org.eclipse.emf.ecore.EObject;
 
+import imdb.Episode;
 import imdb.Imdb;
 import imdb.ImdbFactory;
 import imdb.Title;
 import imdb.TitleType;
 import imdb.TitleTypeWrapper;
+import imdb.TvSeries;
 
 /**
  * The services class used by VSM.
@@ -22,6 +28,38 @@ public class Services {
 	public EObject myService(EObject self, String arg) {
 		// TODO Auto-generated code
 		return self;
+    }
+    
+
+    
+    public Collection<Episode> getSeasons(EObject self){
+    	Map<Integer, Episode> seasons = new HashMap<Integer, Episode>();
+    	
+    	if( !(self instanceof TvSeries)) {
+    		return seasons.values();
+    		
+    	}
+    	for(Episode episode : ((TvSeries) self).getEpisodes()) {
+    		int season = episode.getSeasonNumber();
+    		if(!seasons.containsKey(season)){
+    			seasons.put(season, episode);
+    		}
+    	}
+    	return seasons.values();
+    }
+    
+    public List<Episode> getEpisodes (EObject self){
+    	List<Episode> episodes = new ArrayList<Episode>();
+    	if( !(self instanceof Episode)) {
+    		return episodes;
+    	}
+    	Episode episode  = (Episode) self;
+    	for(Episode e: episode.getSeries().getEpisodes()) {
+    		if(e.getSeasonNumber() == episode.getSeasonNumber()) {
+    			episodes.add(e);
+    		}
+    	}
+    	return episodes;
 	}
 
 	public Collection<TitleTypeWrapper> getAvailableTitleTypes(Imdb self) {

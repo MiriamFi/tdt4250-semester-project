@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:filter="http://www.eclipse.org/sirius/diagram/description/filter/1.1.0" xmlns:properties="http://www.eclipse.org/sirius/properties/1.0.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="odesign" version="12.0.0.2017041100">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:description_3="http://www.eclipse.org/sirius/tree/description/1.0.0" xmlns:filter="http://www.eclipse.org/sirius/diagram/description/filter/1.1.0" xmlns:properties="http://www.eclipse.org/sirius/properties/1.0.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="odesign" version="12.0.0.2017041100">
   <ownedViewpoints name="imdb_viewpoint" modelFileExtension="imdb">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Persons Network Diagram" domainClass="imdb::Imdb" enablePopupBars="true">
       <defaultLayer name="Default">
@@ -74,7 +74,7 @@
             <menuItemDescription xsi:type="tool_1:OperationAction" name="Title details">
               <view name="views"/>
               <initialOperation>
-                <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='title_viewpoint']/@ownedRepresentations[name='Title%20detail%20diagram']"/>
+                <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Title%20detail%20diagram']"/>
               </initialOperation>
             </menuItemDescription>
           </ownedTools>
@@ -126,7 +126,7 @@
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="Imdb" detailDescriptions="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Create%20Imdb%20Title%20Table'] //@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Create%20Imdb%20Persons%20Table']" semanticCandidatesExpression="aql:self" domainClass="imdb::Imdb">
+        <nodeMappings name="Imdb" detailDescriptions="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Create%20Imdb%20Title%20Table'] //@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Create%20Imdb%20Persons%20Table'] //@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Create%20Imdb%20TvSeries%20Tree']" semanticCandidatesExpression="aql:self" domainClass="imdb::Imdb">
           <style xsi:type="style:EllipseNodeDescription" labelSize="12" labelExpression="aql:'IMDB'" labelPosition="node" resizeKind="NSEW" horizontalDiameterComputationExpression="12" verticalDiameterComputationExpression="12">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -289,12 +289,6 @@
             </initialOperation>
           </ownedTools>
           <ownedTools xsi:type="tool_1:PopupMenu" name="Navigation">
-            <menuItemDescription xsi:type="tool_1:OperationAction" name="Tv Series Tree">
-              <view name="views"/>
-              <initialOperation>
-                <firstModelOperations xsi:type="tool:Navigation"/>
-              </initialOperation>
-            </menuItemDescription>
             <menuItemDescription xsi:type="tool_1:OperationAction" name="Persons Network">
               <view name="views"/>
               <initialOperation>
@@ -310,7 +304,7 @@
             <menuItemDescription xsi:type="tool_1:OperationAction" name="Title Details">
               <view name="views"/>
               <initialOperation>
-                <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='title_viewpoint']/@ownedRepresentations[name='Title%20detail%20diagram']"/>
+                <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Title%20detail%20diagram']"/>
               </initialOperation>
             </menuItemDescription>
           </ownedTools>
@@ -324,11 +318,16 @@
             <containerViewVariable name="containerView"/>
             <representationNameVariable name="tableName"/>
           </ownedTools>
+          <ownedTools xsi:type="description_3:TreeCreationDescription" name="Create Imdb TvSeries Tree" treeDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='TVseries%20tree']">
+            <initialOperation/>
+            <containerViewVariable name="containerView"/>
+            <representationNameVariable name="treeName"/>
+          </ownedTools>
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_2:EditionTableDescription" name="TitleTable" titleExpression="Imdb Title Table" initialisation="true" domainClass="imdb::Imdb">
-      <ownedRepresentationCreationDescriptions xsi:type="tool:DiagramCreationDescription" name="Create Title Details" diagramDescription="//@ownedViewpoints[name='title_viewpoint']/@ownedRepresentations[name='Title%20detail%20diagram']">
+      <ownedRepresentationCreationDescriptions xsi:type="tool:DiagramCreationDescription" name="Create Title Details" diagramDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Title%20detail%20diagram']">
         <initialOperation/>
         <containerViewVariable name="containerView"/>
         <representationNameVariable name="diagramName"/>
@@ -338,7 +337,7 @@
         <containerVariable name="container"/>
         <representationNameVariable name="diagramName"/>
       </ownedRepresentationNavigationDescriptions>
-      <ownedRepresentationNavigationDescriptions xsi:type="tool:DiagramNavigationDescription" diagramDescription="//@ownedViewpoints[name='title_viewpoint']/@ownedRepresentations[name='Title%20detail%20diagram']">
+      <ownedRepresentationNavigationDescriptions xsi:type="tool:DiagramNavigationDescription" diagramDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Title%20detail%20diagram']">
         <containerViewVariable name="containerView"/>
         <containerVariable name="container"/>
         <representationNameVariable name="diagramName"/>
@@ -371,6 +370,152 @@
       <ownedColumnMappings name="Characters" headerLabelExpression="Characters" featureName="*" labelExpression="aql:self.involvement.character->asOrderedSet()->sep(', ') ->toString()"/>
       <ownedColumnMappings name="Jobs" headerLabelExpression="Jobs" featureName="*" labelExpression="aql:self.involvement.job->asOrderedSet()->sep(', ') ->toString()"/>
     </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Title detail diagram" titleExpression="aql:'Details of '+self.name" domainClass="imdb::Title" enablePopupBars="true">
+      <defaultLayer name="Default">
+        <containerMappings name="Title Container" semanticCandidatesExpression="var:self" domainClass="imdb::Title" childrenPresentation="HorizontalStack">
+          <subContainerMappings name="Title's Persons Container" semanticCandidatesExpression="var:self" domainClass="imdb::Title" childrenPresentation="List">
+            <subNodeMappings name="Title's Persons Node" semanticCandidatesExpression="aql:self.involvements.person" doubleClickDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Title%20detail%20diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Associated%20Person']" domainClass="imdb::Person">
+              <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="aql:self.name -> sep('\n') ->toString()" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              </style>
+            </subNodeMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="Crew">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              <labelFormat>bold</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+            </style>
+          </subContainerMappings>
+          <subContainerMappings name="Title's Roles Container" semanticCandidatesExpression="var:self" domainClass="imdb::Title" childrenPresentation="List">
+            <subNodeMappings name="Title's Roles Node" semanticCandidatesExpression="aql:self" domainClass="imdb::Title">
+              <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="aql:self.involvements.character->asOrderedSet() -> sep('\n') ->toString()" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              </style>
+            </subNodeMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="Roles">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              <labelFormat>bold</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+            </style>
+          </subContainerMappings>
+          <subContainerMappings name="Title's Jobs Container" semanticCandidatesExpression="var:self" domainClass="imdb::Title" childrenPresentation="List">
+            <subNodeMappings name="Title's Job Node" semanticCandidatesExpression="aql:self" domainClass="imdb::Title">
+              <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="aql:self.involvements.job -> sep('\n') ->toString()" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              </style>
+            </subNodeMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="Jobs">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              <labelFormat>bold</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+            </style>
+          </subContainerMappings>
+          <subContainerMappings name="Title's Genres Container" semanticCandidatesExpression="var:self" domainClass="imdb::Title" childrenPresentation="List">
+            <subNodeMappings name="Title's Genre Node" semanticCandidatesExpression="aql:self" domainClass="imdb::Title">
+              <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="aql:self.genre->asOrderedSet()->sep('\n') ->toString()" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              </style>
+            </subNodeMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="Genres">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              <labelFormat>bold</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+            </style>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="14" showIcon="false">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
+        <toolSections>
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="Title">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:Navigation"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="Associated Person" mappings="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Title%20detail%20diagram']/@defaultLayer/@containerMappings[name='Title%20Container']/@subContainerMappings[name='Title%27s%20Persons%20Container']/@subNodeMappings[name='Title%27s%20Persons%20Node']">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20detail%20diagram']"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:PaneBasedSelectionWizardDescription" name="Diagram for selected titles" candidatesExpression="aql:self.involvement.title">
+            <element name="element"/>
+            <containerView name="containerView"/>
+            <container name="container"/>
+            <initialOperation/>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:PopupMenu" name="Navigation">
+            <menuItemDescription xsi:type="tool_1:OperationAction" name="Imdb Diagram">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.imdb">
+                  <subModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']"/>
+                </firstModelOperations>
+              </initialOperation>
+            </menuItemDescription>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_3:TreeDescription" name="TVseries tree" titleExpression="TvSeries" domainClass="imdb::Imdb">
+      <subItemMappings name="Imdb" navigationDescriptions="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='TVseries%20tree']/@ownedRepresentationNavigationDescriptions[name='Navigate%20to%20Imdb%20diagram']" domainClass="imdb::Imdb" semanticCandidatesExpression="aql:self">
+        <defaultStyle labelExpression="aql:'IMDB'">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="TVseries branch" detailDescriptions="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='TVseries%20tree']/@ownedRepresentationCreationDescriptions[name='Create%20Title%20Details']" domainClass="imdb::TvSeries" semanticCandidatesExpression="aql:self.titles">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <subItemMappings name="Season branch" domainClass="imdb::Episode" semanticCandidatesExpression="aql:self.getSeasons()">
+            <defaultStyle labelExpression="aql:'Season ' + self.seasonNumber">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_purple']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </defaultStyle>
+            <subItemMappings name="Episode branch" detailDescriptions="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='TVseries%20tree']/@ownedRepresentationCreationDescriptions[name='Create%20Title%20Details']" domainClass="imdb::Episode" semanticCandidatesExpression="aql: self.getEpisodes()">
+              <defaultStyle>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_red']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </defaultStyle>
+            </subItemMappings>
+          </subItemMappings>
+        </subItemMappings>
+      </subItemMappings>
+      <ownedRepresentationCreationDescriptions xsi:type="tool:DiagramCreationDescription" name="Create Title Details" diagramDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Title%20detail%20diagram']">
+        <initialOperation/>
+        <containerViewVariable name="containerView"/>
+        <representationNameVariable name="diagramName"/>
+      </ownedRepresentationCreationDescriptions>
+      <ownedRepresentationNavigationDescriptions xsi:type="tool:DiagramNavigationDescription" name="Navigate to Imdb diagram" diagramDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']">
+        <containerViewVariable name="containerView"/>
+        <containerVariable name="container"/>
+        <representationNameVariable name="diagramName"/>
+      </ownedRepresentationNavigationDescriptions>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="imdb.odesign.Services"/>
   </ownedViewpoints>
   <ownedViewpoints name="person_viewpoint" modelFileExtension="imdb">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Person detail diagram" titleExpression="aql:'Details of '+self.name" domainClass="imdb::Person" enablePopupBars="true">
@@ -470,7 +615,7 @@
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:element">
-                <subModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='title_viewpoint']/@ownedRepresentations[name='Title%20detail%20diagram']"/>
+                <subModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Title%20detail%20diagram']"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -569,116 +714,5 @@
       </defaultLayer>
     </ownedRepresentations>
     <ownedJavaExtensions qualifiedClassName="imdb.odesign.Services"/>
-  </ownedViewpoints>
-  <ownedViewpoints name="title_viewpoint" modelFileExtension="imdb">
-    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Title detail diagram" titleExpression="aql:'Details of '+self.name" domainClass="imdb::Title" enablePopupBars="true">
-      <defaultLayer name="Default">
-        <containerMappings name="Title Container" semanticCandidatesExpression="var:self" domainClass="imdb::Title" childrenPresentation="HorizontalStack">
-          <subContainerMappings name="Title's Persons Container" semanticCandidatesExpression="var:self" domainClass="imdb::Title" childrenPresentation="List">
-            <subNodeMappings name="Title's Persons Node" semanticCandidatesExpression="aql:self.involvements.person" doubleClickDescription="//@ownedViewpoints[name='title_viewpoint']/@ownedRepresentations[name='Title%20detail%20diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Associated%20Person']" domainClass="imdb::Person">
-              <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="aql:self.name -> sep('\n') ->toString()" labelPosition="node" resizeKind="NSEW">
-                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-              </style>
-            </subNodeMappings>
-            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="Crew">
-              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-              <labelFormat>bold</labelFormat>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
-            </style>
-          </subContainerMappings>
-          <subContainerMappings name="Title's Roles Container" semanticCandidatesExpression="var:self" domainClass="imdb::Title" childrenPresentation="List">
-            <subNodeMappings name="Title's Roles Node" semanticCandidatesExpression="aql:self" domainClass="imdb::Title">
-              <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="aql:self.involvements.character->asOrderedSet() -> sep('\n') ->toString()" labelPosition="node" resizeKind="NSEW">
-                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-              </style>
-            </subNodeMappings>
-            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="Roles">
-              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-              <labelFormat>bold</labelFormat>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
-            </style>
-          </subContainerMappings>
-          <subContainerMappings name="Title's Jobs Container" semanticCandidatesExpression="var:self" domainClass="imdb::Title" childrenPresentation="List">
-            <subNodeMappings name="Title's Job Node" semanticCandidatesExpression="aql:self" domainClass="imdb::Title">
-              <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="aql:self.involvements.job -> sep('\n') ->toString()" labelPosition="node" resizeKind="NSEW">
-                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-              </style>
-            </subNodeMappings>
-            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="Jobs">
-              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-              <labelFormat>bold</labelFormat>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
-            </style>
-          </subContainerMappings>
-          <subContainerMappings name="Title's Genres Container" semanticCandidatesExpression="var:self" domainClass="imdb::Title" childrenPresentation="List">
-            <subNodeMappings name="Title's Genre Node" semanticCandidatesExpression="aql:self" domainClass="imdb::Title">
-              <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="aql:self.genre->asOrderedSet()->sep('\n') ->toString()" labelPosition="node" resizeKind="NSEW">
-                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-              </style>
-            </subNodeMappings>
-            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="Genres">
-              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-              <labelFormat>bold</labelFormat>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
-            </style>
-          </subContainerMappings>
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="14" showIcon="false">
-            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <labelFormat>bold</labelFormat>
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
-          </style>
-        </containerMappings>
-        <toolSections>
-          <ownedTools xsi:type="tool:DoubleClickDescription" name="Title">
-            <element name="element"/>
-            <elementView name="elementView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool:Navigation"/>
-            </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool:DoubleClickDescription" name="Associated Person" mappings="//@ownedViewpoints[name='title_viewpoint']/@ownedRepresentations[name='Title%20detail%20diagram']/@defaultLayer/@containerMappings[name='Title%20Container']/@subContainerMappings[name='Title%27s%20Persons%20Container']/@subNodeMappings[name='Title%27s%20Persons%20Node']">
-            <element name="element"/>
-            <elementView name="elementView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20detail%20diagram']"/>
-            </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool_1:PaneBasedSelectionWizardDescription" name="Diagram for selected titles" candidatesExpression="aql:self.involvement.title">
-            <element name="element"/>
-            <containerView name="containerView"/>
-            <container name="container"/>
-            <initialOperation/>
-          </ownedTools>
-          <ownedTools xsi:type="tool_1:PopupMenu" name="Navigation">
-            <menuItemDescription xsi:type="tool_1:OperationAction" name="Imdb Diagram">
-              <view name="views"/>
-              <initialOperation>
-                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.imdb">
-                  <subModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']"/>
-                </firstModelOperations>
-              </initialOperation>
-            </menuItemDescription>
-          </ownedTools>
-        </toolSections>
-      </defaultLayer>
-    </ownedRepresentations>
   </ownedViewpoints>
 </description:Group>
