@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:filter="http://www.eclipse.org/sirius/diagram/description/filter/1.1.0" xmlns:properties="http://www.eclipse.org/sirius/properties/1.0.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="odesign" version="12.0.0.2017041100">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:description_3="http://www.eclipse.org/sirius/tree/description/1.0.0" xmlns:filter="http://www.eclipse.org/sirius/diagram/description/filter/1.1.0" xmlns:properties="http://www.eclipse.org/sirius/properties/1.0.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="odesign" version="12.0.0.2017041100">
   <ownedViewpoints name="imdb_viewpoint" modelFileExtension="imdb">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Persons Network Diagram" domainClass="imdb::Imdb" enablePopupBars="true">
       <defaultLayer name="Default">
@@ -133,7 +133,7 @@
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="Imdb" detailDescriptions="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Create%20Imdb%20Title%20Table'] //@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Create%20Imdb%20Persons%20Table']" semanticCandidatesExpression="aql:self" domainClass="imdb::Imdb">
+        <nodeMappings name="Imdb" detailDescriptions="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Create%20Imdb%20Title%20Table'] //@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Create%20Imdb%20Persons%20Table'] //@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Create%20Imdb%20TvSeries%20Tree']" semanticCandidatesExpression="aql:self" domainClass="imdb::Imdb">
           <style xsi:type="style:EllipseNodeDescription" labelSize="12" labelExpression="aql:'IMDB'" labelPosition="node" resizeKind="NSEW" horizontalDiameterComputationExpression="12" verticalDiameterComputationExpression="12">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -296,12 +296,6 @@
             </initialOperation>
           </ownedTools>
           <ownedTools xsi:type="tool_1:PopupMenu" name="Navigation">
-            <menuItemDescription xsi:type="tool_1:OperationAction" name="Tv Series Tree">
-              <view name="views"/>
-              <initialOperation>
-                <firstModelOperations xsi:type="tool:Navigation"/>
-              </initialOperation>
-            </menuItemDescription>
             <menuItemDescription xsi:type="tool_1:OperationAction" name="Persons Network">
               <view name="views"/>
               <initialOperation>
@@ -444,6 +438,11 @@
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="description_3:TreeCreationDescription" name="Create Imdb TvSeries Tree" treeDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='TVseries%20tree']">
+            <initialOperation/>
+            <containerViewVariable name="containerView"/>
+            <representationNameVariable name="treeName"/>
           </ownedTools>
         </toolSections>
       </defaultLayer>
@@ -603,6 +602,43 @@
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_3:TreeDescription" name="TVseries tree" titleExpression="TvSeries" domainClass="imdb::Imdb">
+      <subItemMappings name="Imdb" navigationDescriptions="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='TVseries%20tree']/@ownedRepresentationNavigationDescriptions[name='Navigate%20to%20Imdb%20diagram']" domainClass="imdb::Imdb" semanticCandidatesExpression="aql:self">
+        <defaultStyle labelExpression="aql:'IMDB'">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="TVseries branch" detailDescriptions="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='TVseries%20tree']/@ownedRepresentationCreationDescriptions[name='Create%20Title%20Details']" domainClass="imdb::TvSeries" semanticCandidatesExpression="aql:self.titles">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <subItemMappings name="Season branch" domainClass="imdb::Episode" semanticCandidatesExpression="aql:self.getSeasons()">
+            <defaultStyle labelExpression="aql:'Season ' + self.seasonNumber">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_purple']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </defaultStyle>
+            <subItemMappings name="Episode branch" detailDescriptions="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='TVseries%20tree']/@ownedRepresentationCreationDescriptions[name='Create%20Title%20Details']" domainClass="imdb::Episode" semanticCandidatesExpression="aql: self.getEpisodes()">
+              <defaultStyle>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_red']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </defaultStyle>
+            </subItemMappings>
+          </subItemMappings>
+        </subItemMappings>
+      </subItemMappings>
+      <ownedRepresentationCreationDescriptions xsi:type="tool:DiagramCreationDescription" name="Create Title Details" diagramDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Title%20detail%20diagram']">
+        <initialOperation/>
+        <containerViewVariable name="containerView"/>
+        <representationNameVariable name="diagramName"/>
+      </ownedRepresentationCreationDescriptions>
+      <ownedRepresentationNavigationDescriptions xsi:type="tool:DiagramNavigationDescription" name="Navigate to Imdb diagram" diagramDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20diagram']">
+        <containerViewVariable name="containerView"/>
+        <containerVariable name="container"/>
+        <representationNameVariable name="diagramName"/>
+      </ownedRepresentationNavigationDescriptions>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="imdb.odesign.Services"/>
   </ownedViewpoints>
   <ownedViewpoints name="person_viewpoint" modelFileExtension="imdb">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Person detail diagram" titleExpression="aql:'Details of '+self.name" domainClass="imdb::Person" enablePopupBars="true">
