@@ -85,6 +85,15 @@ public interface ImdbFactory extends EFactory {
 	Involvement createInvolvement();
 
 	/**
+	 * Returns a new object of class '<em>Title Type Wrapper</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Title Type Wrapper</em>'.
+	 * @generated
+	 */
+	TitleTypeWrapper createTitleTypeWrapper();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

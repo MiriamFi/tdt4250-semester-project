@@ -11,6 +11,7 @@ import imdb.Person;
 import imdb.Rating;
 import imdb.Title;
 import imdb.TitleType;
+import imdb.TitleTypeWrapper;
 import imdb.TvSeries;
 import imdb.util.ImdbValidator;
 import org.eclipse.emf.ecore.EAttribute;
@@ -71,6 +72,12 @@ public class ImdbPackageImpl extends EPackageImpl implements ImdbPackage {
 	 * @generated
 	 */
 	private EClass involvementEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass titleTypeWrapperEClass = null;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -554,6 +561,26 @@ public class ImdbPackageImpl extends EPackageImpl implements ImdbPackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getTitleTypeWrapper() {
+		return titleTypeWrapperEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTitleTypeWrapper_TitleType() {
+		return (EAttribute)titleTypeWrapperEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EEnum getTitleType() {
 		return titleTypeEEnum;
 	}
@@ -634,6 +661,9 @@ public class ImdbPackageImpl extends EPackageImpl implements ImdbPackage {
 		createEAttribute(involvementEClass, INVOLVEMENT__JOB);
 		createEAttribute(involvementEClass, INVOLVEMENT__CHARACTER);
 
+		titleTypeWrapperEClass = createEClass(TITLE_TYPE_WRAPPER);
+		createEAttribute(titleTypeWrapperEClass, TITLE_TYPE_WRAPPER__TITLE_TYPE);
+
 		// Create enums
 		titleTypeEEnum = createEEnum(TITLE_TYPE);
 	}
@@ -709,7 +739,7 @@ public class ImdbPackageImpl extends EPackageImpl implements ImdbPackage {
 		initEReference(getPerson_KnownForTitles(), this.getTitle(), null, "knownForTitles", null, 0, -1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPerson_Involvement(), this.getInvolvement(), this.getInvolvement_Person(), "involvement", null, 0, -1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPerson_Imdb(), this.getImdb(), this.getImdb_Persons(), "imdb", null, 1, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPerson_ID(), ecorePackage.getEString(), "ID", null, 0, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPerson_ID(), ecorePackage.getEString(), "ID", null, 1, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(involvementEClass, Involvement.class, "Involvement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getInvolvement_Title(), this.getTitle(), this.getTitle_Involvements(), "title", null, 1, 1, Involvement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -717,8 +747,12 @@ public class ImdbPackageImpl extends EPackageImpl implements ImdbPackage {
 		initEAttribute(getInvolvement_Job(), ecorePackage.getEString(), "job", null, 1, 1, Involvement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getInvolvement_Character(), ecorePackage.getEString(), "character", null, 0, 1, Involvement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(titleTypeWrapperEClass, TitleTypeWrapper.class, "TitleTypeWrapper", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTitleTypeWrapper_TitleType(), this.getTitleType(), "titleType", null, 1, 1, TitleTypeWrapper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		// Initialize enums and add enum literals
 		initEEnum(titleTypeEEnum, TitleType.class, "TitleType");
+		addEEnumLiteral(titleTypeEEnum, TitleType.OTHER);
 		addEEnumLiteral(titleTypeEEnum, TitleType.MOVIE);
 		addEEnumLiteral(titleTypeEEnum, TitleType.SHORT);
 		addEEnumLiteral(titleTypeEEnum, TitleType.TVSERIES);

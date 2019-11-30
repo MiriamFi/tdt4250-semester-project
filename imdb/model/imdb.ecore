@@ -96,7 +96,7 @@
         eType="#//Involvement" eOpposite="#//Involvement/person"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="imdb" lowerBound="1" eType="#//Imdb"
         eOpposite="#//Imdb/persons"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Involvement">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
@@ -110,10 +110,15 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="character" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="TitleType">
+    <eLiterals name="OTHER" value="-1"/>
     <eLiterals name="MOVIE"/>
     <eLiterals name="SHORT" value="1"/>
     <eLiterals name="TVSERIES" value="2"/>
     <eLiterals name="TVEPISODE" value="3"/>
     <eLiterals name="VIDEO" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TitleTypeWrapper">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="titleType" lowerBound="1"
+        eType="#//TitleType"/>
   </eClassifiers>
 </ecore:EPackage>

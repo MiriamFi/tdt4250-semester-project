@@ -8,6 +8,7 @@
   <titles name="Star Wars Episode IV: A New Hope"
       region="US"
       language="English"
+      titleType="MOVIE"
       startYear="1977"
       runtime="121"
       ID="tt0076759">
@@ -38,6 +39,7 @@
   <titles name="Star Wars: Episode V - The Empire Strikes Back"
       region="US"
       language="English"
+      titleType="MOVIE"
       startYear="1980"
       runtime="124"
       ID="tt0080684">
@@ -60,6 +62,7 @@
   <titles name="Alien"
       region="US"
       language="English"
+      titleType="MOVIE"
       startYear="1979"
       runtime="117"
       ID="tt0078748">
@@ -80,11 +83,34 @@
   </titles>
   <titles xsi:type="no.ntnu.tdt4250.imdb:TvSeries"
       name="Over the Garden Wall"
+      region="US"
+      language="English"
       titleType="TVSERIES"
-      startYear="1234"
+      startYear="2014"
       runtime="12"
       ID="tt3718778"
-      endYear="1235">
+      endYear="2014">
+    <involvements
+        person="//@persons.8"
+        job="Actor"
+        character="Wirt"/>
+    <involvements
+        person="//@persons.9"
+        job="Actor"
+        character="Gregory"/>
+    <involvements
+        person="//@persons.10"
+        job="Actress"
+        character="Beatrice"/>
+    <genre>Animation</genre>
+    <genre>Short</genre>
+    <genre>Adventure</genre>
+    <genre>Drama</genre>
+    <genre>Family</genre>
+    <genre>Fantasy</genre>
+    <genre>Horror</genre>
+    <genre>Mystery</genre>
+    <genre>Thriller</genre>
     <episodes
         name="Chapter 1: The Old Grist Mill"
         titleType="TVEPISODE"
@@ -172,5 +198,26 @@
       involvement="//@titles.2/@involvements.2">
     <professions>Actress</professions>
     <professions>Soundtrack</professions>
+  </persons>
+  <persons name="Elijah Wood"
+      birthYear="1981"
+      deathYear="-1"
+      involvement="//@titles.3/@involvements.0"
+      ID="nm0000704">
+    <professions>Actor</professions>
+  </persons>
+  <persons name="Collin Dean"
+      birthYear="2005"
+      deathYear="-1"
+      involvement="//@titles.3/@involvements.1"
+      ID="nm5242354">
+    <professions>Actor</professions>
+  </persons>
+  <persons name="Melanie Lynskey"
+      birthYear="1977"
+      deathYear="-1"
+      involvement="//@titles.3/@involvements.2"
+      ID="nm0001491">
+    <professions>Actress</professions>
   </persons>
 </no.ntnu.tdt4250.imdb:Imdb>

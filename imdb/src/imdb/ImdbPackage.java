@@ -750,6 +750,43 @@ public interface ImdbPackage extends EPackage {
 	int INVOLVEMENT_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link imdb.impl.TitleTypeWrapperImpl <em>Title Type Wrapper</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see imdb.impl.TitleTypeWrapperImpl
+	 * @see imdb.impl.ImdbPackageImpl#getTitleTypeWrapper()
+	 * @generated
+	 */
+	int TITLE_TYPE_WRAPPER = 7;
+
+	/**
+	 * The feature id for the '<em><b>Title Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TITLE_TYPE_WRAPPER__TITLE_TYPE = 0;
+
+	/**
+	 * The number of structural features of the '<em>Title Type Wrapper</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TITLE_TYPE_WRAPPER_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Title Type Wrapper</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TITLE_TYPE_WRAPPER_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link imdb.TitleType <em>Title Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -757,7 +794,7 @@ public interface ImdbPackage extends EPackage {
 	 * @see imdb.impl.ImdbPackageImpl#getTitleType()
 	 * @generated
 	 */
-	int TITLE_TYPE = 7;
+	int TITLE_TYPE = 8;
 
 
 	/**
@@ -1194,6 +1231,27 @@ public interface ImdbPackage extends EPackage {
 	EAttribute getInvolvement_Character();
 
 	/**
+	 * Returns the meta object for class '{@link imdb.TitleTypeWrapper <em>Title Type Wrapper</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Title Type Wrapper</em>'.
+	 * @see imdb.TitleTypeWrapper
+	 * @generated
+	 */
+	EClass getTitleTypeWrapper();
+
+	/**
+	 * Returns the meta object for the attribute '{@link imdb.TitleTypeWrapper#getTitleType <em>Title Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Title Type</em>'.
+	 * @see imdb.TitleTypeWrapper#getTitleType()
+	 * @see #getTitleTypeWrapper()
+	 * @generated
+	 */
+	EAttribute getTitleTypeWrapper_TitleType();
+
+	/**
 	 * Returns the meta object for enum '{@link imdb.TitleType <em>Title Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1559,6 +1617,24 @@ public interface ImdbPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute INVOLVEMENT__CHARACTER = eINSTANCE.getInvolvement_Character();
+
+		/**
+		 * The meta object literal for the '{@link imdb.impl.TitleTypeWrapperImpl <em>Title Type Wrapper</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see imdb.impl.TitleTypeWrapperImpl
+		 * @see imdb.impl.ImdbPackageImpl#getTitleTypeWrapper()
+		 * @generated
+		 */
+		EClass TITLE_TYPE_WRAPPER = eINSTANCE.getTitleTypeWrapper();
+
+		/**
+		 * The meta object literal for the '<em><b>Title Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TITLE_TYPE_WRAPPER__TITLE_TYPE = eINSTANCE.getTitleTypeWrapper_TitleType();
 
 		/**
 		 * The meta object literal for the '{@link imdb.TitleType <em>Title Type</em>}' enum.

@@ -119,7 +119,7 @@ public class TitleImpl extends MinimalEObjectImpl.Container implements Title {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final TitleType TITLE_TYPE_EDEFAULT = TitleType.MOVIE;
+	protected static final TitleType TITLE_TYPE_EDEFAULT = TitleType.OTHER;
 
 	/**
 	 * The cached value of the '{@link #getTitleType() <em>Title Type</em>}' attribute.
