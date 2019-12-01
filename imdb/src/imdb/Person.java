@@ -77,12 +77,13 @@ public interface Person extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Death Year</b></em>' attribute.
+	 * The default value is <code>"-1"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Death Year</em>' attribute.
 	 * @see #setDeathYear(int)
 	 * @see imdb.ImdbPackage#getPerson_DeathYear()
-	 * @model
+	 * @model default="-1"
 	 * @generated
 	 */
 	int getDeathYear();
@@ -180,4 +181,15 @@ public interface Person extends EObject {
 	 * @generated
 	 */
 	void setID(String value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * @param searchString a string assumed to be lower case if <b>caseInsensitive</b> is {@code true}.
+	 * @param caseInsensitive
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	boolean isFilteredBy(String searchString, boolean caseInsensitive);
+
 } // Person

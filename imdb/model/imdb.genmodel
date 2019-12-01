@@ -29,6 +29,10 @@
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference imdb.ecore#//Title/imdb"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute imdb.ecore#//Title/genre"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute imdb.ecore#//Title/ID"/>
+      <genOperations ecoreOperation="imdb.ecore#//Title/isFilteredBy">
+        <genParameters ecoreParameter="imdb.ecore#//Title/isFilteredBy/searchString"/>
+        <genParameters ecoreParameter="imdb.ecore#//Title/isFilteredBy/caseInsensitive"/>
+      </genOperations>
     </genClasses>
     <genClasses ecoreClass="imdb.ecore#//TvSeries">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute imdb.ecore#//TvSeries/endYear"/>
@@ -53,6 +57,10 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference imdb.ecore#//Person/involvement"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference imdb.ecore#//Person/imdb"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute imdb.ecore#//Person/ID"/>
+      <genOperations ecoreOperation="imdb.ecore#//Person/isFilteredBy">
+        <genParameters ecoreParameter="imdb.ecore#//Person/isFilteredBy/searchString"/>
+        <genParameters ecoreParameter="imdb.ecore#//Person/isFilteredBy/caseInsensitive"/>
+      </genOperations>
     </genClasses>
     <genClasses ecoreClass="imdb.ecore#//Involvement">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference imdb.ecore#//Involvement/title"/>
@@ -62,6 +70,10 @@
     </genClasses>
     <genClasses ecoreClass="imdb.ecore#//TitleTypeWrapper">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute imdb.ecore#//TitleTypeWrapper/titleType"/>
+      <genOperations ecoreOperation="imdb.ecore#//TitleTypeWrapper/equals">
+        <genParameters ecoreParameter="imdb.ecore#//TitleTypeWrapper/equals/obj"/>
+      </genOperations>
+      <genOperations ecoreOperation="imdb.ecore#//TitleTypeWrapper/hashCode"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

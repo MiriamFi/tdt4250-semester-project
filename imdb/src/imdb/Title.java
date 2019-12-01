@@ -265,4 +265,14 @@ public interface Title extends EObject {
 	 */
 	void setID(String value);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * @param searchString a string assumed to be lower case if <b>caseInsensitive</b> is {@code true}.
+	 * @param caseInsensitive
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	boolean isFilteredBy(String searchString, boolean caseInsensitive);
+
 } // Title

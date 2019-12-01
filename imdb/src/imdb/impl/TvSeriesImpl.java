@@ -44,7 +44,7 @@ public class TvSeriesImpl extends TitleImpl implements TvSeries {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int END_YEAR_EDEFAULT = 0;
+	protected static final int END_YEAR_EDEFAULT = -1;
 
 	/**
 	 * The cached value of the '{@link #getEndYear() <em>End Year</em>}' attribute.

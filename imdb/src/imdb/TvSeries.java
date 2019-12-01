@@ -25,12 +25,13 @@ import org.eclipse.emf.common.util.EList;
 public interface TvSeries extends Title {
 	/**
 	 * Returns the value of the '<em><b>End Year</b></em>' attribute.
+	 * The default value is <code>"-1"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>End Year</em>' attribute.
 	 * @see #setEndYear(int)
 	 * @see imdb.ImdbPackage#getTvSeries_EndYear()
-	 * @model
+	 * @model default="-1"
 	 * @generated
 	 */
 	int getEndYear();

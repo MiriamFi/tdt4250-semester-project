@@ -116,4 +116,5 @@ public interface Involvement extends EObject {
 	 * @generated
 	 */
 	void setCharacter(String value);
+
 } // Involvement
