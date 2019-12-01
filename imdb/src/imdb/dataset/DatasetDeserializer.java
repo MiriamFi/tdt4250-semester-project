@@ -147,8 +147,12 @@ public class DatasetDeserializer {
 		try(BufferedReader br = new BufferedReader(new FileReader(filename))) {
 			// skip the first line, it contains the column headers
 			br.readLine();
+			int i = 0;
 			for(String line; (line = br.readLine()) != null; ) {
 		    	deserializeEpisodeDetails(line);
+
+		    	if (++i % 100_000 == 0)
+		    		System.out.println(i + " episodes deserialized");
 		    }
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -207,8 +211,12 @@ public class DatasetDeserializer {
 		// Open file
 		try(BufferedReader br = new BufferedReader(new FileReader(filename))) {
 			br.readLine(); //skip first line
+			int i = 0;
 		    for(String line; (line = br.readLine()) != null; ) {
 		    	deserializeEachTitle(line);
+
+		    	if (++i % 100_000 == 0)
+		    		System.out.println(i + " titles deserialized");
 		    }
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -329,8 +337,12 @@ public class DatasetDeserializer {
 		// Open file
 		try(BufferedReader br = new BufferedReader(new FileReader(filename))) {
 			br.readLine(); //skip first line
+			int i = 0;
 		    for(String line; (line = br.readLine()) != null; ) {
 		    	deserializePerson(line);
+		    	
+		    	if (++i % 100_000 == 0)
+		    		System.out.println(i + " persons deserialized");
 		    }
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -398,8 +410,12 @@ public class DatasetDeserializer {
 		try(BufferedReader br = new BufferedReader(new FileReader(filename))) {
 			// skip the first line, it contains the column headers
 			br.readLine();
+			int i = 0;
 			for(String line; (line = br.readLine()) != null; ) {
 		    	deserializeEachRating(line);
+
+		    	if (++i % 100_000 == 0)
+		    		System.out.println(i + " ratings deserialized");
 		    }
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -432,8 +448,12 @@ public class DatasetDeserializer {
 		try(BufferedReader br = new BufferedReader(new FileReader(filename))) {
 		    // skip the first line, it contains the column headers
 			br.readLine();
+			int i = 0;
 			for(String line; (line = br.readLine()) != null; ) {
 		    	deserializeInvolvement(line);
+
+		    	if (++i % 100_000 == 0)
+		    		System.out.println(i + " titles deserialized");
 		    }
 		} catch (IOException e) {
 			e.printStackTrace();
