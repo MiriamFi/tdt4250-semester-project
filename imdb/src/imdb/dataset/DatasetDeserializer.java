@@ -66,7 +66,7 @@ public class DatasetDeserializer {
 		// Pick tv series first !important
 		int targetTvSeriesAtLeastCount = 10;
 		while (pickedTitleMap.size() < targetTvSeriesAtLeastCount) {
-			pickRandomTitles(TitleType.TVSERIES, 50);
+			pickRandomTitles(TitleType.TVSERIES, 10);
 			System.out.println("Picked tvseries");
 
 			deserializeEpisodesDetails();
