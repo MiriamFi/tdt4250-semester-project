@@ -13,6 +13,7 @@ name.basics -> persons.tsv
 title.basics.tsv -> titles.tsv
 title.ratings.tsv -> ratings.tsv
 title.principals.tsv -> involvements.tsv
+title.episode.tsv -> episodesDetails.tsv
 `
 These need to be placed in `*\imdb\src\imdb\dataset\`
 
