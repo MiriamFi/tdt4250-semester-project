@@ -4,20 +4,16 @@ package imdb.impl;
 
 import imdb.Imdb;
 import imdb.ImdbPackage;
+
 import imdb.Person;
 import imdb.Title;
-
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -45,7 +41,6 @@ public class ImdbImpl extends MinimalEObjectImpl.Container implements Imdb {
 	 * @ordered
 	 */
 	protected EList<Title> titles;
-
 	/**
 	 * The cached value of the '{@link #getPersons() <em>Persons</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

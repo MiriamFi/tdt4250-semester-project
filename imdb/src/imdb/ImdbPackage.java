@@ -5,6 +5,7 @@ package imdb;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -223,13 +224,22 @@ public interface ImdbPackage extends EPackage {
 	int TITLE_FEATURE_COUNT = 11;
 
 	/**
+	 * The operation id for the '<em>Is Filtered By</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TITLE___IS_FILTERED_BY__STRING_BOOLEAN = 0;
+
+	/**
 	 * The number of operations of the '<em>Title</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TITLE_OPERATION_COUNT = 0;
+	int TITLE_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link imdb.impl.TvSeriesImpl <em>Tv Series</em>}' class.
@@ -368,6 +378,15 @@ public interface ImdbPackage extends EPackage {
 	int TV_SERIES_FEATURE_COUNT = TITLE_FEATURE_COUNT + 2;
 
 	/**
+	 * The operation id for the '<em>Is Filtered By</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TV_SERIES___IS_FILTERED_BY__STRING_BOOLEAN = TITLE___IS_FILTERED_BY__STRING_BOOLEAN;
+
+	/**
 	 * The number of operations of the '<em>Tv Series</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -375,6 +394,16 @@ public interface ImdbPackage extends EPackage {
 	 * @ordered
 	 */
 	int TV_SERIES_OPERATION_COUNT = TITLE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link imdb.impl.PersonImpl <em>Person</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see imdb.impl.PersonImpl
+	 * @see imdb.impl.ImdbPackageImpl#getPerson()
+	 * @generated
+	 */
+	int PERSON = 5;
 
 	/**
 	 * The meta object id for the '{@link imdb.impl.EpisodeImpl <em>Episode</em>}' class.
@@ -522,6 +551,15 @@ public interface ImdbPackage extends EPackage {
 	int EPISODE_FEATURE_COUNT = TITLE_FEATURE_COUNT + 3;
 
 	/**
+	 * The operation id for the '<em>Is Filtered By</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EPISODE___IS_FILTERED_BY__STRING_BOOLEAN = TITLE___IS_FILTERED_BY__STRING_BOOLEAN;
+
+	/**
 	 * The number of operations of the '<em>Episode</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -584,16 +622,6 @@ public interface ImdbPackage extends EPackage {
 	 * @ordered
 	 */
 	int RATING_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link imdb.impl.PersonImpl <em>Person</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see imdb.impl.PersonImpl
-	 * @see imdb.impl.ImdbPackageImpl#getPerson()
-	 * @generated
-	 */
-	int PERSON = 5;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -677,13 +705,22 @@ public interface ImdbPackage extends EPackage {
 	int PERSON_FEATURE_COUNT = 8;
 
 	/**
+	 * The operation id for the '<em>Is Filtered By</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERSON___IS_FILTERED_BY__STRING_BOOLEAN = 0;
+
+	/**
 	 * The number of operations of the '<em>Person</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON_OPERATION_COUNT = 0;
+	int PERSON_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link imdb.impl.InvolvementImpl <em>Involvement</em>}' class.
@@ -714,22 +751,13 @@ public interface ImdbPackage extends EPackage {
 	int INVOLVEMENT__PERSON = 1;
 
 	/**
-	 * The feature id for the '<em><b>Job Category</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INVOLVEMENT__JOB_CATEGORY = 2;
-
-	/**
 	 * The feature id for the '<em><b>Job</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INVOLVEMENT__JOB = 3;
+	int INVOLVEMENT__JOB = 2;
 
 	/**
 	 * The feature id for the '<em><b>Character</b></em>' attribute.
@@ -738,16 +766,7 @@ public interface ImdbPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INVOLVEMENT__CHARACTER = 4;
-
-	/**
-	 * The feature id for the '<em><b>Tvseries</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INVOLVEMENT__TVSERIES = 5;
+	int INVOLVEMENT__CHARACTER = 3;
 
 	/**
 	 * The number of structural features of the '<em>Involvement</em>' class.
@@ -756,7 +775,7 @@ public interface ImdbPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INVOLVEMENT_FEATURE_COUNT = 6;
+	int INVOLVEMENT_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Involvement</em>' class.
@@ -768,6 +787,61 @@ public interface ImdbPackage extends EPackage {
 	int INVOLVEMENT_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link imdb.impl.TitleTypeWrapperImpl <em>Title Type Wrapper</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see imdb.impl.TitleTypeWrapperImpl
+	 * @see imdb.impl.ImdbPackageImpl#getTitleTypeWrapper()
+	 * @generated
+	 */
+	int TITLE_TYPE_WRAPPER = 7;
+
+	/**
+	 * The feature id for the '<em><b>Title Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TITLE_TYPE_WRAPPER__TITLE_TYPE = 0;
+
+	/**
+	 * The number of structural features of the '<em>Title Type Wrapper</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TITLE_TYPE_WRAPPER_FEATURE_COUNT = 1;
+
+	/**
+	 * The operation id for the '<em>Equals</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TITLE_TYPE_WRAPPER___EQUALS__OBJECT = 0;
+
+	/**
+	 * The operation id for the '<em>Hash Code</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TITLE_TYPE_WRAPPER___HASH_CODE = 1;
+
+	/**
+	 * The number of operations of the '<em>Title Type Wrapper</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TITLE_TYPE_WRAPPER_OPERATION_COUNT = 2;
+
+	/**
 	 * The meta object id for the '{@link imdb.TitleType <em>Title Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -775,7 +849,7 @@ public interface ImdbPackage extends EPackage {
 	 * @see imdb.impl.ImdbPackageImpl#getTitleType()
 	 * @generated
 	 */
-	int TITLE_TYPE = 7;
+	int TITLE_TYPE = 8;
 
 
 	/**
@@ -942,6 +1016,16 @@ public interface ImdbPackage extends EPackage {
 	EAttribute getTitle_ID();
 
 	/**
+	 * Returns the meta object for the '{@link imdb.Title#isFilteredBy(java.lang.String, boolean) <em>Is Filtered By</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Filtered By</em>' operation.
+	 * @see imdb.Title#isFilteredBy(java.lang.String, boolean)
+	 * @generated
+	 */
+	EOperation getTitle__IsFilteredBy__String_boolean();
+
+	/**
 	 * Returns the meta object for class '{@link imdb.TvSeries <em>Tv Series</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -972,92 +1056,6 @@ public interface ImdbPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getTvSeries_Episodes();
-
-	/**
-	 * Returns the meta object for class '{@link imdb.Episode <em>Episode</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Episode</em>'.
-	 * @see imdb.Episode
-	 * @generated
-	 */
-	EClass getEpisode();
-
-	/**
-	 * Returns the meta object for the container reference '{@link imdb.Episode#getSeries <em>Series</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Series</em>'.
-	 * @see imdb.Episode#getSeries()
-	 * @see #getEpisode()
-	 * @generated
-	 */
-	EReference getEpisode_Series();
-
-	/**
-	 * Returns the meta object for the attribute '{@link imdb.Episode#getSeasonNumber <em>Season Number</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Season Number</em>'.
-	 * @see imdb.Episode#getSeasonNumber()
-	 * @see #getEpisode()
-	 * @generated
-	 */
-	EAttribute getEpisode_SeasonNumber();
-
-	/**
-	 * Returns the meta object for the attribute '{@link imdb.Episode#getEpisodeNumber <em>Episode Number</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Episode Number</em>'.
-	 * @see imdb.Episode#getEpisodeNumber()
-	 * @see #getEpisode()
-	 * @generated
-	 */
-	EAttribute getEpisode_EpisodeNumber();
-
-	/**
-	 * Returns the meta object for class '{@link imdb.Rating <em>Rating</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Rating</em>'.
-	 * @see imdb.Rating
-	 * @generated
-	 */
-	EClass getRating();
-
-	/**
-	 * Returns the meta object for the attribute '{@link imdb.Rating#getAverageRating <em>Average Rating</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Average Rating</em>'.
-	 * @see imdb.Rating#getAverageRating()
-	 * @see #getRating()
-	 * @generated
-	 */
-	EAttribute getRating_AverageRating();
-
-	/**
-	 * Returns the meta object for the attribute '{@link imdb.Rating#getNumberOfVotes <em>Number Of Votes</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Number Of Votes</em>'.
-	 * @see imdb.Rating#getNumberOfVotes()
-	 * @see #getRating()
-	 * @generated
-	 */
-	EAttribute getRating_NumberOfVotes();
-
-	/**
-	 * Returns the meta object for the container reference '{@link imdb.Rating#getTitle <em>Title</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Title</em>'.
-	 * @see imdb.Rating#getTitle()
-	 * @see #getRating()
-	 * @generated
-	 */
-	EReference getRating_Title();
 
 	/**
 	 * Returns the meta object for class '{@link imdb.Person <em>Person</em>}'.
@@ -1158,6 +1156,102 @@ public interface ImdbPackage extends EPackage {
 	EAttribute getPerson_ID();
 
 	/**
+	 * Returns the meta object for the '{@link imdb.Person#isFilteredBy(java.lang.String, boolean) <em>Is Filtered By</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Filtered By</em>' operation.
+	 * @see imdb.Person#isFilteredBy(java.lang.String, boolean)
+	 * @generated
+	 */
+	EOperation getPerson__IsFilteredBy__String_boolean();
+
+	/**
+	 * Returns the meta object for class '{@link imdb.Episode <em>Episode</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Episode</em>'.
+	 * @see imdb.Episode
+	 * @generated
+	 */
+	EClass getEpisode();
+
+	/**
+	 * Returns the meta object for the container reference '{@link imdb.Episode#getSeries <em>Series</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Series</em>'.
+	 * @see imdb.Episode#getSeries()
+	 * @see #getEpisode()
+	 * @generated
+	 */
+	EReference getEpisode_Series();
+
+	/**
+	 * Returns the meta object for the attribute '{@link imdb.Episode#getSeasonNumber <em>Season Number</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Season Number</em>'.
+	 * @see imdb.Episode#getSeasonNumber()
+	 * @see #getEpisode()
+	 * @generated
+	 */
+	EAttribute getEpisode_SeasonNumber();
+
+	/**
+	 * Returns the meta object for the attribute '{@link imdb.Episode#getEpisodeNumber <em>Episode Number</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Episode Number</em>'.
+	 * @see imdb.Episode#getEpisodeNumber()
+	 * @see #getEpisode()
+	 * @generated
+	 */
+	EAttribute getEpisode_EpisodeNumber();
+
+	/**
+	 * Returns the meta object for class '{@link imdb.Rating <em>Rating</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Rating</em>'.
+	 * @see imdb.Rating
+	 * @generated
+	 */
+	EClass getRating();
+
+	/**
+	 * Returns the meta object for the attribute '{@link imdb.Rating#getAverageRating <em>Average Rating</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Average Rating</em>'.
+	 * @see imdb.Rating#getAverageRating()
+	 * @see #getRating()
+	 * @generated
+	 */
+	EAttribute getRating_AverageRating();
+
+	/**
+	 * Returns the meta object for the attribute '{@link imdb.Rating#getNumberOfVotes <em>Number Of Votes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Number Of Votes</em>'.
+	 * @see imdb.Rating#getNumberOfVotes()
+	 * @see #getRating()
+	 * @generated
+	 */
+	EAttribute getRating_NumberOfVotes();
+
+	/**
+	 * Returns the meta object for the container reference '{@link imdb.Rating#getTitle <em>Title</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Title</em>'.
+	 * @see imdb.Rating#getTitle()
+	 * @see #getRating()
+	 * @generated
+	 */
+	EReference getRating_Title();
+
+	/**
 	 * Returns the meta object for class '{@link imdb.Involvement <em>Involvement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1190,17 +1284,6 @@ public interface ImdbPackage extends EPackage {
 	EReference getInvolvement_Person();
 
 	/**
-	 * Returns the meta object for the attribute '{@link imdb.Involvement#getJobCategory <em>Job Category</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Job Category</em>'.
-	 * @see imdb.Involvement#getJobCategory()
-	 * @see #getInvolvement()
-	 * @generated
-	 */
-	EAttribute getInvolvement_JobCategory();
-
-	/**
 	 * Returns the meta object for the attribute '{@link imdb.Involvement#getJob <em>Job</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1223,15 +1306,45 @@ public interface ImdbPackage extends EPackage {
 	EAttribute getInvolvement_Character();
 
 	/**
-	 * Returns the meta object for the reference '{@link imdb.Involvement#getTvseries <em>Tvseries</em>}'.
+	 * Returns the meta object for class '{@link imdb.TitleTypeWrapper <em>Title Type Wrapper</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Tvseries</em>'.
-	 * @see imdb.Involvement#getTvseries()
-	 * @see #getInvolvement()
+	 * @return the meta object for class '<em>Title Type Wrapper</em>'.
+	 * @see imdb.TitleTypeWrapper
 	 * @generated
 	 */
-	EReference getInvolvement_Tvseries();
+	EClass getTitleTypeWrapper();
+
+	/**
+	 * Returns the meta object for the attribute '{@link imdb.TitleTypeWrapper#getTitleType <em>Title Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Title Type</em>'.
+	 * @see imdb.TitleTypeWrapper#getTitleType()
+	 * @see #getTitleTypeWrapper()
+	 * @generated
+	 */
+	EAttribute getTitleTypeWrapper_TitleType();
+
+	/**
+	 * Returns the meta object for the '{@link imdb.TitleTypeWrapper#equals(java.lang.Object) <em>Equals</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Equals</em>' operation.
+	 * @see imdb.TitleTypeWrapper#equals(java.lang.Object)
+	 * @generated
+	 */
+	EOperation getTitleTypeWrapper__Equals__Object();
+
+	/**
+	 * Returns the meta object for the '{@link imdb.TitleTypeWrapper#hashCode() <em>Hash Code</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Hash Code</em>' operation.
+	 * @see imdb.TitleTypeWrapper#hashCode()
+	 * @generated
+	 */
+	EOperation getTitleTypeWrapper__HashCode();
 
 	/**
 	 * Returns the meta object for enum '{@link imdb.TitleType <em>Title Type</em>}'.
@@ -1391,6 +1504,14 @@ public interface ImdbPackage extends EPackage {
 		EAttribute TITLE__ID = eINSTANCE.getTitle_ID();
 
 		/**
+		 * The meta object literal for the '<em><b>Is Filtered By</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation TITLE___IS_FILTERED_BY__STRING_BOOLEAN = eINSTANCE.getTitle__IsFilteredBy__String_boolean();
+
+		/**
 		 * The meta object literal for the '{@link imdb.impl.TvSeriesImpl <em>Tv Series</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1415,74 +1536,6 @@ public interface ImdbPackage extends EPackage {
 		 * @generated
 		 */
 		EReference TV_SERIES__EPISODES = eINSTANCE.getTvSeries_Episodes();
-
-		/**
-		 * The meta object literal for the '{@link imdb.impl.EpisodeImpl <em>Episode</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see imdb.impl.EpisodeImpl
-		 * @see imdb.impl.ImdbPackageImpl#getEpisode()
-		 * @generated
-		 */
-		EClass EPISODE = eINSTANCE.getEpisode();
-
-		/**
-		 * The meta object literal for the '<em><b>Series</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EPISODE__SERIES = eINSTANCE.getEpisode_Series();
-
-		/**
-		 * The meta object literal for the '<em><b>Season Number</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EPISODE__SEASON_NUMBER = eINSTANCE.getEpisode_SeasonNumber();
-
-		/**
-		 * The meta object literal for the '<em><b>Episode Number</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EPISODE__EPISODE_NUMBER = eINSTANCE.getEpisode_EpisodeNumber();
-
-		/**
-		 * The meta object literal for the '{@link imdb.impl.RatingImpl <em>Rating</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see imdb.impl.RatingImpl
-		 * @see imdb.impl.ImdbPackageImpl#getRating()
-		 * @generated
-		 */
-		EClass RATING = eINSTANCE.getRating();
-
-		/**
-		 * The meta object literal for the '<em><b>Average Rating</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute RATING__AVERAGE_RATING = eINSTANCE.getRating_AverageRating();
-
-		/**
-		 * The meta object literal for the '<em><b>Number Of Votes</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute RATING__NUMBER_OF_VOTES = eINSTANCE.getRating_NumberOfVotes();
-
-		/**
-		 * The meta object literal for the '<em><b>Title</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference RATING__TITLE = eINSTANCE.getRating_Title();
 
 		/**
 		 * The meta object literal for the '{@link imdb.impl.PersonImpl <em>Person</em>}' class.
@@ -1559,6 +1612,82 @@ public interface ImdbPackage extends EPackage {
 		EAttribute PERSON__ID = eINSTANCE.getPerson_ID();
 
 		/**
+		 * The meta object literal for the '<em><b>Is Filtered By</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation PERSON___IS_FILTERED_BY__STRING_BOOLEAN = eINSTANCE.getPerson__IsFilteredBy__String_boolean();
+
+		/**
+		 * The meta object literal for the '{@link imdb.impl.EpisodeImpl <em>Episode</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see imdb.impl.EpisodeImpl
+		 * @see imdb.impl.ImdbPackageImpl#getEpisode()
+		 * @generated
+		 */
+		EClass EPISODE = eINSTANCE.getEpisode();
+
+		/**
+		 * The meta object literal for the '<em><b>Series</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EPISODE__SERIES = eINSTANCE.getEpisode_Series();
+
+		/**
+		 * The meta object literal for the '<em><b>Season Number</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EPISODE__SEASON_NUMBER = eINSTANCE.getEpisode_SeasonNumber();
+
+		/**
+		 * The meta object literal for the '<em><b>Episode Number</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EPISODE__EPISODE_NUMBER = eINSTANCE.getEpisode_EpisodeNumber();
+
+		/**
+		 * The meta object literal for the '{@link imdb.impl.RatingImpl <em>Rating</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see imdb.impl.RatingImpl
+		 * @see imdb.impl.ImdbPackageImpl#getRating()
+		 * @generated
+		 */
+		EClass RATING = eINSTANCE.getRating();
+
+		/**
+		 * The meta object literal for the '<em><b>Average Rating</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RATING__AVERAGE_RATING = eINSTANCE.getRating_AverageRating();
+
+		/**
+		 * The meta object literal for the '<em><b>Number Of Votes</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RATING__NUMBER_OF_VOTES = eINSTANCE.getRating_NumberOfVotes();
+
+		/**
+		 * The meta object literal for the '<em><b>Title</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference RATING__TITLE = eINSTANCE.getRating_Title();
+
+		/**
 		 * The meta object literal for the '{@link imdb.impl.InvolvementImpl <em>Involvement</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1585,14 +1714,6 @@ public interface ImdbPackage extends EPackage {
 		EReference INVOLVEMENT__PERSON = eINSTANCE.getInvolvement_Person();
 
 		/**
-		 * The meta object literal for the '<em><b>Job Category</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute INVOLVEMENT__JOB_CATEGORY = eINSTANCE.getInvolvement_JobCategory();
-
-		/**
 		 * The meta object literal for the '<em><b>Job</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1609,12 +1730,38 @@ public interface ImdbPackage extends EPackage {
 		EAttribute INVOLVEMENT__CHARACTER = eINSTANCE.getInvolvement_Character();
 
 		/**
-		 * The meta object literal for the '<em><b>Tvseries</b></em>' reference feature.
+		 * The meta object literal for the '{@link imdb.impl.TitleTypeWrapperImpl <em>Title Type Wrapper</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see imdb.impl.TitleTypeWrapperImpl
+		 * @see imdb.impl.ImdbPackageImpl#getTitleTypeWrapper()
+		 * @generated
+		 */
+		EClass TITLE_TYPE_WRAPPER = eINSTANCE.getTitleTypeWrapper();
+
+		/**
+		 * The meta object literal for the '<em><b>Title Type</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference INVOLVEMENT__TVSERIES = eINSTANCE.getInvolvement_Tvseries();
+		EAttribute TITLE_TYPE_WRAPPER__TITLE_TYPE = eINSTANCE.getTitleTypeWrapper_TitleType();
+
+		/**
+		 * The meta object literal for the '<em><b>Equals</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation TITLE_TYPE_WRAPPER___EQUALS__OBJECT = eINSTANCE.getTitleTypeWrapper__Equals__Object();
+
+		/**
+		 * The meta object literal for the '<em><b>Hash Code</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation TITLE_TYPE_WRAPPER___HASH_CODE = eINSTANCE.getTitleTypeWrapper__HashCode();
 
 		/**
 		 * The meta object literal for the '{@link imdb.TitleType <em>Title Type</em>}' enum.

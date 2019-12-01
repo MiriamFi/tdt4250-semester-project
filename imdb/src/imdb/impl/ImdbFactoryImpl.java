@@ -64,6 +64,7 @@ public class ImdbFactoryImpl extends EFactoryImpl implements ImdbFactory {
 			case ImdbPackage.RATING: return createRating();
 			case ImdbPackage.PERSON: return createPerson();
 			case ImdbPackage.INVOLVEMENT: return createInvolvement();
+			case ImdbPackage.TITLE_TYPE_WRAPPER: return createTitleTypeWrapper();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -138,6 +139,17 @@ public class ImdbFactoryImpl extends EFactoryImpl implements ImdbFactory {
 	 * @generated
 	 */
 	@Override
+	public Person createPerson() {
+		PersonImpl person = new PersonImpl();
+		return person;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Episode createEpisode() {
 		EpisodeImpl episode = new EpisodeImpl();
 		return episode;
@@ -160,9 +172,9 @@ public class ImdbFactoryImpl extends EFactoryImpl implements ImdbFactory {
 	 * @generated
 	 */
 	@Override
-	public Person createPerson() {
-		PersonImpl person = new PersonImpl();
-		return person;
+	public Involvement createInvolvement() {
+		InvolvementImpl involvement = new InvolvementImpl();
+		return involvement;
 	}
 
 	/**
@@ -171,9 +183,9 @@ public class ImdbFactoryImpl extends EFactoryImpl implements ImdbFactory {
 	 * @generated
 	 */
 	@Override
-	public Involvement createInvolvement() {
-		InvolvementImpl involvement = new InvolvementImpl();
-		return involvement;
+	public TitleTypeWrapper createTitleTypeWrapper() {
+		TitleTypeWrapperImpl titleTypeWrapper = new TitleTypeWrapperImpl();
+		return titleTypeWrapper;
 	}
 
 	/**

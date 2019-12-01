@@ -446,8 +446,7 @@ public class DatasetDeserializer {
 		Involvement involvement = ImdbFactory.eINSTANCE.createInvolvement();
 		involvement.setTitle(pickedTitleMap.get(titleID)); // both ways
 		involvement.setPerson(personMap.get(personID));
-		involvement.setJobCategory(category);
-		involvement.setJob(job);
+		involvement.setJob(category);
 		involvement.setCharacter(character);
 	}
 	

@@ -29,8 +29,8 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see imdb.ImdbPackage#getTitle()
- * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='startYearConstraint runtimeConstraint'"
- *        annotation="http://www.eclipse.org/acceleo/query/1.0 startYearConstraint='self.startYear &gt; 0 and self.startYear &lt;= 2050' runtimeConstraint='self.runtime &gt; 0'"
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='startYearConstraint runtimeConstraint uniqueCharactersConstraint imdbNotNullConstraint titleTypeConstraint'"
+ *        annotation="http://www.eclipse.org/acceleo/query/1.0 startYearConstraint='self.startYear &gt; 0 and self.startYear &lt;= 2050' runtimeConstraint='self.runtime &gt; 0' uniqueCharactersConstraint='self.involvements -&gt; isUnique(inv | inv.character)'"
  * @generated
  */
 public interface Title extends EObject {
@@ -250,7 +250,7 @@ public interface Title extends EObject {
 	 * @return the value of the '<em>ID</em>' attribute.
 	 * @see #setID(String)
 	 * @see imdb.ImdbPackage#getTitle_ID()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	String getID();
@@ -264,5 +264,15 @@ public interface Title extends EObject {
 	 * @generated
 	 */
 	void setID(String value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * @param searchString a string assumed to be lower case if <b>caseInsensitive</b> is {@code true}.
+	 * @param caseInsensitive
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	boolean isFilteredBy(String searchString, boolean caseInsensitive);
 
 } // Title

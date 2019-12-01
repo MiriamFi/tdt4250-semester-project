@@ -18,19 +18,20 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  *
  * @see imdb.ImdbPackage#getTvSeries()
- * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='endYearConstraint hasTitleTypeTvseries'"
- *        annotation="http://www.eclipse.org/acceleo/query/1.0 titleTypeConstraint='self.titleType = TitleType::TVSERIES' endYearConstraint='self.endYear &gt; 0 and self.endYear &lt;= 2050 and self.endYear &gt;= self.startYear'"
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='endYearConstraint'"
+ *        annotation="http://www.eclipse.org/acceleo/query/1.0 endYearConstraint='(self.endYear &gt; 0 and self.endYear &lt;= 2050 and self.endYear &gt;= self.startYear) or self.endYear = -1'"
  * @generated
  */
 public interface TvSeries extends Title {
 	/**
 	 * Returns the value of the '<em><b>End Year</b></em>' attribute.
+	 * The default value is <code>"-1"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>End Year</em>' attribute.
 	 * @see #setEndYear(int)
 	 * @see imdb.ImdbPackage#getTvSeries_EndYear()
-	 * @model
+	 * @model default="-1"
 	 * @generated
 	 */
 	int getEndYear();

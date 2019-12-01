@@ -19,6 +19,14 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum TitleType implements Enumerator {
 	/**
+	 * The '<em><b>OTHER</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #OTHER_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	OTHER(-1, "OTHER", "OTHER"), /**
 	 * The '<em><b>MOVIE</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -67,6 +75,17 @@ public enum TitleType implements Enumerator {
 	 * @ordered
 	 */
 	VIDEO(4, "VIDEO", "VIDEO");
+
+	/**
+	 * The '<em><b>OTHER</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #OTHER
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int OTHER_VALUE = -1;
 
 	/**
 	 * The '<em><b>MOVIE</b></em>' literal value.
@@ -131,6 +150,7 @@ public enum TitleType implements Enumerator {
 	 */
 	private static final TitleType[] VALUES_ARRAY =
 		new TitleType[] {
+			OTHER,
 			MOVIE,
 			SHORT,
 			TVSERIES,
@@ -192,6 +212,7 @@ public enum TitleType implements Enumerator {
 	 */
 	public static TitleType get(int value) {
 		switch (value) {
+			case OTHER_VALUE: return OTHER;
 			case MOVIE_VALUE: return MOVIE;
 			case SHORT_VALUE: return SHORT;
 			case TVSERIES_VALUE: return TVSERIES;
