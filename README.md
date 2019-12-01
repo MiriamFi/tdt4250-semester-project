@@ -10,7 +10,7 @@ We recommend using the google link, as the main imdb datsets use a different nam
 You can import the project by opening a new Eclipse Workspace, preferably located in the root folder of the project downloaded from this page, and clicking Open Projects from file system. And then choosing the root folder of the project downloaded from this page.
 
 ## Deserializing the datsets
-First you can choose to either use the dataset included which are filtered by Region, or use the entire datasets available at imdb, however when downloading these datasets, they will need to be renamed to match the existing datasets. 
+First you can choose to either use the dataset from the google link, or use the datasets available at imdb, however when downloading the imdb datasets, they will need to be renamed to match the following. 
 `
 name.basics -> persons.tsv
 title.basics.tsv -> titles.tsv
