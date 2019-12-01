@@ -1,5 +1,6 @@
 # tdt4250-semester-project
-This project uses a subset of the IMDB Database found at https://www.imdb.com/interfaces/. The subset has been created using python to select only titles made in the US, and aftwrwards filtering all other datasets to include only items that exist or are associated with the US titles.
+This project uses a subset of the IMDB Database found at https://www.imdb.com/interfaces/. The subset has been created using python to select only titles made in the US, and aftwrwards filtering all other datasets to include only items that exist or are associated with the US titles. You can download the filtered subsets from https://drive.google.com/open?id=1YmUb6XO-U-QRwuHYjgTz-tvFm5jrgisG 
+We recommend using the subsets, as the main imdb datsets are quite large, and the naming of the files in the subsets.zip is already correct.
 
 
 ## Import the project
