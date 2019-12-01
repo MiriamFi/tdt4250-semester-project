@@ -61,11 +61,20 @@
           </style>
         </nodeMappings>
         <nodeMappings name="otherTitles" preconditionExpression="if self.name.startsWith('a') then self else self.eContainer() endif" semanticCandidatesExpression="aql:self.involvements.person.involvement.title->select(t | t.titleType != imdb::TitleType::TVEPISODE)->select(t | t.ID != self.ID)" doubleClickDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='SharedCrew%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Other%20Titles']" domainClass="imdb::Title">
-          <style xsi:type="style:SquareDescription" labelSize="12" tooltipExpression="feature:name" sizeComputationExpression="5" labelPosition="node" resizeKind="NSEW" width="20" height="15">
-            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
-          </style>
+          <conditionnalStyles predicateExpression="aql:self.titleType != imdb::TitleType::TVSERIES">
+            <style xsi:type="style:SquareDescription" labelSize="12" labelPosition="node" resizeKind="NSEW" width="18" height="12">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql:self.titleType = imdb::TitleType::TVSERIES">
+            <style xsi:type="style:SquareDescription" labelSize="12" labelPosition="node" resizeKind="NSEW" width="18" height="12">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+            </style>
+          </conditionnalStyles>
         </nodeMappings>
         <edgeMappings sourceMapping="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='SharedCrew%20Diagram']/@defaultLayer/@nodeMappings[name='SharedCrewNode']" targetMapping="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='SharedCrew%20Diagram']/@defaultLayer/@nodeMappings[name='otherTitles']" targetFinderExpression="aql:self.involvements.person.involvement.title->select(t | t.ID != self.ID)">
           <style sizeComputationExpression="2">
@@ -851,11 +860,20 @@
           </style>
         </nodeMappings>
         <nodeMappings name="titlesWorkedOn" semanticCandidatesExpression="aql:self.involvement.title->select(t | t.titleType != imdb::TitleType::TVEPISODE)" domainClass="imdb::Title">
-          <style xsi:type="style:SquareDescription" labelSize="12" tooltipExpression="aql:self.name" labelPosition="node" resizeKind="NSEW" width="16" height="12">
-            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_chocolate']"/>
-          </style>
+          <conditionnalStyles predicateExpression="aql:self.titleType != imdb::TitleType::TVSERIES">
+            <style xsi:type="style:SquareDescription" labelSize="12" labelPosition="node" resizeKind="NSEW" width="18" height="12">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql:self.titleType = imdb::TitleType::TVSERIES">
+            <style xsi:type="style:SquareDescription" labelSize="12" labelPosition="node" resizeKind="NSEW" width="18" height="12">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+            </style>
+          </conditionnalStyles>
         </nodeMappings>
         <edgeMappings name="personTitleEdge" sourceMapping="//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='WorkedOnTitlesSelect']/@defaultLayer/@nodeMappings[name='mainPerson']" targetMapping="//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='WorkedOnTitlesSelect']/@defaultLayer/@nodeMappings[name='titlesWorkedOn']" targetFinderExpression="aql:self.involvement.title">
           <style sizeComputationExpression="2">
