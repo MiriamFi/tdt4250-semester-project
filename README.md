@@ -1,10 +1,10 @@
-# tdt4250-semester-project
+# TDT4250-Semester-Project
 This project uses a subset of the IMDB Database found at https://www.imdb.com/interfaces/. The subset has been created using python to select only titles made in the US, and aftwrwards filtering all other datasets to include only items that exist or are associated with the US titles. You can download the filtered subsets from https://drive.google.com/open?id=1YmUb6XO-U-QRwuHYjgTz-tvFm5jrgisG 
 We recommend using the subsets, as the main imdb datsets are quite large, and the naming of the files in the subsets.zip is already correct.
 
 
 ## Import the project
-You can import the project by opening Eclipse Modeling tools, and using Open Projects from file system. 
+You can import the project by opening Eclipse Modeling tools, and using Open Projects from file system. And then choosing the root folder of the project downloaded from this page.
 
 ## Deserializing the datsets
 First you can choose to either use the dataset included which are filtered by Region, or use the entire datasets available at imdb, however when downloading these datasets, they will need to be renamed to match the existing datasets. 
@@ -32,6 +32,6 @@ To create the first main Imdb diagram, go into `imdb.sirius.editor.model -> Imdb
 
 The viewpoint should now open. From here you can navigate to all other different viewpoints, trees and tables available. See the flowchart to see the navigation options.
 
-## Issues Identifiedz
+## Issues Identified
 Sometimes the TV Series tree won't render all tv series items, we believe this is due to the viewpoint rendering quicker than the java services code can run, if the tree is empty, go into the odesign file located at `imdb.odesign\descriptions\odesign.odesign`
 Under `imdb_viewpoint->TVseries tree->Imdb->TVseries branch->Season branch` In Season Branch's Semantic Expression add a space so that `[self.getSeasons()/] -> [self.getSeasons() /]` and save. Going back to the tree viewpoint and collapse the IMDB view, and expand it, it should now properly render tv series with seasons and episodes.
