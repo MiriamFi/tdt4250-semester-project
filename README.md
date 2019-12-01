@@ -41,4 +41,10 @@ Sometimes the TV Series tree won't render all tv series items, we believe this i
 Under <br/>`imdb_viewpoint->TVseries tree->Imdb->TVseries branch->Season branch`<br/> In Season Branch's Semantic Expression add a space so that<br/> `[self.getSeasons()/] -> [self.getSeasons() /]`<br/> and save. Going back to the tree viewpoint and collapse the IMDB view, and expand it, it should now properly render tv series with seasons and episodes.
 
 ## Ecore Model
-![UML Diagram of the mode](https://github.com/MiriamFi/tdt4250-semester-project/blob/jacksyv-patch-1/UMLModel.PNG)
+This is the model used in the project.
+![UML Diagram of the mode](https://github.com/MiriamFi/tdt4250-semester-project/blob/jacksyv-patch-1/readme-photos/UMLModel.PNG)<br/>
+
+
+## Navigation in Sirius Editor
+The user can navigate through the different representations when using the Sirius editor in the runtime Eclipse. The boxes represent the different representations, and the small boxes inside represent the different elements which can be clicked in order to navigate. Sometime the user will `right click -> Navigation -> *Chosen representation* `, and other times the user will `right click -> New/Open -> *Chosen representation* `. 
+![UML Diagram of the mode](https://github.com/MiriamFi/tdt4250-semester-project/blob/jacksyv-patch-1/readme-photos/Navigation.jpg)
