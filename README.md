@@ -22,15 +22,15 @@ These need to be placed in `*\imdb\src\imdb\dataset\`
 
 When these are placed correctly, you can run DatasetDeserializer.java located in `*\imdb\src\imdb\dataset\` This will deserialize the tsv files and serialize them to a single xmi file. Currently the deserializer is set to choose 500 random titles, and information and people that are connected to these titles. This value can be changed in the `hash500RandomTVSeries()` function. We recommend never going above 500 random titles, and actually reducing the number of titles to possibly 100-200, as most computers will struggle viewing anything more in the Sirius viewpoints that show large amounts of data. Remember that you might need to add an argument to increase max memory allocation to Java, for the subsets you will need about 4,5-5gb. We have not attempted to run this on the full datasets.
 
-After being run the xmi will be named deserialized.xmi and placed in 
+After being run the xmi will be named Imdb.imdb and placed in 
 <br/>
-`*\imdb\src\imdb\dataset\deserialized.xmi`
+`*\imdb\src\imdb\dataset\`
 <br/>
-deserialized.xmi needs to be moved and renamed to <br/>
-`*\imdb.sirius.editor.model\Imdb.imdb`
+Move this Imdb.imdb file to  <br/>
+`*\imdb.sirius.editor.model\`
 <br/> 
 If you're using the xmi pre deserialized, move the Imdb.imdb file to 
-<br/> `*\imdb.sirius.editor.model\Imdb.imdb`
+<br/> `*\imdb.sirius.editor.model\`
 
 ## Running Sirius
 Now that the dataset has been deserialized, you are ready to show the data in the sirius viewpoints. To do this Click <br/>
