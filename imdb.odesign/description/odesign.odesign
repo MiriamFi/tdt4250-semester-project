@@ -449,6 +449,7 @@
                     </controls>
                   </groups>
                 </subModelOperations>
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="titleType" valueExpression="aql:imdb::TitleType::TVEPISODE"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
