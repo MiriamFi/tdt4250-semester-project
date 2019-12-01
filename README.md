@@ -4,7 +4,7 @@ We recommend using the subsets, as the main imdb datsets are quite large, and th
 
 
 ## Import the project
-You can import the project by opening Eclipse Modeling tools, and using Open Projects from file system. And then choosing the root folder of the project downloaded from this page.
+You can import the project by opening Eclipse, and clicking Open Projects from file system. And then choosing the root folder of the project downloaded from this page.
 
 ## Deserializing the datsets
 First you can choose to either use the dataset included which are filtered by Region, or use the entire datasets available at imdb, however when downloading these datasets, they will need to be renamed to match the existing datasets. 
