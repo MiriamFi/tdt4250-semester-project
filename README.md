@@ -54,5 +54,5 @@ This is the model used in the project.
 
 
 ## Navigation in Sirius Editor
-The user can navigate through the different representations when using the Sirius editor in the runtime Eclipse. The boxes represent the different representations, and the small boxes inside represent the different elements which can be clicked in order to navigate. Sometime the user will `right click -> Navigation -> *Chosen representation* `, and other times the user will `right click -> New/Open -> *Chosen representation* `. 
+The user can navigate through the different representations when using the Sirius editor in the runtime Eclipse. The boxes represent the different representations, and the small boxes inside represent the different elements which can be clicked in order to navigate. The user can `right click -> Navigation -> *Chosen representation* `, or `right click -> New/Open -> *Chosen representation* `. 
 ![UML Diagram of the mode](https://github.com/MiriamFi/tdt4250-semester-project/blob/jacksyv-patch-1/readme-photos/Navigation.jpg)
