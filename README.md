@@ -52,6 +52,8 @@ Under <br/>`imdb_viewpoint->TVseries tree->Imdb->TVseries branch->Season branch`
 This is the model used in the project.
 ![UML Diagram of the mode](https://github.com/MiriamFi/tdt4250-semester-project/blob/jacksyv-patch-1/readme-photos/UMLModel.PNG)<br/>
 
+## Creation Tools in Sirius Editor
+In the Imdb Diagram, you can find tools for creating new objects. The tools are displayed in the Palette view on the right side of the screen. Choose an object creation tool, click at an empty space in the Imdb Diagram and fill in the fields in the Dialog Box. It is also possible to create an object by hovering over an empty space in the Imdb Diagram, and clicking on one of the diamonds which will appear.
 
 ## Navigation in Sirius Editor
 The user can navigate through the different representations when using the Sirius editor in the runtime Eclipse. The boxes represent the different representations, and the small boxes inside represent the different elements which can be clicked in order to navigate. The user can `right click -> Navigation -> *Chosen representation* `, or `right click -> New/Open -> *Chosen representation* `. 
