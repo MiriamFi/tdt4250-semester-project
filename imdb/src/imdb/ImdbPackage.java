@@ -88,13 +88,22 @@ public interface ImdbPackage extends EPackage {
 	int IMDB__PERSONS = 1;
 
 	/**
+	 * The feature id for the '<em><b>Genres</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMDB__GENRES = 2;
+
+	/**
 	 * The number of structural features of the '<em>Imdb</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMDB_FEATURE_COUNT = 2;
+	int IMDB_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Imdb</em>' class.
@@ -197,13 +206,13 @@ public interface ImdbPackage extends EPackage {
 	int TITLE__IMDB = 8;
 
 	/**
-	 * The feature id for the '<em><b>Genre</b></em>' attribute list.
+	 * The feature id for the '<em><b>Genres</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TITLE__GENRE = 9;
+	int TITLE__GENRES = 9;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -233,13 +242,22 @@ public interface ImdbPackage extends EPackage {
 	int TITLE___IS_FILTERED_BY__STRING_BOOLEAN = 0;
 
 	/**
+	 * The operation id for the '<em>Set Genres</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TITLE___SET_GENRES__ELIST = 1;
+
+	/**
 	 * The number of operations of the '<em>Title</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TITLE_OPERATION_COUNT = 1;
+	int TITLE_OPERATION_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link imdb.impl.TvSeriesImpl <em>Tv Series</em>}' class.
@@ -333,13 +351,13 @@ public interface ImdbPackage extends EPackage {
 	int TV_SERIES__IMDB = TITLE__IMDB;
 
 	/**
-	 * The feature id for the '<em><b>Genre</b></em>' attribute list.
+	 * The feature id for the '<em><b>Genres</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TV_SERIES__GENRE = TITLE__GENRE;
+	int TV_SERIES__GENRES = TITLE__GENRES;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -387,6 +405,15 @@ public interface ImdbPackage extends EPackage {
 	int TV_SERIES___IS_FILTERED_BY__STRING_BOOLEAN = TITLE___IS_FILTERED_BY__STRING_BOOLEAN;
 
 	/**
+	 * The operation id for the '<em>Set Genres</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TV_SERIES___SET_GENRES__ELIST = TITLE___SET_GENRES__ELIST;
+
+	/**
 	 * The number of operations of the '<em>Tv Series</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -403,7 +430,7 @@ public interface ImdbPackage extends EPackage {
 	 * @see imdb.impl.ImdbPackageImpl#getPerson()
 	 * @generated
 	 */
-	int PERSON = 5;
+	int PERSON = 6;
 
 	/**
 	 * The meta object id for the '{@link imdb.impl.EpisodeImpl <em>Episode</em>}' class.
@@ -497,13 +524,13 @@ public interface ImdbPackage extends EPackage {
 	int EPISODE__IMDB = TITLE__IMDB;
 
 	/**
-	 * The feature id for the '<em><b>Genre</b></em>' attribute list.
+	 * The feature id for the '<em><b>Genres</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EPISODE__GENRE = TITLE__GENRE;
+	int EPISODE__GENRES = TITLE__GENRES;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -560,6 +587,15 @@ public interface ImdbPackage extends EPackage {
 	int EPISODE___IS_FILTERED_BY__STRING_BOOLEAN = TITLE___IS_FILTERED_BY__STRING_BOOLEAN;
 
 	/**
+	 * The operation id for the '<em>Set Genres</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EPISODE___SET_GENRES__ELIST = TITLE___SET_GENRES__ELIST;
+
+	/**
 	 * The number of operations of the '<em>Episode</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -569,6 +605,52 @@ public interface ImdbPackage extends EPackage {
 	int EPISODE_OPERATION_COUNT = TITLE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link imdb.impl.GenreImpl <em>Genre</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see imdb.impl.GenreImpl
+	 * @see imdb.impl.ImdbPackageImpl#getGenre()
+	 * @generated
+	 */
+	int GENRE = 4;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENRE__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Imdb</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENRE__IMDB = 1;
+
+	/**
+	 * The number of structural features of the '<em>Genre</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENRE_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Genre</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENRE_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link imdb.impl.RatingImpl <em>Rating</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -576,7 +658,7 @@ public interface ImdbPackage extends EPackage {
 	 * @see imdb.impl.ImdbPackageImpl#getRating()
 	 * @generated
 	 */
-	int RATING = 4;
+	int RATING = 5;
 
 	/**
 	 * The feature id for the '<em><b>Average Rating</b></em>' attribute.
@@ -669,13 +751,13 @@ public interface ImdbPackage extends EPackage {
 	int PERSON__KNOWN_FOR_TITLES = 4;
 
 	/**
-	 * The feature id for the '<em><b>Involvement</b></em>' reference list.
+	 * The feature id for the '<em><b>Involvements</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__INVOLVEMENT = 5;
+	int PERSON__INVOLVEMENTS = 5;
 
 	/**
 	 * The feature id for the '<em><b>Imdb</b></em>' container reference.
@@ -730,7 +812,7 @@ public interface ImdbPackage extends EPackage {
 	 * @see imdb.impl.ImdbPackageImpl#getInvolvement()
 	 * @generated
 	 */
-	int INVOLVEMENT = 6;
+	int INVOLVEMENT = 7;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' container reference.
@@ -794,7 +876,7 @@ public interface ImdbPackage extends EPackage {
 	 * @see imdb.impl.ImdbPackageImpl#getTitleTypeWrapper()
 	 * @generated
 	 */
-	int TITLE_TYPE_WRAPPER = 7;
+	int TITLE_TYPE_WRAPPER = 8;
 
 	/**
 	 * The feature id for the '<em><b>Title Type</b></em>' attribute.
@@ -849,7 +931,7 @@ public interface ImdbPackage extends EPackage {
 	 * @see imdb.impl.ImdbPackageImpl#getTitleType()
 	 * @generated
 	 */
-	int TITLE_TYPE = 8;
+	int TITLE_TYPE = 9;
 
 
 	/**
@@ -883,6 +965,17 @@ public interface ImdbPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getImdb_Persons();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link imdb.Imdb#getGenres <em>Genres</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Genres</em>'.
+	 * @see imdb.Imdb#getGenres()
+	 * @see #getImdb()
+	 * @generated
+	 */
+	EReference getImdb_Genres();
 
 	/**
 	 * Returns the meta object for class '{@link imdb.Title <em>Title</em>}'.
@@ -994,15 +1087,15 @@ public interface ImdbPackage extends EPackage {
 	EReference getTitle_Imdb();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link imdb.Title#getGenre <em>Genre</em>}'.
+	 * Returns the meta object for the reference list '{@link imdb.Title#getGenres <em>Genres</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Genre</em>'.
-	 * @see imdb.Title#getGenre()
+	 * @return the meta object for the reference list '<em>Genres</em>'.
+	 * @see imdb.Title#getGenres()
 	 * @see #getTitle()
 	 * @generated
 	 */
-	EAttribute getTitle_Genre();
+	EReference getTitle_Genres();
 
 	/**
 	 * Returns the meta object for the attribute '{@link imdb.Title#getID <em>ID</em>}'.
@@ -1024,6 +1117,16 @@ public interface ImdbPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getTitle__IsFilteredBy__String_boolean();
+
+	/**
+	 * Returns the meta object for the '{@link imdb.Title#setGenres(org.eclipse.emf.common.util.EList) <em>Set Genres</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Set Genres</em>' operation.
+	 * @see imdb.Title#setGenres(org.eclipse.emf.common.util.EList)
+	 * @generated
+	 */
+	EOperation getTitle__SetGenres__EList();
 
 	/**
 	 * Returns the meta object for class '{@link imdb.TvSeries <em>Tv Series</em>}'.
@@ -1123,15 +1226,15 @@ public interface ImdbPackage extends EPackage {
 	EReference getPerson_KnownForTitles();
 
 	/**
-	 * Returns the meta object for the reference list '{@link imdb.Person#getInvolvement <em>Involvement</em>}'.
+	 * Returns the meta object for the reference list '{@link imdb.Person#getInvolvements <em>Involvements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Involvement</em>'.
-	 * @see imdb.Person#getInvolvement()
+	 * @return the meta object for the reference list '<em>Involvements</em>'.
+	 * @see imdb.Person#getInvolvements()
 	 * @see #getPerson()
 	 * @generated
 	 */
-	EReference getPerson_Involvement();
+	EReference getPerson_Involvements();
 
 	/**
 	 * Returns the meta object for the container reference '{@link imdb.Person#getImdb <em>Imdb</em>}'.
@@ -1207,6 +1310,38 @@ public interface ImdbPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getEpisode_EpisodeNumber();
+
+	/**
+	 * Returns the meta object for class '{@link imdb.Genre <em>Genre</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Genre</em>'.
+	 * @see imdb.Genre
+	 * @generated
+	 */
+	EClass getGenre();
+
+	/**
+	 * Returns the meta object for the attribute '{@link imdb.Genre#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see imdb.Genre#getName()
+	 * @see #getGenre()
+	 * @generated
+	 */
+	EAttribute getGenre_Name();
+
+	/**
+	 * Returns the meta object for the container reference '{@link imdb.Genre#getImdb <em>Imdb</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Imdb</em>'.
+	 * @see imdb.Genre#getImdb()
+	 * @see #getGenre()
+	 * @generated
+	 */
+	EReference getGenre_Imdb();
 
 	/**
 	 * Returns the meta object for class '{@link imdb.Rating <em>Rating</em>}'.
@@ -1406,6 +1541,14 @@ public interface ImdbPackage extends EPackage {
 		EReference IMDB__PERSONS = eINSTANCE.getImdb_Persons();
 
 		/**
+		 * The meta object literal for the '<em><b>Genres</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference IMDB__GENRES = eINSTANCE.getImdb_Genres();
+
+		/**
 		 * The meta object literal for the '{@link imdb.impl.TitleImpl <em>Title</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1488,12 +1631,12 @@ public interface ImdbPackage extends EPackage {
 		EReference TITLE__IMDB = eINSTANCE.getTitle_Imdb();
 
 		/**
-		 * The meta object literal for the '<em><b>Genre</b></em>' attribute list feature.
+		 * The meta object literal for the '<em><b>Genres</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TITLE__GENRE = eINSTANCE.getTitle_Genre();
+		EReference TITLE__GENRES = eINSTANCE.getTitle_Genres();
 
 		/**
 		 * The meta object literal for the '<em><b>ID</b></em>' attribute feature.
@@ -1510,6 +1653,14 @@ public interface ImdbPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation TITLE___IS_FILTERED_BY__STRING_BOOLEAN = eINSTANCE.getTitle__IsFilteredBy__String_boolean();
+
+		/**
+		 * The meta object literal for the '<em><b>Set Genres</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation TITLE___SET_GENRES__ELIST = eINSTANCE.getTitle__SetGenres__EList();
 
 		/**
 		 * The meta object literal for the '{@link imdb.impl.TvSeriesImpl <em>Tv Series</em>}' class.
@@ -1588,12 +1739,12 @@ public interface ImdbPackage extends EPackage {
 		EReference PERSON__KNOWN_FOR_TITLES = eINSTANCE.getPerson_KnownForTitles();
 
 		/**
-		 * The meta object literal for the '<em><b>Involvement</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Involvements</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PERSON__INVOLVEMENT = eINSTANCE.getPerson_Involvement();
+		EReference PERSON__INVOLVEMENTS = eINSTANCE.getPerson_Involvements();
 
 		/**
 		 * The meta object literal for the '<em><b>Imdb</b></em>' container reference feature.
@@ -1652,6 +1803,32 @@ public interface ImdbPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute EPISODE__EPISODE_NUMBER = eINSTANCE.getEpisode_EpisodeNumber();
+
+		/**
+		 * The meta object literal for the '{@link imdb.impl.GenreImpl <em>Genre</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see imdb.impl.GenreImpl
+		 * @see imdb.impl.ImdbPackageImpl#getGenre()
+		 * @generated
+		 */
+		EClass GENRE = eINSTANCE.getGenre();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GENRE__NAME = eINSTANCE.getGenre_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Imdb</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GENRE__IMDB = eINSTANCE.getGenre_Imdb();
 
 		/**
 		 * The meta object literal for the '{@link imdb.impl.RatingImpl <em>Rating</em>}' class.

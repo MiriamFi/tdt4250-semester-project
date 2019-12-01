@@ -84,6 +84,10 @@ public class ImdbAdapterFactory extends AdapterFactoryImpl {
 				return createEpisodeAdapter();
 			}
 			@Override
+			public Adapter caseGenre(Genre object) {
+				return createGenreAdapter();
+			}
+			@Override
 			public Adapter caseRating(Rating object) {
 				return createRatingAdapter();
 			}
@@ -186,6 +190,20 @@ public class ImdbAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createEpisodeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link imdb.Genre <em>Genre</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see imdb.Genre
+	 * @generated
+	 */
+	public Adapter createGenreAdapter() {
 		return null;
 	}
 

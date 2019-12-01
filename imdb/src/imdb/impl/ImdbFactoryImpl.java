@@ -61,6 +61,7 @@ public class ImdbFactoryImpl extends EFactoryImpl implements ImdbFactory {
 			case ImdbPackage.TITLE: return createTitle();
 			case ImdbPackage.TV_SERIES: return createTvSeries();
 			case ImdbPackage.EPISODE: return createEpisode();
+			case ImdbPackage.GENRE: return createGenre();
 			case ImdbPackage.RATING: return createRating();
 			case ImdbPackage.PERSON: return createPerson();
 			case ImdbPackage.INVOLVEMENT: return createInvolvement();
@@ -153,6 +154,17 @@ public class ImdbFactoryImpl extends EFactoryImpl implements ImdbFactory {
 	public Episode createEpisode() {
 		EpisodeImpl episode = new EpisodeImpl();
 		return episode;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Genre createGenre() {
+		GenreImpl genre = new GenreImpl();
+		return genre;
 	}
 
 	/**

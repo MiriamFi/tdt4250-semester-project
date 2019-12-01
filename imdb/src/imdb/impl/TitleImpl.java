@@ -2,6 +2,7 @@
  */
 package imdb.impl;
 
+import imdb.Genre;
 import imdb.Imdb;
 import imdb.ImdbPackage;
 import imdb.Involvement;
@@ -22,9 +23,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -45,7 +45,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link imdb.impl.TitleImpl#getRating <em>Rating</em>}</li>
  *   <li>{@link imdb.impl.TitleImpl#getInvolvements <em>Involvements</em>}</li>
  *   <li>{@link imdb.impl.TitleImpl#getImdb <em>Imdb</em>}</li>
- *   <li>{@link imdb.impl.TitleImpl#getGenre <em>Genre</em>}</li>
+ *   <li>{@link imdb.impl.TitleImpl#getGenres <em>Genres</em>}</li>
  *   <li>{@link imdb.impl.TitleImpl#getID <em>ID</em>}</li>
  * </ul>
  *
@@ -193,14 +193,14 @@ public class TitleImpl extends MinimalEObjectImpl.Container implements Title {
 	protected EList<Involvement> involvements;
 
 	/**
-	 * The cached value of the '{@link #getGenre() <em>Genre</em>}' attribute list.
+	 * The cached value of the '{@link #getGenres() <em>Genres</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getGenre()
+	 * @see #getGenres()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<String> genre;
+	protected EList<Genre> genres;
 
 	/**
 	 * The default value of the '{@link #getID() <em>ID</em>}' attribute.
@@ -486,11 +486,11 @@ public class TitleImpl extends MinimalEObjectImpl.Container implements Title {
 	 * @generated
 	 */
 	@Override
-	public EList<String> getGenre() {
-		if (genre == null) {
-			genre = new EDataTypeUniqueEList<String>(String.class, this, ImdbPackage.TITLE__GENRE);
+	public EList<Genre> getGenres() {
+		if (genres == null) {
+			genres = new EObjectResolvingEList<Genre>(Genre.class, this, ImdbPackage.TITLE__GENRES);
 		}
-		return genre;
+		return genres;
 	}
 
 	/**
@@ -528,6 +528,16 @@ public class TitleImpl extends MinimalEObjectImpl.Container implements Title {
 			cleanedName = cleanedName.toLowerCase();
 
 		return cleanedName.contains(searchString);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public void setGenres(EList<Genre> genres) {
+		this.genres = genres;
 	}
 
 	/**
@@ -611,8 +621,8 @@ public class TitleImpl extends MinimalEObjectImpl.Container implements Title {
 				return getInvolvements();
 			case ImdbPackage.TITLE__IMDB:
 				return getImdb();
-			case ImdbPackage.TITLE__GENRE:
-				return getGenre();
+			case ImdbPackage.TITLE__GENRES:
+				return getGenres();
 			case ImdbPackage.TITLE__ID:
 				return getID();
 		}
@@ -656,9 +666,9 @@ public class TitleImpl extends MinimalEObjectImpl.Container implements Title {
 			case ImdbPackage.TITLE__IMDB:
 				setImdb((Imdb)newValue);
 				return;
-			case ImdbPackage.TITLE__GENRE:
-				getGenre().clear();
-				getGenre().addAll((Collection<? extends String>)newValue);
+			case ImdbPackage.TITLE__GENRES:
+				getGenres().clear();
+				getGenres().addAll((Collection<? extends Genre>)newValue);
 				return;
 			case ImdbPackage.TITLE__ID:
 				setID((String)newValue);
@@ -702,8 +712,8 @@ public class TitleImpl extends MinimalEObjectImpl.Container implements Title {
 			case ImdbPackage.TITLE__IMDB:
 				setImdb((Imdb)null);
 				return;
-			case ImdbPackage.TITLE__GENRE:
-				getGenre().clear();
+			case ImdbPackage.TITLE__GENRES:
+				getGenres().clear();
 				return;
 			case ImdbPackage.TITLE__ID:
 				setID(ID_EDEFAULT);
@@ -738,8 +748,8 @@ public class TitleImpl extends MinimalEObjectImpl.Container implements Title {
 				return involvements != null && !involvements.isEmpty();
 			case ImdbPackage.TITLE__IMDB:
 				return getImdb() != null;
-			case ImdbPackage.TITLE__GENRE:
-				return genre != null && !genre.isEmpty();
+			case ImdbPackage.TITLE__GENRES:
+				return genres != null && !genres.isEmpty();
 			case ImdbPackage.TITLE__ID:
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 		}
@@ -752,10 +762,14 @@ public class TitleImpl extends MinimalEObjectImpl.Container implements Title {
 	 * @generated
 	 */
 	@Override
+	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
 			case ImdbPackage.TITLE___IS_FILTERED_BY__STRING_BOOLEAN:
 				return isFilteredBy((String)arguments.get(0), (Boolean)arguments.get(1));
+			case ImdbPackage.TITLE___SET_GENRES__ELIST:
+				setGenres((EList<Genre>)arguments.get(0));
+				return null;
 		}
 		return super.eInvoke(operationID, arguments);
 	}
@@ -782,8 +796,6 @@ public class TitleImpl extends MinimalEObjectImpl.Container implements Title {
 		result.append(startYear);
 		result.append(", runtime: ");
 		result.append(runtime);
-		result.append(", genre: ");
-		result.append(genre);
 		result.append(", ID: ");
 		result.append(id);
 		result.append(')');

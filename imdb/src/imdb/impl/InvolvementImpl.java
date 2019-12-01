@@ -193,9 +193,9 @@ public class InvolvementImpl extends MinimalEObjectImpl.Container implements Inv
 		if (newPerson != person) {
 			NotificationChain msgs = null;
 			if (person != null)
-				msgs = ((InternalEObject)person).eInverseRemove(this, ImdbPackage.PERSON__INVOLVEMENT, Person.class, msgs);
+				msgs = ((InternalEObject)person).eInverseRemove(this, ImdbPackage.PERSON__INVOLVEMENTS, Person.class, msgs);
 			if (newPerson != null)
-				msgs = ((InternalEObject)newPerson).eInverseAdd(this, ImdbPackage.PERSON__INVOLVEMENT, Person.class, msgs);
+				msgs = ((InternalEObject)newPerson).eInverseAdd(this, ImdbPackage.PERSON__INVOLVEMENTS, Person.class, msgs);
 			msgs = basicSetPerson(newPerson, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -263,7 +263,7 @@ public class InvolvementImpl extends MinimalEObjectImpl.Container implements Inv
 				return basicSetTitle((Title)otherEnd, msgs);
 			case ImdbPackage.INVOLVEMENT__PERSON:
 				if (person != null)
-					msgs = ((InternalEObject)person).eInverseRemove(this, ImdbPackage.PERSON__INVOLVEMENT, Person.class, msgs);
+					msgs = ((InternalEObject)person).eInverseRemove(this, ImdbPackage.PERSON__INVOLVEMENTS, Person.class, msgs);
 				return basicSetPerson((Person)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);

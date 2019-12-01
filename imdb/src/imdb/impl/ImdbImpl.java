@@ -2,6 +2,7 @@
  */
 package imdb.impl;
 
+import imdb.Genre;
 import imdb.Imdb;
 import imdb.ImdbPackage;
 
@@ -27,6 +28,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link imdb.impl.ImdbImpl#getTitles <em>Titles</em>}</li>
  *   <li>{@link imdb.impl.ImdbImpl#getPersons <em>Persons</em>}</li>
+ *   <li>{@link imdb.impl.ImdbImpl#getGenres <em>Genres</em>}</li>
  * </ul>
  *
  * @generated
@@ -50,6 +52,16 @@ public class ImdbImpl extends MinimalEObjectImpl.Container implements Imdb {
 	 * @ordered
 	 */
 	protected EList<Person> persons;
+
+	/**
+	 * The cached value of the '{@link #getGenres() <em>Genres</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGenres()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Genre> genres;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -101,6 +113,19 @@ public class ImdbImpl extends MinimalEObjectImpl.Container implements Imdb {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	public EList<Genre> getGenres() {
+		if (genres == null) {
+			genres = new EObjectContainmentWithInverseEList<Genre>(Genre.class, this, ImdbPackage.IMDB__GENRES, ImdbPackage.GENRE__IMDB);
+		}
+		return genres;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -109,6 +134,8 @@ public class ImdbImpl extends MinimalEObjectImpl.Container implements Imdb {
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getTitles()).basicAdd(otherEnd, msgs);
 			case ImdbPackage.IMDB__PERSONS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getPersons()).basicAdd(otherEnd, msgs);
+			case ImdbPackage.IMDB__GENRES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getGenres()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -125,6 +152,8 @@ public class ImdbImpl extends MinimalEObjectImpl.Container implements Imdb {
 				return ((InternalEList<?>)getTitles()).basicRemove(otherEnd, msgs);
 			case ImdbPackage.IMDB__PERSONS:
 				return ((InternalEList<?>)getPersons()).basicRemove(otherEnd, msgs);
+			case ImdbPackage.IMDB__GENRES:
+				return ((InternalEList<?>)getGenres()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -141,6 +170,8 @@ public class ImdbImpl extends MinimalEObjectImpl.Container implements Imdb {
 				return getTitles();
 			case ImdbPackage.IMDB__PERSONS:
 				return getPersons();
+			case ImdbPackage.IMDB__GENRES:
+				return getGenres();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -162,6 +193,10 @@ public class ImdbImpl extends MinimalEObjectImpl.Container implements Imdb {
 				getPersons().clear();
 				getPersons().addAll((Collection<? extends Person>)newValue);
 				return;
+			case ImdbPackage.IMDB__GENRES:
+				getGenres().clear();
+				getGenres().addAll((Collection<? extends Genre>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -180,6 +215,9 @@ public class ImdbImpl extends MinimalEObjectImpl.Container implements Imdb {
 			case ImdbPackage.IMDB__PERSONS:
 				getPersons().clear();
 				return;
+			case ImdbPackage.IMDB__GENRES:
+				getGenres().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -196,6 +234,8 @@ public class ImdbImpl extends MinimalEObjectImpl.Container implements Imdb {
 				return titles != null && !titles.isEmpty();
 			case ImdbPackage.IMDB__PERSONS:
 				return persons != null && !persons.isEmpty();
+			case ImdbPackage.IMDB__GENRES:
+				return genres != null && !genres.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

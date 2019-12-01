@@ -11,6 +11,7 @@
       titleType="MOVIE"
       startYear="1977"
       runtime="121"
+      genres="Action Fantasy Adventure"
       ID="tt0076759">
     <involvements
         person="//@persons.0"
@@ -32,9 +33,6 @@
         person="//@persons.4"
         job="Actor"
         character="Alec Guinness"/>
-    <genre>Action</genre>
-    <genre>Fantasy</genre>
-    <genre>Adventure</genre>
   </titles>
   <titles name="Star Wars: Episode V - The Empire Strikes Back"
       region="US"
@@ -42,6 +40,7 @@
       titleType="MOVIE"
       startYear="1980"
       runtime="124"
+      genres="Action Adventure Fantasy"
       ID="tt0080684">
     <involvements
         person="//@persons.0"
@@ -55,9 +54,6 @@
         person="//@persons.2"
         job="Actress"
         character="Princess Leia"/>
-    <genre>Action</genre>
-    <genre>Adventure</genre>
-    <genre>Fantasy</genre>
   </titles>
   <titles name="Alien"
       region="US"
@@ -65,6 +61,7 @@
       titleType="MOVIE"
       startYear="1979"
       runtime="117"
+      genres="Horror Sci-Fi"
       ID="tt0078748">
     <involvements
         person="//@persons.5"
@@ -78,8 +75,6 @@
         person="//@persons.7"
         job="Actress"
         character="Lambert"/>
-    <genre>Horror</genre>
-    <genre>Sci-Fi</genre>
   </titles>
   <titles xsi:type="no.ntnu.tdt4250.imdb:TvSeries"
       name="Over the Garden Wall"
@@ -88,6 +83,7 @@
       titleType="TVSERIES"
       startYear="2014"
       runtime="12"
+      genres="Animation Short Adventure Drama Family Fantasy Horror Mystery Thriller"
       ID="tt3718778"
       endYear="2014">
     <involvements
@@ -102,15 +98,6 @@
         person="//@persons.10"
         job="Actress"
         character="Beatrice"/>
-    <genre>Animation</genre>
-    <genre>Short</genre>
-    <genre>Adventure</genre>
-    <genre>Drama</genre>
-    <genre>Family</genre>
-    <genre>Fantasy</genre>
-    <genre>Horror</genre>
-    <genre>Mystery</genre>
-    <genre>Thriller</genre>
     <episodes
         name="Chapter 1: The Old Grist Mill"
         titleType="TVEPISODE"
@@ -130,18 +117,16 @@
   </titles>
   <persons name="Mark Hamill"
       birthYear="1951"
-      deathYear="-1"
       knownForTitles="//@titles.0 //@titles.1"
-      involvement="//@titles.0/@involvements.0 //@titles.1/@involvements.0">
+      involvements="//@titles.0/@involvements.0 //@titles.1/@involvements.0">
     <professions>Actor</professions>
     <professions>Producer</professions>
     <professions>Soundtrack</professions>
   </persons>
   <persons name="Harrison Ford"
       birthYear="1942"
-      deathYear="-1"
       knownForTitles="//@titles.0 //@titles.1"
-      involvement="//@titles.0/@involvements.1 //@titles.1/@involvements.1">
+      involvements="//@titles.0/@involvements.1 //@titles.1/@involvements.1">
     <professions>Actor</professions>
     <professions>Writer</professions>
     <professions>Producer</professions>
@@ -150,7 +135,7 @@
       birthYear="1956"
       deathYear="2016"
       knownForTitles="//@titles.0 //@titles.1"
-      involvement="//@titles.0/@involvements.2 //@titles.1/@involvements.2">
+      involvements="//@titles.0/@involvements.2 //@titles.1/@involvements.2">
     <professions>Actress</professions>
     <professions>Soundtrack</professions>
     <professions>Writer</professions>
@@ -159,7 +144,7 @@
       birthYear="1913"
       deathYear="1994"
       knownForTitles="//@titles.0"
-      involvement="//@titles.0/@involvements.3">
+      involvements="//@titles.0/@involvements.3">
     <professions>Actor</professions>
     <professions>Art_department</professions>
     <professions>Soundtrack</professions>
@@ -168,56 +153,61 @@
       birthYear="1914"
       deathYear="2000"
       knownForTitles="//@titles.0"
-      involvement="//@titles.0/@involvements.4">
+      involvements="//@titles.0/@involvements.4">
     <professions>Actor</professions>
     <professions>Soundtrack</professions>
     <professions>Writer</professions>
   </persons>
   <persons name="Tom Skerritt"
       birthYear="1933"
-      deathYear="-1"
       knownForTitles="//@titles.2"
-      involvement="//@titles.2/@involvements.0">
+      involvements="//@titles.2/@involvements.0">
     <professions>Actor</professions>
     <professions>Director</professions>
     <professions>Producer</professions>
   </persons>
   <persons name="Sigourney Weaver"
       birthYear="1949"
-      deathYear="-1"
       knownForTitles="//@titles.2"
-      involvement="//@titles.2/@involvements.1">
+      involvements="//@titles.2/@involvements.1">
     <professions>Actress</professions>
     <professions>Soundtrack</professions>
     <professions>Producer</professions>
   </persons>
   <persons name="Veronica Cartwright"
       birthYear="1949"
-      deathYear="-1"
       knownForTitles="//@titles.2"
-      involvement="//@titles.2/@involvements.2">
+      involvements="//@titles.2/@involvements.2">
     <professions>Actress</professions>
     <professions>Soundtrack</professions>
   </persons>
   <persons name="Elijah Wood"
       birthYear="1981"
-      deathYear="-1"
-      involvement="//@titles.3/@involvements.0"
+      involvements="//@titles.3/@involvements.0"
       ID="nm0000704">
     <professions>Actor</professions>
   </persons>
   <persons name="Collin Dean"
       birthYear="2005"
-      deathYear="-1"
-      involvement="//@titles.3/@involvements.1"
+      involvements="//@titles.3/@involvements.1"
       ID="nm5242354">
     <professions>Actor</professions>
   </persons>
   <persons name="Melanie Lynskey"
       birthYear="1977"
-      deathYear="-1"
-      involvement="//@titles.3/@involvements.2"
+      involvements="//@titles.3/@involvements.2"
       ID="nm0001491">
     <professions>Actress</professions>
   </persons>
+  <genres name="Action"/>
+  <genres name="Fantasy"/>
+  <genres name="Adventure"/>
+  <genres name="Horror"/>
+  <genres name="Sci-Fi"/>
+  <genres name="Animation"/>
+  <genres name="Short"/>
+  <genres name="Drama"/>
+  <genres name="Family"/>
+  <genres name="Mystery"/>
+  <genres name="Thriller"/>
 </no.ntnu.tdt4250.imdb:Imdb>
