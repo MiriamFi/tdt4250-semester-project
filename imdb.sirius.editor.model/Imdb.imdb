@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <no.ntnu.tdt4250.imdb:Imdb xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:no.ntnu.tdt4250.imdb="http://no/ntnu/tdt4250/imdb">
   <titles name="Star Wars Episode IV: A New Hope" region="US" language="English" titleType="MOVIE" startYear="1977" runtime="121" ID="tt0076759">
+    <rating averageRating="8.6" numberOfVotes="1149670"/>
     <involvements person="//@persons.0" job="Actor" character="Luke Skywalker"/>
     <involvements person="//@persons.1" job="Actor" character="Han Solo"/>
     <involvements person="//@persons.2" job="Actress" character="Princess Leia Organa"/>
@@ -11,6 +12,7 @@
     <genre>Adventure</genre>
   </titles>
   <titles name="Star Wars: Episode V - The Empire Strikes Back" region="US" language="English" titleType="MOVIE" startYear="1980" runtime="124" ID="tt0080684">
+    <rating averageRating="8.7" numberOfVotes="1081083"/>
     <involvements person="//@persons.0" job="Actor" character="Luke Skywalker"/>
     <involvements person="//@persons.1" job="Actor" character="Han Solo"/>
     <involvements person="//@persons.2" job="Actress" character="Princess Leia"/>
@@ -19,6 +21,7 @@
     <genre>Fantasy</genre>
   </titles>
   <titles name="Alien" region="US" language="English" titleType="MOVIE" startYear="1979" runtime="117" ID="tt0078748">
+    <rating averageRating="8.4" numberOfVotes="734877"/>
     <involvements person="//@persons.5" job="Actor" character="Dallas"/>
     <involvements person="//@persons.6" job="Actress" character="Ripley"/>
     <involvements person="//@persons.7" job="Actress" character="Lambert"/>
@@ -30,6 +33,7 @@
     <involvements person="//@persons.8" job="Actor" character="Man 2"/>
   </titles>
   <titles xsi:type="no.ntnu.tdt4250.imdb:TvSeries" name="Over the Garden Wall" region="US" language="English" titleType="TVSERIES" startYear="2014" runtime="12" ID="tt3718778" endYear="2014">
+    <rating averageRating="8.8" numberOfVotes="31782"/>
     <involvements person="//@persons.9" job="Actor" character="Wirt"/>
     <involvements person="//@persons.10" job="Actor" character="Gregory"/>
     <involvements person="//@persons.11" job="Actress" character="Beatrice"/>
@@ -43,17 +47,20 @@
     <genre>Mystery</genre>
     <genre>Thriller</genre>
     <episodes name="Chapter 1: The Old Grist Mill" titleType="TVEPISODE" startYear="2014" runtime="12" ID="tt3841710" seasonNumber="1" episodeNumber="1">
+      <rating averageRating="8.1" numberOfVotes="940"/>
       <involvements person="//@persons.9" job="Actor" character="Wirt"/>
       <involvements person="//@persons.10" job="Actor" character="Gregory"/>
       <involvements person="//@persons.11" job="Actress" character="Beatrice"/>
     </episodes>
     <episodes name="Chapter 2: Hard Times at the Huskin' Bee" titleType="TVEPISODE" startYear="2014" runtime="12" ID="tt4166816" seasonNumber="1" episodeNumber="2">
+      <rating averageRating="8.5" numberOfVotes="893"/>
       <involvements person="//@persons.9" job="Actor" character="Wirt"/>
       <involvements person="//@persons.10" job="Actor" character="Gregory"/>
       <involvements person="//@persons.11" job="Actress" character="Beatrice"/>
     </episodes>
   </titles>
   <titles xsi:type="no.ntnu.tdt4250.imdb:TvSeries" name="Firefly" region="US" language="English" titleType="TVSERIES" startYear="2002" runtime="44" ID="tt0303461" endYear="2003">
+    <rating averageRating="9.0" numberOfVotes="231493"/>
     <episodes name="The Train Job" region="US" language="English" titleType="TVEPISODE" startYear="2002" runtime="42" ID="tt0579539" seasonNumber="1" episodeNumber="1"/>
     <episodes name="Bushwhacked" region="US" language="English" titleType="TVEPISODE" startYear="2002" runtime="44" ID="tt0579528" seasonNumber="1" episodeNumber="2"/>
     <episodes name="Our Mrs. Reynolds" region="US" language="English" titleType="TVEPISODE" startYear="2002" runtime="44" ID="tt0579532" seasonNumber="1" episodeNumber="3"/>
