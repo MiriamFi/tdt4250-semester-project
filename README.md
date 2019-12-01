@@ -20,7 +20,7 @@ title.episode.tsv -> episodesDetails.tsv
 `
 These need to be placed in `*\imdb\src\imdb\dataset\`
 
-When these are placed correctly, you can run DatasetDeserializer.java located in `*\imdb\src\imdb\dataset\` This will deserialize the tsv files and serialize them to a single xmi file. Currently the deserializer is set to choose 500 random titles, and information and people that are connected to these titles. This value can be changed in the `hash500RandomTVSeries()` function. We recommend never going above 500 random titles, and actually reducing the number of titles to possibly 100-200, as most computers will struggle viewing anything more in the Sirius viewpoints that show large amounts of data. Remember that you might need to add an argument to increase max memory allocation to Java, for the subsets you will need about 4,5-5gb. We have not attempted to run this on the full datasets.
+When these are placed correctly, you can run DatasetDeserializer.java located in `*\imdb\src\imdb\dataset\` This will deserialize the tsv files and serialize them to a single xmi file. Currently the deserializer is set to choose 10 random tv series, 5 movies, 5 shorts 5 videos, and information, episodes and people that are connected to these. This value can be changed in the `deserialize()` function. We recommend never going above 50 of each, as most computers will struggle viewing anything more in the Sirius viewpoints that show large amounts of data. Remember that you might need to add an argument to increase max memory allocation to Java, for the subsets you will need about 4,5-5gb. We have not attempted to run this on the full datasets.
 
 After being run the xmi will be named Imdb.imdb and placed in 
 <br/>
@@ -46,7 +46,7 @@ The viewpoint should now open. From here you can navigate to all other different
 
 ## Issues Identified
 Sometimes the TV Series tree won't render all tv series items, we believe this is due to the viewpoint rendering quicker than the java services code can run, if the tree is empty, go into the odesign file located at <br/>`imdb.odesign\descriptions\odesign.odesign`<br/>
-Under <br/>`imdb_viewpoint->TVseries tree->Imdb->TVseries branch->Season branch`<br/> In Season Branch's Semantic Expression add a space so that<br/> `[self.getSeasons()/] -> [self.getSeasons() /]`<br/> and save. Going back to the tree viewpoint and collapse the IMDB view, and expand it, it should now properly render tv series with seasons and episodes.
+Under <br/>`imdb_viewpoint->TVseries tree->Imdb->TVseries branch->Season branch`<br/> In Season Branch's Semantic Expression add a space so that<br/> `[self.getSeasons()/] -> [self.getSeasons() /]`<br/> and save. Going back to the tree viewpoint and collapse the IMDB view, and expand it, it should now properly render tv series with seasons and episodes. In addition, some tv series can have thousands of episodes causing the tv tree series to take quite a long time to load.
 
 ## Ecore Model
 This is the model used in the project.
