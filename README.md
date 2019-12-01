@@ -33,4 +33,4 @@ The viewpoint should now open. From here you can navigate to all other different
 
 ## Issues Identifiedz
 Sometimes the TV Series tree won't render all tv series items, we believe this is due to the viewpoint rendering quicker than the java services code can run, if the tree is empty, go into the odesign file located at `imdb.odesign\descriptions\odesign.odesign`
-Under `imdb_viewpoint->TVseries tree->Imdb->TVseries branch->Season branch` In Season Branch's Semantic Expression add a space so that `[self.getSeasons()/] _> [self.getSeasons() /]` and save. Going back to the tree viewpoint and collapse the IMDB view, and expand it, it should now properly render tv series with seasons and episodes.
+Under `imdb_viewpoint->TVseries tree->Imdb->TVseries branch->Season branch` In Season Branch's Semantic Expression add a space so that `[self.getSeasons()/] -> [self.getSeasons() /]` and save. Going back to the tree viewpoint and collapse the IMDB view, and expand it, it should now properly render tv series with seasons and episodes.
