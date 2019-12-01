@@ -67,6 +67,15 @@ public interface ImdbFactory extends EFactory {
 	Episode createEpisode();
 
 	/**
+	 * Returns a new object of class '<em>Genre</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Genre</em>'.
+	 * @generated
+	 */
+	Genre createGenre();
+
+	/**
 	 * Returns a new object of class '<em>Rating</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -83,6 +92,15 @@ public interface ImdbFactory extends EFactory {
 	 * @generated
 	 */
 	Involvement createInvolvement();
+
+	/**
+	 * Returns a new object of class '<em>Title Type Wrapper</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Title Type Wrapper</em>'.
+	 * @generated
+	 */
+	TitleTypeWrapper createTitleTypeWrapper();
 
 	/**
 	 * Returns the package supported by this factory.

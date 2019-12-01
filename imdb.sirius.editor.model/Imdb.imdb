@@ -1,147 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<no.ntnu.tdt4250.imdb:Imdb
-    xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:no.ntnu.tdt4250.imdb="http://no/ntnu/tdt4250/imdb"
-    xsi:schemaLocation="http://no/ntnu/tdt4250/imdb imdb.ecore">
-  <titles name="Star Wars Episode IV: A New Hope"
-      region="US"
-      language="English"
-      startYear="1977"
-      runtime="121"
-      titleID="tt0076759">
-    <involvements
-        person="//@persons.0"
-        job="Actor"
-        character="Luke Skywalker"/>
-    <involvements
-        person="//@persons.1"
-        job="Actor"
-        character="Han Solo"/>
-    <involvements
-        person="//@persons.2"
-        job="Actress"
-        character="Princess Leia Organa"/>
-    <involvements
-        person="//@persons.3"
-        job="Actor"
-        character="Grand Moff Tarkin"/>
-    <involvements
-        person="//@persons.4"
-        job="Actor"
-        character="Alec Guinness"/>
-    <genre>Action</genre>
-    <genre>Fantasy</genre>
-    <genre>Adventure</genre>
+<no.ntnu.tdt4250.imdb:Imdb xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:no.ntnu.tdt4250.imdb="http://no/ntnu/tdt4250/imdb">
+  <titles name="Star Wars Episode IV: A New Hope" region="US" language="English" titleType="MOVIE" startYear="1977" runtime="121" genres="Action Fantasy Adventure" ID="tt0076759">
+    <rating averageRating="8.6" numberOfVotes="1149670"/>
+    <involvements person="//@persons.0" job="Actor" character="Luke Skywalker"/>
+    <involvements person="//@persons.1" job="Actor" character="Han Solo"/>
+    <involvements person="//@persons.2" job="Actress" character="Princess Leia Organa"/>
+    <involvements person="//@persons.3" job="Actor" character="Grand Moff Tarkin"/>
+    <involvements person="//@persons.4" job="Actor" character="Alec Guinness"/>
   </titles>
-  <titles name="Star Wars: Episode V - The Empire Strikes Back"
-      region="US"
-      language="English"
-      startYear="1980"
-      runtime="124"
-      titleID="tt0080684">
-    <involvements
-        person="//@persons.0"
-        job="Actor"
-        character="Luke Skywalker"/>
-    <involvements
-        person="//@persons.1"
-        job="Actor"
-        character="Han Solo"/>
-    <involvements
-        person="//@persons.2"
-        job="Actress"
-        character="Princess Leia"/>
-    <genre>Action</genre>
-    <genre>Adventure</genre>
-    <genre>Fantasy</genre>
+  <titles name="Star Wars: Episode V - The Empire Strikes Back" region="US" language="English" titleType="MOVIE" startYear="1980" runtime="124" genres="Action Adventure Fantasy" ID="tt0080684">
+    <rating averageRating="8.7" numberOfVotes="1081083"/>
+    <involvements person="//@persons.0" job="Actor" character="Luke Skywalker"/>
+    <involvements person="//@persons.1" job="Actor" character="Han Solo"/>
+    <involvements person="//@persons.2" job="Actress" character="Princess Leia"/>
   </titles>
-  <titles name="Alien"
-      region="US"
-      language="English"
-      startYear="1979"
-      runtime="117"
-      titleID="tt0078748">
-    <involvements
-        person="//@persons.5"
-        job="Actor"
-        character="Dallas"/>
-    <involvements
-        person="//@persons.6"
-        job="Actress"
-        character="Ripley"/>
-    <involvements
-        person="//@persons.7"
-        job="Actress"
-        character="Lambert"/>
-    <genre>Horror</genre>
-    <genre>Sci-Fi</genre>
+  <titles name="Alien" region="US" language="English" titleType="MOVIE" startYear="1979" runtime="117" genres="Horror Sci-Fi" ID="tt0078748">
+    <rating averageRating="8.4" numberOfVotes="734877"/>
+    <involvements person="//@persons.5" job="Actor" character="Dallas"/>
+    <involvements person="//@persons.6" job="Actress" character="Ripley"/>
+    <involvements person="//@persons.7" job="Actress" character="Lambert"/>
+    <involvements person="//@persons.12" job="Actor" character="asdf"/>
   </titles>
-  <persons name="Mark Hamill"
-      birthYear="1951"
-      knownForTitles="//@titles.0 //@titles.1"
-      involvement="//@titles.0/@involvements.0 //@titles.1/@involvements.0">
+  <titles name="Short Stories From Dallas" region="USA" language="English" startYear="2019" runtime="111" ID="1234567vdfkslfjlskdfjesijrgelirjles">
+    <involvements person="//@persons.9" job="Actor" character="Man"/>
+    <involvements person="//@persons.8" job="Actor" character="Man 2"/>
+  </titles>
+  <titles xsi:type="no.ntnu.tdt4250.imdb:TvSeries" name="Over the Garden Wall" region="US" language="English" titleType="TVSERIES" startYear="2014" runtime="12" genres="Animation Short Adventure Drama Family Fantasy Horror Mystery Thriller" ID="tt3718778" endYear="2014">
+    <rating averageRating="8.8" numberOfVotes="31782"/>
+    <involvements person="//@persons.9" job="Actor" character="Wirt"/>
+    <involvements person="//@persons.10" job="Actor" character="Gregory"/>
+    <involvements person="//@persons.11" job="Actress" character="Beatrice"/>
+    <episodes name="Chapter 1: The Old Grist Mill" titleType="TVEPISODE" startYear="2014" runtime="12" ID="tt3841710" seasonNumber="1" episodeNumber="1">
+      <rating averageRating="8.1" numberOfVotes="940"/>
+      <involvements person="//@persons.9" job="Actor" character="Wirt"/>
+      <involvements person="//@persons.10" job="Actor" character="Gregory"/>
+      <involvements person="//@persons.11" job="Actress" character="Beatrice"/>
+      <involvements person="//@persons.12" job="Actor" character="safdgdfg"/>
+    </episodes>
+    <episodes name="Chapter 2: Hard Times at the Huskin' Bee" titleType="TVEPISODE" startYear="2014" runtime="12" ID="tt4166816" seasonNumber="1" episodeNumber="2">
+      <rating averageRating="8.5" numberOfVotes="893"/>
+      <involvements person="//@persons.9" job="Actor" character="Wirt"/>
+      <involvements person="//@persons.10" job="Actor" character="Gregory"/>
+      <involvements person="//@persons.11" job="Actress" character="Beatrice"/>
+    </episodes>
+  </titles>
+  <titles xsi:type="no.ntnu.tdt4250.imdb:TvSeries" name="Firefly" region="US" language="English" titleType="TVSERIES" startYear="2002" runtime="44" ID="tt0303461" endYear="2003">
+    <rating averageRating="9.0" numberOfVotes="231493"/>
+    <involvements person="//@persons.12" job="Actor" character="sdfg"/>
+    <episodes name="The Train Job" region="US" language="English" titleType="TVEPISODE" startYear="2002" runtime="42" ID="tt0579539" seasonNumber="1" episodeNumber="1"/>
+    <episodes name="Bushwhacked" region="US" language="English" titleType="TVEPISODE" startYear="2002" runtime="44" ID="tt0579528" seasonNumber="1" episodeNumber="2"/>
+    <episodes name="Our Mrs. Reynolds" region="US" language="English" titleType="TVEPISODE" startYear="2002" runtime="44" ID="tt0579532" seasonNumber="1" episodeNumber="3"/>
+    <episodes name="Jaynestown" region="US" language="English" titleType="TVEPISODE" startYear="2002" runtime="44" ID="tt0579530" seasonNumber="1" episodeNumber="4"/>
+  </titles>
+  <persons name="Mark Hamill" birthYear="1951" knownForTitles="//@titles.0 //@titles.1" involvements="//@titles.0/@involvements.0 //@titles.1/@involvements.0" ID="nm0000434">
     <professions>Actor</professions>
     <professions>Producer</professions>
     <professions>Soundtrack</professions>
   </persons>
-  <persons name="Harrison Ford"
-      birthYear="1942"
-      knownForTitles="//@titles.0 //@titles.1"
-      involvement="//@titles.0/@involvements.1 //@titles.1/@involvements.1">
+  <persons name="Harrison Ford" birthYear="1942" knownForTitles="//@titles.0 //@titles.1" involvements="//@titles.0/@involvements.1 //@titles.1/@involvements.1" ID="nm0000148">
     <professions>Actor</professions>
     <professions>Writer</professions>
     <professions>Producer</professions>
   </persons>
-  <persons name="Carrie Fisher"
-      birthYear="1956"
-      deathYear="2016"
-      knownForTitles="//@titles.0 //@titles.1"
-      involvement="//@titles.0/@involvements.2 //@titles.1/@involvements.2">
+  <persons name="Carrie Fisher" birthYear="1956" deathYear="2016" knownForTitles="//@titles.0 //@titles.1" involvements="//@titles.0/@involvements.2 //@titles.1/@involvements.2" ID="nm0000402">
     <professions>Actress</professions>
     <professions>Soundtrack</professions>
     <professions>Writer</professions>
   </persons>
-  <persons name="Peter Cushing"
-      birthYear="1913"
-      deathYear="1994"
-      knownForTitles="//@titles.0"
-      involvement="//@titles.0/@involvements.3">
+  <persons name="Peter Cushing" birthYear="1913" deathYear="1994" knownForTitles="//@titles.0" involvements="//@titles.0/@involvements.3" ID="nm0001088">
     <professions>Actor</professions>
     <professions>Art_department</professions>
     <professions>Soundtrack</professions>
   </persons>
-  <persons name="Alec Guinness"
-      birthYear="1914"
-      deathYear="2000"
-      knownForTitles="//@titles.0"
-      involvement="//@titles.0/@involvements.4">
+  <persons name="Alec Guinness" birthYear="1914" deathYear="2000" knownForTitles="//@titles.0" involvements="//@titles.0/@involvements.4" ID="nm0000027">
     <professions>Actor</professions>
     <professions>Soundtrack</professions>
     <professions>Writer</professions>
   </persons>
-  <persons name="Tom Skerritt"
-      birthYear="1933"
-      knownForTitles="//@titles.2"
-      involvement="//@titles.2/@involvements.0">
+  <persons name="Tom Skerritt" birthYear="1933" knownForTitles="//@titles.2" involvements="//@titles.2/@involvements.0" ID="nm0000643">
     <professions>Actor</professions>
     <professions>Director</professions>
     <professions>Producer</professions>
   </persons>
-  <persons name="Sigourney Weaver"
-      birthYear="1949"
-      knownForTitles="//@titles.2"
-      involvement="//@titles.2/@involvements.1">
+  <persons name="Sigourney Weaver" birthYear="1949" knownForTitles="//@titles.2" involvements="//@titles.2/@involvements.1" ID="nm0000244">
     <professions>Actress</professions>
     <professions>Soundtrack</professions>
     <professions>Producer</professions>
   </persons>
-  <persons name="Veronica Cartwright"
-      birthYear="1949"
-      knownForTitles="//@titles.2"
-      involvement="//@titles.2/@involvements.2">
+  <persons name="Veronica Cartwright" birthYear="1949" knownForTitles="//@titles.2" involvements="//@titles.2/@involvements.2" ID="nm0001021">
     <professions>Actress</professions>
     <professions>Soundtrack</professions>
   </persons>
+  <persons name="Martin Shortleg" birthYear="1995" involvements="//@titles.3/@involvements.1" ID="32qtafevdfv"/>
+  <persons name="Elijah Wood" birthYear="1981" involvements="//@titles.4/@involvements.0 //@titles.3/@involvements.0 //@titles.4/@episodes.0/@involvements.0 //@titles.4/@episodes.1/@involvements.0" ID="nm0000704">
+    <professions>Actor</professions>
+  </persons>
+  <persons name="Collin Dean" birthYear="2005" involvements="//@titles.4/@involvements.1 //@titles.4/@episodes.0/@involvements.1 //@titles.4/@episodes.1/@involvements.1" ID="nm5242354">
+    <professions>Actor</professions>
+  </persons>
+  <persons name="Melanie Lynskey" birthYear="1977" involvements="//@titles.4/@involvements.2 //@titles.4/@episodes.0/@involvements.2 //@titles.4/@episodes.1/@involvements.2" ID="nm0001491">
+    <professions>Actress</professions>
+  </persons>
+  <persons name="Nathan Fillion" birthYear="1971" knownForTitles="//@titles.5" involvements="//@titles.2/@involvements.3 //@titles.5/@involvements.0 //@titles.4/@episodes.0/@involvements.3" ID="nm0277213">
+    <professions>Actor</professions>
+  </persons>
+  <genres name="Action"/>
+  <genres name="Fantasy"/>
+  <genres name="Adventure"/>
+  <genres name="Horror"/>
+  <genres name="Sci-Fi"/>
+  <genres name="Animation"/>
+  <genres name="Short"/>
+  <genres name="Drama"/>
+  <genres name="Family"/>
+  <genres name="Mystery"/>
+  <genres name="Thriller"/>
 </no.ntnu.tdt4250.imdb:Imdb>

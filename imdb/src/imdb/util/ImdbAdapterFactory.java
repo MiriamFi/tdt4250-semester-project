@@ -84,6 +84,10 @@ public class ImdbAdapterFactory extends AdapterFactoryImpl {
 				return createEpisodeAdapter();
 			}
 			@Override
+			public Adapter caseGenre(Genre object) {
+				return createGenreAdapter();
+			}
+			@Override
 			public Adapter caseRating(Rating object) {
 				return createRatingAdapter();
 			}
@@ -94,6 +98,10 @@ public class ImdbAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseInvolvement(Involvement object) {
 				return createInvolvementAdapter();
+			}
+			@Override
+			public Adapter caseTitleTypeWrapper(TitleTypeWrapper object) {
+				return createTitleTypeWrapperAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -186,6 +194,20 @@ public class ImdbAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link imdb.Genre <em>Genre</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see imdb.Genre
+	 * @generated
+	 */
+	public Adapter createGenreAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link imdb.Rating <em>Rating</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -210,6 +232,20 @@ public class ImdbAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createInvolvementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link imdb.TitleTypeWrapper <em>Title Type Wrapper</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see imdb.TitleTypeWrapper
+	 * @generated
+	 */
+	public Adapter createTitleTypeWrapperAdapter() {
 		return null;
 	}
 

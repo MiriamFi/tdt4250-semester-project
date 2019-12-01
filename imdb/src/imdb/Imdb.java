@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link imdb.Imdb#getTitles <em>Titles</em>}</li>
  *   <li>{@link imdb.Imdb#getPersons <em>Persons</em>}</li>
+ *   <li>{@link imdb.Imdb#getGenres <em>Genres</em>}</li>
  * </ul>
  *
  * @see imdb.ImdbPackage#getImdb()
@@ -51,4 +52,19 @@ public interface Imdb extends EObject {
 	 * @generated
 	 */
 	EList<Person> getPersons();
+
+	/**
+	 * Returns the value of the '<em><b>Genres</b></em>' containment reference list.
+	 * The list contents are of type {@link imdb.Genre}.
+	 * It is bidirectional and its opposite is '{@link imdb.Genre#getImdb <em>Imdb</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Genres</em>' containment reference list.
+	 * @see imdb.ImdbPackage#getImdb_Genres()
+	 * @see imdb.Genre#getImdb
+	 * @model opposite="imdb" containment="true"
+	 * @generated
+	 */
+	EList<Genre> getGenres();
+
 } // Imdb

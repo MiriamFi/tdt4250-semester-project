@@ -92,6 +92,12 @@ public class ImdbSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ImdbPackage.GENRE: {
+				Genre genre = (Genre)theEObject;
+				T result = caseGenre(genre);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ImdbPackage.RATING: {
 				Rating rating = (Rating)theEObject;
 				T result = caseRating(rating);
@@ -107,6 +113,12 @@ public class ImdbSwitch<T> extends Switch<T> {
 			case ImdbPackage.INVOLVEMENT: {
 				Involvement involvement = (Involvement)theEObject;
 				T result = caseInvolvement(involvement);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ImdbPackage.TITLE_TYPE_WRAPPER: {
+				TitleTypeWrapper titleTypeWrapper = (TitleTypeWrapper)theEObject;
+				T result = caseTitleTypeWrapper(titleTypeWrapper);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -190,6 +202,21 @@ public class ImdbSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Genre</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Genre</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGenre(Genre object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Rating</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -216,6 +243,21 @@ public class ImdbSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseInvolvement(Involvement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Title Type Wrapper</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Title Type Wrapper</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTitleTypeWrapper(TitleTypeWrapper object) {
 		return null;
 	}
 

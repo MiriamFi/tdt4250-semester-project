@@ -19,13 +19,14 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link imdb.Person#getDeathYear <em>Death Year</em>}</li>
  *   <li>{@link imdb.Person#getProfessions <em>Professions</em>}</li>
  *   <li>{@link imdb.Person#getKnownForTitles <em>Known For Titles</em>}</li>
- *   <li>{@link imdb.Person#getInvolvement <em>Involvement</em>}</li>
+ *   <li>{@link imdb.Person#getInvolvements <em>Involvements</em>}</li>
  *   <li>{@link imdb.Person#getImdb <em>Imdb</em>}</li>
+ *   <li>{@link imdb.Person#getID <em>ID</em>}</li>
  * </ul>
  *
  * @see imdb.ImdbPackage#getPerson()
- * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='numberOfVotesConstraint averageRatingConstraint'"
- *        annotation="http://www.eclipse.org/acceleo/query/1.0 birthYearConstraint='self.birthYear &gt; 0 and self.birthYear &lt;= 2019' deathYearConstraint='self.deathYear &gt; -2 and self.deathYear &lt;= 2019 and self.deathYear &gt;= self.birthYear'"
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='birthYearConstraint deathYearConstraint'"
+ *        annotation="http://www.eclipse.org/acceleo/query/1.0 birthYearConstraint='self.birthYear &gt; 0 and self.birthYear &lt;= 2019' deathYearConstraint='(self.deathYear &gt; 0 and self.deathYear &lt;= 2019 and self.deathYear &gt;= self.birthYear) or self.deathYear = -1'"
  * @generated
  */
 public interface Person extends EObject {
@@ -76,12 +77,13 @@ public interface Person extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Death Year</b></em>' attribute.
+	 * The default value is <code>"-1"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Death Year</em>' attribute.
 	 * @see #setDeathYear(int)
 	 * @see imdb.ImdbPackage#getPerson_DeathYear()
-	 * @model
+	 * @model default="-1"
 	 * @generated
 	 */
 	int getDeathYear();
@@ -121,18 +123,18 @@ public interface Person extends EObject {
 	EList<Title> getKnownForTitles();
 
 	/**
-	 * Returns the value of the '<em><b>Involvement</b></em>' reference list.
+	 * Returns the value of the '<em><b>Involvements</b></em>' reference list.
 	 * The list contents are of type {@link imdb.Involvement}.
 	 * It is bidirectional and its opposite is '{@link imdb.Involvement#getPerson <em>Person</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Involvement</em>' reference list.
-	 * @see imdb.ImdbPackage#getPerson_Involvement()
+	 * @return the value of the '<em>Involvements</em>' reference list.
+	 * @see imdb.ImdbPackage#getPerson_Involvements()
 	 * @see imdb.Involvement#getPerson
 	 * @model opposite="person"
 	 * @generated
 	 */
-	EList<Involvement> getInvolvement();
+	EList<Involvement> getInvolvements();
 
 	/**
 	 * Returns the value of the '<em><b>Imdb</b></em>' container reference.
@@ -143,7 +145,7 @@ public interface Person extends EObject {
 	 * @see #setImdb(Imdb)
 	 * @see imdb.ImdbPackage#getPerson_Imdb()
 	 * @see imdb.Imdb#getPersons
-	 * @model opposite="persons" transient="false"
+	 * @model opposite="persons" required="true" transient="false"
 	 * @generated
 	 */
 	Imdb getImdb();
@@ -157,4 +159,37 @@ public interface Person extends EObject {
 	 * @generated
 	 */
 	void setImdb(Imdb value);
+
+	/**
+	 * Returns the value of the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>ID</em>' attribute.
+	 * @see #setID(String)
+	 * @see imdb.ImdbPackage#getPerson_ID()
+	 * @model required="true"
+	 * @generated
+	 */
+	String getID();
+
+	/**
+	 * Sets the value of the '{@link imdb.Person#getID <em>ID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>ID</em>' attribute.
+	 * @see #getID()
+	 * @generated
+	 */
+	void setID(String value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * @param searchString a string assumed to be lower case if <b>caseInsensitive</b> is {@code true}.
+	 * @param caseInsensitive
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	boolean isFilteredBy(String searchString, boolean caseInsensitive);
+
 } // Person

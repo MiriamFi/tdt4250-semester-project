@@ -8,6 +8,7 @@ import imdb.Involvement;
 import imdb.Person;
 
 import imdb.Title;
+import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -36,8 +37,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link imdb.impl.PersonImpl#getDeathYear <em>Death Year</em>}</li>
  *   <li>{@link imdb.impl.PersonImpl#getProfessions <em>Professions</em>}</li>
  *   <li>{@link imdb.impl.PersonImpl#getKnownForTitles <em>Known For Titles</em>}</li>
- *   <li>{@link imdb.impl.PersonImpl#getInvolvement <em>Involvement</em>}</li>
+ *   <li>{@link imdb.impl.PersonImpl#getInvolvements <em>Involvements</em>}</li>
  *   <li>{@link imdb.impl.PersonImpl#getImdb <em>Imdb</em>}</li>
+ *   <li>{@link imdb.impl.PersonImpl#getID <em>ID</em>}</li>
  * </ul>
  *
  * @generated
@@ -87,7 +89,7 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int DEATH_YEAR_EDEFAULT = 0;
+	protected static final int DEATH_YEAR_EDEFAULT = -1;
 	/**
 	 * The cached value of the '{@link #getDeathYear() <em>Death Year</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -117,14 +119,32 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 	 */
 	protected EList<Title> knownForTitles;
 	/**
-	 * The cached value of the '{@link #getInvolvement() <em>Involvement</em>}' reference list.
+	 * The cached value of the '{@link #getInvolvements() <em>Involvements</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getInvolvement()
+	 * @see #getInvolvements()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Involvement> involvement;
+	protected EList<Involvement> involvements;
+	/**
+	 * The default value of the '{@link #getID() <em>ID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getID()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getID() <em>ID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getID()
+	 * @generated
+	 * @ordered
+	 */
+	protected String id = ID_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -246,11 +266,11 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 	 * @generated
 	 */
 	@Override
-	public EList<Involvement> getInvolvement() {
-		if (involvement == null) {
-			involvement = new EObjectWithInverseResolvingEList<Involvement>(Involvement.class, this, ImdbPackage.PERSON__INVOLVEMENT, ImdbPackage.INVOLVEMENT__PERSON);
+	public EList<Involvement> getInvolvements() {
+		if (involvements == null) {
+			involvements = new EObjectWithInverseResolvingEList<Involvement>(Involvement.class, this, ImdbPackage.PERSON__INVOLVEMENTS, ImdbPackage.INVOLVEMENT__PERSON);
 		}
-		return involvement;
+		return involvements;
 	}
 
 	/**
@@ -301,12 +321,49 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	public String getID() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setID(String newID) {
+		String oldID = id;
+		id = newID;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ImdbPackage.PERSON__ID, oldID, id));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public boolean isFilteredBy(String searchString, boolean caseInsensitive) {
+		String cleanedName = name;
+		if (caseInsensitive)
+			cleanedName = cleanedName.toLowerCase();
+
+		return cleanedName.contains(searchString);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ImdbPackage.PERSON__INVOLVEMENT:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getInvolvement()).basicAdd(otherEnd, msgs);
+			case ImdbPackage.PERSON__INVOLVEMENTS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getInvolvements()).basicAdd(otherEnd, msgs);
 			case ImdbPackage.PERSON__IMDB:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
@@ -323,8 +380,8 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ImdbPackage.PERSON__INVOLVEMENT:
-				return ((InternalEList<?>)getInvolvement()).basicRemove(otherEnd, msgs);
+			case ImdbPackage.PERSON__INVOLVEMENTS:
+				return ((InternalEList<?>)getInvolvements()).basicRemove(otherEnd, msgs);
 			case ImdbPackage.PERSON__IMDB:
 				return basicSetImdb(null, msgs);
 		}
@@ -363,10 +420,12 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 				return getProfessions();
 			case ImdbPackage.PERSON__KNOWN_FOR_TITLES:
 				return getKnownForTitles();
-			case ImdbPackage.PERSON__INVOLVEMENT:
-				return getInvolvement();
+			case ImdbPackage.PERSON__INVOLVEMENTS:
+				return getInvolvements();
 			case ImdbPackage.PERSON__IMDB:
 				return getImdb();
+			case ImdbPackage.PERSON__ID:
+				return getID();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -397,12 +456,15 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 				getKnownForTitles().clear();
 				getKnownForTitles().addAll((Collection<? extends Title>)newValue);
 				return;
-			case ImdbPackage.PERSON__INVOLVEMENT:
-				getInvolvement().clear();
-				getInvolvement().addAll((Collection<? extends Involvement>)newValue);
+			case ImdbPackage.PERSON__INVOLVEMENTS:
+				getInvolvements().clear();
+				getInvolvements().addAll((Collection<? extends Involvement>)newValue);
 				return;
 			case ImdbPackage.PERSON__IMDB:
 				setImdb((Imdb)newValue);
+				return;
+			case ImdbPackage.PERSON__ID:
+				setID((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -431,11 +493,14 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 			case ImdbPackage.PERSON__KNOWN_FOR_TITLES:
 				getKnownForTitles().clear();
 				return;
-			case ImdbPackage.PERSON__INVOLVEMENT:
-				getInvolvement().clear();
+			case ImdbPackage.PERSON__INVOLVEMENTS:
+				getInvolvements().clear();
 				return;
 			case ImdbPackage.PERSON__IMDB:
 				setImdb((Imdb)null);
+				return;
+			case ImdbPackage.PERSON__ID:
+				setID(ID_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -459,12 +524,28 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 				return professions != null && !professions.isEmpty();
 			case ImdbPackage.PERSON__KNOWN_FOR_TITLES:
 				return knownForTitles != null && !knownForTitles.isEmpty();
-			case ImdbPackage.PERSON__INVOLVEMENT:
-				return involvement != null && !involvement.isEmpty();
+			case ImdbPackage.PERSON__INVOLVEMENTS:
+				return involvements != null && !involvements.isEmpty();
 			case ImdbPackage.PERSON__IMDB:
 				return getImdb() != null;
+			case ImdbPackage.PERSON__ID:
+				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case ImdbPackage.PERSON___IS_FILTERED_BY__STRING_BOOLEAN:
+				return isFilteredBy((String)arguments.get(0), (Boolean)arguments.get(1));
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 	/**
@@ -485,6 +566,8 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 		result.append(deathYear);
 		result.append(", professions: ");
 		result.append(professions);
+		result.append(", ID: ");
+		result.append(id);
 		result.append(')');
 		return result.toString();
 	}

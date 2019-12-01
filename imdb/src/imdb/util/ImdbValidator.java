@@ -4,12 +4,14 @@ package imdb.util;
 
 import imdb.*;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.ResourceLocator;
 
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.EObjectValidator;
@@ -94,12 +96,16 @@ public class ImdbValidator extends EObjectValidator {
 				return validateTvSeries((TvSeries)value, diagnostics, context);
 			case ImdbPackage.EPISODE:
 				return validateEpisode((Episode)value, diagnostics, context);
+			case ImdbPackage.GENRE:
+				return validateGenre((Genre)value, diagnostics, context);
 			case ImdbPackage.RATING:
 				return validateRating((Rating)value, diagnostics, context);
 			case ImdbPackage.PERSON:
 				return validatePerson((Person)value, diagnostics, context);
 			case ImdbPackage.INVOLVEMENT:
 				return validateInvolvement((Involvement)value, diagnostics, context);
+			case ImdbPackage.TITLE_TYPE_WRAPPER:
+				return validateTitleTypeWrapper((TitleTypeWrapper)value, diagnostics, context);
 			case ImdbPackage.TITLE_TYPE:
 				return validateTitleType((TitleType)value, diagnostics, context);
 			default:
@@ -133,6 +139,9 @@ public class ImdbValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(title, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTitle_startYearConstraint(title, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTitle_runtimeConstraint(title, diagnostics, context);
+		if (result || diagnostics != null) result &= validateTitle_uniqueCharactersConstraint(title, diagnostics, context);
+		if (result || diagnostics != null) result &= validateTitle_imdbNotNullConstraint(title, diagnostics, context);
+		if (result || diagnostics != null) result &= validateTitle_titleTypeConstraint(title, diagnostics, context);
 		return result;
 	}
 
@@ -195,6 +204,101 @@ public class ImdbValidator extends EObjectValidator {
 	}
 
 	/**
+	 * The cached validation expression for the uniqueCharactersConstraint constraint of '<em>Title</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String TITLE__UNIQUE_CHARACTERS_CONSTRAINT__EEXPRESSION = "self.involvements -> isUnique(inv | inv.character)";
+
+	/**
+	 * Validates the uniqueCharactersConstraint constraint of '<em>Title</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateTitle_uniqueCharactersConstraint(Title title, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return
+			validate
+				(ImdbPackage.Literals.TITLE,
+				 title,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/acceleo/query/1.0",
+				 "uniqueCharactersConstraint",
+				 TITLE__UNIQUE_CHARACTERS_CONSTRAINT__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
+	}
+
+	/**
+	 * Validates the imdbNotNullConstraint constraint of '<em>Title</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public boolean validateTitle_imdbNotNullConstraint(Title title, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (title.getTitleType() != TitleType.TVEPISODE
+				&& title.getImdb() == null) {
+			if (diagnostics != null) {
+				diagnostics.add
+					(createDiagnostic
+						(Diagnostic.ERROR,
+						 DIAGNOSTIC_SOURCE,
+						 0,
+						 "_UI_GenericConstraint_diagnostic",
+						 new Object[] { "imdbNotNullConstraint", getObjectLabel(title, context) },
+						 new Object[] { title },
+						 context));
+			}
+			return false;
+		}
+		return true;
+	}
+
+	private static Map<EClass, TitleType> class_titleType_map;
+	static {
+		class_titleType_map = new HashMap<>();
+		class_titleType_map.put(ImdbPackage.eINSTANCE.getTvSeries(), TitleType.TVSERIES);
+		class_titleType_map.put(ImdbPackage.eINSTANCE.getEpisode(), TitleType.TVEPISODE);
+	}
+
+	/**
+	 * Validates the titleTypeConstraint constraint of '<em>Title</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public boolean validateTitle_titleTypeConstraint(Title title, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		boolean matchingClassAndTitleType;
+
+		TitleType requiredTitleType = class_titleType_map.get(title.eClass());
+		if (requiredTitleType != null) {
+			matchingClassAndTitleType = title.getTitleType() == requiredTitleType;
+		}
+		else {
+			matchingClassAndTitleType = !class_titleType_map.values().contains(title.getTitleType());
+		}
+
+		if (!matchingClassAndTitleType) {
+			if (diagnostics != null) {
+				diagnostics.add
+					(createDiagnostic
+						(Diagnostic.ERROR,
+						 DIAGNOSTIC_SOURCE,
+						 0,
+						 "_UI_GenericConstraint_diagnostic",
+						 new Object[] { "titleTypeConstraint", getObjectLabel(title, context) },
+						 new Object[] { title },
+						 context));
+			}
+			return false;
+		}
+		return true;
+	}
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -211,8 +315,10 @@ public class ImdbValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tvSeries, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTitle_startYearConstraint(tvSeries, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTitle_runtimeConstraint(tvSeries, diagnostics, context);
+		if (result || diagnostics != null) result &= validateTitle_uniqueCharactersConstraint(tvSeries, diagnostics, context);
+		if (result || diagnostics != null) result &= validateTitle_imdbNotNullConstraint(tvSeries, diagnostics, context);
+		if (result || diagnostics != null) result &= validateTitle_titleTypeConstraint(tvSeries, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTvSeries_endYearConstraint(tvSeries, diagnostics, context);
-		if (result || diagnostics != null) result &= validateTvSeries_hasTitleTypeTvseries(tvSeries, diagnostics, context);
 		return result;
 	}
 
@@ -222,7 +328,7 @@ public class ImdbValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String TV_SERIES__END_YEAR_CONSTRAINT__EEXPRESSION = "self.endYear > 0 and self.endYear <= 2050 and self.endYear >= self.startYear";
+	protected static final String TV_SERIES__END_YEAR_CONSTRAINT__EEXPRESSION = "(self.endYear > 0 and self.endYear <= 2050 and self.endYear >= self.startYear) or self.endYear = -1";
 
 	/**
 	 * Validates the endYearConstraint constraint of '<em>Tv Series</em>'.
@@ -246,34 +352,6 @@ public class ImdbValidator extends EObjectValidator {
 	}
 
 	/**
-	 * Validates the hasTitleTypeTvseries constraint of '<em>Tv Series</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateTvSeries_hasTitleTypeTvseries(TvSeries tvSeries, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		// TODO implement the constraint
-		// -> specify the condition that violates the constraint
-		// -> verify the diagnostic details, including severity, code, and message
-		// Ensure that you remove @generated or mark it @generated NOT
-		if (false) {
-			if (diagnostics != null) {
-				diagnostics.add
-					(createDiagnostic
-						(Diagnostic.ERROR,
-						 DIAGNOSTIC_SOURCE,
-						 0,
-						 "_UI_GenericConstraint_diagnostic",
-						 new Object[] { "hasTitleTypeTvseries", getObjectLabel(tvSeries, context) },
-						 new Object[] { tvSeries },
-						 context));
-			}
-			return false;
-		}
-		return true;
-	}
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -290,9 +368,42 @@ public class ImdbValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(episode, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTitle_startYearConstraint(episode, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTitle_runtimeConstraint(episode, diagnostics, context);
+		if (result || diagnostics != null) result &= validateTitle_uniqueCharactersConstraint(episode, diagnostics, context);
+		if (result || diagnostics != null) result &= validateTitle_imdbNotNullConstraint(episode, diagnostics, context);
+		if (result || diagnostics != null) result &= validateTitle_titleTypeConstraint(episode, diagnostics, context);
+		if (result || diagnostics != null) result &= validateEpisode_noImdbContainerConstraint(episode, diagnostics, context);
 		if (result || diagnostics != null) result &= validateEpisode_seasonNumberConstraint(episode, diagnostics, context);
 		if (result || diagnostics != null) result &= validateEpisode_episodeNumberConstraint(episode, diagnostics, context);
 		return result;
+	}
+
+	/**
+	 * The cached validation expression for the noImdbContainerConstraint constraint of '<em>Episode</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String EPISODE__NO_IMDB_CONTAINER_CONSTRAINT__EEXPRESSION = "self.imdb = null";
+
+	/**
+	 * Validates the noImdbContainerConstraint constraint of '<em>Episode</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateEpisode_noImdbContainerConstraint(Episode episode, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return
+			validate
+				(ImdbPackage.Literals.EPISODE,
+				 episode,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/acceleo/query/1.0",
+				 "noImdbContainerConstraint",
+				 EPISODE__NO_IMDB_CONTAINER_CONSTRAINT__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
 	}
 
 	/**
@@ -301,7 +412,7 @@ public class ImdbValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String EPISODE__SEASON_NUMBER_CONSTRAINT__EEXPRESSION = "self.seasonNumber> 0";
+	protected static final String EPISODE__SEASON_NUMBER_CONSTRAINT__EEXPRESSION = "self.seasonNumber > 0";
 
 	/**
 	 * Validates the seasonNumberConstraint constraint of '<em>Episode</em>'.
@@ -330,7 +441,7 @@ public class ImdbValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String EPISODE__EPISODE_NUMBER_CONSTRAINT__EEXPRESSION = "self.episodeNumber> 0";
+	protected static final String EPISODE__EPISODE_NUMBER_CONSTRAINT__EEXPRESSION = "self.episodeNumber > 0";
 
 	/**
 	 * Validates the episodeNumberConstraint constraint of '<em>Episode</em>'.
@@ -351,6 +462,15 @@ public class ImdbValidator extends EObjectValidator {
 				 Diagnostic.ERROR,
 				 DIAGNOSTIC_SOURCE,
 				 0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateGenre(Genre genre, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(genre, diagnostics, context);
 	}
 
 	/**
@@ -409,10 +529,6 @@ public class ImdbValidator extends EObjectValidator {
 	 * @generated NOT
 	 */
 	public boolean validateRating_averageRatingConstraint(Rating rating, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		// TODO implement the constraint
-		// -> specify the condition that violates the constraint
-		// -> verify the diagnostic details, including severity, code, and message
-		// Ensure that you remove @generated or mark it @generated NOT
 		if (!(rating.getAverageRating() >= 1 && rating.getAverageRating() <= 10)) {
 			if (diagnostics != null) {
 				diagnostics.add
@@ -445,65 +561,67 @@ public class ImdbValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(person, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(person, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(person, diagnostics, context);
-		if (result || diagnostics != null) result &= validatePerson_numberOfVotesConstraint(person, diagnostics, context);
-		if (result || diagnostics != null) result &= validatePerson_averageRatingConstraint(person, diagnostics, context);
+		if (result || diagnostics != null) result &= validatePerson_birthYearConstraint(person, diagnostics, context);
+		if (result || diagnostics != null) result &= validatePerson_deathYearConstraint(person, diagnostics, context);
 		return result;
 	}
 
 	/**
-	 * Validates the numberOfVotesConstraint constraint of '<em>Person</em>'.
+	 * The cached validation expression for the birthYearConstraint constraint of '<em>Person</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validatePerson_numberOfVotesConstraint(Person person, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		// TODO implement the constraint
-		// -> specify the condition that violates the constraint
-		// -> verify the diagnostic details, including severity, code, and message
-		// Ensure that you remove @generated or mark it @generated NOT
-		if (false) {
-			if (diagnostics != null) {
-				diagnostics.add
-					(createDiagnostic
-						(Diagnostic.ERROR,
-						 DIAGNOSTIC_SOURCE,
-						 0,
-						 "_UI_GenericConstraint_diagnostic",
-						 new Object[] { "numberOfVotesConstraint", getObjectLabel(person, context) },
-						 new Object[] { person },
-						 context));
-			}
-			return false;
-		}
-		return true;
+	protected static final String PERSON__BIRTH_YEAR_CONSTRAINT__EEXPRESSION = "self.birthYear > 0 and self.birthYear <= 2019";
+
+	/**
+	 * Validates the birthYearConstraint constraint of '<em>Person</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validatePerson_birthYearConstraint(Person person, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return
+			validate
+				(ImdbPackage.Literals.PERSON,
+				 person,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/acceleo/query/1.0",
+				 "birthYearConstraint",
+				 PERSON__BIRTH_YEAR_CONSTRAINT__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
 	}
 
 	/**
-	 * Validates the averageRatingConstraint constraint of '<em>Person</em>'.
+	 * The cached validation expression for the deathYearConstraint constraint of '<em>Person</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validatePerson_averageRatingConstraint(Person person, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		// TODO implement the constraint
-		// -> specify the condition that violates the constraint
-		// -> verify the diagnostic details, including severity, code, and message
-		// Ensure that you remove @generated or mark it @generated NOT
-		if (false) {
-			if (diagnostics != null) {
-				diagnostics.add
-					(createDiagnostic
-						(Diagnostic.ERROR,
-						 DIAGNOSTIC_SOURCE,
-						 0,
-						 "_UI_GenericConstraint_diagnostic",
-						 new Object[] { "averageRatingConstraint", getObjectLabel(person, context) },
-						 new Object[] { person },
-						 context));
-			}
-			return false;
-		}
-		return true;
+	protected static final String PERSON__DEATH_YEAR_CONSTRAINT__EEXPRESSION = "(self.deathYear > 0 and self.deathYear <= 2019 and self.deathYear >= self.birthYear) or self.deathYear = -1";
+
+	/**
+	 * Validates the deathYearConstraint constraint of '<em>Person</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validatePerson_deathYearConstraint(Person person, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return
+			validate
+				(ImdbPackage.Literals.PERSON,
+				 person,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/acceleo/query/1.0",
+				 "deathYearConstraint",
+				 PERSON__DEATH_YEAR_CONSTRAINT__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
 	}
 
 	/**
@@ -521,37 +639,37 @@ public class ImdbValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(involvement, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(involvement, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(involvement, diagnostics, context);
-		if (result || diagnostics != null) result &= validateInvolvement_uniqueInvolvementConstraint(involvement, diagnostics, context);
+		if (result || diagnostics != null) result &= validateInvolvement_uniqueJobPerPersonConstraint(involvement, diagnostics, context);
 		if (result || diagnostics != null) result &= validateInvolvement_actorIsBornConstraint(involvement, diagnostics, context);
 		return result;
 	}
 
 	/**
-	 * Validates the uniqueInvolvementConstraint constraint of '<em>Involvement</em>'.
+	 * Validates the uniqueJobPerPersonConstraint constraint of '<em>Involvement</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public boolean validateInvolvement_uniqueInvolvementConstraint(Involvement involvement, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		// TODO implement the constraint
-		// -> specify the condition that violates the constraint
-		// -> verify the diagnostic details, including severity, code, and message
-		// Ensure that you remove @generated or mark it @generated NOT
-		
-		boolean involvementIsUnique = true;
+	public boolean validateInvolvement_uniqueJobPerPersonConstraint(Involvement involvement, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		boolean personHasMultipleOfTheSameJob = false;
 		for (Involvement otherInvolvement : involvement.getTitle().getInvolvements()) {
-			if(otherInvolvement.getPerson() == involvement.getPerson()) {
-				if((otherInvolvement.getJob() == "actor" || otherInvolvement.getJob() == "actress")
-						&& otherInvolvement.getCharacter() == involvement.getCharacter()) {
-					involvementIsUnique = false;
-				}
-				else if (otherInvolvement.getJob() == involvement.getJob()) {
-					involvementIsUnique = false;
+			if (otherInvolvement == involvement)
+				continue;
+
+			if (otherInvolvement.getPerson() == involvement.getPerson()
+					&& otherInvolvement.getJob().equals(involvement.getJob())) {
+
+				String job = involvement.getJob().toLowerCase();
+				if (!job.equals("actor") && !job.equals("actress")) {
+					personHasMultipleOfTheSameJob = true;
+				} else {
+					if (otherInvolvement.getCharacter().equals(involvement.getCharacter()))
+						personHasMultipleOfTheSameJob = true;
 				}
 			}
 		}
 		
-		if (!involvementIsUnique) {
+		if (personHasMultipleOfTheSameJob) {
 			if (diagnostics != null) {
 				diagnostics.add
 					(createDiagnostic
@@ -559,7 +677,7 @@ public class ImdbValidator extends EObjectValidator {
 						 DIAGNOSTIC_SOURCE,
 						 0,
 						 "_UI_GenericConstraint_diagnostic",
-						 new Object[] { "uniqueInvolvementConstraint", getObjectLabel(involvement, context) },
+						 new Object[] { "uniqueJobPerPersonConstraint", getObjectLabel(involvement, context) },
 						 new Object[] { involvement },
 						 context));
 			}
@@ -575,18 +693,22 @@ public class ImdbValidator extends EObjectValidator {
 	 * @generated NOT
 	 */
 	public boolean validateInvolvement_actorIsBornConstraint(Involvement involvement, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		// TODO implement the constraint
-		// -> specify the condition that violates the constraint
-		// -> verify the diagnostic details, including severity, code, and message
-		// Ensure that you remove @generated or mark it @generated NOT
 		boolean actorIsBorn = true;
-		if(involvement.getTitle().getTitleType() == TitleType.TVSERIES) {
-			if(involvement.getPerson().getBirthYear() >= involvement.getTvseries().getEndYear()) {
+		if (involvement.getTitle().getTitleType() == TitleType.TVSERIES) {
+			Title title = involvement.getTitle();
+			if (!(title instanceof TvSeries)) {
+				// Ignore until titleType has been corrected (validated by `validateTitle_titleTypeConstraint()`)
+				return true;
+			}
+
+			int endYear = ((TvSeries) title).getEndYear();
+			if (involvement.getPerson().getBirthYear() > endYear) {
 				actorIsBorn = false;
 			}
-		}else if(involvement.getPerson().getBirthYear() > involvement.getTitle().getStartYear()) {
+		} else if(involvement.getPerson().getBirthYear() > involvement.getTitle().getStartYear()) {
 			actorIsBorn = false;
 		}
+
 		if (!actorIsBorn) {
 			if (diagnostics != null) {
 				diagnostics.add
@@ -602,6 +724,15 @@ public class ImdbValidator extends EObjectValidator {
 			return false;
 		}
 		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateTitleTypeWrapper(TitleTypeWrapper titleTypeWrapper, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(titleTypeWrapper, diagnostics, context);
 	}
 
 	/**

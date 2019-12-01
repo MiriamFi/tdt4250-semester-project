@@ -15,14 +15,12 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link imdb.Involvement#getTitle <em>Title</em>}</li>
  *   <li>{@link imdb.Involvement#getPerson <em>Person</em>}</li>
- *   <li>{@link imdb.Involvement#getJobCategory <em>Job Category</em>}</li>
  *   <li>{@link imdb.Involvement#getJob <em>Job</em>}</li>
  *   <li>{@link imdb.Involvement#getCharacter <em>Character</em>}</li>
- *   <li>{@link imdb.Involvement#getTvseries <em>Tvseries</em>}</li>
  * </ul>
  *
  * @see imdb.ImdbPackage#getInvolvement()
- * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='uniqueInvolvementConstraint actorIsBornConstraint'"
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='uniqueJobPerPersonConstraint actorIsBornConstraint'"
  * @generated
  */
 public interface Involvement extends EObject {
@@ -53,14 +51,14 @@ public interface Involvement extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Person</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link imdb.Person#getInvolvement <em>Involvement</em>}'.
+	 * It is bidirectional and its opposite is '{@link imdb.Person#getInvolvements <em>Involvements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Person</em>' reference.
 	 * @see #setPerson(Person)
 	 * @see imdb.ImdbPackage#getInvolvement_Person()
-	 * @see imdb.Person#getInvolvement
-	 * @model opposite="involvement" required="true"
+	 * @see imdb.Person#getInvolvements
+	 * @model opposite="involvements" required="true"
 	 * @generated
 	 */
 	Person getPerson();
@@ -76,35 +74,13 @@ public interface Involvement extends EObject {
 	void setPerson(Person value);
 
 	/**
-	 * Returns the value of the '<em><b>Job Category</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Job Category</em>' attribute.
-	 * @see #setJobCategory(String)
-	 * @see imdb.ImdbPackage#getInvolvement_JobCategory()
-	 * @model required="true"
-	 * @generated
-	 */
-	String getJobCategory();
-
-	/**
-	 * Sets the value of the '{@link imdb.Involvement#getJobCategory <em>Job Category</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Job Category</em>' attribute.
-	 * @see #getJobCategory()
-	 * @generated
-	 */
-	void setJobCategory(String value);
-
-	/**
 	 * Returns the value of the '<em><b>Job</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Job</em>' attribute.
 	 * @see #setJob(String)
 	 * @see imdb.ImdbPackage#getInvolvement_Job()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	String getJob();
@@ -141,25 +117,4 @@ public interface Involvement extends EObject {
 	 */
 	void setCharacter(String value);
 
-	/**
-	 * Returns the value of the '<em><b>Tvseries</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Tvseries</em>' reference.
-	 * @see #setTvseries(TvSeries)
-	 * @see imdb.ImdbPackage#getInvolvement_Tvseries()
-	 * @model
-	 * @generated
-	 */
-	TvSeries getTvseries();
-
-	/**
-	 * Sets the value of the '{@link imdb.Involvement#getTvseries <em>Tvseries</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Tvseries</em>' reference.
-	 * @see #getTvseries()
-	 * @generated
-	 */
-	void setTvseries(TvSeries value);
 } // Involvement
