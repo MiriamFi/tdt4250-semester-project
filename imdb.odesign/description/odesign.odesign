@@ -626,12 +626,12 @@
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
           </defaultStyle>
-          <subItemMappings name="Season branch" domainClass="imdb::Episode" semanticCandidatesExpression="aql:self.getSeasons()">
+          <subItemMappings name="Season branch" domainClass="imdb::Episode" semanticCandidatesExpression="[self.getSeasons() /]">
             <defaultStyle labelExpression="aql:'Season ' + self.seasonNumber">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_purple']"/>
               <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             </defaultStyle>
-            <subItemMappings name="Episode branch" detailDescriptions="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='TVseries%20tree']/@ownedRepresentationCreationDescriptions[name='Create%20Title%20Details']" domainClass="imdb::Episode" semanticCandidatesExpression="aql: self.getEpisodes()">
+            <subItemMappings name="Episode branch" detailDescriptions="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='TVseries%20tree']/@ownedRepresentationCreationDescriptions[name='Create%20Title%20Details']" domainClass="imdb::Episode" semanticCandidatesExpression="[self.getEpisodes() /]">
               <defaultStyle>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_red']"/>
                 <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
