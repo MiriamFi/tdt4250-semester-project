@@ -1,4 +1,8 @@
 # TDT4250-Semester-Project
+This project was created as a part of the course TDT4250 Advanced Software Design at NTNU. The project uses a movie dataset, and can be used to edit and analyse the data, as well as showing connections between different kinds of data. 
+
+
+## Datasets
 This project uses the IMDB Database found at https://www.imdb.com/interfaces/. You can download the subsets used in this project from https://drive.google.com/open?id=1d21_aJ2rq5ss5TxdumnubQOzmv6H7cYq. These were generated using Python and filtered by Region, showing only titles from the US, except for TvEpisodes, these can be from any region, but must be connected to a series originating in the US. All other subsets are filtered by what is contained in the region based subset.
 We recommend using the google link, as the main imdb datsets use a different naming scheme, and the naming of the files in sets.zip is already correct. In addition we've also added a deserialized Imdb.imdb, as deserializing uses a massive amount of memory, and can crash on some computers. To deserialize, we recommend never using the full datasets from Imdb, and even when using the subsets, you should add an argument to increase the max memory usage of Java to 4,5-5gb RAM. 
 
@@ -53,7 +57,7 @@ This is the model used in the project.
 ![UML Diagram of the mode](https://github.com/MiriamFi/tdt4250-semester-project/blob/jacksyv-patch-1/readme-photos/UMLModel.PNG)<br/>
 
 ## Creation Tools in Sirius Editor
-In the Imdb Diagram, you can find tools for creating new objects. The tools are displayed in the Palette view on the right side of the screen. Choose an object creation tool, click at an empty space in the Imdb Diagram and fill in the fields in the Dialog Box. It is also possible to create an object by hovering over an empty space in the Imdb Diagram, and clicking on one of the diamonds which will appear.
+In the Imdb Diagram, you can find tools for creating new objects. The tools are displayed in the Palette view on the right side of the screen. Choose an object creation tool, click at an empty space in the Imdb Diagram and fill in the fields in the Dialog Box. It is also possible to create an object by hovering over an empty space in the Imdb Diagram, and clicking on one of the diamonds that will appear. Object properties can be edited in the Properties view.
 
 ## Navigation in Sirius Editor
 The user can navigate through the different representations when using the Sirius editor in the runtime Eclipse. The boxes represent the different representations, and the small boxes inside represent the different elements which can be clicked in order to navigate. The user can `right click -> Navigation -> *Chosen representation* `, or `right click -> New/Open -> *Chosen representation* `. 
