@@ -51,14 +51,14 @@ public interface Involvement extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Person</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link imdb.Person#getInvolvement <em>Involvement</em>}'.
+	 * It is bidirectional and its opposite is '{@link imdb.Person#getInvolvements <em>Involvements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Person</em>' reference.
 	 * @see #setPerson(Person)
 	 * @see imdb.ImdbPackage#getInvolvement_Person()
-	 * @see imdb.Person#getInvolvement
-	 * @model opposite="involvement" required="true"
+	 * @see imdb.Person#getInvolvements
+	 * @model opposite="involvements" required="true"
 	 * @generated
 	 */
 	Person getPerson();

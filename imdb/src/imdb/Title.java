@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link imdb.Title#getRating <em>Rating</em>}</li>
  *   <li>{@link imdb.Title#getInvolvements <em>Involvements</em>}</li>
  *   <li>{@link imdb.Title#getImdb <em>Imdb</em>}</li>
- *   <li>{@link imdb.Title#getGenre <em>Genre</em>}</li>
+ *   <li>{@link imdb.Title#getGenres <em>Genres</em>}</li>
  *   <li>{@link imdb.Title#getID <em>ID</em>}</li>
  * </ul>
  *
@@ -232,16 +232,16 @@ public interface Title extends EObject {
 	void setImdb(Imdb value);
 
 	/**
-	 * Returns the value of the '<em><b>Genre</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
+	 * Returns the value of the '<em><b>Genres</b></em>' reference list.
+	 * The list contents are of type {@link imdb.Genre}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Genre</em>' attribute list.
-	 * @see imdb.ImdbPackage#getTitle_Genre()
+	 * @return the value of the '<em>Genres</em>' reference list.
+	 * @see imdb.ImdbPackage#getTitle_Genres()
 	 * @model
 	 * @generated
 	 */
-	EList<String> getGenre();
+	EList<Genre> getGenres();
 
 	/**
 	 * Returns the value of the '<em><b>ID</b></em>' attribute.
@@ -274,5 +274,13 @@ public interface Title extends EObject {
 	 * @generated
 	 */
 	boolean isFilteredBy(String searchString, boolean caseInsensitive);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model genresMany="true"
+	 * @generated
+	 */
+	void setGenres(EList<Genre> genres);
 
 } // Title

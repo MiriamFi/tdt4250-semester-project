@@ -3,12 +3,14 @@ package imdb.dataset;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
@@ -16,6 +18,7 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMLResourceFactoryImpl;
 
 import imdb.Episode;
+import imdb.Genre;
 import imdb.Imdb;
 import imdb.ImdbFactory;
 import imdb.Involvement;
@@ -32,9 +35,10 @@ public class DatasetDeserializer {
 	private static Imdb imdb;
 
 
-	private static HashMap<String, Title> allTitleMap = new HashMap<String, Title>();
-	private static HashMap<String, Title> pickedTitleMap = new HashMap<String, Title>();
-	private static HashMap<String, Person> personMap = new HashMap<String, Person>();
+	private static HashMap<String, Title> allTitleMap = new HashMap<>();
+	private static HashMap<String, Title> pickedTitleMap = new HashMap<>();
+	private static HashMap<String, Person> personMap = new HashMap<>();
+	private static HashMap<String, Genre> genreMap = new HashMap<>();
 	
 	
 	
@@ -143,8 +147,12 @@ public class DatasetDeserializer {
 		try(BufferedReader br = new BufferedReader(new FileReader(filename))) {
 			// skip the first line, it contains the column headers
 			br.readLine();
+			int i = 0;
 			for(String line; (line = br.readLine()) != null; ) {
 		    	deserializeEpisodeDetails(line);
+
+		    	if (++i % 100_000 == 0)
+		    		System.out.println(i + " episodes deserialized");
 		    }
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -203,8 +211,12 @@ public class DatasetDeserializer {
 		// Open file
 		try(BufferedReader br = new BufferedReader(new FileReader(filename))) {
 			br.readLine(); //skip first line
+			int i = 0;
 		    for(String line; (line = br.readLine()) != null; ) {
 		    	deserializeEachTitle(line);
+
+		    	if (++i % 100_000 == 0)
+		    		System.out.println(i + " titles deserialized");
 		    }
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -242,7 +254,23 @@ public class DatasetDeserializer {
 		} catch (NumberFormatException e) {
 			// do nothing
 		}
-		// String[] titleGenres = columnValues[8].split(",");
+		
+		
+		String[] genreStrings = columnValues[8].split(",");
+		if (genreStrings.length == 1 && genreStrings[0].equals("\\N"))
+			genreStrings = new String[0];
+		
+		List<Genre> genres = new ArrayList<>();
+		for (String genreString : genreStrings) {
+			Genre genre = genreMap.get(genreString);
+			if (genre == null) {
+				genre = ImdbFactory.eINSTANCE.createGenre();
+				genre.setName(genreString);
+				genre.setImdb(imdb);
+				genreMap.put(genreString, genre);
+			}
+			genres.add(genre);
+		}
 		
 		
 		TitleType titleType = TitleType.get(titleTypeString.toUpperCase());
@@ -265,6 +293,12 @@ public class DatasetDeserializer {
 		title.setName(titleName);
 		title.setStartYear(titleStartYear);
 		title.setRuntime(titleRuntimeMinutes);
+		
+		EList<Genre> titleGenres = title.getGenres(); // genres is null, so will return a new empty list
+		for (Genre genre : genres)
+			titleGenres.add(genre);
+		title.setGenres(titleGenres);
+		
 		allTitleMap.put(titleID, title);
 		
 	}
@@ -303,8 +337,12 @@ public class DatasetDeserializer {
 		// Open file
 		try(BufferedReader br = new BufferedReader(new FileReader(filename))) {
 			br.readLine(); //skip first line
+			int i = 0;
 		    for(String line; (line = br.readLine()) != null; ) {
 		    	deserializePerson(line);
+		    	
+		    	if (++i % 100_000 == 0)
+		    		System.out.println(i + " persons deserialized");
 		    }
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -372,8 +410,12 @@ public class DatasetDeserializer {
 		try(BufferedReader br = new BufferedReader(new FileReader(filename))) {
 			// skip the first line, it contains the column headers
 			br.readLine();
+			int i = 0;
 			for(String line; (line = br.readLine()) != null; ) {
 		    	deserializeEachRating(line);
+
+		    	if (++i % 100_000 == 0)
+		    		System.out.println(i + " ratings deserialized");
 		    }
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -406,8 +448,12 @@ public class DatasetDeserializer {
 		try(BufferedReader br = new BufferedReader(new FileReader(filename))) {
 		    // skip the first line, it contains the column headers
 			br.readLine();
+			int i = 0;
 			for(String line; (line = br.readLine()) != null; ) {
 		    	deserializeInvolvement(line);
+
+		    	if (++i % 100_000 == 0)
+		    		System.out.println(i + " titles deserialized");
 		    }
 		} catch (IOException e) {
 			e.printStackTrace();

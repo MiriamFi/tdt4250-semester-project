@@ -17,7 +17,7 @@
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='orange']"/>
           </style>
         </nodeMappings>
-        <edgeMappings sourceMapping="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Persons%27%20Network%20Diagram']/@defaultLayer/@nodeMappings[name='Person']" targetMapping="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Persons%27%20Network%20Diagram']/@defaultLayer/@nodeMappings[name='Person']" targetFinderExpression="aql:self.involvement.title.involvements.person->select(p | p.ID != self.ID)">
+        <edgeMappings sourceMapping="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Persons%27%20Network%20Diagram']/@defaultLayer/@nodeMappings[name='Person']" targetMapping="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Persons%27%20Network%20Diagram']/@defaultLayer/@nodeMappings[name='Person']" targetFinderExpression="aql:self.involvements.title.involvements.person->select(p | p.ID != self.ID)">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_purple']"/>
             <centerLabelStyleDescription labelSize="12">
@@ -60,7 +60,7 @@
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='orange']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="otherTitles" preconditionExpression="if self.name.startsWith('a') then self else self.eContainer() endif" semanticCandidatesExpression="aql:self.involvements.person.involvement.title->select(t | t.titleType != imdb::TitleType::TVEPISODE)->select(t | t.ID != self.ID)" doubleClickDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Shared%20Crew%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Other%20Titles']" domainClass="imdb::Title">
+        <nodeMappings name="otherTitles" preconditionExpression="if self.name.startsWith('a') then self else self.eContainer() endif" semanticCandidatesExpression="aql:let titles = (if self.titleType != imdb::TitleType::TVSERIES then self.involvements.person.involvements.title else (self.involvements.person.involvements.title + self.episodes.involvements.person.involvements.title) endif) in (titles->select(t | t.titleType != imdb::TitleType::TVEPISODE) + titles->select(t | t.titleType = imdb::TitleType::TVEPISODE).series)->select(t | t.ID != self.ID)" doubleClickDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Shared%20Crew%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Other%20Titles']" domainClass="imdb::Title">
           <conditionnalStyles predicateExpression="aql:self.titleType != imdb::TitleType::TVSERIES">
             <style xsi:type="style:SquareDescription" labelSize="12" labelPosition="node" resizeKind="NSEW" width="18" height="12">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -76,7 +76,7 @@
             </style>
           </conditionnalStyles>
         </nodeMappings>
-        <edgeMappings sourceMapping="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Shared%20Crew%20Diagram']/@defaultLayer/@nodeMappings[name='SharedCrewNode']" targetMapping="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Shared%20Crew%20Diagram']/@defaultLayer/@nodeMappings[name='otherTitles']" targetFinderExpression="aql:self.involvements.person.involvement.title->select(t | t.ID != self.ID)">
+        <edgeMappings sourceMapping="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Shared%20Crew%20Diagram']/@defaultLayer/@nodeMappings[name='SharedCrewNode']" targetMapping="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Shared%20Crew%20Diagram']/@defaultLayer/@nodeMappings[name='otherTitles']" targetFinderExpression="aql:self.imdb.titles">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="12">
@@ -162,7 +162,7 @@
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
           </style>
         </nodeMappings>
-        <edgeMappings name="personTitleEdge" sourceMapping="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20Diagram']/@defaultLayer/@nodeMappings[name='TitleNode']" targetMapping="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20Diagram']/@defaultLayer/@nodeMappings[name='PersonNode']" targetFinderExpression="aql:self.involvements.person">
+        <edgeMappings name="titlePersonEdge" sourceMapping="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20Diagram']/@defaultLayer/@nodeMappings[name='TitleNode']" targetMapping="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20Diagram']/@defaultLayer/@nodeMappings[name='PersonNode']" targetFinderExpression="aql:self.involvements.person + if self.titleType = imdb::TitleType::TVSERIES then self.episodes.involvements.person else Sequence{} endif">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
             <centerLabelStyleDescription labelSize="12">
@@ -282,7 +282,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Involvement" label="Create Involvement" edgeMappings="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20Diagram']/@defaultLayer/@edgeMappings[name='personTitleEdge']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Involvement" label="Create Involvement" edgeMappings="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20Diagram']/@defaultLayer/@edgeMappings[name='titlePersonEdge']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -488,8 +488,8 @@
       </ownedRepresentationNavigationDescriptions>
       <ownedLineMappings name="Imdb" navigationDescriptions="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Titles%20Table']/@ownedRepresentationNavigationDescriptions[name='Imdb%20Diagram']" domainClass="imdb::Imdb" semanticCandidatesExpression="aql:self" headerLabelExpression="IMDB"/>
       <ownedLineMappings name="Titles" detailDescriptions="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Titles%20Table']/@ownedRepresentationCreationDescriptions[name='Create%20Title%20Details']" navigationDescriptions="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Titles%20Table']/@ownedRepresentationNavigationDescriptions[name='Title%20Details']" domainClass="imdb::Title" semanticCandidatesExpression="aql:self.titles" headerLabelExpression="feature:name"/>
-      <ownedColumnMappings name="Actors" headerLabelExpression="Actors" featureName="*" labelExpression="aql:self.involvements.person.name"/>
-      <ownedColumnMappings name="Genre" headerLabelExpression="Genres" featureName="*" labelExpression="aql:self.genre"/>
+      <ownedColumnMappings name="Actors" headerLabelExpression="Actors" featureName="*" labelExpression="aql:(self.involvements.person + if self.titleType = imdb::TitleType::TVSERIES then self.episodes.involvements.person else Sequence{} endif)->asSet().name"/>
+      <ownedColumnMappings name="Genre" headerLabelExpression="Genres" featureName="*" labelExpression="aql:self.genres.name"/>
       <ownedColumnMappings name="Runtime" headerLabelExpression="Runtime" featureName="*" labelExpression="feature:runtime"/>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_2:EditionTableDescription" name="Persons Table" initialisation="true" domainClass="imdb::Imdb">
@@ -510,16 +510,16 @@
       </ownedRepresentationNavigationDescriptions>
       <ownedLineMappings name="Imdb" navigationDescriptions="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Persons%20Table']/@ownedRepresentationNavigationDescriptions[name='Diagram%20Navigation']" domainClass="imdb::Imdb" semanticCandidatesExpression="aql:self" headerLabelExpression="IMDB"/>
       <ownedLineMappings name="Persons" detailDescriptions="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Persons%20Table']/@ownedRepresentationCreationDescriptions[name='Create%20Person%20Details']" navigationDescriptions="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Persons%20Table']/@ownedRepresentationNavigationDescriptions[name='Person%20details']" domainClass="imdb::Person" semanticCandidatesExpression="aql:self.persons" headerLabelExpression="feature:name"/>
-      <ownedColumnMappings name="Titles" headerLabelExpression="Titles" featureName="*" labelExpression="aql:self.involvement.title->select(t | t.titleType != imdb::TitleType::TVEPISODE).name"/>
-      <ownedColumnMappings name="Characters" headerLabelExpression="Characters" featureName="*" labelExpression="aql:self.involvement.character->asOrderedSet()->sep(', ')->toString()"/>
-      <ownedColumnMappings name="Jobs" headerLabelExpression="Jobs" featureName="*" labelExpression="aql:self.involvement.job->asOrderedSet()->sep(', ')->toString()"/>
+      <ownedColumnMappings name="Titles" headerLabelExpression="Titles" featureName="*" labelExpression="aql:(self.involvements.title->select(t | t.titleType != imdb::TitleType::TVEPISODE) + self.involvements.title.series)->asSet().name"/>
+      <ownedColumnMappings name="Characters" headerLabelExpression="Characters" featureName="*" labelExpression="aql:self.involvements.character->asOrderedSet()->sep(', ')->toString()"/>
+      <ownedColumnMappings name="Jobs" headerLabelExpression="Jobs" featureName="*" labelExpression="aql:self.involvements.job->asOrderedSet()->sep(', ')->toString()"/>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Title Details Diagram" titleExpression="aql:'Details of '+self.name" domainClass="imdb::Title" enablePopupBars="true">
       <defaultLayer name="Default">
         <containerMappings name="Title Container" semanticCandidatesExpression="var:self" doubleClickDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Title%20Details%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Title']" domainClass="imdb::Title" childrenPresentation="HorizontalStack">
           <subContainerMappings name="Title's Persons Container" semanticCandidatesExpression="var:self" domainClass="imdb::Title" childrenPresentation="List">
-            <subNodeMappings name="Title's Persons Node" semanticCandidatesExpression="aql:self.involvements.person" doubleClickDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Title%20Details%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Associated%20Person']" domainClass="imdb::Person">
-              <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="aql:self.name->sep('\n')->toString()" labelPosition="node" resizeKind="NSEW">
+            <subNodeMappings name="Title's Persons Node" semanticCandidatesExpression="aql:self.involvements.person + if self.titleType = imdb::TitleType::TVSERIES then self.episodes.involvements.person else Sequence{} endif" doubleClickDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Title%20Details%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Associated%20Person']" domainClass="imdb::Person">
+              <style xsi:type="style:SquareDescription" showIcon="false" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
@@ -535,7 +535,7 @@
           </subContainerMappings>
           <subContainerMappings name="Title's Roles Container" semanticCandidatesExpression="var:self" domainClass="imdb::Title" childrenPresentation="List">
             <subNodeMappings name="Title's Roles Node" semanticCandidatesExpression="aql:self" domainClass="imdb::Title">
-              <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="aql:self.involvements.character->asOrderedSet()->sep('\n')->toString()" labelPosition="node" resizeKind="NSEW">
+              <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="aql:(self.involvements.character + if self.titleType = imdb::TitleType::TVSERIES then self.episodes.involvements.character else Sequence{} endif)->asOrderedSet()->sep('\n')->toString()" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
@@ -566,8 +566,8 @@
             </style>
           </subContainerMappings>
           <subContainerMappings name="Title's Genres Container" semanticCandidatesExpression="var:self" domainClass="imdb::Title" childrenPresentation="List">
-            <subNodeMappings name="Title's Genre Node" semanticCandidatesExpression="aql:self" domainClass="imdb::Title">
-              <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="aql:self.genre->asOrderedSet()->sep('\n')->toString()" labelPosition="node" resizeKind="NSEW">
+            <subNodeMappings name="Title's Genre Node" semanticCandidatesExpression="aql:self.genres" domainClass="imdb::Genre">
+              <style xsi:type="style:SquareDescription" showIcon="false" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
@@ -622,7 +622,7 @@
               <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20Details%20Diagram']"/>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool_1:PaneBasedSelectionWizardDescription" name="Diagram for selected titles" candidatesExpression="aql:self.involvement.title">
+          <ownedTools xsi:type="tool_1:PaneBasedSelectionWizardDescription" name="Diagram for selected titles" candidatesExpression="aql:self.involvements.title">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -657,7 +657,7 @@
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_purple']"/>
               <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             </defaultStyle>
-            <subItemMappings name="Episode branch" detailDescriptions="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='TvSeries%20Tree']/@ownedRepresentationCreationDescriptions[name='Create%20Title%20Details']" domainClass="imdb::Episode" semanticCandidatesExpression="[self.getEpisodes() /]">
+            <subItemMappings name="Episode branch" domainClass="imdb::Episode" semanticCandidatesExpression="[self.getEpisodes() /]">
               <defaultStyle>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_red']"/>
                 <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -684,7 +684,7 @@
       <defaultLayer name="Default">
         <containerMappings name="Person Container" semanticCandidatesExpression="var:self" doubleClickDescription="//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20Details%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Main%20Person']" domainClass="imdb::Person" childrenPresentation="HorizontalStack">
           <subContainerMappings name="Person's Titles Container" semanticCandidatesExpression="var:self" domainClass="imdb::Person" childrenPresentation="List">
-            <subNodeMappings name="Person's Title Node" semanticCandidatesExpression="aql:self.involvement.title->select(t | t.titleType != imdb::TitleType::TVEPISODE)" doubleClickDescription="//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20Details%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Title']" domainClass="imdb::Title">
+            <subNodeMappings name="Person's Title Node" semanticCandidatesExpression="aql:self.involvements.title->select(t | t.titleType != imdb::TitleType::TVEPISODE) + self.involvements.title.series" doubleClickDescription="//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20Details%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Title']" domainClass="imdb::Title">
               <style xsi:type="style:SquareDescription" showIcon="false" sizeComputationExpression="" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -701,7 +701,7 @@
           </subContainerMappings>
           <subContainerMappings name="Person's Roles Container" semanticCandidatesExpression="var:self" domainClass="imdb::Person" childrenPresentation="List">
             <subNodeMappings name="Person's Roles Node" semanticCandidatesExpression="aql:self" domainClass="imdb::Person">
-              <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="aql:self.involvement.character->asOrderedSet()->sep('\n')->toString()" labelPosition="node" resizeKind="NSEW">
+              <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="aql:self.involvements.character->asOrderedSet()->sep('\n')->toString()" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
@@ -717,7 +717,7 @@
           </subContainerMappings>
           <subContainerMappings name="Person's Jobs Container" semanticCandidatesExpression="var:self" domainClass="imdb::Person" childrenPresentation="List">
             <subNodeMappings name="Person's Job Node" semanticCandidatesExpression="aql:self" domainClass="imdb::Person">
-              <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="aql:self.involvement.job->asOrderedSet()->sep('\n')->toString()" labelPosition="node" resizeKind="NSEW">
+              <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="aql:self.involvements.job->asOrderedSet()->sep('\n')->toString()" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
@@ -732,8 +732,8 @@
             </style>
           </subContainerMappings>
           <subContainerMappings name="Person's Genres Container" semanticCandidatesExpression="var:self" domainClass="imdb::Person" childrenPresentation="List">
-            <subNodeMappings name="Person's Genre Node" semanticCandidatesExpression="aql:self" domainClass="imdb::Person">
-              <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="aql:self.involvement.title.genre->asOrderedSet()->sep('\n')->toString()" labelPosition="node" resizeKind="NSEW">
+            <subNodeMappings name="Person's Genre Node" semanticCandidatesExpression="aql:self.involvements.title.genres + self.involvements.title.series.genres" domainClass="imdb::Genre">
+              <style xsi:type="style:SquareDescription" showIcon="false" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
@@ -748,7 +748,7 @@
             </style>
           </subContainerMappings>
           <subContainerMappings name="Person's Associated People Container" semanticCandidatesExpression="var:self" domainClass="imdb::Person" childrenPresentation="List">
-            <subNodeMappings name="Person's Associated People Node" semanticCandidatesExpression="aql:self.involvement.title.involvements.person->select(p | p.ID != self.ID)" doubleClickDescription="//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20Details%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Associated%20Person']" domainClass="imdb::Person">
+            <subNodeMappings name="Person's Associated People Node" semanticCandidatesExpression="aql:self.involvements.title.involvements.person->select(p | p.ID != self.ID)" doubleClickDescription="//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20Details%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Associated%20Person']" domainClass="imdb::Person">
               <style xsi:type="style:SquareDescription" showIcon="false" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -826,14 +826,14 @@
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='orange']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="otherPeople" semanticCandidatesExpression="aql:self.involvement.title.involvements.person->select(p | p.ID != self.ID)" doubleClickDescription="//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%27s%20Network%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='expandOtherPeople']" domainClass="imdb::Person">
+        <nodeMappings name="otherPeople" semanticCandidatesExpression="aql:self.involvements.title.involvements.person->select(p | p.ID != self.ID)" doubleClickDescription="//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%27s%20Network%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='expandOtherPeople']" domainClass="imdb::Person">
           <style xsi:type="style:SquareDescription" labelSize="12" tooltipExpression="feature:name" labelPosition="node" resizeKind="NSEW" width="16" height="12">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_chocolate']"/>
           </style>
         </nodeMappings>
-        <edgeMappings sourceMapping="//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%27s%20Network%20Diagram']/@defaultLayer/@nodeMappings[name='MainPersonNode']" targetMapping="//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%27s%20Network%20Diagram']/@defaultLayer/@nodeMappings[name='otherPeople']" targetFinderExpression="aql:self.involvement.title.involvements.person->select(p | p.ID != self.ID)">
+        <edgeMappings sourceMapping="//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%27s%20Network%20Diagram']/@defaultLayer/@nodeMappings[name='MainPersonNode']" targetMapping="//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%27s%20Network%20Diagram']/@defaultLayer/@nodeMappings[name='otherPeople']" targetFinderExpression="aql:self.involvements.title.involvements.person->select(p | p.ID != self.ID)">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_gray']"/>
             <centerLabelStyleDescription labelSize="12">
@@ -875,7 +875,7 @@
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='orange']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="titlesWorkedOn" semanticCandidatesExpression="aql:self.involvement.title->select(t | t.titleType != imdb::TitleType::TVEPISODE)" domainClass="imdb::Title">
+        <nodeMappings name="titlesWorkedOn" semanticCandidatesExpression="aql:self.involvements.title->select(t | t.titleType != imdb::TitleType::TVEPISODE) + self.involvements.title.series" domainClass="imdb::Title">
           <conditionnalStyles predicateExpression="aql:self.titleType != imdb::TitleType::TVSERIES">
             <style xsi:type="style:SquareDescription" labelSize="12" labelPosition="node" resizeKind="NSEW" width="18" height="12">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -891,7 +891,7 @@
             </style>
           </conditionnalStyles>
         </nodeMappings>
-        <edgeMappings name="personTitleEdge" sourceMapping="//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%27s%20Titles%20Diagram']/@defaultLayer/@nodeMappings[name='mainPerson']" targetMapping="//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%27s%20Titles%20Diagram']/@defaultLayer/@nodeMappings[name='titlesWorkedOn']" targetFinderExpression="aql:self.involvement.title">
+        <edgeMappings name="personTitleEdge" sourceMapping="//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%27s%20Titles%20Diagram']/@defaultLayer/@nodeMappings[name='mainPerson']" targetMapping="//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%27s%20Titles%20Diagram']/@defaultLayer/@nodeMappings[name='titlesWorkedOn']" targetFinderExpression="aql:self.imdb.titles">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="12">

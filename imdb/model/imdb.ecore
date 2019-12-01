@@ -9,6 +9,8 @@
         eType="#//Title" containment="true" eOpposite="#//Title/imdb"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="persons" upperBound="-1"
         eType="#//Person" containment="true" eOpposite="#//Person/imdb"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="genres" upperBound="-1"
+        eType="#//Genre" containment="true" eOpposite="#//Genre/imdb"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Title">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
@@ -23,6 +25,9 @@
       <eParameters name="searchString" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="caseInsensitive" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     </eOperations>
+    <eOperations name="setGenres">
+      <eParameters name="genres" upperBound="-1" eType="#//Genre"/>
+    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="region" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="language" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -35,8 +40,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="involvements" upperBound="-1"
         eType="#//Involvement" containment="true" eOpposite="#//Involvement/title"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="imdb" eType="#//Imdb" eOpposite="#//Imdb/titles"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="genre" upperBound="-1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="genres" upperBound="-1"
+        eType="#//Genre"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TvSeries" eSuperTypes="#//Title">
@@ -66,6 +71,12 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="episodeNumber" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Genre">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="imdb" lowerBound="1" eType="#//Imdb"
+        eOpposite="#//Imdb/genres"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Rating">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
@@ -102,7 +113,7 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="knownForTitles" upperBound="-1"
         eType="#//Title"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="involvement" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="involvements" upperBound="-1"
         eType="#//Involvement" eOpposite="#//Involvement/person"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="imdb" lowerBound="1" eType="#//Imdb"
         eOpposite="#//Imdb/persons"/>
@@ -115,7 +126,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="title" lowerBound="1" eType="#//Title"
         eOpposite="#//Title/involvements"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="person" lowerBound="1"
-        eType="#//Person" eOpposite="#//Person/involvement"/>
+        eType="#//Person" eOpposite="#//Person/involvements"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="job" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="character" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>

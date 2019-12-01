@@ -95,7 +95,7 @@ public class Services {
 			if (!hideConnections)
 				return true;
 
-			Collection<Involvement> involvements = ((Person) self).getInvolvement();
+			Collection<Involvement> involvements = ((Person) self).getInvolvements();
 			return involvements.stream()
 					.map(involvement -> involvement.getTitle())
 					.anyMatch(title -> title.getTitleType() == type);
@@ -131,7 +131,7 @@ public class Services {
 			if (!hideConnections)
 				return true;
 
-			Collection<Involvement> involvements = ((Person) self).getInvolvement();
+			Collection<Involvement> involvements = ((Person) self).getInvolvements();
 			return involvements.stream()
 					.map(involvement -> involvement.getTitle())
 					.anyMatch(title -> title.isFilteredBy(cleanedSearchString, true));
