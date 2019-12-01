@@ -1,6 +1,6 @@
 # TDT4250-Semester-Project
-This project uses a subset of the IMDB Database found at https://www.imdb.com/interfaces/. The subset has been created using python to select only titles made in the US, and aftwrwards filtering all other datasets to include only items that exist or are associated with the US titles. You can download the filtered subsets from https://drive.google.com/open?id=1YmUb6XO-U-QRwuHYjgTz-tvFm5jrgisG 
-We recommend using the subsets, as the main imdb datsets are quite large, and the naming of the files in the subsets.zip is already correct.
+This project uses the IMDB Database found at https://www.imdb.com/interfaces/. You can download the sets from https://drive.google.com/open?id=1YmUb6XO-U-QRwuHYjgTz-tvFm5jrgisG 
+We recommend using the google link, as the main imdb datsets use a different naming scheme, and the naming of the files in sets.zip is already correct.
 
 ## Requirements
 `Sirius - https://www.eclipse.org/sirius/download.html, follow the marketplace guidelines` <br/>
