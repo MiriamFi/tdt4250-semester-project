@@ -2,9 +2,12 @@
 This project uses a subset of the IMDB Database found at https://www.imdb.com/interfaces/. The subset has been created using python to select only titles made in the US, and aftwrwards filtering all other datasets to include only items that exist or are associated with the US titles. You can download the filtered subsets from https://drive.google.com/open?id=1YmUb6XO-U-QRwuHYjgTz-tvFm5jrgisG 
 We recommend using the subsets, as the main imdb datsets are quite large, and the naming of the files in the subsets.zip is already correct.
 
+## Requirements
+`Sirius - https://www.eclipse.org/sirius/download.html, follow the marketplace guidelines`
+`Eclipse with Eclipse Modeling tools - https://www.eclipse.org/downloads/ Select Eclipse Modeling tools during installation`
 
 ## Import the project
-You can import the project by opening Eclipse, and clicking Open Projects from file system. And then choosing the root folder of the project downloaded from this page.
+You can import the project by opening a new Eclipse Workspace, preferably located in the root folder of the project downloaded from this page, and clicking Open Projects from file system. And then choosing the root folder of the project downloaded from this page.
 
 ## Deserializing the datsets
 First you can choose to either use the dataset included which are filtered by Region, or use the entire datasets available at imdb, however when downloading these datasets, they will need to be renamed to match the existing datasets. 
