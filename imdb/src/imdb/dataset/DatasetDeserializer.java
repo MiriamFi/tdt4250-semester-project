@@ -28,7 +28,7 @@ import imdb.TvSeries;
 public class DatasetDeserializer {
 	
 	
-	public static final String outputXmiFilePath = "src/imdb/dataset/deserialized.xmi";
+	public static final String outputXmiFilePath = "src/imdb/dataset/Imdb.imdb";
 	private static Imdb imdb;
 
 
