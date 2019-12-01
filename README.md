@@ -24,12 +24,11 @@ When these are placed correctly, you can run DatasetDeserializer.java located in
 
 After being run the xmi will be named deserialized.xmi and placed in 
 <br/>
-`*\imdb\src\imdb\dataset\`
+`*\imdb\src\imdb\dataset\deserialized.xmi`
 <br/>
-This needs to be moved to <br/>
-`*\imdb.sirius.editor.model\`
-<br/> and renamed to <br/>
-`Imdb.imdb` 
+deserialized.xmi needs to be moved and renamed to <br/>
+`*\imdb.sirius.editor.model\Imdb.imdb`
+<br/> 
 If you're using the xmi pre deserialized, move the Imdb.imdb file to 
 <br/> `*\imdb.sirius.editor.model\Imdb.imdb`
 
