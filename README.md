@@ -4,8 +4,8 @@ We recommend using the google link, as the main imdb datsets use a different nam
 
 ## Requirements
 `Sirius - https://www.eclipse.org/sirius/download.html, follow the marketplace guidelines` <br/>
-`Eclipse with Eclipse Modeling tools - https://www.eclipse.org/downloads/ Select Eclipse Modeling tools during installation`
-
+`Eclipse with Eclipse Modeling tools - https://www.eclipse.org/downloads/ Select Eclipse Modeling tools during installation`<br/>
+`Acceleo - https://marketplace.eclipse.org/content/acceleo`<br/>
 ## Import the project
 You can import the project by opening a new Eclipse Workspace, preferably located in the root folder of the project downloaded from this page, and clicking Open Projects from file system. And then choosing the root folder of the project downloaded from this page.
 
