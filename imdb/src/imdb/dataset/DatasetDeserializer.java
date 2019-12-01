@@ -63,15 +63,29 @@ public class DatasetDeserializer {
 		deserializeTitles();
 		System.out.println("Done deserializing all titles");
 		
-		pickRandomTitles(TitleType.MOVIE, 5);
-		pickRandomTitles(TitleType.TVSERIES, 50);
-		
-		System.out.println("Picked titles");
-		
-		deserializeEpisodesDetails();
-		System.out.println("Done deserializing episodes by picked titles");
+		// Pick tv series first !important
+		int targetTvSeriesAtLeastCount = 10;
+		while (pickedTitleMap.size() < targetTvSeriesAtLeastCount) {
+			pickRandomTitles(TitleType.TVSERIES, 50);
+			System.out.println("Picked tvseries");
+
+			deserializeEpisodesDetails();
+			System.out.println("Done deserializing episodes by picked titles");
+			
+			// Assumes all picked titles are tv series
+			// Remove all series without episodes
+			List<Title> seriesWithoutEpisodes = pickedTitleMap.values().stream()
+				.filter(title -> ((TvSeries)title).getEpisodes().size() <= 0)
+				.collect(Collectors.toList());
+			seriesWithoutEpisodes.forEach(series -> pickedTitleMap.remove(series.getID()));
+		}
 		
 
+		pickRandomTitles(TitleType.MOVIE, 5);
+		pickRandomTitles(TitleType.SHORT, 5);
+		pickRandomTitles(TitleType.VIDEO, 5);
+		
+		
 		// Append to ecore model
 		imdb.getTitles().clear();
 		imdb.getTitles().addAll(pickedTitleMap.values());
@@ -159,14 +173,14 @@ public class DatasetDeserializer {
 		// If start year is \N, make it a 0
 		int seasonNumber = 0;
 		try {
-			seasonNumber = Integer.parseInt(columnValues[1]);
+			seasonNumber = Integer.parseInt(columnValues[2]);
 		} catch (NumberFormatException e) {
 			// do nothing
 		}
 		// If start year is \N, make it a 0
 		int episodeNumber = 0;
 		try {
-			episodeNumber = Integer.parseInt(columnValues[2]);
+			episodeNumber = Integer.parseInt(columnValues[3]);
 		} catch (NumberFormatException e) {
 			// do nothing
 		}
