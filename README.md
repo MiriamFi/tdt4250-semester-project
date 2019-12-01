@@ -25,20 +25,20 @@ When these are placed correctly, you can run DatasetDeserializer.java located in
 After being run the xmi will be named Imdb.imdb and placed in `*\imdb.sirius.editor.model\Imdb.imdb`
 
 ## Running Sirius
-Now that the dataset has been deserialized, you are ready to show the data in the sirius viewpoints. To do this Click 
+Now that the dataset has been deserialized, you are ready to show the data in the sirius viewpoints. To do this Click <br/>
 `Run -> Run Configurations -> Eclipse Application -> Run`
 
-When the new workspace has opened do the following
+When the new workspace has opened do the following <br/>
 
 `Import Projects -> General -> Existing Projects into Workspace -> Browse -> *Root folder of the project directory* -> Select only imdb.odesign & imdb.sirius.editor.model -> Finish`
 
-To create the first main Imdb diagram, go into `imdb.sirius.editor.model -> Imdb.imdb -> Right click Imdb -> New Representation -> Imdb Diagram -> Finish -> OK`
+To create the first main Imdb diagram, go into <br/> `imdb.sirius.editor.model -> Imdb.imdb -> Right click Imdb -> New Representation -> Imdb Diagram -> Finish -> OK`
 
 The viewpoint should now open. From here you can navigate to all other different viewpoints, trees and tables available. See the flowchart to see the navigation options.
 
 ## Issues Identified
-Sometimes the TV Series tree won't render all tv series items, we believe this is due to the viewpoint rendering quicker than the java services code can run, if the tree is empty, go into the odesign file located at `imdb.odesign\descriptions\odesign.odesign`
-Under `imdb_viewpoint->TVseries tree->Imdb->TVseries branch->Season branch` In Season Branch's Semantic Expression add a space so that `[self.getSeasons()/] -> [self.getSeasons() /]` and save. Going back to the tree viewpoint and collapse the IMDB view, and expand it, it should now properly render tv series with seasons and episodes.
+Sometimes the TV Series tree won't render all tv series items, we believe this is due to the viewpoint rendering quicker than the java services code can run, if the tree is empty, go into the odesign file located at <br/>`imdb.odesign\descriptions\odesign.odesign`
+Under <br/>`imdb_viewpoint->TVseries tree->Imdb->TVseries branch->Season branch` In Season Branch's Semantic Expression add a space so that<br/> `[self.getSeasons()/] -> [self.getSeasons() /]` and save. Going back to the tree viewpoint and collapse the IMDB view, and expand it, it should now properly render tv series with seasons and episodes.
 
 ## Ecore Model
 ![UML Diagram of the mode](https://github.com/MiriamFi/tdt4250-semester-project/blob/jacksyv-patch-1/UMLModel.PNG)
