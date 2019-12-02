@@ -489,7 +489,7 @@
       <ownedLineMappings name="Imdb" navigationDescriptions="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='titlesTable']/@ownedRepresentationNavigationDescriptions[name='Imdb%20Diagram']" domainClass="imdb::Imdb" semanticCandidatesExpression="aql:self" headerLabelExpression="IMDb"/>
       <ownedLineMappings name="Titles" detailDescriptions="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='titlesTable']/@ownedRepresentationCreationDescriptions[name='Create%20Title%20Details']" navigationDescriptions="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='titlesTable']/@ownedRepresentationNavigationDescriptions[name='Title%20Details']" domainClass="imdb::Title" semanticCandidatesExpression="aql:self.titles" headerLabelExpression="feature:name"/>
       <ownedColumnMappings name="Actors" headerLabelExpression="Actors" featureName="*" labelExpression="aql:(self.involvements.person + if self.titleType = imdb::TitleType::TVSERIES then self.episodes.involvements.person else Sequence{} endif)->asSet().name"/>
-      <ownedColumnMappings name="Genre" headerLabelExpression="Genres" featureName="*" labelExpression="aql:self.genres.name"/>
+      <ownedColumnMappings name="Genre" headerLabelExpression="Genres" featureName="*" labelExpression="aql:if self.oclIsKindOf(imdb::Title) then self.genres.name else '' endif"/>
       <ownedColumnMappings name="Runtime" headerLabelExpression="Runtime" featureName="*" labelExpression="feature:runtime"/>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_2:EditionTableDescription" name="personsTable" label="Persons Table" titleExpression="Persons Table" initialisation="true" domainClass="imdb::Imdb">
