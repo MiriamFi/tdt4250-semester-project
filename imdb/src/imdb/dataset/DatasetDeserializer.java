@@ -3,11 +3,11 @@ package imdb.dataset;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 import org.eclipse.emf.common.util.EList;
@@ -29,13 +29,18 @@ import imdb.TitleType;
 import imdb.TvSeries;
 
 public class DatasetDeserializer {
-	public static final String outputXmiFilePath = "src/imdb/dataset/Imdb.imdb";
+	public static final String DATASET_FOLDER_PATH = "src/imdb/dataset/";
+	public static final String OUTPUT_XMI_FILE_PATH = DATASET_FOLDER_PATH + "Imdb.imdb";
+
+	private static final String TAB_CHAR = "\\t";
+	private static final String NO_VALUE_CHAR = "\\N";
+
 	private static Imdb imdb;
 
-	private static HashMap<String, Title> allTitlesMap = new HashMap<>();
-	private static HashMap<String, Title> pickedTitlesMap = new HashMap<>();
-	private static HashMap<String, Person> personMap = new HashMap<>();
-	private static HashMap<String, Genre> genreMap = new HashMap<>();
+	private static Map<String, Title> allTitlesMap = new HashMap<>();
+	private static Map<String, Title> pickedTitlesMap = new HashMap<>();
+	private static Map<String, Person> personMap = new HashMap<>();
+	private static Map<String, Genre> genreMap = new HashMap<>();
 
 	public static void main(String[] args) {
 		// get instantiated EPackage
@@ -50,8 +55,8 @@ public class DatasetDeserializer {
 		System.out.println("Start deserializing to Ecore instances");
 		DatasetDeserializer.deserialize();
 		System.out.println("\nStart serializing to XMI");
-		serializeToXMI(outputXmiFilePath);
-		System.out.println("Saved to " + outputXmiFilePath);
+		serializeToXMI(OUTPUT_XMI_FILE_PATH);
+		System.out.println("Saved to " + OUTPUT_XMI_FILE_PATH);
 	}
 
 	public static void deserialize() {
@@ -98,7 +103,7 @@ public class DatasetDeserializer {
 
 		// remove all persons not connected to titles or
 		// involvements that are connected to a titles
-		HashMap<String, Person> smallerPersonMap = new HashMap<String, Person>();
+		Map<String, Person> smallerPersonMap = new HashMap<String, Person>();
 
 		// For each parsed title, get all persons connected with involvements
 		for (Title title : pickedTitlesMap.values()) {
@@ -140,7 +145,7 @@ public class DatasetDeserializer {
 
 	public static void deserializeEpisodeDetails(String line) {
 		// Split string by delimiter tab
-		String[] columnValues = line.split("\\t");
+		String[] columnValues = line.split(TAB_CHAR);
 
 		String episodeID = columnValues[0];
 		String parentTitleID = columnValues[1];
@@ -198,7 +203,7 @@ public class DatasetDeserializer {
 
 	public static void deserializeEachTitle(String line) {
 		// Split string by delimiter tab
-		String[] columnValues = line.split("\\t");
+		String[] columnValues = line.split(TAB_CHAR);
 
 		String titleID = columnValues[0];
 		String titleTypeString = columnValues[1];
@@ -229,20 +234,8 @@ public class DatasetDeserializer {
 
 		String[] genreStrings = columnValues[8].split(",");
 		// If genres is \N, make it an empty array
-		if (genreStrings.length == 1 && genreStrings[0].equals("\\N"))
+		if (genreStrings.length == 1 && genreStrings[0].equals(NO_VALUE_CHAR))
 			genreStrings = new String[0];
-
-		List<Genre> genres = new ArrayList<>();
-		for (String genreString : genreStrings) {
-			Genre genre = genreMap.get(genreString);
-			if (genre == null) {
-				genre = ImdbFactory.eINSTANCE.createGenre();
-				genre.setName(genreString);
-				genre.setImdb(imdb);
-				genreMap.put(genreString, genre);
-			}
-			genres.add(genre);
-		}
 
 
 		TitleType titleType = TitleType.get(titleTypeString.toUpperCase());
@@ -266,8 +259,16 @@ public class DatasetDeserializer {
 		title.setRuntime(titleRuntimeMinutes);
 
 		EList<Genre> titleGenres = title.getGenres(); // genres is null, so will return a new empty list
-		titleGenres.addAll(genres);
-		title.setGenres(titleGenres);
+		for (String genreString : genreStrings) {
+			Genre genre = genreMap.get(genreString);
+			if (genre == null) {
+				genre = ImdbFactory.eINSTANCE.createGenre();
+				genre.setName(genreString);
+				genre.setImdb(imdb);
+				genreMap.put(genreString, genre);
+			}
+			titleGenres.add(genre);
+		}
 
 		allTitlesMap.put(titleID, title);
 	}
@@ -314,7 +315,7 @@ public class DatasetDeserializer {
 
 	public static void deserializePerson(String line) {
 		// Split string by delimiter tab
-		String[] columnValues = line.split("\\t");
+		String[] columnValues = line.split(TAB_CHAR);
 		Person person = ImdbFactory.eINSTANCE.createPerson();
 
 		person.setImdb(imdb);
@@ -380,7 +381,7 @@ public class DatasetDeserializer {
 
 	public static void deserializeEachRating(String line) {
 		// Split string by delimiter tab
-		String[] columnValues = line.split("\\t");
+		String[] columnValues = line.split(TAB_CHAR);
 
 		String titleID = columnValues[0];
 		// Stop deserialization when the titleID is not in titleMap
@@ -406,7 +407,7 @@ public class DatasetDeserializer {
 				deserializeInvolvement(line);
 
 				if (++i % 100_000 == 0)
-					System.out.println(i + " titles deserialized");
+					System.out.println(i + " involvements deserialized");
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -415,7 +416,7 @@ public class DatasetDeserializer {
 
 	public static void deserializeInvolvement(String line) {
 		// Split string by delimiter tab
-		String[] columnValues = line.split("\\t");
+		String[] columnValues = line.split(TAB_CHAR);
 
 		String titleID = columnValues[0];
 		// Stop deserialization when the titleID is not in titleMap
@@ -433,7 +434,7 @@ public class DatasetDeserializer {
 		// character is stored as "[""name 1"",""name 2 something""]"
 		// That is for when a name itself contains commas, such as "Superintendent, Department Store"
 		String[] characters;
-		if (charactersString.equals("\\N")) {
+		if (charactersString.equals(NO_VALUE_CHAR)) {
 			characters = null;
 			createInvolvement(titleID, personID, category, job, null);
 		} else {
