@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:description_3="http://www.eclipse.org/sirius/tree/description/1.0.0" xmlns:filter="http://www.eclipse.org/sirius/diagram/description/filter/1.1.0" xmlns:properties="http://www.eclipse.org/sirius/properties/1.0.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="odesign" version="12.0.0.2017041100">
-  <ownedViewpoints name="imdb_viewpoint" modelFileExtension="imdb">
-    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Persons' Network Diagram" domainClass="imdb::Imdb" enablePopupBars="true">
+  <ownedViewpoints name="imdbViewpoint" label="IMDb Viewpoint" modelFileExtension="imdb">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="personsNetworkDiagram" label="Persons' Network Diagram" titleExpression="Persons' Network Diagram" domainClass="imdb::Imdb" enablePopupBars="true">
       <filters xsi:type="filter:CompositeFilterDescription" name="searchPersons" label="Search persons">
         <filters xsi:type="filter:VariableFilter" semanticConditionExpression="[self.isFilteredByPerson(searchString, false)/]">
           <ownedVariables xsi:type="description:TypedVariable" name="searchString">
@@ -10,14 +10,14 @@
         </filters>
       </filters>
       <defaultLayer name="Default">
-        <nodeMappings name="Person" semanticCandidatesExpression="feature:persons" doubleClickDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Persons%27%20Network%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='']" domainClass="imdb::Person">
+        <nodeMappings name="Person" semanticCandidatesExpression="feature:persons" doubleClickDescription="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='personsNetworkDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='']" domainClass="imdb::Person">
           <style xsi:type="style:SquareDescription" labelSize="12" labelPosition="node" resizeKind="NSEW" width="16" height="12">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='orange']"/>
           </style>
         </nodeMappings>
-        <edgeMappings sourceMapping="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Persons%27%20Network%20Diagram']/@defaultLayer/@nodeMappings[name='Person']" targetMapping="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Persons%27%20Network%20Diagram']/@defaultLayer/@nodeMappings[name='Person']" targetFinderExpression="aql:self.involvements.title.involvements.person->select(p | p.ID != self.ID)">
+        <edgeMappings sourceMapping="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='personsNetworkDiagram']/@defaultLayer/@nodeMappings[name='Person']" targetMapping="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='personsNetworkDiagram']/@defaultLayer/@nodeMappings[name='Person']" targetFinderExpression="aql:self.involvements.title.involvements.person->select(p | p.ID != self.ID)">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_purple']"/>
             <centerLabelStyleDescription labelSize="12">
@@ -26,25 +26,25 @@
           </style>
         </edgeMappings>
         <toolSections>
-          <ownedTools xsi:type="tool:DoubleClickDescription" mappings="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Persons%27%20Network%20Diagram']/@defaultLayer/@nodeMappings[name='Person']">
+          <ownedTools xsi:type="tool:DoubleClickDescription" mappings="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='personsNetworkDiagram']/@defaultLayer/@nodeMappings[name='Person']">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%27s%20Network%20Diagram']"/>
+              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='personViewpoint']/@ownedRepresentations[name='personNetworkDiagram']"/>
             </initialOperation>
           </ownedTools>
           <ownedTools xsi:type="tool_1:PopupMenu" name="Navigation">
             <menuItemDescription xsi:type="tool_1:OperationAction" name="Person Details">
               <view name="views"/>
               <initialOperation>
-                <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20Details%20Diagram']"/>
+                <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='personViewpoint']/@ownedRepresentations[name='personDetailsDiagram']"/>
               </initialOperation>
             </menuItemDescription>
           </ownedTools>
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Shared Crew Diagram" titleExpression="aql:'Other titles that share crew with ' +self.name" initialisation="true" domainClass="imdb::Title" preconditionExpression="aql:self.titleType != imdb::TitleType::TVEPISODE" enablePopupBars="true">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="sharedCrewDiagram" label="Shared Crew Diagram" titleExpression="aql:'Titles that share crew with ' + self.name" initialisation="true" domainClass="imdb::Title" preconditionExpression="aql:self.titleType != imdb::TitleType::TVEPISODE" enablePopupBars="true">
       <filters xsi:type="filter:CompositeFilterDescription" name="searchTitles" label="Search titles">
         <filters xsi:type="filter:VariableFilter" semanticConditionExpression="[self.isFilteredByTitle(searchString, false)/]">
           <ownedVariables xsi:type="description:TypedVariable" name="searchString">
@@ -53,14 +53,14 @@
         </filters>
       </filters>
       <defaultLayer name="Default">
-        <nodeMappings name="SharedCrewNode" semanticCandidatesExpression="var:self" doubleClickDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Shared%20Crew%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Main%20Title']" domainClass="imdb::Title">
+        <nodeMappings name="SharedCrewNode" semanticCandidatesExpression="var:self" doubleClickDescription="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='sharedCrewDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Main%20Title']" domainClass="imdb::Title">
           <style xsi:type="style:SquareDescription" labelSize="12" tooltipExpression="feature:name" labelPosition="node" resizeKind="NSEW" width="20" height="15">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='orange']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="otherTitles" preconditionExpression="if self.name.startsWith('a') then self else self.eContainer() endif" semanticCandidatesExpression="aql:let titles = (if self.titleType != imdb::TitleType::TVSERIES then self.involvements.person.involvements.title else (self.involvements.person.involvements.title + self.episodes.involvements.person.involvements.title) endif) in (titles->select(t | t.titleType != imdb::TitleType::TVEPISODE) + titles->select(t | t.titleType = imdb::TitleType::TVEPISODE).series)->select(t | t.ID != self.ID)" doubleClickDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Shared%20Crew%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Other%20Titles']" domainClass="imdb::Title">
+        <nodeMappings name="otherTitles" preconditionExpression="if self.name.startsWith('a') then self else self.eContainer() endif" semanticCandidatesExpression="aql:let titles = (if self.titleType != imdb::TitleType::TVSERIES then self.involvements.person.involvements.title else (self.involvements.person.involvements.title + self.episodes.involvements.person.involvements.title) endif) in (titles->select(t | t.titleType != imdb::TitleType::TVEPISODE) + titles->select(t | t.titleType = imdb::TitleType::TVEPISODE).series)->select(t | t.ID != self.ID)" doubleClickDescription="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='sharedCrewDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Other%20Titles']" domainClass="imdb::Title">
           <conditionnalStyles predicateExpression="aql:self.titleType != imdb::TitleType::TVSERIES">
             <style xsi:type="style:SquareDescription" labelSize="12" labelPosition="node" resizeKind="NSEW" width="18" height="12">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -76,7 +76,7 @@
             </style>
           </conditionnalStyles>
         </nodeMappings>
-        <edgeMappings sourceMapping="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Shared%20Crew%20Diagram']/@defaultLayer/@nodeMappings[name='SharedCrewNode']" targetMapping="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Shared%20Crew%20Diagram']/@defaultLayer/@nodeMappings[name='otherTitles']" targetFinderExpression="aql:self.imdb.titles">
+        <edgeMappings sourceMapping="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='sharedCrewDiagram']/@defaultLayer/@nodeMappings[name='SharedCrewNode']" targetMapping="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='sharedCrewDiagram']/@defaultLayer/@nodeMappings[name='otherTitles']" targetFinderExpression="aql:self.imdb.titles">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="12">
@@ -85,32 +85,32 @@
           </style>
         </edgeMappings>
         <toolSections>
-          <ownedTools xsi:type="tool:DoubleClickDescription" name="Other Titles" mappings="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Shared%20Crew%20Diagram']/@defaultLayer/@nodeMappings[name='otherTitles']">
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="Other Titles" mappings="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='sharedCrewDiagram']/@defaultLayer/@nodeMappings[name='otherTitles']">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Shared%20Crew%20Diagram']"/>
+              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='sharedCrewDiagram']"/>
             </initialOperation>
           </ownedTools>
           <ownedTools xsi:type="tool_1:PopupMenu" name="Navigation">
             <menuItemDescription xsi:type="tool_1:OperationAction" name="Title details">
               <view name="views"/>
               <initialOperation>
-                <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Title%20Details%20Diagram']"/>
+                <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='titleDetailsDiagram']"/>
               </initialOperation>
             </menuItemDescription>
           </ownedTools>
-          <ownedTools xsi:type="tool:DoubleClickDescription" name="Main Title" mappings="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Shared%20Crew%20Diagram']/@defaultLayer/@nodeMappings[name='SharedCrewNode']">
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="Main Title" mappings="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='sharedCrewDiagram']/@defaultLayer/@nodeMappings[name='SharedCrewNode']">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Title%20Details%20Diagram']"/>
+              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='titleDetailsDiagram']"/>
             </initialOperation>
           </ownedTools>
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Imdb Diagram" initialisation="true" domainClass="imdb::Imdb" enablePopupBars="true">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="imdbDiagram" label="IMDb Diagram" titleExpression="IMDb Diagram" initialisation="true" domainClass="imdb::Imdb" enablePopupBars="true">
       <metamodel href="http://no/ntnu/tdt4250/imdb#/"/>
       <filters xsi:type="filter:CompositeFilterDescription" name="ofTitleType" label="Of title type">
         <filters xsi:type="filter:VariableFilter" semanticConditionExpression="[self.isFilteredByTitle(filterTitleType, true)/]">
@@ -132,7 +132,7 @@
         </filters>
       </filters>
       <defaultLayer name="Default">
-        <nodeMappings name="TitleNode" semanticCandidatesExpression="feature:titles" doubleClickDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='TitleDoubleClick']" domainClass="imdb::Title">
+        <nodeMappings name="TitleNode" semanticCandidatesExpression="feature:titles" doubleClickDescription="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='imdbDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='TitleDoubleClick']" domainClass="imdb::Title">
           <conditionnalStyles predicateExpression="aql:self.titleType != imdb::TitleType::TVSERIES">
             <style xsi:type="style:SquareDescription" labelSize="12" labelPosition="node" resizeKind="NSEW" width="18" height="12">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -148,21 +148,21 @@
             </style>
           </conditionnalStyles>
         </nodeMappings>
-        <nodeMappings name="PersonNode" semanticCandidatesExpression="feature:persons" doubleClickDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='personDoubleClick']" domainClass="imdb::Person">
+        <nodeMappings name="PersonNode" semanticCandidatesExpression="feature:persons" doubleClickDescription="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='imdbDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='personDoubleClick']" domainClass="imdb::Person">
           <style xsi:type="style:SquareDescription" borderSizeComputationExpression="1" labelSize="12" sizeComputationExpression="9" labelPosition="node" resizeKind="NSEW" width="16" height="12">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="Imdb" detailDescriptions="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Create%20Imdb%20Title%20Table'] //@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Create%20Imdb%20Persons%20Table'] //@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Create%20Imdb%20TvSeries%20Tree']" semanticCandidatesExpression="aql:self" doubleClickDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='personDoubleClick']" domainClass="imdb::Imdb">
-          <style xsi:type="style:EllipseNodeDescription" labelSize="12" labelExpression="IMDB" labelPosition="node" resizeKind="NSEW" horizontalDiameterComputationExpression="12" verticalDiameterComputationExpression="12">
+        <nodeMappings name="Imdb" detailDescriptions="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='imdbDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Create%20Imdb%20Title%20Table'] //@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='imdbDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Create%20Imdb%20Persons%20Table'] //@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='imdbDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Create%20Imdb%20TvSeries%20Tree']" semanticCandidatesExpression="aql:self" doubleClickDescription="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='imdbDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='personDoubleClick']" domainClass="imdb::Imdb">
+          <style xsi:type="style:EllipseNodeDescription" labelSize="12" labelExpression="IMDb" labelPosition="node" resizeKind="NSEW" horizontalDiameterComputationExpression="12" verticalDiameterComputationExpression="12">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
           </style>
         </nodeMappings>
-        <edgeMappings name="titlePersonEdge" sourceMapping="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20Diagram']/@defaultLayer/@nodeMappings[name='TitleNode']" targetMapping="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20Diagram']/@defaultLayer/@nodeMappings[name='PersonNode']" targetFinderExpression="aql:self.involvements.person + if self.titleType = imdb::TitleType::TVSERIES then self.episodes.involvements.person else Sequence{} endif">
+        <edgeMappings name="titlePersonEdge" sourceMapping="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='imdbDiagram']/@defaultLayer/@nodeMappings[name='TitleNode']" targetMapping="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='imdbDiagram']/@defaultLayer/@nodeMappings[name='PersonNode']" targetFinderExpression="aql:self.involvements.person + if self.titleType = imdb::TitleType::TVSERIES then self.episodes.involvements.person else Sequence{} endif">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
             <centerLabelStyleDescription labelSize="12">
@@ -170,7 +170,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="imdbTitleEdge" sourceMapping="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20Diagram']/@defaultLayer/@nodeMappings[name='Imdb']" targetMapping="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20Diagram']/@defaultLayer/@nodeMappings[name='TitleNode']" targetFinderExpression="aql:self.titles">
+        <edgeMappings name="imdbTitleEdge" sourceMapping="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='imdbDiagram']/@defaultLayer/@nodeMappings[name='Imdb']" targetMapping="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='imdbDiagram']/@defaultLayer/@nodeMappings[name='TitleNode']" targetFinderExpression="aql:self.titles">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="12">
@@ -179,21 +179,21 @@
           </style>
         </edgeMappings>
         <toolSections name="Tools">
-          <ownedTools xsi:type="tool:DoubleClickDescription" name="TitleDoubleClick" mappings="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20Diagram']/@defaultLayer/@nodeMappings[name='TitleNode']">
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="TitleDoubleClick" mappings="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='imdbDiagram']/@defaultLayer/@nodeMappings[name='TitleNode']">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Shared%20Crew%20Diagram']"/>
+              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='sharedCrewDiagram']"/>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:DoubleClickDescription" name="personDoubleClick" mappings="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20Diagram']/@defaultLayer/@nodeMappings[name='PersonNode'] //@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20Diagram']/@defaultLayer/@nodeMappings[name='Imdb']">
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="personDoubleClick" mappings="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='imdbDiagram']/@defaultLayer/@nodeMappings[name='PersonNode'] //@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='imdbDiagram']/@defaultLayer/@nodeMappings[name='Imdb']">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%27s%20Network%20Diagram']"/>
+              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='personViewpoint']/@ownedRepresentations[name='personNetworkDiagram']"/>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="TitleNode" nodeMappings="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20Diagram']/@defaultLayer/@nodeMappings[name='TitleNode']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="TitleNode" nodeMappings="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='imdbDiagram']/@defaultLayer/@nodeMappings[name='TitleNode']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -205,7 +205,7 @@
                   <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
                     <initialOperation/>
                   </buttons>
-                  <page name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='TitleNode']/@initialOperation/@firstModelOperations/@subModelOperations.0/@groups.0"/>
+                  <page name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='imdbDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='TitleNode']/@initialOperation/@firstModelOperations/@subModelOperations.0/@groups.0"/>
                   <groups name="Default Group" semanticCandidateExpression="var:self">
                     <controls xsi:type="properties:TextDescription" name="Name" labelExpression="Name:">
                       <initialOperation>
@@ -242,7 +242,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="PersonNode" nodeMappings="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20Diagram']/@defaultLayer/@nodeMappings[name='PersonNode']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="PersonNode" nodeMappings="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='imdbDiagram']/@defaultLayer/@nodeMappings[name='PersonNode']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -255,7 +255,7 @@
                   <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
                     <initialOperation/>
                   </buttons>
-                  <page name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='PersonNode']/@initialOperation/@firstModelOperations/@subModelOperations.1/@groups.0"/>
+                  <page name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='imdbDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='PersonNode']/@initialOperation/@firstModelOperations/@subModelOperations.1/@groups.0"/>
                   <groups name="Default Group" semanticCandidateExpression="var:self">
                     <controls xsi:type="properties:TextDescription" name="Name" labelExpression="Name:">
                       <initialOperation>
@@ -282,7 +282,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Involvement" label="Create Involvement" edgeMappings="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20Diagram']/@defaultLayer/@edgeMappings[name='titlePersonEdge']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Involvement" label="Create Involvement" edgeMappings="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='imdbDiagram']/@defaultLayer/@edgeMappings[name='titlePersonEdge']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -297,7 +297,7 @@
                     <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
                       <initialOperation/>
                     </buttons>
-                    <page name="newInvolvementPage" labelExpression="Set information about the involvement" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Involvement']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.0/@groups.0" indented="true"/>
+                    <page name="newInvolvementPage" labelExpression="Set information about the involvement" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='imdbDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Involvement']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.0/@groups.0" indented="true"/>
                     <groups name="Default Group" semanticCandidateExpression="var:self">
                       <controls xsi:type="properties:TextDescription" name="Job" labelExpression="Job:">
                         <initialOperation>
@@ -321,33 +321,33 @@
             <menuItemDescription xsi:type="tool_1:OperationAction" name="Persons Network">
               <view name="views"/>
               <initialOperation>
-                <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Persons%27%20Network%20Diagram']"/>
+                <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='personsNetworkDiagram']"/>
               </initialOperation>
             </menuItemDescription>
             <menuItemDescription xsi:type="tool_1:OperationAction" name="Person Details">
               <view name="views"/>
               <initialOperation>
-                <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20Details%20Diagram']"/>
+                <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='personViewpoint']/@ownedRepresentations[name='personDetailsDiagram']"/>
               </initialOperation>
             </menuItemDescription>
             <menuItemDescription xsi:type="tool_1:OperationAction" name="Title Details">
               <view name="views"/>
               <initialOperation>
-                <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Title%20Details%20Diagram']"/>
+                <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='titleDetailsDiagram']"/>
               </initialOperation>
             </menuItemDescription>
           </ownedTools>
-          <ownedTools xsi:type="description_2:TableCreationDescription" name="Create Imdb Title Table" titleExpression="Imdb Title Table" tableDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Titles%20Table']">
+          <ownedTools xsi:type="description_2:TableCreationDescription" name="Create Imdb Title Table" titleExpression="Imdb Title Table" tableDescription="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='titlesTable']">
             <initialOperation/>
             <containerViewVariable name="containerView"/>
             <representationNameVariable name="tableName"/>
           </ownedTools>
-          <ownedTools xsi:type="description_2:TableCreationDescription" name="Create Imdb Persons Table" tableDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Persons%20Table']">
+          <ownedTools xsi:type="description_2:TableCreationDescription" name="Create Imdb Persons Table" tableDescription="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='personsTable']">
             <initialOperation/>
             <containerViewVariable name="containerView"/>
             <representationNameVariable name="tableName"/>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="SeriesNode" nodeMappings="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20Diagram']/@defaultLayer/@nodeMappings[name='TitleNode']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="SeriesNode" nodeMappings="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='imdbDiagram']/@defaultLayer/@nodeMappings[name='TitleNode']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -359,7 +359,7 @@
                   <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
                     <initialOperation/>
                   </buttons>
-                  <page name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='SeriesNode']/@initialOperation/@firstModelOperations/@subModelOperations.0/@groups.0"/>
+                  <page name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='imdbDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='SeriesNode']/@initialOperation/@firstModelOperations/@subModelOperations.0/@groups.0"/>
                   <groups name="Default Group" semanticCandidateExpression="var:self">
                     <controls xsi:type="properties:TextDescription" name="Name" labelExpression="Name:">
                       <initialOperation>
@@ -397,7 +397,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="EpisodeNode" nodeMappings="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20Diagram']/@defaultLayer/@nodeMappings[name='TitleNode']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="EpisodeNode" nodeMappings="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='imdbDiagram']/@defaultLayer/@nodeMappings[name='TitleNode']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -409,7 +409,7 @@
                   <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
                     <initialOperation/>
                   </buttons>
-                  <page name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='EpisodeNode']/@initialOperation/@firstModelOperations/@subModelOperations.0/@groups.0"/>
+                  <page name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='imdbDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='EpisodeNode']/@initialOperation/@firstModelOperations/@subModelOperations.0/@groups.0"/>
                   <groups name="Default Group" semanticCandidateExpression="var:self">
                     <controls xsi:type="properties:TextDescription" name="Name" labelExpression="Name:">
                       <initialOperation>
@@ -462,7 +462,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="description_3:TreeCreationDescription" name="Create Imdb TvSeries Tree" treeDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='TvSeries%20Tree']">
+          <ownedTools xsi:type="description_3:TreeCreationDescription" name="Create Imdb TvSeries Tree" treeDescription="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='tvSeriesTree']">
             <initialOperation/>
             <containerViewVariable name="containerView"/>
             <representationNameVariable name="treeName"/>
@@ -470,55 +470,55 @@
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_2:EditionTableDescription" name="Titles Table" titleExpression="Imdb Title Table" initialisation="true" domainClass="imdb::Imdb">
-      <ownedRepresentationCreationDescriptions xsi:type="tool:DiagramCreationDescription" name="Create Title Details" diagramDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Title%20Details%20Diagram']">
+    <ownedRepresentations xsi:type="description_2:EditionTableDescription" name="titlesTable" label="Titles Table" titleExpression="Titles Table" initialisation="true" domainClass="imdb::Imdb">
+      <ownedRepresentationCreationDescriptions xsi:type="tool:DiagramCreationDescription" name="Create Title Details" diagramDescription="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='titleDetailsDiagram']">
         <initialOperation/>
         <containerViewVariable name="containerView"/>
         <representationNameVariable name="diagramName"/>
       </ownedRepresentationCreationDescriptions>
-      <ownedRepresentationNavigationDescriptions xsi:type="tool:DiagramNavigationDescription" name="Imdb Diagram" diagramDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20Diagram']">
+      <ownedRepresentationNavigationDescriptions xsi:type="tool:DiagramNavigationDescription" name="Imdb Diagram" diagramDescription="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='imdbDiagram']">
         <containerViewVariable name="containerView"/>
         <containerVariable name="container"/>
         <representationNameVariable name="diagramName"/>
       </ownedRepresentationNavigationDescriptions>
-      <ownedRepresentationNavigationDescriptions xsi:type="tool:DiagramNavigationDescription" name="Title Details" diagramDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Title%20Details%20Diagram']">
+      <ownedRepresentationNavigationDescriptions xsi:type="tool:DiagramNavigationDescription" name="Title Details" diagramDescription="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='titleDetailsDiagram']">
         <containerViewVariable name="containerView"/>
         <containerVariable name="container"/>
         <representationNameVariable name="diagramName"/>
       </ownedRepresentationNavigationDescriptions>
-      <ownedLineMappings name="Imdb" navigationDescriptions="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Titles%20Table']/@ownedRepresentationNavigationDescriptions[name='Imdb%20Diagram']" domainClass="imdb::Imdb" semanticCandidatesExpression="aql:self" headerLabelExpression="IMDB"/>
-      <ownedLineMappings name="Titles" detailDescriptions="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Titles%20Table']/@ownedRepresentationCreationDescriptions[name='Create%20Title%20Details']" navigationDescriptions="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Titles%20Table']/@ownedRepresentationNavigationDescriptions[name='Title%20Details']" domainClass="imdb::Title" semanticCandidatesExpression="aql:self.titles" headerLabelExpression="feature:name"/>
+      <ownedLineMappings name="Imdb" navigationDescriptions="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='titlesTable']/@ownedRepresentationNavigationDescriptions[name='Imdb%20Diagram']" domainClass="imdb::Imdb" semanticCandidatesExpression="aql:self" headerLabelExpression="IMDb"/>
+      <ownedLineMappings name="Titles" detailDescriptions="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='titlesTable']/@ownedRepresentationCreationDescriptions[name='Create%20Title%20Details']" navigationDescriptions="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='titlesTable']/@ownedRepresentationNavigationDescriptions[name='Title%20Details']" domainClass="imdb::Title" semanticCandidatesExpression="aql:self.titles" headerLabelExpression="feature:name"/>
       <ownedColumnMappings name="Actors" headerLabelExpression="Actors" featureName="*" labelExpression="aql:(self.involvements.person + if self.titleType = imdb::TitleType::TVSERIES then self.episodes.involvements.person else Sequence{} endif)->asSet().name"/>
       <ownedColumnMappings name="Genre" headerLabelExpression="Genres" featureName="*" labelExpression="aql:self.genres.name"/>
       <ownedColumnMappings name="Runtime" headerLabelExpression="Runtime" featureName="*" labelExpression="feature:runtime"/>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_2:EditionTableDescription" name="Persons Table" initialisation="true" domainClass="imdb::Imdb">
-      <ownedRepresentationCreationDescriptions xsi:type="tool:DiagramCreationDescription" name="Create Person Details" diagramDescription="//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20Details%20Diagram']">
+    <ownedRepresentations xsi:type="description_2:EditionTableDescription" name="personsTable" label="Persons Table" titleExpression="Persons Table" initialisation="true" domainClass="imdb::Imdb">
+      <ownedRepresentationCreationDescriptions xsi:type="tool:DiagramCreationDescription" name="Create Person Details" diagramDescription="//@ownedViewpoints[name='personViewpoint']/@ownedRepresentations[name='personDetailsDiagram']">
         <initialOperation/>
         <containerViewVariable name="containerView"/>
         <representationNameVariable name="diagramName"/>
       </ownedRepresentationCreationDescriptions>
-      <ownedRepresentationNavigationDescriptions xsi:type="tool:DiagramNavigationDescription" name="Diagram Navigation" diagramDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20Diagram']">
+      <ownedRepresentationNavigationDescriptions xsi:type="tool:DiagramNavigationDescription" name="Diagram Navigation" diagramDescription="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='imdbDiagram']">
         <containerViewVariable name="containerView"/>
         <containerVariable name="container"/>
         <representationNameVariable name="diagramName"/>
       </ownedRepresentationNavigationDescriptions>
-      <ownedRepresentationNavigationDescriptions xsi:type="tool:DiagramNavigationDescription" name="Person details" diagramDescription="//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20Details%20Diagram']">
+      <ownedRepresentationNavigationDescriptions xsi:type="tool:DiagramNavigationDescription" name="Person details" diagramDescription="//@ownedViewpoints[name='personViewpoint']/@ownedRepresentations[name='personDetailsDiagram']">
         <containerViewVariable name="containerView"/>
         <containerVariable name="container"/>
         <representationNameVariable name="diagramName"/>
       </ownedRepresentationNavigationDescriptions>
-      <ownedLineMappings name="Imdb" navigationDescriptions="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Persons%20Table']/@ownedRepresentationNavigationDescriptions[name='Diagram%20Navigation']" domainClass="imdb::Imdb" semanticCandidatesExpression="aql:self" headerLabelExpression="IMDB"/>
-      <ownedLineMappings name="Persons" detailDescriptions="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Persons%20Table']/@ownedRepresentationCreationDescriptions[name='Create%20Person%20Details']" navigationDescriptions="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Persons%20Table']/@ownedRepresentationNavigationDescriptions[name='Person%20details']" domainClass="imdb::Person" semanticCandidatesExpression="aql:self.persons" headerLabelExpression="feature:name"/>
+      <ownedLineMappings name="Imdb" navigationDescriptions="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='personsTable']/@ownedRepresentationNavigationDescriptions[name='Diagram%20Navigation']" domainClass="imdb::Imdb" semanticCandidatesExpression="aql:self" headerLabelExpression="IMDb"/>
+      <ownedLineMappings name="Persons" detailDescriptions="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='personsTable']/@ownedRepresentationCreationDescriptions[name='Create%20Person%20Details']" navigationDescriptions="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='personsTable']/@ownedRepresentationNavigationDescriptions[name='Person%20details']" domainClass="imdb::Person" semanticCandidatesExpression="aql:self.persons" headerLabelExpression="feature:name"/>
       <ownedColumnMappings name="Titles" headerLabelExpression="Titles" featureName="*" labelExpression="aql:(self.involvements.title->select(t | t.titleType != imdb::TitleType::TVEPISODE) + self.involvements.title.series)->asSet().name"/>
       <ownedColumnMappings name="Characters" headerLabelExpression="Characters" featureName="*" labelExpression="aql:self.involvements.character->asOrderedSet()->sep(', ')->toString()"/>
       <ownedColumnMappings name="Jobs" headerLabelExpression="Jobs" featureName="*" labelExpression="aql:self.involvements.job->asOrderedSet()->sep(', ')->toString()"/>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Title Details Diagram" titleExpression="aql:'Details of '+self.name" domainClass="imdb::Title" enablePopupBars="true">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="titleDetailsDiagram" label="Title Details Diagram" titleExpression="aql:'Details of ' + self.name" domainClass="imdb::Title" enablePopupBars="true">
       <defaultLayer name="Default">
-        <containerMappings name="Title Container" semanticCandidatesExpression="var:self" doubleClickDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Title%20Details%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Title']" domainClass="imdb::Title" childrenPresentation="HorizontalStack">
+        <containerMappings name="Title Container" semanticCandidatesExpression="var:self" doubleClickDescription="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='titleDetailsDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Title']" domainClass="imdb::Title" childrenPresentation="HorizontalStack">
           <subContainerMappings name="Title's Persons Container" semanticCandidatesExpression="var:self" domainClass="imdb::Title" childrenPresentation="List">
-            <subNodeMappings name="Title's Persons Node" semanticCandidatesExpression="aql:self.involvements.person + if self.titleType = imdb::TitleType::TVSERIES then self.episodes.involvements.person else Sequence{} endif" doubleClickDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Title%20Details%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Associated%20Person']" domainClass="imdb::Person">
+            <subNodeMappings name="Title's Persons Node" semanticCandidatesExpression="aql:self.involvements.person + if self.titleType = imdb::TitleType::TVSERIES then self.episodes.involvements.person else Sequence{} endif" doubleClickDescription="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='titleDetailsDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Associated%20Person']" domainClass="imdb::Person">
               <style xsi:type="style:SquareDescription" showIcon="false" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -583,7 +583,7 @@
           </subContainerMappings>
           <subContainerMappings name="Title's Rating Container" semanticCandidatesExpression="var:self" domainClass="imdb::Title" childrenPresentation="List">
             <subNodeMappings name="Title's Rating Node" semanticCandidatesExpression="aql:self" domainClass="imdb::Title">
-              <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="aql:if self.rating != null then 'Avg: '+self.rating.averageRating + '\nVotes: '+self.rating.numberOfVotes else '' endif" labelPosition="node" resizeKind="NSEW">
+              <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="aql:if self.rating != null then 'Avg: ' + self.rating.averageRating + '\nVotes: ' + self.rating.numberOfVotes else '' endif" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
@@ -606,20 +606,20 @@
           </style>
         </containerMappings>
         <toolSections>
-          <ownedTools xsi:type="tool:DoubleClickDescription" name="Title" mappings="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Title%20Details%20Diagram']/@defaultLayer/@containerMappings[name='Title%20Container']">
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="Title" mappings="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='titleDetailsDiagram']/@defaultLayer/@containerMappings[name='Title%20Container']">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:element.imdb">
-                <subModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20Diagram']"/>
+                <subModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='imdbDiagram']"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:DoubleClickDescription" name="Associated Person" mappings="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Title%20Details%20Diagram']/@defaultLayer/@containerMappings[name='Title%20Container']/@subContainerMappings[name='Title%27s%20Persons%20Container']/@subNodeMappings[name='Title%27s%20Persons%20Node']">
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="Associated Person" mappings="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='titleDetailsDiagram']/@defaultLayer/@containerMappings[name='Title%20Container']/@subContainerMappings[name='Title%27s%20Persons%20Container']/@subNodeMappings[name='Title%27s%20Persons%20Node']">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20Details%20Diagram']"/>
+              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='personViewpoint']/@ownedRepresentations[name='personDetailsDiagram']"/>
             </initialOperation>
           </ownedTools>
           <ownedTools xsi:type="tool_1:PaneBasedSelectionWizardDescription" name="Diagram for selected titles" candidatesExpression="aql:self.involvements.title">
@@ -633,7 +633,7 @@
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.imdb">
-                  <subModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20Diagram']"/>
+                  <subModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='imdbDiagram']"/>
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
@@ -641,13 +641,13 @@
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_3:TreeDescription" name="TvSeries Tree" titleExpression="TvSeries" domainClass="imdb::Imdb">
-      <subItemMappings name="Imdb" navigationDescriptions="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='TvSeries%20Tree']/@ownedRepresentationNavigationDescriptions[name='Navigate%20to%20Imdb%20diagram']" domainClass="imdb::Imdb" semanticCandidatesExpression="aql:self">
-        <defaultStyle labelExpression="IMDB">
+    <ownedRepresentations xsi:type="description_3:TreeDescription" name="tvSeriesTree" label="TV Series Tree" titleExpression="TV Series Tree" domainClass="imdb::Imdb">
+      <subItemMappings name="Imdb" navigationDescriptions="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='tvSeriesTree']/@ownedRepresentationNavigationDescriptions[name='Navigate%20to%20Imdb%20diagram']" domainClass="imdb::Imdb" semanticCandidatesExpression="aql:self">
+        <defaultStyle labelExpression="IMDb">
           <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
         </defaultStyle>
-        <subItemMappings name="TVseries branch" detailDescriptions="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='TvSeries%20Tree']/@ownedRepresentationCreationDescriptions[name='Create%20Title%20Details']" domainClass="imdb::TvSeries" semanticCandidatesExpression="aql:self.titles">
+        <subItemMappings name="TVseries branch" detailDescriptions="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='tvSeriesTree']/@ownedRepresentationCreationDescriptions[name='Create%20Title%20Details']" domainClass="imdb::TvSeries" semanticCandidatesExpression="aql:self.titles">
           <defaultStyle>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -666,12 +666,12 @@
           </subItemMappings>
         </subItemMappings>
       </subItemMappings>
-      <ownedRepresentationCreationDescriptions xsi:type="tool:DiagramCreationDescription" name="Create Title Details" diagramDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Title%20Details%20Diagram']">
+      <ownedRepresentationCreationDescriptions xsi:type="tool:DiagramCreationDescription" name="Create Title Details" diagramDescription="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='titleDetailsDiagram']">
         <initialOperation/>
         <containerViewVariable name="containerView"/>
         <representationNameVariable name="diagramName"/>
       </ownedRepresentationCreationDescriptions>
-      <ownedRepresentationNavigationDescriptions xsi:type="tool:DiagramNavigationDescription" name="Navigate to Imdb diagram" diagramDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20Diagram']">
+      <ownedRepresentationNavigationDescriptions xsi:type="tool:DiagramNavigationDescription" name="Navigate to Imdb diagram" diagramDescription="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='imdbDiagram']">
         <containerViewVariable name="containerView"/>
         <containerVariable name="container"/>
         <representationNameVariable name="diagramName"/>
@@ -679,12 +679,12 @@
     </ownedRepresentations>
     <ownedJavaExtensions qualifiedClassName="imdb.odesign.Services"/>
   </ownedViewpoints>
-  <ownedViewpoints name="person_viewpoint" modelFileExtension="imdb">
-    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Person Details Diagram" titleExpression="aql:'Details of '+self.name" domainClass="imdb::Person" enablePopupBars="true">
+  <ownedViewpoints name="personViewpoint" label="Person Viewpoint" modelFileExtension="imdb">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="personDetailsDiagram" label="Person Details Diagram" titleExpression="aql:'Details of ' + self.name" domainClass="imdb::Person" enablePopupBars="true">
       <defaultLayer name="Default">
-        <containerMappings name="Person Container" semanticCandidatesExpression="var:self" doubleClickDescription="//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20Details%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Main%20Person']" domainClass="imdb::Person" childrenPresentation="HorizontalStack">
+        <containerMappings name="Person Container" semanticCandidatesExpression="var:self" doubleClickDescription="//@ownedViewpoints[name='personViewpoint']/@ownedRepresentations[name='personDetailsDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Main%20Person']" domainClass="imdb::Person" childrenPresentation="HorizontalStack">
           <subContainerMappings name="Person's Titles Container" semanticCandidatesExpression="var:self" domainClass="imdb::Person" childrenPresentation="List">
-            <subNodeMappings name="Person's Title Node" semanticCandidatesExpression="aql:self.involvements.title->select(t | t.titleType != imdb::TitleType::TVEPISODE) + self.involvements.title.series" doubleClickDescription="//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20Details%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Title']" domainClass="imdb::Title">
+            <subNodeMappings name="Person's Title Node" semanticCandidatesExpression="aql:self.involvements.title->select(t | t.titleType != imdb::TitleType::TVEPISODE) + self.involvements.title.series" doubleClickDescription="//@ownedViewpoints[name='personViewpoint']/@ownedRepresentations[name='personDetailsDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Title']" domainClass="imdb::Title">
               <style xsi:type="style:SquareDescription" showIcon="false" sizeComputationExpression="" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -748,7 +748,7 @@
             </style>
           </subContainerMappings>
           <subContainerMappings name="Person's Associated People Container" semanticCandidatesExpression="var:self" domainClass="imdb::Person" childrenPresentation="List">
-            <subNodeMappings name="Person's Associated People Node" semanticCandidatesExpression="aql:self.involvements.title.involvements.person->select(p | p.ID != self.ID)" doubleClickDescription="//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20Details%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Associated%20Person']" domainClass="imdb::Person">
+            <subNodeMappings name="Person's Associated People Node" semanticCandidatesExpression="aql:self.involvements.title.involvements.person->select(p | p.ID != self.ID)" doubleClickDescription="//@ownedViewpoints[name='personViewpoint']/@ownedRepresentations[name='personDetailsDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Associated%20Person']" domainClass="imdb::Person">
               <style xsi:type="style:SquareDescription" showIcon="false" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -772,20 +772,20 @@
           </style>
         </containerMappings>
         <toolSections>
-          <ownedTools xsi:type="tool:DoubleClickDescription" name="Title" mappings="//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20Details%20Diagram']/@defaultLayer/@containerMappings[name='Person%20Container']/@subContainerMappings[name='Person%27s%20Titles%20Container']/@subNodeMappings[name='Person%27s%20Title%20Node']">
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="Title" mappings="//@ownedViewpoints[name='personViewpoint']/@ownedRepresentations[name='personDetailsDiagram']/@defaultLayer/@containerMappings[name='Person%20Container']/@subContainerMappings[name='Person%27s%20Titles%20Container']/@subNodeMappings[name='Person%27s%20Title%20Node']">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:element">
-                <subModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Title%20Details%20Diagram']"/>
+                <subModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='titleDetailsDiagram']"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:DoubleClickDescription" name="Associated Person" mappings="//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20Details%20Diagram']/@defaultLayer/@containerMappings[name='Person%20Container']/@subContainerMappings[name='Person%27s%20Associated%20People%20Container']/@subNodeMappings[name='Person%27s%20Associated%20People%20Node']">
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="Associated Person" mappings="//@ownedViewpoints[name='personViewpoint']/@ownedRepresentations[name='personDetailsDiagram']/@defaultLayer/@containerMappings[name='Person%20Container']/@subContainerMappings[name='Person%27s%20Associated%20People%20Container']/@subNodeMappings[name='Person%27s%20Associated%20People%20Node']">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20Details%20Diagram']"/>
+              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='personViewpoint']/@ownedRepresentations[name='personDetailsDiagram']"/>
             </initialOperation>
           </ownedTools>
           <ownedTools xsi:type="tool_1:PopupMenu" name="Navigation">
@@ -793,24 +793,24 @@
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.imdb">
-                  <subModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20Diagram']"/>
+                  <subModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='imdbDiagram']"/>
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
           </ownedTools>
-          <ownedTools xsi:type="tool:DoubleClickDescription" name="Main Person" mappings="//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20Details%20Diagram']/@defaultLayer/@containerMappings[name='Person%20Container']">
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="Main Person" mappings="//@ownedViewpoints[name='personViewpoint']/@ownedRepresentations[name='personDetailsDiagram']/@defaultLayer/@containerMappings[name='Person%20Container']">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:element.imdb">
-                <subModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='imdb_viewpoint']/@ownedRepresentations[name='Imdb%20Diagram']"/>
+                <subModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='imdbViewpoint']/@ownedRepresentations[name='imdbDiagram']"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Person's Network Diagram" titleExpression="aql:'Other people that ' +self.name+ ' has worked with'" initialisation="true" domainClass="imdb::Person" enablePopupBars="true">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="personNetworkDiagram" label="Person's Network Diagram" titleExpression="aql:'People that ' + self.name + ' has worked with'" initialisation="true" domainClass="imdb::Person" enablePopupBars="true">
       <filters xsi:type="filter:CompositeFilterDescription" name="searchPersons" label="Search persons">
         <filters xsi:type="filter:VariableFilter" semanticConditionExpression="[self.isFilteredByPerson(searchString, false)/]">
           <ownedVariables xsi:type="description:TypedVariable" name="searchString">
@@ -819,21 +819,21 @@
         </filters>
       </filters>
       <defaultLayer name="Default">
-        <nodeMappings name="MainPersonNode" semanticCandidatesExpression="var:self" doubleClickDescription="//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%27s%20Network%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Main%20Person']" domainClass="imdb::Person">
+        <nodeMappings name="MainPersonNode" semanticCandidatesExpression="var:self" doubleClickDescription="//@ownedViewpoints[name='personViewpoint']/@ownedRepresentations[name='personNetworkDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Main%20Person']" domainClass="imdb::Person">
           <style xsi:type="style:SquareDescription" labelSize="12" tooltipExpression="feature:name" labelPosition="node" resizeKind="NSEW" width="16" height="12">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='orange']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="otherPeople" semanticCandidatesExpression="aql:self.involvements.title.involvements.person->select(p | p.ID != self.ID)" doubleClickDescription="//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%27s%20Network%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='expandOtherPeople']" domainClass="imdb::Person">
+        <nodeMappings name="otherPeople" semanticCandidatesExpression="aql:self.involvements.title.involvements.person->select(p | p.ID != self.ID)" doubleClickDescription="//@ownedViewpoints[name='personViewpoint']/@ownedRepresentations[name='personNetworkDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='expandOtherPeople']" domainClass="imdb::Person">
           <style xsi:type="style:SquareDescription" labelSize="12" tooltipExpression="feature:name" labelPosition="node" resizeKind="NSEW" width="16" height="12">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_chocolate']"/>
           </style>
         </nodeMappings>
-        <edgeMappings sourceMapping="//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%27s%20Network%20Diagram']/@defaultLayer/@nodeMappings[name='MainPersonNode']" targetMapping="//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%27s%20Network%20Diagram']/@defaultLayer/@nodeMappings[name='otherPeople']" targetFinderExpression="aql:self.involvements.title.involvements.person->select(p | p.ID != self.ID)">
+        <edgeMappings sourceMapping="//@ownedViewpoints[name='personViewpoint']/@ownedRepresentations[name='personNetworkDiagram']/@defaultLayer/@nodeMappings[name='MainPersonNode']" targetMapping="//@ownedViewpoints[name='personViewpoint']/@ownedRepresentations[name='personNetworkDiagram']/@defaultLayer/@nodeMappings[name='otherPeople']" targetFinderExpression="aql:self.involvements.title.involvements.person->select(p | p.ID != self.ID)">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_gray']"/>
             <centerLabelStyleDescription labelSize="12">
@@ -842,24 +842,24 @@
           </style>
         </edgeMappings>
         <toolSections name="Tools">
-          <ownedTools xsi:type="tool:DoubleClickDescription" name="expandOtherPeople" mappings="//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%27s%20Network%20Diagram']/@defaultLayer/@nodeMappings[name='otherPeople']">
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="expandOtherPeople" mappings="//@ownedViewpoints[name='personViewpoint']/@ownedRepresentations[name='personNetworkDiagram']/@defaultLayer/@nodeMappings[name='otherPeople']">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%27s%20Network%20Diagram']"/>
+              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='personViewpoint']/@ownedRepresentations[name='personNetworkDiagram']"/>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:DoubleClickDescription" name="Main Person" mappings="//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%27s%20Network%20Diagram']/@defaultLayer/@nodeMappings[name='MainPersonNode']">
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="Main Person" mappings="//@ownedViewpoints[name='personViewpoint']/@ownedRepresentations[name='personNetworkDiagram']/@defaultLayer/@nodeMappings[name='MainPersonNode']">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%20Details%20Diagram']"/>
+              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='personViewpoint']/@ownedRepresentations[name='personDetailsDiagram']"/>
             </initialOperation>
           </ownedTools>
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Person's Titles Diagram" titleExpression="aql:'Which titles ' + self.name + ' has worked on'" initialisation="true" domainClass="imdb::Person" enablePopupBars="true">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="personTitlesDiagram" label="Person's Titles Diagram" titleExpression="aql:'Titles ' + self.name + ' has worked on'" initialisation="true" domainClass="imdb::Person" enablePopupBars="true">
       <filters xsi:type="filter:CompositeFilterDescription" name="searchTitles" label="Search titles">
         <filters xsi:type="filter:VariableFilter" semanticConditionExpression="[self.isFilteredByTitle(searchString, false)/]">
           <ownedVariables xsi:type="description:TypedVariable" name="searchString">
@@ -891,7 +891,7 @@
             </style>
           </conditionnalStyles>
         </nodeMappings>
-        <edgeMappings name="personTitleEdge" sourceMapping="//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%27s%20Titles%20Diagram']/@defaultLayer/@nodeMappings[name='mainPerson']" targetMapping="//@ownedViewpoints[name='person_viewpoint']/@ownedRepresentations[name='Person%27s%20Titles%20Diagram']/@defaultLayer/@nodeMappings[name='titlesWorkedOn']" targetFinderExpression="aql:self.imdb.titles">
+        <edgeMappings name="personTitleEdge" sourceMapping="//@ownedViewpoints[name='personViewpoint']/@ownedRepresentations[name='personTitlesDiagram']/@defaultLayer/@nodeMappings[name='mainPerson']" targetMapping="//@ownedViewpoints[name='personViewpoint']/@ownedRepresentations[name='personTitlesDiagram']/@defaultLayer/@nodeMappings[name='titlesWorkedOn']" targetFinderExpression="aql:self.imdb.titles">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="12">
