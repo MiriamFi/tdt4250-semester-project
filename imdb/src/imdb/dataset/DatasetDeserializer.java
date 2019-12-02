@@ -1,6 +1,7 @@
 package imdb.dataset;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Arrays;
@@ -30,7 +31,9 @@ import imdb.TvSeries;
 
 public class DatasetDeserializer {
 	public static final String DATASET_FOLDER_PATH = "src/imdb/dataset/";
+	public static final String DATASET_FILE_EXT = ".tsv";
 	public static final String OUTPUT_XMI_FILE_PATH = DATASET_FOLDER_PATH + "Imdb.imdb";
+	public static final int FILE_READER_BUFFER_SIZE = (1 << 14) * 4096; // 4096 is the default block size for most NTFS systems
 
 	private static final String TAB_CHAR = "\\t";
 	private static final String NO_VALUE_CHAR = "\\N";
@@ -138,8 +141,8 @@ public class DatasetDeserializer {
 	}
 
 	public static void deserializeEpisodesDetails() {
-		String filename = "src/imdb/dataset/episodesDetails.tsv";
-		try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
+		final String datasetName = "episodesDetails";
+		try (BufferedReader br = createBufferedReader(datasetName)) {
 			br.readLine(); // skip the first line, as it contains the column headers
 			int i = 0;
 			for (String line; (line = br.readLine()) != null; ) {
@@ -196,8 +199,8 @@ public class DatasetDeserializer {
 	}
 
 	public static void deserializeTitles() {
-		String filename = "src/imdb/dataset/titles.tsv";
-		try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
+		final String datasetName = "titles";
+		try (BufferedReader br = createBufferedReader(datasetName)) {
 			br.readLine(); // skip the first line, as it contains the column headers
 			int i = 0;
 			for (String line; (line = br.readLine()) != null; ) {
@@ -309,8 +312,8 @@ public class DatasetDeserializer {
 	}
 
 	public static void deserializePersons() {
-		String filename = "src/imdb/dataset/persons.tsv";
-		try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
+		final String datasetName = "persons";
+		try (BufferedReader br = createBufferedReader(datasetName)) {
 			br.readLine(); // skip the first line, as it contains the column headers
 			int i = 0;
 			for (String line; (line = br.readLine()) != null; ) {
@@ -376,8 +379,8 @@ public class DatasetDeserializer {
 	}
 
 	public static void deserializeRatings() {
-		String filename = "src/imdb/dataset/ratings.tsv";
-		try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
+		final String datasetName = "ratings";
+		try (BufferedReader br = createBufferedReader(datasetName)) {
 			br.readLine(); // skip the first line, as it contains the column headers
 			int i = 0;
 			for (String line; (line = br.readLine()) != null; ) {
@@ -411,8 +414,8 @@ public class DatasetDeserializer {
 	}
 
 	public static void deserializeInvolvements() {
-		String filename = "src/imdb/dataset/involvements.tsv";
-		try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
+		final String datasetName = "involvements";
+		try (BufferedReader br = createBufferedReader(datasetName)) {
 			br.readLine(); // skip the first line, as it contains the column headers
 			int i = 0;
 			for (String line; (line = br.readLine()) != null; ) {
@@ -463,6 +466,11 @@ public class DatasetDeserializer {
 		involvement.setPerson(personMap.get(personID));
 		involvement.setJob(category);
 		involvement.setCharacter(character);
+	}
+
+	private static BufferedReader createBufferedReader(String datasetName) throws FileNotFoundException {
+		final String filename = DATASET_FOLDER_PATH + datasetName + DATASET_FILE_EXT;
+		return new BufferedReader(new FileReader(filename), FILE_READER_BUFFER_SIZE);
 	}
 
 	public static void serializeToXMI(String filepath) {
