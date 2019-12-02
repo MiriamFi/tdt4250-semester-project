@@ -227,7 +227,7 @@ public class DatasetDeserializer {
 		} catch (NumberFormatException e) {
 			// do nothing
 		}
-		int titleEndYear = 0;
+		Integer titleEndYear = null;
 		try {
 			titleEndYear = Integer.parseInt(columnValues[6]);
 		} catch (NumberFormatException e) {
@@ -252,7 +252,8 @@ public class DatasetDeserializer {
 		Title title;
 		if (titleType == TitleType.TVSERIES) {
 			TvSeries tvSeries = ImdbFactory.eINSTANCE.createTvSeries();
-			tvSeries.setEndYear(titleEndYear);
+			if (titleEndYear != null)
+				tvSeries.setEndYear(titleEndYear);
 			title = tvSeries;
 		} else if (titleType == TitleType.TVEPISODE) {
 			Episode episode = ImdbFactory.eINSTANCE.createEpisode();
@@ -342,7 +343,7 @@ public class DatasetDeserializer {
 		}
 
 		// If start year is \N, make it a 0
-		int deathYear = 0;
+		Integer deathYear = null;
 		try {
 			deathYear = Integer.parseInt(columnValues[3]);
 		} catch (NumberFormatException e) {
@@ -361,7 +362,8 @@ public class DatasetDeserializer {
 		person.setID(ID);
 		person.setName(name);
 		person.setBirthYear(birthYear);
-		person.setDeathYear(deathYear);
+		if (deathYear != null)
+			person.setDeathYear(deathYear);
 		person.getProfessions().clear();
 		person.getProfessions().addAll(Arrays.asList(professions));
 
