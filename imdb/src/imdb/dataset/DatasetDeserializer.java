@@ -156,7 +156,7 @@ public class DatasetDeserializer {
 					System.out.println(i + " episodes deserialized");
 			}
 		} catch (IOException e) {
-			e.printStackTrace();
+			throw new RuntimeException(e);
 		}
 	}
 
@@ -214,7 +214,7 @@ public class DatasetDeserializer {
 					System.out.println(i + " titles deserialized");
 			}
 		} catch (IOException e) {
-			e.printStackTrace();
+			throw new RuntimeException(e);
 		}
 	}
 
@@ -327,7 +327,7 @@ public class DatasetDeserializer {
 					System.out.println(i + " persons deserialized");
 			}
 		} catch (IOException e) {
-			e.printStackTrace();
+			throw new RuntimeException(e);
 		}
 	}
 
@@ -394,7 +394,7 @@ public class DatasetDeserializer {
 					System.out.println(i + " ratings deserialized");
 			}
 		} catch (IOException e) {
-			e.printStackTrace();
+			throw new RuntimeException(e);
 		}
 	}
 
@@ -429,7 +429,7 @@ public class DatasetDeserializer {
 					System.out.println(i + " involvements deserialized");
 			}
 		} catch (IOException e) {
-			e.printStackTrace();
+			throw new RuntimeException(e);
 		}
 	}
 
@@ -493,7 +493,7 @@ public class DatasetDeserializer {
 		try {
 			resource.save(null);
 		} catch (IOException e) {
-			e.printStackTrace();
+			throw new RuntimeException(e);
 		}
 	}
 }
