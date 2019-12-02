@@ -125,6 +125,7 @@ public class DatasetDeserializer {
 			}
 		}
 
+		/* Commented out, as we're mostly interested in persons connected to titles through an involvement
 		// Get each person that is connected to a title in titleMap through knownForTitles
 		imdb.getPersons().forEach(person -> {
 			for (Title title : person.getKnownForTitles()) {
@@ -132,6 +133,9 @@ public class DatasetDeserializer {
 					smallerPersonMap.put(person.getID(), person);
 			}
 		});
+		*/
+		System.out.println("Done selecting relevant persons");
+
 
 		// Update ecore model
 		imdb.getPersons().clear();
