@@ -70,7 +70,7 @@ public class DatasetDeserializer {
 			// Assume all picked titles are tv series
 			// Remove all series without episodes
 			List<Title> seriesWithoutEpisodes = pickedTitlesMap.values().stream()
-					.filter(title -> ((TvSeries) title).getEpisodes().size() <= 0)
+					.filter(title -> ((TvSeries) title).getEpisodes().isEmpty())
 					.collect(Collectors.toList());
 			seriesWithoutEpisodes.forEach(series -> pickedTitlesMap.remove(series.getID()));
 		}
@@ -148,9 +148,7 @@ public class DatasetDeserializer {
 		// There are episodes that are connected to Movies
 		// We will filter them away
 		Title parentTitle = pickedTitlesMap.get(parentTitleID);
-		if (parentTitle == null)
-			return;
-		if (parentTitle.getTitleType() != TitleType.TVSERIES)
+		if (parentTitle == null || parentTitle.getTitleType() != TitleType.TVSERIES)
 			return;
 
 		TvSeries series = (TvSeries) parentTitle;
@@ -268,8 +266,7 @@ public class DatasetDeserializer {
 		title.setRuntime(titleRuntimeMinutes);
 
 		EList<Genre> titleGenres = title.getGenres(); // genres is null, so will return a new empty list
-		for (Genre genre : genres)
-			titleGenres.add(genre);
+		titleGenres.addAll(genres);
 		title.setGenres(titleGenres);
 
 		allTitlesMap.put(titleID, title);
