@@ -19,7 +19,7 @@
     <involvements person="//@persons.5" job="Actor" character="Dallas"/>
     <involvements person="//@persons.6" job="Actress" character="Ripley"/>
     <involvements person="//@persons.7" job="Actress" character="Lambert"/>
-    <involvements person="//@persons.12" job="Actor" character="asdf"/>
+    <involvements person="//@persons.12" job="Actor" character="Guy in the background"/>
   </titles>
   <titles name="Short Stories From Dallas" region="USA" language="English" startYear="2019" runtime="111" ID="1234567vdfkslfjlskdfjesijrgelirjles">
     <involvements person="//@persons.9" job="Actor" character="Man"/>
@@ -35,7 +35,7 @@
       <involvements person="//@persons.9" job="Actor" character="Wirt"/>
       <involvements person="//@persons.10" job="Actor" character="Gregory"/>
       <involvements person="//@persons.11" job="Actress" character="Beatrice"/>
-      <involvements person="//@persons.12" job="Actor" character="safdgdfg"/>
+      <involvements person="//@persons.12" job="Actor" character="Some random tree"/>
     </episodes>
     <episodes name="Chapter 2: Hard Times at the Huskin' Bee" titleType="TVEPISODE" startYear="2014" runtime="12" ID="tt4166816" seasonNumber="1" episodeNumber="2">
       <rating averageRating="8.5" numberOfVotes="893"/>
@@ -46,7 +46,7 @@
   </titles>
   <titles xsi:type="no.ntnu.tdt4250.imdb:TvSeries" name="Firefly" region="US" language="English" titleType="TVSERIES" startYear="2002" runtime="44" ID="tt0303461" endYear="2003">
     <rating averageRating="9.0" numberOfVotes="231493"/>
-    <involvements person="//@persons.12" job="Actor" character="sdfg"/>
+    <involvements person="//@persons.12" job="Actor" character="Captain Malcolm 'Mal' Reynolds"/>
     <episodes name="The Train Job" region="US" language="English" titleType="TVEPISODE" startYear="2002" runtime="42" ID="tt0579539" seasonNumber="1" episodeNumber="1"/>
     <episodes name="Bushwhacked" region="US" language="English" titleType="TVEPISODE" startYear="2002" runtime="44" ID="tt0579528" seasonNumber="1" episodeNumber="2"/>
     <episodes name="Our Mrs. Reynolds" region="US" language="English" titleType="TVEPISODE" startYear="2002" runtime="44" ID="tt0579532" seasonNumber="1" episodeNumber="3"/>

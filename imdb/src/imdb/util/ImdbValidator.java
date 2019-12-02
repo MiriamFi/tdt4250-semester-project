@@ -412,7 +412,7 @@ public class ImdbValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String EPISODE__SEASON_NUMBER_CONSTRAINT__EEXPRESSION = "self.seasonNumber > 0";
+	protected static final String EPISODE__SEASON_NUMBER_CONSTRAINT__EEXPRESSION = "self.seasonNumber >= 0";
 
 	/**
 	 * Validates the seasonNumberConstraint constraint of '<em>Episode</em>'.
@@ -441,7 +441,7 @@ public class ImdbValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String EPISODE__EPISODE_NUMBER_CONSTRAINT__EEXPRESSION = "self.episodeNumber > 0";
+	protected static final String EPISODE__EPISODE_NUMBER_CONSTRAINT__EEXPRESSION = "self.episodeNumber >= 0";
 
 	/**
 	 * Validates the episodeNumberConstraint constraint of '<em>Episode</em>'.

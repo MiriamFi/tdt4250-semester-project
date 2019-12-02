@@ -62,8 +62,8 @@
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/acceleo/query/1.0">
       <details key="noImdbContainerConstraint" value="self.imdb = null"/>
-      <details key="seasonNumberConstraint" value="self.seasonNumber > 0"/>
-      <details key="episodeNumberConstraint" value="self.episodeNumber > 0"/>
+      <details key="seasonNumberConstraint" value="self.seasonNumber >= 0"/>
+      <details key="episodeNumberConstraint" value="self.episodeNumber >= 0"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="series" lowerBound="1"
         eType="#//TvSeries" eOpposite="#//TvSeries/episodes"/>
