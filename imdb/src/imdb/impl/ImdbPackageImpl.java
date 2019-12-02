@@ -977,8 +977,8 @@ public class ImdbPackageImpl extends EPackageImpl implements ImdbPackage {
 		   source,
 		   new String[] {
 			   "noImdbContainerConstraint", "self.imdb = null",
-			   "seasonNumberConstraint", "self.seasonNumber > 0",
-			   "episodeNumberConstraint", "self.episodeNumber > 0"
+			   "seasonNumberConstraint", "self.seasonNumber >= 0",
+			   "episodeNumberConstraint", "self.episodeNumber >= 0"
 		   });
 		addAnnotation
 		  (ratingEClass,
