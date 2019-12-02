@@ -42,6 +42,16 @@ public class DatasetDeserializer {
 	private static Map<String, Person> personMap = new HashMap<>();
 	private static Map<String, Genre> genreMap = new HashMap<>();
 
+	private static final Map<String, TitleType> TITLE_TYPE_MAP;
+	static {
+		TITLE_TYPE_MAP = new HashMap<>(TitleType.VALUES.size());
+		TitleType.VALUES.forEach(type -> TITLE_TYPE_MAP.put(type.getLiteral(), type));
+	}
+
+	private static TitleType getTitleTypeByLiteral(String literal) {
+		return TITLE_TYPE_MAP.get(literal.toUpperCase());
+	}
+
 	public static void main(String[] args) {
 		// get instantiated EPackage
 		// imdbPackage can be found in ImdbPackage.eINSTANCE;
@@ -238,7 +248,7 @@ public class DatasetDeserializer {
 			genreStrings = new String[0];
 
 
-		TitleType titleType = TitleType.get(titleTypeString.toUpperCase());
+		TitleType titleType = getTitleTypeByLiteral(titleTypeString);
 		Title title;
 		if (titleType == TitleType.TVSERIES) {
 			TvSeries tvSeries = ImdbFactory.eINSTANCE.createTvSeries();
